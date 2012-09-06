@@ -1,0 +1,5 @@
+[INFO][06.09.2012-15:11:18] Starting MultiCastor with a gui
+[WARNING][06.09.2012-15:11:18] Default configurationfile was not found. MultiCastor starts without preconfigured Multicasts and with default GUI configuration.
+[INFO][06.09.2012-15:19:13] Starting MultiCastor with a gui
+[INFO][06.09.2012-15:19:13] Default Configurationfile loaded.
+[INFO][06.09.2012-15:19:13] In the Configfile were less than 4 UserlevelData objects. Default ULD will be used.
