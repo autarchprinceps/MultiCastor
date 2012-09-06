@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<workbench>
+    <window-size height="694" width="1095"/>
+    <mode>sender</mode>
+    <active-rb>IGMP</active-rb>
+    <graph-console>graph</graph-console>
+    <locale country="US" language="en"/>
+    <position posx="100" posy="100"/>
+    <config/>
+</workbench>

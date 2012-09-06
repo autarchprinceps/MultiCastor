@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<MultiCastor date="Thu Feb 02 19:25:17 CET 2012">
+    <Multicasts>
+        <Multicast color="000000" networkInterface="127.0.0.1" typ="IGMP">
+            <active>false</active>
+            <groupIp>230.0.0.10</groupIp>
+            <sourceIp>127.0.0.1</sourceIp>
+            <udpPort>80</udpPort>
+            <packetLength>60</packetLength>
+            <ttl>7</ttl>
+            <packetRateDesired>55</packetRateDesired>
+        </Multicast>
+		<Multicast color="000000" networkInterface="127.0.0.1" typ="IGMP">
+            <active>false</active>
+            <groupIp>230.0.0.12</groupIp>
+            <sourceIp>127.0.0.1</sourceIp>
+            <udpPort>80</udpPort>
+            <packetLength>60</packetLength>
+            <ttl>7</ttl>
+            <packetRateDesired>60</packetRateDesired>
+        </Multicast>
+		<Multicast color="000000" networkInterface="127.0.0.1" typ="IGMP">
+            <active>false</active>
+            <groupIp>230.0.0.12</groupIp>
+            <sourceIp>127.0.0.1</sourceIp>
+            <udpPort>80</udpPort>
+            <packetLength>60</packetLength>
+            <ttl>7</ttl>
+            <packetRateDesired>60</packetRateDesired>
+        </Multicast>
+    </Multicasts>
+	<default>
+			<Multicast typ="IGMP">
+				<active>false</active>
+				<groupIp>230.0.0.1</groupIp>
+            	<udpPort>4711</udpPort>
+            	<packetLength>2048</packetLength>
+            	<ttl>32</ttl>
+            	<packetRateDesired>50</packetRateDesired>
+			</Multicast>
+			<Multicast typ="MMRP">
+				<active>false</active>
+				<macGroupId>12:34:56:78:9A:BC</macGroupId>
+				<packetLength>2048</packetLength>
+				<packetRateDesired>50</packetRateDesired>
+			</Multicast>
+			<Multicast typ="MLD">
+				<active>false</active>
+          		<groupIp>FF01:0:0:0:0:0:0:1</groupIp>
+                <udpPort>4711</udpPort>
+            	<packetLength>2048</packetLength>
+            	<ttl>32</ttl>
+            	<packetRateDesired>50</packetRateDesired>
+			</Multicast>
+		</default>
+</MultiCastor>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<MultiCastor date="Thu Feb 02 19:25:17 CET 2012">
+	<default>
+			<Multicast protocolType="IGMP">
+				<active>false</active>
+				<groupIp>230.0.0.1</groupIp>
+            	<udpPort>4711</udpPort>
+            	<packetLength>2048</packetLength>
+            	<ttl>32</ttl>
+            	<packetRateDesired>50</packetRateDesired>
+			</Multicast>
+			<Multicast protocolType="MMRP">
+				<active>false</active>
+				<macGroupId>01:90:C2:00:00:FF</macGroupId>
+				<packetLength>128</packetLength>
+				<packetRateDesired>50</packetRateDesired>
+				<timerJoinMt>10</timerJoinMt></Multicast>
+			<Multicast protocolType="MLD">
+				<active>false</active>
+          		<groupIp>FF01:0:0:0:0:0:0:1</groupIp>
+                <udpPort>4711</udpPort>
+            	<packetLength>2048</packetLength>
+            	<ttl>32</ttl>
+            	<packetRateDesired>50</packetRateDesired>
+			</Multicast>
+		</default>
+</MultiCastor>
