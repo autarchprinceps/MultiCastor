@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<MultiCastor>
+    <System>
+        <Time>Tue Sep 11 10:22:17 CEST 2012</Time>
+        <Hostname>ghjkl</Hostname>
+        <Hostaddress>127.0.1.1</Hostaddress>
+        <Username>groxar</Username>
+        <Javaversion>1.7.0_03</Javaversion>
+        <Javavendor>Oracle Corporation</Javavendor>
+    </System>
+    <Multicasts/>
+</MultiCastor>
