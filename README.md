@@ -1,2 +1,4 @@
 MultiCastor
 ===========
+
+multicast testing tool
