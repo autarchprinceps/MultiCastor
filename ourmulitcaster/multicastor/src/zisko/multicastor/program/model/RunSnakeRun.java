@@ -1,7 +1,6 @@
 package zisko.multicastor.program.model;
 
 import java.util.TimerTask;
-
 import zisko.multicastor.program.controller.ViewController;
 import zisko.multicastor.program.data.MulticastData.Typ;
 
@@ -10,18 +9,20 @@ import zisko.multicastor.program.data.MulticastData.Typ;
  */
 public class RunSnakeRun extends TimerTask {
 	ViewController view;
-	
-	public RunSnakeRun(ViewController view){
+
+	public RunSnakeRun(final ViewController view) {
 		this.view = view;
 	}
-	
+
 	@Override
 	public void run() {
-		if(view.isInitFinished()){
-			if(view.getSelectedTab() != Typ.UNDEFINED && view.getSelectedTab() != Typ.CONFIG){
-				view.getPanTabbed(view.getSelectedTab()).getPan_graph().moveSnakeAndUpdateView(view.getSnakeDir());
+		if(view.isInitFinished()) {
+			if((view.getSelectedTab() != Typ.UNDEFINED)
+					&& (view.getSelectedTab() != Typ.CONFIG)) {
+				view.getPanTabbed(view.getSelectedTab()).getPan_graph()
+						.moveSnakeAndUpdateView(view.getSnakeDir());
 			}
-		}	
+		}
 	}
 
 }
