@@ -24,13 +24,13 @@ public class MulticastReceiver extends MulticastThreadSuper {
 	/** Wenn auf wahr, lauscht dieser Receiver auf ankommende Pakete. */
 	private boolean active = false;
 	/** Byte Array in dem das Paket gespeichert wird. */
-	private final byte[] buf = new byte[length];
+	private final byte[] buf;
 	/**
 	 * Language Manager ist wichtig fuer die multi Language Unterstuetzung
 	 */
-	private final LanguageManager lang = LanguageManager.getInstance();
+	private final LanguageManager lang;
 	/** Maximale Paketlaenge */
-	private final int length = 65575;
+	private final int length;
 	/** Wird fuer die Fehlerausgabe verwendet. */
 	private Logger logger;
 	/** Javasocket fuer Multicasts. */
@@ -50,6 +50,11 @@ public class MulticastReceiver extends MulticastThreadSuper {
 	 */
 	public MulticastReceiver(final MulticastData m, final Logger logger) {
 		super(m);
+		
+		length = 65575;
+		buf = new byte[length];
+		lang = LanguageManager.getInstance();
+		
 		if(logger == null) {
 			System.out.println(lang.getProperty("error.mr.logger"));
 			return;
