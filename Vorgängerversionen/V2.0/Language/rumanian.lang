@@ -1,0 +1,225 @@
+﻿mi.autoSave			=salvează automat
+mi.changeWindowTitle=modifică titlul ferestrei
+mi.language			=limba
+mi.saveConfiguration=salvează configurația
+mi.saveAllMc		=salvează toate datele multicast
+mi.saveSelectedMc	=salvează datele multicast selectate
+mi.loadConfiguration=încarcă configurația
+mi.loadMc			=încarcă datele multicasts
+mi.loadAdditionalMc	=load additional multicasts
+mi.errorFileNotFound=Eroare: date negăsite
+mi.snake			=șarpe 
+mi.help				=ajutor
+mi.exit				=închide
+mi.about			=despre
+mi.beginner			=începator
+mi.expert			=expert
+mi.custom			=definit de utilizator
+mi.menu				=meniu
+mi.options			=opțiuni
+mi.views			=nivelul utilizatorului
+mi.userLevel		=User Level
+mi.layer2Receiver	=layer2 destinatar
+mi.layer2Sender		=layer2 emițător
+mi.layer3Receiver	=layer3 destinatar
+mi.layer3Sender		=layer3 emițător
+mi.info				=informație
+tab.l2s				=layer2 emițător
+tab.l3s				=layer3 emițător
+tab.l2r				=layer2 destinatar
+tab.l3r				=layer3 destinatar
+tab.graph			=diagramă
+tab.console			=consolă	
+plus.l2rDescription		=deschide layer-ul 2 receptor filă. Dacă fila este închisă, se va deschide. Daca este deschisă, va fi focusată.
+plus.l2sDescription		=deschide layer-ul 2 emițător cu MMRP. Daca fila este  închisă, se va deschide. Daca este  deschisă, va fi focusată 
+plus.l3rDescription		=deschide layer-ul 3 receptor. Daca fila este  închisă, se va deschide. Daca este  deschisă, va fi focusată  
+plus.l3sDescription		=Deschide layer-ul 3 emițător.  Daca fila este  închisă, se va deschide. Daca este  deschisă, va fi focusată
+plus.aboutDescription	=Deschide fila despre. Daca fila este  închisă, se va deschide. Daca este  deschisă, va fi focusată  
+miscBorder.mcOverwiew	=Privire de ansamblu MultiCast
+miscBorder.mcControl	=Camandă MultiCast
+miscBorder.mcConfig		=Configurație MultiCast
+miscBorder.ipGroupAddress		=IP adresă de grup
+miscBorder.ipNetworkInterface	=IP interfață rețea
+miscBorder.udpPort				=UDP Port
+miscBorder.packetRate			=rată pachet
+miscBorder.packetLength			=lungime pachet
+miscBorder.timeToLive			=durată de viață
+miscBorder.ipGroupAddress		=IP adresă de grup
+miscBorder.ipNetworkInterface	=IP interfață rețea
+miscBorder.MacGroupAddress		=Mac adresă de grup
+miscBorder.NetworkInterface		=interfață rețea
+config.message.ipFirst			=mai întâi alege IP
+config.message.ipFirstShort		=mai întâi IP
+button.start		=start
+button.stop			=stop
+button.delete		=șterge
+button.deSelectAll	=(de)selectează tot
+button.new			=nou
+button.active		=activ
+button.inactive		=inactiv
+button.add			=adaugă
+button.change		=schimbă
+button.changeAll	=schimbă tot
+status.mcSelected	=Multicast selectate
+status.mcTotal		=Număr MultiCast
+status.traffic		=transfer de date
+status.in			=înauntru
+status.out			=înafară
+graph.time			=timp
+graph.sec			=sec
+graph.y				=y
+graph.jitter		=fluctuație
+graph.lostPackets	=pachete pierdute
+graph.measuredPacketRate=pachete stabilite/determinate
+graph.packetsPerSec	=pachet pe secundă
+graph.current		=actual
+
+# Will create a message like: Not enough memory. You have XXX MB. You need minimum XXX MB to start MultiCastor.
+# MC will show this message if there are not enough free memory in heap.
+error.memory.part1	=Memorie insuficientă. Dispuneți de 
+error.memory.part2	=Aveți nevoie de cel puțin
+error.memory.part3	=pentru a lansa MultiCastor
+error.memory.title	=MultiCastor: eroare de memorie
+
+error.mr.logger 	=eroare fatală: nu se poate crea receptor multicast fără 'logger'
+error.mc.logger		=eroare in MulticastController: obiectul logger-ului este nul
+error.mr.mcdata		=eroare in crearea Multicast receptor. Datele multicast nu pot fi goale.
+
+# MC will show this message if there are less them 10% free memory in heap.
+warning.memory.title=Memoria dumneavoastră de lucru este aproape plină(mai puțin de 10% disponibil)
+warning.memory.freeMemory =Memorie libera
+warning.memory.allocMemory=Memorie alocata totala
+warning.memory.maxMemory  =Memorie maxima pentru JVM
+
+logger.info.startWithGui=Initiind MultiCastor cu GUI
+logger.info.startNoGui	=Initiind MultiCastor fara GUI 
+logger.info.startGuiFile=Initiind MultiCastor cu GUI si un fisier
+
+error.config.notSpecified=Configurarea fisierelor nespecificata.
+
+error.config.wrongFormat =Configuration file in wrong format or corrupted. Please use a valid configuration file.\n\nUsage:\tjava -jar multiCastor.jar [-h] [-g] configuration-file-path\n\t\
+ type 'java -jar multiCastor.jar -h' for more information\n\n\
+ To start the tool without a graphical user interface,\n\
+ the configuration-file-path is required.
+
+error.invalidParameter	 =Not a valid parameter.\n\nUsage:\tjava -jar multiCastor.jar [-h] [-g] configuration-file-path\n\t\
+ type 'java -jar multiCastor.jar -h' for more information
+
+error.logfile.canNotWrite=Log file could not be written to disk. Please check if you have writing permission in the MultiCastor directory.
+
+error.network.noHostName	=Hostname nu poate determinat. Eroarea este:
+error.network.settingUDP	=Eroare in timpul setarii Port-ului UDP.
+error.network.noDefaultPort	=Eroare fatală:Port-ul implicit nu este 
+error.network.sourceIP		=Eroare in timpul IP-ului sursa.
+
+console.helptext		=Usage:\tjava -jar multiCastor.jar [-h] [-g] configuration-file-path\n\t\
+ type 'java -jar multiCastor.jar -h' for more information\n\n\
+ To start the tool without a graphical user interface,\n\
+ the configuration-file-path is required.\n\n\
+ For more information about a valid configuration file\n\
+ consult the user manual.\n\n\
+ Options:\n\
+ \t\t-h\tdisplays this help-message\n\
+ \t\t-g\tstart the MultiCastor-Tool without\n\
+ \t\t\ta graphical user interface
+
+info.longUpdateTime		 =Data actualizării este prea lungă.
+warning.longUpdateTime	 =Updating the user interface takes very long. Consider the help for more information.
+
+warning.invalidNetAdapter=Invalid Network Adapter. Network Interface has been set to localhost.
+
+toolTip.closeThisTab		=Inchide acest tab.
+toolTip.mcAddressRange		=Select a Multicast IP Address, either IPv4 or IPv6
+toolTip.ipFirst			=Specify the IP address first, then select an interface
+toolTip.specifyUDPPort		=Specifă un port UDP.
+toolTip.specifyTTL		=Specifică timpul de funcţionare.
+toolTip.specifyPacketRate	=Specifică rata pachetului.
+toolTip.specifyPacketLength	=Specifică lungimea pachetului.
+toolTip.selectNetInterface	=Alegeti o interfaţă de reţea pentru Multicast.
+toolTip.selectMacAddress	=Alegeţi o adresă MAC pentru Multicast
+
+message.setNewTitle		=Vă rog introduceţi un nou titlu.
+message.noMcCreated		=There is no Multicast data available for saving. Please create any Multicasts first.
+message.noMcSelected		=There is no Multicast data selected right now. You can select any row in the tables. You can select multiple rows by holding the Ctrl-Key.
+message.canNotOpenHelpPart1	=MultiCastor was unable to open the help file. You will find the help file at
+message.canNotOpenHelpPart2 	=You will need a pdf reader for open this file.
+message.useDefaultPort		=Try to set default Port 4711...
+message.mcActivated		=MultiCast-Sender activated
+message.mcDeaktivated		=MultiCast-Sender deactivated
+message.mcAdded			=MultiCast added
+message.mcDeleted		=MultiCast deleted
+message.mcAdvisePart1		=Could not start Multicast: 
+message.mcAdvisePart2		= Advised a Change on that Multicast.
+message.mcStartRunning		=Tried to start an already running Multicast.
+message.mcStopNotRunning	=Tried to stop a not running Multicast.
+message.joinMcPart1		=Joined Multicast-group
+message.joinMcPart2		=as sender using method
+message.unableToJoin		=Was not able to join multicast-group
+message.settingTTLErr		=error while setting TTL to
+message.resetPackets		=While sending reset Packets:
+message.senderStoped		=Sender was stopped
+message.whileSending		=While sending:
+message.sleepPeak 			=Sleep after sending with method PEAK failed:
+message.senderWorkingAgain  =Sender is working again
+message.problemIp			=Problem with sending via IP 
+message.tryReconnect		=Trying to reconnect ...
+message.senderFail			=Sender is still not working correctly.
+message.senderViaIp			=Because sending via IP is not reachable
+message.sendingWarning		=Sending Warning
+message.whileSending		=While sending:
+message.whileSendingSleepFail =While sending (sleep fails):
+message.packetsSendTotal 	=packets send in total
+message.defaultPort4711		=Trying to set default port 4711 ...
+message.receiverMcObj		=Started Receiver with MC Object.
+message.receiverStartFail 	=Could not start receiver.
+message.mcgroupMcobj		=Left Multicastgroup of MC Object.
+message.mcgroupLeaveFail	=Could not leave MC group of MC Object.
+message.packetReceiver		=Error while receiving packets:
+message.getHostname			=Unable to get Host-Name. Error is:
+message.mmrpSender			=Could not create MMRP sender
+message.mcSenderActivated	=multicast sender activated
+message.mcSenderDeactivated	=multicast sender deactivated
+message.problemSending		=Problem with sending
+message.registerMmrpSender	=Could not register path for MMRP Sender, stopping it again.
+message.receiverInterfaceFail =Could not create Receiver. The interface seems to have no MMRP functionality.
+message.jnetpcapNotInstalled =jnetpcap probably not installed
+message.registerReceiverPath =Could not register receiver path
+message.deregisterReceiverPath =Could not deregister receiver path
+message.unsatisfiedLinkError =[Warning] UnsatisfiedLinkError. Is jnetpcap installed?
+message.loadDeviceFail		=[Warning] Not able to load devices, there will possibly be problems with using Layer 2. Did you start as root / admin?
+message.savedGUI		=Saved GUI Configuration.
+message.savedGUINot		=Could not save GUI Configuration.
+message.savedMCConfig		=Saved Multicastconfiguration.
+message.savedMCConfigNot	=Could not save Multicast Configuration.
+message.gui.Loaded		=Default GUI Configurationfile loaded.
+message.gui.NotFoundWithout	=Default GUI configurationfile was not found. MultiCastor starts without preconfigured Multicasts and with default GUI configuration.
+message.gui.NotFound		=GUI Configurationfile not found.
+message.gui.NotParsedWithout	=Default GUI configurationfile could not be parsed correctly. MultiCastor starts without preconfigured Multicasts and with default GUI configuration.
+message.gui.NotParsed		=GUI Configurationfile could not be parsed.
+message.gui.NotLoadedWithout	=Default GUI configurationfile could not be loaded. MultiCastor starts without preconfigured Multicasts and with default GUI configuration.
+message.gui.NotLoaded		=GUI Configurationfile could not be loaded.
+message.gui.ErrorDefault	=Error in default GUI configurationfile.
+message.gui.Error		=Error in GUI configurationfile.
+message.gui.unexcpectedError	=Unexpected error of type: 
+message.gui.usedPath		=  Used path: 
+message.mcc.Loaded		=Fişierul de configurare se încarcă.
+message.mcc.NotFoundWithout	=Datele implicite de configurare nu au fost găsite.
+message.mcc.NotFound		=Fişierul de configurare  nu poate fi găsit.
+message.mcc.NotParsedWithout	=Default configurationfile could not be parsed correctly. MultiCastor starts without preconfigured Multicasts and with default GUI configuration.
+message.mcc.NotParsed		=Configurationfile could not be parsed.
+message.mcc.NotLoadedWithout	=Default configurationfile could not be loaded. MultiCastor starts without preconfigured Multicasts and with default GUI configuration.
+message.mcc.NotLoaded		=Fişierul de configurare nu poate fi încărcat.
+message.mcc.ErrorDefault	=Eroare în configurarea implicită a  fişierului.
+message.mcc.Error		=Eroare în configurarea fişierului.
+message.mcc.unexcpectedError	=Eroare neaşteptată de tip: 
+message.mcc.usedPath		=Cale folosită:
+message.mc.undefined 		=Overgiven type in getMCs in MulticastController is UNDEFINED.
+
+about.license  = Licenţiat de către GPLv3.
+about.text1 =MultiCastor is a tool which is able to send and receive multicasts.
+about.text2 =It was developed by students as a software engineering project at the University of Cooperative
+about.text3 =Education Stuttgart under the direction of Markus Rentschler and Andreas Stuckert.
+about.mc1 =Developers MultiCastor Version 1.0 (TIT09AIB):
+about.mc2 =Developers MultiCastor Version 2.0 (TIT10AID):
+
+general.device = Aparat
