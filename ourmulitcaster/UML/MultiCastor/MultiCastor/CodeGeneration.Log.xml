@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///E:/APPLICATIONS/VISUAL STUDIO 2012/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Codegenerierungs-/Texttransformationsprotokoll">
+  <MessageClass Name="Message" Label="Meldung" Option="Informationsmeldungen anzeigen" />
+  <MessageClass Name="Warning" Label="Warnung" Option="Warnungen anzeigen" />
+  <MessageClass Name="Error" Label="Fehler" Option="Fehler anzeigen" />
+  <MessageClass Name="Property" Label="Eigenschaft" Option="Metadaten anzeigen" />
+  <MessageClass Name="Diagnostic" Label="Meldung" Option="Diagnosemeldungen anzeigen" />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="High" Text="Die Codegenerierung oder Texttransformation wurde gestartet." />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Diagnostic" Text="Überschreiben = True" />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Diagnostic" Text="ProjectPath = ..\MultiCastorLib\MultiCastorLib.csproj" />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Diagnostic" Text="TemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Diagnostic" Text="ResolvedTemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Medium" Text="Die Textvorlagenbindung von MultiCastor: 'ClassTemplate' wendet ClassTemplate.t4 an für: 'MultiCastor::lang::InvalidLanguageFileException' -  (Class) " />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Medium" Text="Projekt hinzugefügt: E:\Dropbox\SWE-Multicastor 3.0\Diagramme\Klassendiagramm\MultiCastor\MultiCastorLib\MultiCastorLib.csproj" />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Medium" Text="'MultiCastor::lang::InvalidLanguageFileException' -  (Class) : Erfolg (Datei ersetzt) - E:\Dropbox\SWE-Multicastor 3.0\Diagramme\Klassendiagramm\MultiCastor\MultiCastorLib\GeneratedCode\lang\InvalidLanguageFileException.cs" />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Diagnostic" Text="Überschreiben = True" />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Diagnostic" Text="ProjectPath = ..\MultiCastorLib\MultiCastorLib.csproj" />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Diagnostic" Text="TemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Diagnostic" Text="ResolvedTemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Medium" Text="Die Textvorlagenbindung von MultiCastor: 'StructTemplate' wendet StructTemplate.t4 an für: 'MultiCastor::lang::InvalidLanguageFileException' -  (Class) " />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="Diagnostic" Text="'MultiCastor::lang::InvalidLanguageFileException' -  (Class): Es wurde keine Datei erstellt, da die 'AppliesToElement'-Methode der Vorlage 'StructTemplate.t4' als 'false' ausgewertet wurde." />
+  <Message Timestamp="2012-09-17T20:12:22" Importance="High" Text="Die Codegenerierung ist abgeschlossen. Fehler: 0. Warnungen: 0." />
+</Log>
