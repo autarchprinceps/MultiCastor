@@ -2,7 +2,7 @@
 <sim-project version="5.93" multi-file="no">
   <meta>
     <name>MultiCastor</name>
-    <authors>Patrick Robinson, Erwin Stamm</authors>
+    <authors>Patrick Robinson</authors>
     <description />
   </meta>
   <management>
@@ -27,7 +27,13 @@
     <type-sets>
       <type-set file="UmlTypes.xml" />
     </type-sets>
-    <custom-types />
+    <custom-types>
+      <type id="void" name="void" description="" />
+      <type id="MulticastData" name="MulticastData" description="" />
+      <type id="array of byte" name="array of byte" description="" />
+      <type id="GUIData" name="GUIData" description="" />
+      <type id="Vector of MulticastData" name="Vector of MulticastData" description="" />
+    </custom-types>
   </types>
   <filters />
   <items />
