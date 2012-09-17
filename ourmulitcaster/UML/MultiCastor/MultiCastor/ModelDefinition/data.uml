@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="6f622b6d-4e7c-4175-ae09-b232aa1749e4"
+  name="data" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="fe409638-17ef-4175-af9c-89a73078576d"
+        name="MulticastData"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="184d26e3-c742-4abc-9f9e-a025d104858b"
+            name="active"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+            <defaultValue>
+              <literalBoolean
+                Id="0f6c0acd-4c80-4c9a-8831-25e2ff4d46ce"
+                name="DefaultValue"
+                value="false" />
+            </defaultValue>
+          </property>
+          <property
+            Id="4fcef72a-cbdd-4ea7-a77a-63add8f8088c"
+            name="averageInterruptionTime"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+            <defaultValue>
+              <literalInteger
+                Id="2a02f1b3-ec6f-4931-b0be-23262aafb767"
+                name="DefaultValue"
+                value="-1" />
+            </defaultValue>
+          </property>
+          <property
+            Id="44a79315-79ed-4e5e-81cf-c804c10c2e61"
+            name="groupIp"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16ece737-69ad-43f1-8bf9-1d98a53eba6f"
+                LastKnownName="InetAddress"
+                LastKnownLocation="Package_2032.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6a3477ab-892e-4938-b44a-94b41ee544dc"
+            name="hostID"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a4e443cb-dccb-448e-b27b-e1cc8fcce8bc"
+            name="jitter"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0ef42e48-6e46-49d4-98cb-4c662cd52a40"
+            name="jitterAvg"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8a6126ee-114c-4922-a638-70ed8db04359"
+                LastKnownName="long"
+                LastKnownLocation="Package_2032.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="981ce8e9-8336-496e-906e-b9996363fe12"
+            name="maxInterruptionTime"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="93ee890a-6af2-4270-bc72-95b67923ade0"
+            name="mmrpGroupMac"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <lowerValueInternal>
+              <literalString
+                Id="a656d063-f4e0-47a8-9132-06dae74f41af"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="416aa18c-852c-43db-89a5-740634a473a4"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="9126ab55-d02a-4495-8dfd-b9a5985c70dd"
+                LastKnownName="byte"
+                LastKnownLocation="Package_2032.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e595fca6-7bcb-4aa2-897a-722e4b6723ef"
+            name="mmrpSourceMac"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <lowerValueInternal>
+              <literalString
+                Id="51dd908b-a93f-4b59-9bf5-85904207bcd6"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="2e471289-2ccd-45bf-af07-2bb6333312ad"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="9126ab55-d02a-4495-8dfd-b9a5985c70dd"
+                LastKnownName="byte"
+                LastKnownLocation="Package_2032.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1b1e4f16-d5d4-4107-9eec-24d2187cfd8f"
+            name="numberOfInterruptions"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="af707385-76de-4409-bf2a-983577d99aba"
+            name="packetCount"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8a6126ee-114c-4922-a638-70ed8db04359"
+                LastKnownName="long"
+                LastKnownLocation="Package_2032.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="18b7a91b-08e3-496a-9e05-d52e8fd04e59"
+        name="senderState"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="25b1b585-29f2-40a0-ba19-40fdf840685a"
+            name="MULTIPLE" />
+          <enumerationLiteral
+            Id="81410d26-b63b-439b-9e54-20cf61b65928"
+            name="NETWORK_ERROR" />
+          <enumerationLiteral
+            Id="78277801-4dbe-448b-bf3f-35f415e5151e"
+            name="NONE" />
+          <enumerationLiteral
+            Id="fc331946-ca36-4356-8218-56b04a443eea"
+            name="SINGLE" />
+          <enumerationLiteral
+            Id="9aa0851d-3f37-46d7-841a-cdc278a58f38"
+            name="RECENTLY_CHANGED" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="e892d6a8-b7b5-4779-8c58-107f9ae10ecc"
+        name="Source"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="c29c9546-800b-4db6-915d-6ae5973141dd"
+            name="HIRSCHMANN" />
+          <enumerationLiteral
+            Id="3150e69f-9f8f-4d6c-9a5f-54159ffed1fd"
+            name="MULTICASTOR" />
+          <enumerationLiteral
+            Id="b767d084-91d6-4f27-9a29-3a50af895f63"
+            name="UNDEFINED" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="ff16e029-fd0c-435a-9a1e-470c80da2547"
+        name="Typ"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="f3c22a59-3669-4960-bbaf-249f6665709f"
+            name="CONFIG" />
+          <enumerationLiteral
+            Id="b65fe252-2032-4931-815c-eda8164f8d87"
+            name="L2_RECEIVER" />
+          <enumerationLiteral
+            Id="93b4e9f1-5352-4fb5-a2b4-a5e3103ded36"
+            name="L2_SENDER" />
+          <enumerationLiteral
+            Id="bc5fe109-75cf-4d0d-b95d-6541d66abe6d"
+            name="L3_RECEIVER" />
+          <enumerationLiteral
+            Id="c32d8b82-50f4-4305-b489-dcf782d67ecd"
+            name="L3_SENDER" />
+          <enumerationLiteral
+            Id="45d30bc2-85ba-461b-905d-049d78417c6b"
+            name="UNDEFINED" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="16ece737-69ad-43f1-8bf9-1d98a53eba6f"
+        name="InetAddress" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8a6126ee-114c-4922-a638-70ed8db04359"
+        name="long" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="9126ab55-d02a-4495-8dfd-b9a5985c70dd"
+        name="byte" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

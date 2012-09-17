@@ -128,25 +128,25 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="4ad47fdc-265e-401e-8f14-116d80e2da72"
-        name="LanguageManager"
+        Id="ad6b4b47-af3a-4044-a402-f86b31092445"
+        name="Properties"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false">
-        <ownedAttributesInternal>
-          <property
-            Id="6bb70600-1940-4d57-a372-2de6429825f8"
-            name="languages"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-        </ownedAttributesInternal>
-      </class>
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="6f622b6d-4e7c-4175-ae09-b232aa1749e4"
+        LastKnownName="data"
+        LastKnownLocation="Package_2032.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7e88daf3-7252-489b-aa8d-7920b3c3ce54"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
