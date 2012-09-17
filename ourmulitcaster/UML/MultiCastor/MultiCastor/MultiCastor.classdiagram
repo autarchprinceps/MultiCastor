@@ -822,12 +822,147 @@
                     <referencedTypeMoniker Id="24f2cf25-8872-4e2d-8c57-c7a0b8b58b4c" LastKnownName="long" />
                   </type_NamedElement>
                 </property>
+                <property Id="00a8c65e-5da9-4a69-8d26-406c9368752f" name="packetLength" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b9d60804-25d7-4407-b5e1-3e24091992b9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="b7558542-5653-4b75-bc77-53f2a2ed3f48" name="packetLossPerSecond" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4d29d0db-54b6-4714-a9d4-901c6210b6ac" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c99cc57d-1c9f-4a98-8d69-ec5c8ed0c94c" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="88aa01ca-44a3-4505-85a2-9cd8a92f612a" name="packetLossPerSecondAvg" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="efceb1ba-4529-4ede-930e-f9ba6896dfad" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="24f2cf25-8872-4e2d-8c57-c7a0b8b58b4c" LastKnownName="long" />
+                  </type_NamedElement>
+                </property>
+                <property Id="0c469692-c185-4a54-9f52-b1496c6a55c0" name="packetLostCount" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="66460d22-4157-4a6d-a13f-a9c65d5c9159" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="733d7b75-a2a9-44db-a597-3b15858ca297" name="packetRateAvg" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d05207be-3383-4151-9a75-fb41c7a9924d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="24f2cf25-8872-4e2d-8c57-c7a0b8b58b4c" LastKnownName="long" />
+                  </type_NamedElement>
+                </property>
+                <property Id="b63ee6c9-7090-4406-95a7-87463e563aed" name="packetRateDesired" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="416f721a-aa54-41b2-9961-816ce8b5531c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="dedc42c2-358d-4667-b5ac-be002ab99392" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="df96b85c-ac24-4195-8180-9f4edf3b7376" name="packetRateMeasured" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ab58d653-8841-4c16-9692-6b3c40778979" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="8efae3c9-800e-4c74-a29d-0b41769c1e7e" name="packetSource" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3d2d1878-3bb5-43da-a73f-dcb8352b22bc" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="44ed2f07-6aaa-46cb-a8fd-a54256a22257" LastKnownName="Source" />
+                  </type_NamedElement>
+                  <defaultValue>
+                    <literalString Id="98293d80-7638-4961-bee5-bd316cc5a070" name="DefaultValue" value="Source.UNDEFINED">
+                      <elementDefinition Id="a84d831e-340d-4236-89ed-860bb14fbec6" />
+                    </literalString>
+                  </defaultValue>
+                </property>
+                <property Id="de1ddb08-9929-4113-9bb1-6ec563cc868c" name="randomID" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ec07277b-f81c-412c-ac37-3360844f16a1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="1ee82eee-ba35-44c0-b800-1814d6e16a6f" name="senders" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="531bcbdb-e822-40c3-91bc-b16894cd7044" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="64c12250-2a92-4412-984d-8112d3e9c2ea" LastKnownName="senderState" />
+                  </type_NamedElement>
+                  <defaultValue>
+                    <literalString Id="a5862ca1-794f-4bc4-890a-95721f5ba287" name="DefaultValue" value="senderState.NONE">
+                      <elementDefinition Id="bec0533c-e8d9-43ed-8e91-44439f8f70ef" />
+                    </literalString>
+                  </defaultValue>
+                </property>
+                <property Id="cc97e134-c52f-471e-9cea-e49646a046e5" name="sourceIp" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9a9f50bd-1e7f-4891-bcaf-6e86e52a58cb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b4031f27-7303-476c-ae8b-7688bfe91d3a" LastKnownName="InetAddress" />
+                  </type_NamedElement>
+                </property>
+                <property Id="5ca42be7-42e7-4d46-90fb-feb7e3f6a9e3" name="threadID" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="12fb9666-ce4d-4a8a-ad84-10c467683c0d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="480d7192-a9f8-459a-904c-fae38c54d49d" name="traffic" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d7d82d9e-6f20-4a75-8d85-da692b02a7a3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="4149bd7d-0022-4524-8101-3da7f01f5672" name="trafficAvg" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cbb6a167-b282-4a66-9070-cb0a2389cd53" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="24f2cf25-8872-4e2d-8c57-c7a0b8b58b4c" LastKnownName="long" />
+                  </type_NamedElement>
+                </property>
+                <property Id="7f657f30-fcbd-4d61-a549-35f80292cf1c" name="tt1" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c427dc52-6271-436f-bf40-299ebe690bb0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="89856d84-8155-4fce-a3dd-7016b510d3a8" name="typ" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="11872aa1-d349-4682-a86b-72e839f6aad3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b903e0b5-3f38-40af-9f6c-807cc06879bf" LastKnownName="Typ" />
+                  </type_NamedElement>
+                  <defaultValue>
+                    <literalString Id="535f22c3-b377-42aa-8a0a-bdf47ff48144" name="DefaultValue" value="Typ.UNDEFINED">
+                      <elementDefinition Id="692da9a5-f270-4b8b-96f5-20d56187e25e" />
+                    </literalString>
+                  </defaultValue>
+                </property>
+                <property Id="68c64681-1cde-4e97-828f-c464cf52c12d" name="udpPort" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8b7e34c7-e0e0-4acc-bfc4-3caee161bff9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
               </ownedAttributesInternal>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
             <enumeration Id="e7f52d53-df48-417a-9c58-04228355fd09" name="senderState" isAbstract="false" isLeaf="false">
               <elementDefinition Id="18b7a91b-08e3-496a-9e05-d52e8fd04e59" />
+              <targetEnds>
+                <association Id="666db002-89b5-412f-b914-33902bd51a74" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="0a716a62-c3db-4ec8-9bd4-1a8877b067e5" LastKnownName="MulticastData" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="5279ee4e-75b3-4e51-a9d1-69cee4cfc786" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="aa2f70ce-cc13-48f2-abe9-c298cf66f1a2" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="1414318c-3133-4328-929d-a8c283a15aa0" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="9af4103a-dd3e-486b-9cea-5243af4fbd6a" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="85dd7d0f-260d-4dec-b24a-3e7b1a32679a" />
+                </association>
+              </targetEnds>
               <ownedLiterals>
                 <enumerationLiteral Id="bbc0d5fc-21dd-4a11-afca-a80af61a22ce" name="MULTIPLE">
                   <elementDefinition Id="25b1b585-29f2-40a0-ba19-40fdf840685a" />
@@ -850,6 +985,24 @@
           <packageHasNamedElement>
             <enumeration Id="077bb497-fb78-4d21-96ce-c7702deee84f" name="Source" isAbstract="false" isLeaf="false">
               <elementDefinition Id="e892d6a8-b7b5-4779-8c58-107f9ae10ecc" />
+              <targetEnds>
+                <association Id="94a591db-5c50-4e77-88ae-20341e2612c5" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="0a716a62-c3db-4ec8-9bd4-1a8877b067e5" LastKnownName="MulticastData" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="771edcb4-d8f3-4263-93a1-9b5f34a92642" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="a6ad50e8-89ba-4896-9676-a14f8417c861" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="6796072e-df76-4d09-a2de-239e7c421788" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="67d517f9-e086-4563-a513-0eb87faa17ca" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="76ad5081-63a6-40b2-a5bc-8ac84db38317" />
+                </association>
+              </targetEnds>
               <ownedLiterals>
                 <enumerationLiteral Id="d66bdabe-b3f2-4601-92e3-222a270f4a80" name="HIRSCHMANN">
                   <elementDefinition Id="c29c9546-800b-4db6-915d-6ae5973141dd" />
@@ -866,6 +1019,24 @@
           <packageHasNamedElement>
             <enumeration Id="7f8f4ed9-17c7-4835-8972-17bdedd957a2" name="Typ" isAbstract="false" isLeaf="false">
               <elementDefinition Id="ff16e029-fd0c-435a-9a1e-470c80da2547" />
+              <targetEnds>
+                <association Id="dc9568d7-5032-46f4-a3bb-aa5abab20e37" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="0a716a62-c3db-4ec8-9bd4-1a8877b067e5" LastKnownName="MulticastData" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="24ba35cf-aa13-410c-a0c1-2a1939fc2924" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="61674c0b-6bce-498f-8422-ed495152c2d9" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="f44b275b-81cd-42d1-b3a9-3aad38e69fc7" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="07cc8116-ac63-4512-86b9-8dec648ab177" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="9095304e-64b2-45a2-8930-b25ebc83af29" />
+                </association>
+              </targetEnds>
               <ownedLiterals>
                 <enumerationLiteral Id="50003bc3-bcba-45ef-8cdc-3bb8e0511887" name="CONFIG">
                   <elementDefinition Id="f3c22a59-3669-4960-bbaf-249f6665709f" />
@@ -909,6 +1080,54 @@
     <packageHasNamedElement>
       <referencedType Id="06704e96-d6ae-4344-8e49-2030479d816d" name="byte" isAbstract="false" isLeaf="false" cachedFullName="byte">
         <elementDefinition Id="9126ab55-d02a-4495-8dfd-b9a5985c70dd" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c99cc57d-1c9f-4a98-8d69-ec5c8ed0c94c" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="dedc42c2-358d-4667-b5ac-be002ab99392" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="44ed2f07-6aaa-46cb-a8fd-a54256a22257" name="Source" isAbstract="false" isLeaf="false" cachedFullName="MultiCastor::data::Source">
+        <elementDefinition Id="e892d6a8-b7b5-4779-8c58-107f9ae10ecc" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="64c12250-2a92-4412-984d-8112d3e9c2ea" name="senderState" isAbstract="false" isLeaf="false" cachedFullName="MultiCastor::data::senderState">
+        <elementDefinition Id="18b7a91b-08e3-496a-9e05-d52e8fd04e59" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="699a9db2-8ea0-47be-9f91-00ad841b20a9" name="InetAddress" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="410f1ca4-6bc6-419b-b5f2-ab9f5194df8c" />
+        <targetEnds>
+          <association Id="8257c819-b7c4-4263-9107-5b97bb7e33ec" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="0a716a62-c3db-4ec8-9bd4-1a8877b067e5" LastKnownName="MulticastData" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="460e94b5-fc6d-4e5d-9aca-34dbec8fdfb3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1df1d036-f64f-4e0d-80d2-355dcddcef60" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="121df19c-bca3-485b-9b70-0da4d2d21631" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fc64f7ba-94a6-4d05-a04a-c3236eddb2e8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dfbf2402-d50b-423f-aa93-b4b441637af6" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="b903e0b5-3f38-40af-9f6c-807cc06879bf" name="Typ" isAbstract="false" isLeaf="false" cachedFullName="MultiCastor::data::Typ">
+        <elementDefinition Id="ff16e029-fd0c-435a-9a1e-470c80da2547" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

@@ -116,7 +116,7 @@
       <packageMoniker
         Id="c00bc6fb-6313-4aae-b882-e8491aae25b2"
         LastKnownName="lang"
-        LastKnownLocation="Package_1958.uml" />
+        LastKnownLocation="lang.uml" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -138,7 +138,7 @@
       <packageMoniker
         Id="6f622b6d-4e7c-4175-ae09-b232aa1749e4"
         LastKnownName="data"
-        LastKnownLocation="Package_2032.uml" />
+        LastKnownLocation="data.uml" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -147,6 +147,54 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="410f1ca4-6bc6-419b-b5f2-ab9f5194df8c"
+        name="InetAddress"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="dfbf2402-d50b-423f-aa93-b4b441637af6"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="fe409638-17ef-4175-af9c-89a73078576d"
+              LastKnownName="MulticastData"
+              LastKnownLocation="data.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1df1d036-f64f-4e0d-80d2-355dcddcef60"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fc64f7ba-94a6-4d05-a04a-c3236eddb2e8"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

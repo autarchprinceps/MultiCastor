@@ -78,7 +78,7 @@
               <undefinedTypeMoniker
                 Id="16ece737-69ad-43f1-8bf9-1d98a53eba6f"
                 LastKnownName="InetAddress"
-                LastKnownLocation="Package_2032.uml" />
+                LastKnownLocation="data.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -135,7 +135,7 @@
               <undefinedTypeMoniker
                 Id="8a6126ee-114c-4922-a638-70ed8db04359"
                 LastKnownName="long"
-                LastKnownLocation="Package_2032.uml" />
+                LastKnownLocation="data.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -185,7 +185,7 @@
               <undefinedTypeMoniker
                 Id="9126ab55-d02a-4495-8dfd-b9a5985c70dd"
                 LastKnownName="byte"
-                LastKnownLocation="Package_2032.uml" />
+                LastKnownLocation="data.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -216,7 +216,7 @@
               <undefinedTypeMoniker
                 Id="9126ab55-d02a-4495-8dfd-b9a5985c70dd"
                 LastKnownName="byte"
-                LastKnownLocation="Package_2032.uml" />
+                LastKnownLocation="data.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -254,7 +254,348 @@
               <undefinedTypeMoniker
                 Id="8a6126ee-114c-4922-a638-70ed8db04359"
                 LastKnownName="long"
-                LastKnownLocation="Package_2032.uml" />
+                LastKnownLocation="data.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b9d60804-25d7-4407-b5e1-3e24091992b9"
+            name="packetLength"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4d29d0db-54b6-4714-a9d4-901c6210b6ac"
+            name="packetLossPerSecond"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="efceb1ba-4529-4ede-930e-f9ba6896dfad"
+            name="packetLossPerSecondAvg"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8a6126ee-114c-4922-a638-70ed8db04359"
+                LastKnownName="long"
+                LastKnownLocation="data.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="66460d22-4157-4a6d-a13f-a9c65d5c9159"
+            name="packetLostCount"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d05207be-3383-4151-9a75-fb41c7a9924d"
+            name="packetRateAvg"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8a6126ee-114c-4922-a638-70ed8db04359"
+                LastKnownName="long"
+                LastKnownLocation="data.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="416f721a-aa54-41b2-9961-816ce8b5531c"
+            name="packetRateDesired"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ab58d653-8841-4c16-9692-6b3c40778979"
+            name="packetRateMeasured"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3d2d1878-3bb5-43da-a73f-dcb8352b22bc"
+            name="packetSource"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="e892d6a8-b7b5-4779-8c58-107f9ae10ecc"
+                LastKnownName="Source"
+                LastKnownLocation="data.uml" />
+            </type_NamedElement>
+            <defaultValue>
+              <literalString
+                Id="a84d831e-340d-4236-89ed-860bb14fbec6"
+                name="DefaultValue"
+                value="Source.UNDEFINED" />
+            </defaultValue>
+          </property>
+          <property
+            Id="ec07277b-f81c-412c-ac37-3360844f16a1"
+            name="randomID"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="531bcbdb-e822-40c3-91bc-b16894cd7044"
+            name="senders"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="18b7a91b-08e3-496a-9e05-d52e8fd04e59"
+                LastKnownName="senderState"
+                LastKnownLocation="data.uml" />
+            </type_NamedElement>
+            <defaultValue>
+              <literalString
+                Id="bec0533c-e8d9-43ed-8e91-44439f8f70ef"
+                name="DefaultValue"
+                value="senderState.NONE" />
+            </defaultValue>
+          </property>
+          <property
+            Id="9a9f50bd-1e7f-4891-bcaf-6e86e52a58cb"
+            name="sourceIp"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="16ece737-69ad-43f1-8bf9-1d98a53eba6f"
+                LastKnownName="InetAddress"
+                LastKnownLocation="data.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="12fb9666-ce4d-4a8a-ad84-10c467683c0d"
+            name="threadID"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d7d82d9e-6f20-4a75-8d85-da692b02a7a3"
+            name="traffic"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="cbb6a167-b282-4a66-9070-cb0a2389cd53"
+            name="trafficAvg"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8a6126ee-114c-4922-a638-70ed8db04359"
+                LastKnownName="long"
+                LastKnownLocation="data.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c427dc52-6271-436f-bf40-299ebe690bb0"
+            name="tt1"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="11872aa1-d349-4682-a86b-72e839f6aad3"
+            name="typ"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="ff16e029-fd0c-435a-9a1e-470c80da2547"
+                LastKnownName="Typ"
+                LastKnownLocation="data.uml" />
+            </type_NamedElement>
+            <defaultValue>
+              <literalString
+                Id="692da9a5-f270-4b8b-96f5-20d56187e25e"
+                name="DefaultValue"
+                value="Typ.UNDEFINED" />
+            </defaultValue>
+          </property>
+          <property
+            Id="8b7e34c7-e0e0-4acc-bfc4-3caee161bff9"
+            name="udpPort"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="MultiCastor.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -266,6 +607,45 @@
         name="senderState"
         isAbstract="false"
         isLeaf="false">
+        <targetEnds>
+          <association
+            Id="85dd7d0f-260d-4dec-b24a-3e7b1a32679a"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="fe409638-17ef-4175-af9c-89a73078576d"
+              LastKnownName="MulticastData"
+              LastKnownLocation="data.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aa2f70ce-cc13-48f2-abe9-c298cf66f1a2"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9af4103a-dd3e-486b-9cea-5243af4fbd6a"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedLiterals>
           <enumerationLiteral
             Id="25b1b585-29f2-40a0-ba19-40fdf840685a"
@@ -291,6 +671,45 @@
         name="Source"
         isAbstract="false"
         isLeaf="false">
+        <targetEnds>
+          <association
+            Id="76ad5081-63a6-40b2-a5bc-8ac84db38317"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="fe409638-17ef-4175-af9c-89a73078576d"
+              LastKnownName="MulticastData"
+              LastKnownLocation="data.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a6ad50e8-89ba-4896-9676-a14f8417c861"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="67d517f9-e086-4563-a513-0eb87faa17ca"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedLiterals>
           <enumerationLiteral
             Id="c29c9546-800b-4db6-915d-6ae5973141dd"
@@ -310,6 +729,45 @@
         name="Typ"
         isAbstract="false"
         isLeaf="false">
+        <targetEnds>
+          <association
+            Id="9095304e-64b2-45a2-8930-b25ebc83af29"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="fe409638-17ef-4175-af9c-89a73078576d"
+              LastKnownName="MulticastData"
+              LastKnownLocation="data.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="61674c0b-6bce-498f-8422-ed495152c2d9"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="07cc8116-ac63-4512-86b9-8dec648ab177"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedLiterals>
           <enumerationLiteral
             Id="f3c22a59-3669-4960-bbaf-249f6665709f"
