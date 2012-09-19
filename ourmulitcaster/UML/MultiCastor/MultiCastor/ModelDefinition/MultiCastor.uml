@@ -225,6 +225,12 @@
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="bad80174-ffcc-4bb2-ada0-3a8e137e17ef"
+        LastKnownName="mmrp"
+        LastKnownLocation="Package_1532.uml" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

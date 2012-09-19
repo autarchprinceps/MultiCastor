@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="bad80174-ffcc-4bb2-ada0-3a8e137e17ef"
+  name="mmrp" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="34465e77-8c23-419c-9e57-dad6e6fd0889"
+        name="PcapHandler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="ee1f966b-4b69-4f3d-8f05-23a7d2bb6e59"
+            name="alldevs"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <lowerValueInternal>
+              <literalString
+                Id="4ef851c4-32a1-44eb-9a02-5f3224ec220e"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="8ed7da02-5887-4aff-9021-7c58a958f82a"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="babe9d35-ff13-4e00-aeee-9760f0cf3a8a"
+                LastKnownName="PcapIf"
+                LastKnownLocation="Package_1532.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9fbf108d-ca1d-406c-9352-8ed3358dd926"
+            name="alldevsAdress"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <lowerValueInternal>
+              <literalString
+                Id="c32f4433-76d5-4863-8c6f-cfb7cbc42ce8"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="57474c28-f6e1-49f5-aa33-949aeb5e5b00"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="9a6d3656-7b96-4e2a-bc2b-8e9e497a1157"
+                LastKnownName="byte[6]"
+                LastKnownLocation="Package_1532.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="862ac3fc-c761-4e56-818b-d007b39af0e6"
+            name="byteMACToString"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="83095b39-c82b-427c-b74b-ceb60f89a406"
+                  name="mac"
+                  direction="In"
+                  isUnique="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4c48faa6-39f4-41a7-826c-3d2f3a2a4ecb"
+                      name="Lower"
+                      value="6" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2fcbc259-b395-475a-a380-d69754addee1"
+                      name="Upper"
+                      value="6" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="9126ab55-d02a-4495-8dfd-b9a5985c70dd"
+                      LastKnownName="byte"
+                      LastKnownLocation="data.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="37d9455a-7373-4551-accf-f3afe1c036f2"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="MultiCastor.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1be5b585-a1e9-40c3-8db1-8cd55c19b60f"
+            name="compareMACs"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c16cf2cf-1067-4b1f-8356-66fc559e2555"
+                  name="a"
+                  direction="In"
+                  isUnique="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5fb81b72-cae3-44b8-8015-b8778f7d5f19"
+                      name="Lower"
+                      value="6" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="238d3507-fd62-4aa0-aedf-08a28c4160ea"
+                      name="Upper"
+                      value="6" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="9126ab55-d02a-4495-8dfd-b9a5985c70dd"
+                      LastKnownName="byte"
+                      LastKnownLocation="data.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="628514e7-ff2d-4480-a3c8-74fef8efd419"
+                  name="b"
+                  direction="In"
+                  isUnique="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5546772f-1cd9-407b-84ce-c1df521babb2"
+                      name="Lower"
+                      value="6" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="02579cf0-9453-42ec-84f1-b5b07ea981ee"
+                      name="Upper"
+                      value="6" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="9126ab55-d02a-4495-8dfd-b9a5985c70dd"
+                      LastKnownName="byte"
+                      LastKnownLocation="data.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2aa05a8c-606d-4608-b594-3a4468d8ed5c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="MultiCastor.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2bd66a68-b7d7-4358-b73f-1740114c69fd"
+            name="getPcapInstance"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="027888fd-294a-4e00-9b77-5ce872dc097e"
+                  name="deviceMACAddress"
+                  direction="In"
+                  isUnique="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="bb8c1a60-1af8-4d7b-8ff5-fdc0643667e6"
+                      name="Lower"
+                      value="6" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="615d2f28-b7af-44ce-a655-22027da40a89"
+                      name="Upper"
+                      value="6" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="9126ab55-d02a-4495-8dfd-b9a5985c70dd"
+                      LastKnownName="byte"
+                      LastKnownLocation="data.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0a1a4ed0-7717-499c-8b20-ff65f90196e6"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="82a51baa-b9b5-4c87-871e-81d907c61a72"
+                      LastKnownName="Pcap"
+                      LastKnownLocation="Package_1532.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="28721888-bdb9-42ba-8c39-3f15be45b5e3"
+            name="getDevice"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7b1e0579-c4b7-47a4-928e-3e065506db45"
+                  name="deviceMACAddress"
+                  direction="In"
+                  isUnique="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="842aad2f-3d96-41d2-8d5a-e4f7925a3cd9"
+                      name="Lower"
+                      value="6" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e3022b76-4652-4758-b1a9-fefff214b754"
+                      name="Upper"
+                      value="6" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="9126ab55-d02a-4495-8dfd-b9a5985c70dd"
+                      LastKnownName="byte"
+                      LastKnownLocation="data.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8490e0cf-3dc7-444d-9f3f-fe9acefd786e"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="babe9d35-ff13-4e00-aeee-9760f0cf3a8a"
+                      LastKnownName="PcapIf"
+                      LastKnownLocation="Package_1532.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="babe9d35-ff13-4e00-aeee-9760f0cf3a8a"
+        name="PcapIf" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a977a0c7-b42a-46b4-a506-c752ae4e6c69"
+        name="byte[*]" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="9a6d3656-7b96-4e2a-bc2b-8e9e497a1157"
+        name="byte[6]" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="82a51baa-b9b5-4c87-871e-81d907c61a72"
+        name="Pcap" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
