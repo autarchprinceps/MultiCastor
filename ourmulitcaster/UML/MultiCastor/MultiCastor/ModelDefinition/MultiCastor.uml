@@ -196,6 +196,35 @@
         </targetEnds>
       </class>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="fbf11ed0-9736-4305-85e5-4e2d35659fe2"
+        LastKnownName="interfaces"
+        LastKnownLocation="interfaces.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bf547337-5af5-49fb-95e0-10ef57004c7c"
+        name="Class2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2da97c3c-bd4b-4675-8a5f-4b70fdee1444"
+        name="Runnable"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="06f4188e-095f-42db-9d86-77488723750b"
+        name="Runnable"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

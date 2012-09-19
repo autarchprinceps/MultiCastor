@@ -28,6 +28,9 @@
     <Content Include="ModelDefinition\data.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\interfaces.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="MultiCastor.classdiagram">
       <SubType>Content</SubType>
     </Content>
