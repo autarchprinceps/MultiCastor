@@ -2232,8 +2232,317 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
+                <operation Id="26c42295-ea07-47a3-b072-a9c2aa6a2dc1" name="getPort" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="ff229615-5461-435e-a399-0383f2c814ec" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="daa3c324-4b52-46b1-a345-a03b556f13a8" direction="Return" isUnique="false">
+                        <elementDefinition Id="2e45ab13-5f44-4c25-b04c-68a963766329" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="8458fd0e-3718-4336-bcf3-d06cf126cdf2" name="getSelectedTab" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="3cd3335e-a04b-4afa-a023-297f6b60b60c" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="5beeb22d-7015-456b-8841-a1078ac48641" direction="Return" isUnique="false">
+                        <elementDefinition Id="9b3899d6-e2a0-4437-ae68-afb19765a7c6" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="3866ef1c-264a-4cd0-aabe-4f5fd4fa26cc" name="getSourceAdressIndex" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="e9662b15-d95c-4d14-934e-a26c902fce8f" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="61cd5ccf-254c-4322-8a7b-2c874e6b822b" direction="Return" isUnique="false">
+                        <elementDefinition Id="382099ff-aa74-4128-9fb9-61d7192d4dde" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="fdc8c809-2d63-4b78-85aa-1be4ec1ed183" name="getTyp" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="800666a3-f2af-48b1-9135-66e999b43780" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="d92795a0-5a2b-46f2-a62f-88614be56737" direction="Return" isUnique="false">
+                        <elementDefinition Id="ca83a8d4-9fb4-4235-93af-965c54fe7ebe" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="b903e0b5-3f38-40af-9f6c-807cc06879bf" LastKnownName="Typ" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="07bf8522-c6a7-4a12-89ce-4ec4eb6ee482" name="hideColumn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="0bf108f5-9e59-473d-a3f3-ba9f64cbb193" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="406a40d6-3d7b-4eee-be8d-8ab4413a964d" name="i" direction="In" isUnique="false">
+                        <elementDefinition Id="4f0eafc6-7efe-4713-a520-ebefc770721c" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="737794bf-253b-49b5-bbc2-89c43e5c2c42" name="isActive" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="4e888f7d-8490-492b-bfd4-415760dd7c23" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="813fcbc0-cb85-42b1-aee2-d2b6a6efea0d" direction="Return" isUnique="false">
+                        <elementDefinition Id="91bbeb62-a7b8-4f95-afb6-32edaba2b206" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="6fa6cf6e-363f-4d03-a49e-bc95b1f2f720" LastKnownName="Boolean" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="de3d2466-5cf6-43b3-9855-acba399b00b2" name="isAutoSaveEnabled" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="c1e3b5e2-9780-4493-8044-164c085ca054" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="676db873-0c39-4024-b823-5fd4d8f6bfed" direction="Return" isUnique="false">
+                        <elementDefinition Id="dc0165c9-7634-45c6-988b-7e0a7d519918" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="6fa6cf6e-363f-4d03-a49e-bc95b1f2f720" LastKnownName="Boolean" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="e0334c06-6889-4617-a3f3-51c037c34c85" name="resetColumns" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="6798049f-6cc7-446d-a949-7ff7f56bdf56" />
+                </operation>
+                <operation Id="45a6d481-e915-43b1-9316-9513836c2c8b" name="setActiveButton" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="31d6f4eb-9c53-418e-872e-41a17414b6ce" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="4f269d3e-9421-40e7-8c4a-ead109bfd4d9" name="activeButton" direction="In" isUnique="false">
+                        <elementDefinition Id="b8ac713a-7d59-49ad-884c-514dad827553" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="6fa6cf6e-363f-4d03-a49e-bc95b1f2f720" LastKnownName="Boolean" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="89065287-03b1-4841-8087-8b4027bde6c5" name="setColumnOrder" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="2dcc0371-7c36-461e-85d7-1fc25fc85252" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="4acbe5f4-3b25-4e83-b0ec-90dd58b675f3" name="columnOrder" direction="In" isUnique="false">
+                        <lowerValueInternal>
+                          <literalString Id="dfde5717-58cd-4ee1-ade8-894e25c8161b" name="Lower" value="*">
+                            <elementDefinition Id="f185c6f4-c918-477c-b693-7d01ed492623" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="c536d174-a88a-49df-923f-d854eed74a6a" name="Upper" value="*">
+                            <elementDefinition Id="a39595ef-a676-4d28-aace-efad97a1ba22" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="829820de-0c3f-4654-bb6e-5001690b5675" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="bb1d9eb4-9022-400e-bb0e-f4a36447d507" name="setColumnVisibiltyString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="b356aa37-fd11-4ad3-a669-50f680aa5b41" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="c708560c-e908-41b6-b78f-7fa39fd5aa03" name="columnVisibilityString" direction="In" isUnique="false">
+                        <elementDefinition Id="b9fa5090-8ab1-4578-a495-652fdaefbf21" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="86323850-3c80-4dcb-bba5-a9181d9a4974" name="setGroupadress" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="2ee848d8-8eba-4799-a8f3-0c878b3a7274" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="94ae6420-f099-46d5-af68-8d004682dfc9" name="groupadress" direction="In" isUnique="false">
+                        <elementDefinition Id="bc724a81-ad02-4c0e-88d8-4a2003ac60e4" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="685d81ac-5e2e-4657-b171-cdc6654615c6" name="setIsAutoSaveEnabled" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="c9e90136-dfc4-4773-a60e-6287f867fa9e" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="3351fe69-cee4-446e-b5a1-305f6b4cd57e" name="isAutoSaveEnabled" direction="In" isUnique="false">
+                        <elementDefinition Id="05decbd0-bf52-4252-bed7-00ec7dcf287f" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="68efc78b-e4ca-43bf-9c15-21695dbe712a" name="setNetworkInterface" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="14d1675f-bb6a-4646-90b3-baec6c1da4cb" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="c261e4cf-dd6f-458e-93c9-088e97e5f540" name="selectedInterface" direction="In" isUnique="false">
+                        <elementDefinition Id="b934e07a-685c-4abe-9c06-03b1e68f8c23" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="d22c70b7-1470-4301-a3a7-4080e0b61480" name="setPacketlength" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="fe02c171-97e5-46fa-a7b8-294e0cfaeb8f" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="9c58ebca-bfd1-4704-9605-318eaa3803cd" name="packetlength" direction="In" isUnique="false">
+                        <elementDefinition Id="56e0a820-4551-4048-b7c4-8a7bb456c3a3" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="fbfef69a-a615-445c-ac2d-ac45a0829adf" name="setPacketrate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="f8d364c9-de04-463e-a298-d385c6531040" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="f1d2dfe4-853e-40be-9cb8-7a6a06056b42" name="packetrate" direction="In" isUnique="false">
+                        <elementDefinition Id="ee3b29f3-500d-47d0-a93b-c940d7206c91" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="52436672-1c43-4ad7-bee4-5aa23c7b7edf" name="setSelectedRowsArray" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="f4e5ade2-f9fb-4186-be90-d8609e27873e" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="4da8d723-3857-4b5f-87eb-d6ad63d4c38b" name="selectedRowsArray" direction="In" isUnique="false">
+                        <lowerValueInternal>
+                          <literalString Id="cb2ef823-e74f-4f46-abdd-213a2ea64bec" name="Lower" value="*">
+                            <elementDefinition Id="8d53b41f-b745-4730-adbf-750c4a21fa66" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="d1655ef6-6079-4d4d-b076-09b95fdbcc85" name="Upper" value="*">
+                            <elementDefinition Id="b26114fa-a42c-49c4-a73a-c3bf91aa782c" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="8ae6b7ed-3966-4bfd-8b5d-f46d5394631c" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="dd4b9d7d-af99-4793-990b-9212238de9de" name="setSelectedTab" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="c5f1e492-2246-4716-b876-08d48544e354" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="97562749-d421-4d1e-be45-30a18c6fcbfb" name="typ" direction="In" isUnique="false">
+                        <elementDefinition Id="5fde1fd2-18f3-43e4-9d72-07ce412e19b5" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="b903e0b5-3f38-40af-9f6c-807cc06879bf" LastKnownName="Typ" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="87ba62d2-d4c9-4dcd-ae63-144998193be0" name="setTt1" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="92fe27c2-f984-49e6-a85f-3cf494628482" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="acd1d13b-e277-4096-8503-f72c307de059" name="tt1" direction="In" isUnique="false">
+                        <elementDefinition Id="5a577465-8c18-4fe4-a6ea-f81427a766c3" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="7dadcf51-c198-495c-b80c-1c67b25180d9" name="toString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="4bdd0f3c-8071-4e8d-8b7a-d26d9733ee04" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="aa565eaa-cd5a-400f-b798-34585c300e71" direction="Return" isUnique="false">
+                        <elementDefinition Id="5d533719-93a0-43d0-a0ba-a9b606684b0a" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
               </ownedOperationsInternal>
             </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="eec4cc15-0a19-4123-b843-f6f3ab849595" name="GUIData" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="e4c7864c-8402-41a8-846d-93a7168f4f3f" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <enumeration Id="702db2eb-20ef-4f90-9d5b-5d7bd3cde9d6" name="TabState" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="0dd0644c-d790-499e-822b-da7b4df22262" />
+              <targetEnds>
+                <association Id="93616db4-54d3-427e-80b0-7a449a27de2a" isDerived="false" sourceEndRoleName="TabState" targetEndRoleName="GUIData" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="eec4cc15-0a19-4123-b843-f6f3ab849595" LastKnownName="GUIData" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="6fbbb0b8-7d48-45be-b667-1275a1c27d73" name="TabState" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="2b6e017f-7b2b-4ccb-baab-e4dc09b79818" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="ce07dfbb-2263-4bb0-98a2-7fc2b08f1734" name="GUIData" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="d7a09535-7f1f-4eb9-ab3d-ae0908153f38" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="2e0638e5-890e-4e47-b15e-7fe2eb9bc056" />
+                </association>
+              </targetEnds>
+              <ownedLiterals>
+                <enumerationLiteral Id="50d3e152-1f95-44df-802e-99139988dd63" name="invisible">
+                  <elementDefinition Id="a4c88abc-330c-47ea-a47c-09ea649b19e1" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="cd65b61b-1d47-42aa-a5f2-8cb33180fc7a" name="selected">
+                  <elementDefinition Id="c90a09b8-3517-4891-b602-297f4f0b0add" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="35958b89-8b3b-4448-a11e-b9540d4d4f8a" name="visible">
+                  <elementDefinition Id="0a5619dc-469e-4a79-9f4f-f2119702668a" />
+                </enumerationLiteral>
+              </ownedLiterals>
+            </enumeration>
           </packageHasNamedElement>
         </packagedElements>
       </package>
