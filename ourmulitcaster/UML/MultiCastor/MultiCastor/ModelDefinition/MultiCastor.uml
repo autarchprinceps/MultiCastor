@@ -266,6 +266,14 @@
         LastKnownName="model"
         LastKnownLocation="model.uml" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="53d0d6ac-d711-4f41-a568-187386d3bfda"
+        name="Exception"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

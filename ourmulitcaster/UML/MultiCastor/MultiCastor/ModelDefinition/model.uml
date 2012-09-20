@@ -2044,5 +2044,45 @@
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b58991d2-d440-468a-8224-c62b92d4d7f1"
+        name="InvalidNetworkAdapterException"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="6fe6b83b-8290-49f7-845b-0ddf2db938fb"
+            isSubstitutable="false">
+            <classMoniker
+              Id="53d0d6ac-d711-4f41-a568-187386d3bfda"
+              LastKnownName="Exception"
+              LastKnownLocation="MultiCastor.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="653afe23-29ee-4978-8484-c9bf01b8a7f1"
+            name="serialVersionUID"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8a6126ee-114c-4922-a638-70ed8db04359"
+                LastKnownName="long"
+                LastKnownLocation="data.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
   </packagedElements>
 </package>

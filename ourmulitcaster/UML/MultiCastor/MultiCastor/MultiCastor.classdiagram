@@ -934,7 +934,7 @@
                     <referencedTypeMoniker Id="24f2cf25-8872-4e2d-8c57-c7a0b8b58b4c" LastKnownName="long" />
                   </type_NamedElement>
                 </property>
-                <property Id="7f657f30-fcbd-4d61-a549-35f80292cf1c" name="tt1" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="7f657f30-fcbd-4d61-a549-35f80292cf1c" name="ttl" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="c427dc52-6271-436f-bf40-299ebe690bb0" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
@@ -1364,7 +1364,7 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="66ad6d81-957c-40eb-9719-04092ddef9f2" name="getTt1" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="66ad6d81-957c-40eb-9719-04092ddef9f2" name="getTtl" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="c8942d1a-e5fe-4185-bfe9-cc43e10d13fe" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
@@ -1764,11 +1764,11 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="dd242392-f850-4cff-9090-3dbc0bf10586" name="setTt1" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="dd242392-f850-4cff-9090-3dbc0bf10586" name="setTtl" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="1517bc58-9f56-4c74-b511-0d53d7719c48" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="b6a49512-a86b-4294-a46b-3d16ceb15e75" name="tt1" direction="In" isUnique="false">
+                      <parameter Id="b6a49512-a86b-4294-a46b-3d16ceb15e75" name="ttl" direction="In" isUnique="false">
                         <elementDefinition Id="caa2a47e-06b8-44cd-b841-2fa71947233e" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
@@ -2081,7 +2081,7 @@
                     <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
                   </type_NamedElement>
                 </property>
-                <property Id="12de74cc-3e13-4d9d-b419-2895d2f24c00" name="tt1" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="12de74cc-3e13-4d9d-b419-2895d2f24c00" name="ttl" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="9205205d-9f4d-4948-9089-14f5eda86195" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
@@ -2494,11 +2494,11 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="87ba62d2-d4c9-4dcd-ae63-144998193be0" name="setTt1" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="87ba62d2-d4c9-4dcd-ae63-144998193be0" name="setTtl" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="92fe27c2-f984-49e6-a85f-3cf494628482" />
                   <ownedParameters>
                     <operationHasOwnedParameters>
-                      <parameter Id="acd1d13b-e277-4096-8503-f72c307de059" name="tt1" direction="In" isUnique="false">
+                      <parameter Id="acd1d13b-e277-4096-8503-f72c307de059" name="ttl" direction="In" isUnique="false">
                         <elementDefinition Id="5a577465-8c18-4fe4-a6ea-f81427a766c3" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
@@ -2563,7 +2563,7 @@
                     <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
                   </type_NamedElement>
                 </property>
-                <property Id="b2eedcc9-91e8-466b-a42a-44cdd437381a" name="Default_L3_Tt1" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="b2eedcc9-91e8-466b-a42a-44cdd437381a" name="Default_L3_Ttl" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="a7030e5e-ac4f-4e11-86f7-528ccdd9ad42" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
@@ -4896,7 +4896,7 @@
                     <referencedTypeMoniker Id="b4031f27-7303-476c-ae8b-7688bfe91d3a" LastKnownName="InetAddress" />
                   </type_NamedElement>
                 </property>
-                <property Id="51bdebe7-6f54-477b-a4ef-19cb83cf5cce" name="tt1" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="51bdebe7-6f54-477b-a4ef-19cb83cf5cce" name="ttl" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="b13e78fa-83af-43d4-9c24-9f0dd6dbe1b6" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="06704e96-d6ae-4344-8e49-2030479d816d" LastKnownName="byte" />
@@ -5772,6 +5772,25 @@
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="0c9929b7-80af-4e49-9143-b961ef6d70a0" name="InvalidNetworkAdapterException" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="b58991d2-d440-468a-8224-c62b92d4d7f1" />
+              <generalsInternal>
+                <generalization Id="8e0ba61a-b729-47ea-96ea-69104c708f8e" isSubstitutable="false">
+                  <classMoniker Id="773ac043-d78b-44b3-981f-c5fc0fe861cd" LastKnownName="Exception" />
+                  <elementDefinition Id="6fe6b83b-8290-49f7-845b-0ddf2db938fb" />
+                </generalization>
+              </generalsInternal>
+              <ownedAttributesInternal>
+                <property Id="fcb10a3e-e54a-42cc-aef0-92dd3c5b76df" name="serialVersionUID" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="653afe23-29ee-4978-8484-c9bf01b8a7f1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="24f2cf25-8872-4e2d-8c57-c7a0b8b58b4c" LastKnownName="long" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
@@ -5815,6 +5834,11 @@
         <elementDefinition Id="920f6c91-206b-47a6-b457-2ec1dc8cdbab" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="773ac043-d78b-44b3-981f-c5fc0fe861cd" name="Exception" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="53d0d6ac-d711-4f41-a568-187386d3bfda" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <templateSignatureProxies>
     <templateSignatureProxy Id="4bda404f-7e2b-4ea8-880f-505fb47016a6" parameters="" isLeaf="false" signatureId="0bb58ced-2533-4394-838d-623fcbb935f6">
