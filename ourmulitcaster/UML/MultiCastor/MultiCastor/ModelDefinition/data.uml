@@ -576,7 +576,7 @@
           </property>
           <property
             Id="c427dc52-6271-436f-bf40-299ebe690bb0"
-            name="tt1"
+            name="ttl"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -1376,7 +1376,7 @@
           </operation>
           <operation
             Id="c8942d1a-e5fe-4185-bfe9-cc43e10d13fe"
-            name="getTt1"
+            name="getTtl"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -2128,7 +2128,7 @@
           </operation>
           <operation
             Id="1517bc58-9f56-4c74-b511-0d53d7719c48"
-            name="setTt1"
+            name="setTtl"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -2138,7 +2138,7 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="caa2a47e-06b8-44cd-b841-2fa71947233e"
-                  name="tt1"
+                  name="ttl"
                   direction="In"
                   isUnique="false">
                   <type_NamedElement>
@@ -2776,7 +2776,7 @@
           </property>
           <property
             Id="9205205d-9f4d-4948-9089-14f5eda86195"
-            name="tt1"
+            name="ttl"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -3532,7 +3532,7 @@
           </operation>
           <operation
             Id="92fe27c2-f984-49e6-a85f-3cf494628482"
-            name="setTt1"
+            name="setTtl"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -3542,7 +3542,7 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="5a577465-8c18-4fe4-a6ea-f81427a766c3"
-                  name="tt1"
+                  name="ttl"
                   direction="In"
                   isUnique="false">
                   <type_NamedElement>
@@ -3700,7 +3700,7 @@
           </property>
           <property
             Id="a7030e5e-ac4f-4e11-86f7-528ccdd9ad42"
-            name="Default_L3_Tt1"
+            name="Default_L3_Ttl"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
