@@ -260,6 +260,12 @@
         </ownedRedefinableTemplateSignatureInternal>
       </class>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="04e7375d-bb07-407a-b8b5-ee7084a5846c"
+        LastKnownName="model"
+        LastKnownLocation="model.uml" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

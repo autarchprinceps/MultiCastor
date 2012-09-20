@@ -34,6 +34,9 @@
     <Content Include="ModelDefinition\mmrp.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\model.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="MultiCastor.classdiagram">
       <SubType>Content</SubType>
     </Content>
