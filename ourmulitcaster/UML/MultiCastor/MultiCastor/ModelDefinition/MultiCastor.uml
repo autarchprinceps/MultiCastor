@@ -229,7 +229,36 @@
       <packageMoniker
         Id="bad80174-ffcc-4bb2-ada0-3a8e137e17ef"
         LastKnownName="mmrp"
-        LastKnownLocation="Package_1532.uml" />
+        LastKnownLocation="mmrp.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ea5e650d-0e27-4bf3-8246-95bb71815033"
+        name="PcapPacketHandler"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="0bb58ced-2533-4394-838d-623fcbb935f6"
+            parameters=""
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="d965509e-4a3a-4ea8-b7c0-44e919f02a68">
+                <ownedParameterableElement>
+                  <class
+                    Id="5f970cb8-569a-4174-a3dc-ac71022535f8"
+                    name="T"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
