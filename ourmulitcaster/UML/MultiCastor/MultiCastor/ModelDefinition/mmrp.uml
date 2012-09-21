@@ -1137,9 +1137,9 @@
         isActiveClass="false">
         <suppliersInternal>
           <dependency
-            Id="13c051d7-336c-4ee9-b9bc-f9363beaf402">
+            Id="218f07b3-9de8-4037-929d-90a6931dcb7f">
             <interfaceMoniker
-              Id="06f4188e-095f-42db-9d86-77488723750b"
+              Id="a5fd9be4-e41e-419d-84e3-e9de2ca00cc4"
               LastKnownName="Runnable"
               LastKnownLocation="MultiCastor.uml" />
           </dependency>

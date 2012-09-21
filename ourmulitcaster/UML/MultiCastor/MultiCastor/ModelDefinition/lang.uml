@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="c00bc6fb-6313-4aae-b882-e8491aae25b2"
   name="lang" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -643,6 +643,45 @@
               LastKnownLocation="MultiCastor.uml" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association
+            Id="9b76ff8a-e22a-45ee-ada8-ffb4cab5a1be"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9b877f9f-6449-4877-9238-9987cdc89a7e"
+              LastKnownName="xmlParser"
+              LastKnownLocation="model.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f5263994-0058-4114-bf1d-47ccfed956df"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b3744f7d-0b76-4c28-be6d-70625c522f50"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="6bb70600-1940-4d57-a372-2de6429825f8"
@@ -709,7 +748,7 @@
               <classMoniker
                 Id="4ad47fdc-265e-401e-8f14-116d80e2da72"
                 LastKnownName="LanguageManager"
-                LastKnownLocation="Package_1958.uml" />
+                LastKnownLocation="lang.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -776,7 +815,7 @@
                     <classMoniker
                       Id="4ad47fdc-265e-401e-8f14-116d80e2da72"
                       LastKnownName="LanguageManager"
-                      LastKnownLocation="Package_1958.uml" />
+                      LastKnownLocation="lang.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>

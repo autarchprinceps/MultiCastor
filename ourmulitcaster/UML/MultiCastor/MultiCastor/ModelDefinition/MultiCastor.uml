@@ -274,6 +274,13 @@
         isLeaf="false"
         isActiveClass="false" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="a5fd9be4-e41e-419d-84e3-e9de2ca00cc4"
+        name="Runnable"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
