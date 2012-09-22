@@ -7197,6 +7197,59 @@
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="566057bc-c032-466c-97a7-0509ff74bb5b" name="WrongConfigurationException" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="d0775536-e118-4ac9-bc79-e6af1d68f9cd" />
+              <generalsInternal>
+                <generalization Id="91ad768b-8ad6-40f4-8185-13ad93424fba" isSubstitutable="false">
+                  <classMoniker Id="773ac043-d78b-44b3-981f-c5fc0fe861cd" LastKnownName="Exception" />
+                  <elementDefinition Id="2d1af3a3-bfc1-4f0f-b13b-3f7bae65b05d" />
+                </generalization>
+              </generalsInternal>
+              <ownedAttributesInternal>
+                <property Id="e9edbb54-c002-4a6c-951f-eaaa618edac7" name="serialVersionUID" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="72c672cf-3ef9-4121-a26f-9433ab4b116a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="24f2cf25-8872-4e2d-8c57-c7a0b8b58b4c" LastKnownName="long" />
+                  </type_NamedElement>
+                </property>
+                <property Id="f74efac3-50d8-437c-829f-771657a2d0a9" name="errorMessage" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="10b185ee-c131-44c1-97ec-e5fb25504d9f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="cc6f258b-857f-411c-9809-3434a79d944c" name="getErrorMessage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="d6f6f0f2-3988-4278-adf4-546ad00d8ac3" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="8f6e64ee-1e5a-4e39-b5b9-a152e6b83118" direction="Return" isUnique="false">
+                        <elementDefinition Id="08f4e8a3-b137-4216-94a0-8b24bce4c51c" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="51ee4c0c-9b77-4ffc-9683-f7daf1ce7456" name="setErrorMessage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="e923b289-cb42-497a-8455-bb78f1bcc5ce" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="cc235324-aea3-4d71-a37d-37c5b2751934" name="errorMessage" direction="In" isUnique="false">
+                        <elementDefinition Id="5f7848d7-e946-423e-aaec-31d78b6d920f" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
