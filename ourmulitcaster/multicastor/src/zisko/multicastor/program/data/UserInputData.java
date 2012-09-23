@@ -1,4 +1,4 @@
-package zisko.multicastor.program.data;
+﻿package zisko.multicastor.program.data;
 
 import java.util.ArrayList;
 import zisko.multicastor.program.data.MulticastData.Typ;
