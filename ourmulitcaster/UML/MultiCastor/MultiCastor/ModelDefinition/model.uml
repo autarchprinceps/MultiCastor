@@ -32,43 +32,6 @@
         </generalsInternal>
         <targetEnds>
           <association
-            Id="ebbd38c1-a9ee-48b3-9772-0cc2eba361de"
-            isDerived="false"
-            sourceEndRoleName=""
-            targetEndRoleName=""
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="4ad47fdc-265e-401e-8f14-116d80e2da72"
-              LastKnownName="LanguageManager"
-              LastKnownLocation="lang.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="7b97cf6d-335c-4de7-a21d-334f534c153a"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="90a36136-f4e4-47be-a336-3c658c71b14f"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
             Id="92371103-0fbc-4bc4-93a3-a209ddbd8c99"
             isDerived="false"
             sourceEndRoleName=""
@@ -718,45 +681,6 @@
               LastKnownLocation="interfaces.uml" />
           </generalization>
         </generalsInternal>
-        <targetEnds>
-          <association
-            Id="3ce90051-7399-46c6-a49f-abfed1debb7b"
-            isDerived="false"
-            sourceEndRoleName=""
-            targetEndRoleName=""
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="4ad47fdc-265e-401e-8f14-116d80e2da72"
-              LastKnownName="LanguageManager"
-              LastKnownLocation="lang.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="d03c1e19-1134-4e28-b2c4-cbf58a0bb330"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="0c9a978e-e323-43f7-a006-b1627a48b4cf"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="508c45e0-2c37-43e3-b9eb-3c4af42fd3b8"

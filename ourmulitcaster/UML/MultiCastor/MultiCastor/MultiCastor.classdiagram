@@ -604,6 +604,38 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="3381f1cb-07cb-481d-a5aa-414e09a67469" />
                 </association>
+                <association Id="e506d911-551a-4f65-8247-b1b16a58776a" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="f1bb72c2-5769-40a7-a30e-0be4403b2da6" LastKnownName="MulticastReceiver" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="68bb0806-c626-4155-b9b8-9f3e8dadf6bd" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="21b16baa-17e4-43de-a9a2-b14cd1c18e62" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="7f9ebdde-9cbb-45ee-abbe-72696e30a58a" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="531cb0f2-9bb7-44a4-9469-6aa2f8b5754b" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="ccfd9524-7f93-4153-a20a-b60ea641836b" />
+                </association>
+                <association Id="098d60fc-eeab-438f-a11f-40f75387d9f5" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="11e8235f-b97b-4212-acfa-bb27a89f19ab" LastKnownName="MulticastSender" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="f7052223-fcb7-4d37-8ac6-c1bae93bb99c" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="bcf30fbe-276b-4a85-99a4-89ced19445fe" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="a883bdfa-18d7-407b-b605-c69dfcf92870" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="b526550c-adfa-40f7-85f2-49dfc2101113" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="a95f41cd-6167-429b-ad72-a02cbf4362a6" />
+                </association>
               </targetEnds>
               <ownedAttributesInternal>
                 <property Id="3ebf0773-ddae-48d5-8670-6d3fdcbecc76" name="languages" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -4863,22 +4895,6 @@
                 </generalization>
               </generalsInternal>
               <targetEnds>
-                <association Id="21b952cf-2e55-4fe0-ad5e-9bacd9446606" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="45d1a7ae-d900-4b0f-be10-16703ddfa66d" LastKnownName="LanguageManager" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="d99c3581-e560-4ba1-86af-fe01015ad742" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="7b97cf6d-335c-4de7-a21d-334f534c153a" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="f9f4e3ff-8dae-4f9c-95ea-c9d1c537d4b7" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="90a36136-f4e4-47be-a336-3c658c71b14f" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="ebbd38c1-a9ee-48b3-9772-0cc2eba361de" />
-                </association>
                 <association Id="13f69992-8836-46a3-9c4b-fafcbab58c1b" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
                   <enumerationMoniker Id="acc50cf0-e681-45d0-bd64-46802c6b824b" LastKnownName="sendingMethod" />
                   <relationshipOwnedElementsInternal>
@@ -5136,24 +5152,6 @@
                   <elementDefinition Id="9dd68d24-d275-45c4-a84a-ff0dc60a37a0" />
                 </generalization>
               </generalsInternal>
-              <targetEnds>
-                <association Id="73ab492a-1ed5-44e3-8b71-bb34fa657df1" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="45d1a7ae-d900-4b0f-be10-16703ddfa66d" LastKnownName="LanguageManager" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="94fc3be2-460b-4638-beb9-50ab6fed2eb2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="d03c1e19-1134-4e28-b2c4-cbf58a0bb330" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="b4b7beff-f2e7-4daa-851b-633017af1671" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="0c9a978e-e323-43f7-a006-b1627a48b4cf" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="3ce90051-7399-46c6-a49f-abfed1debb7b" />
-                </association>
-              </targetEnds>
               <ownedAttributesInternal>
                 <property Id="f62de4b8-2d55-4cf9-bad5-69663177265c" name="packetAnalyzer" visibility="Package" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="508c45e0-2c37-43e3-b9eb-3c4af42fd3b8" />
