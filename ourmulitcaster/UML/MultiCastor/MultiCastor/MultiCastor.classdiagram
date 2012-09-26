@@ -8148,6 +8148,11 @@
         <elementDefinition Id="35a510a5-a7e8-49af-a56f-559a5f22c619" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="65c5ce6e-ff3c-41d4-8ab4-025e4f4378dc" name="contoller">
+        <elementDefinition Id="31589738-6090-4165-a08d-92a6b0f4f10c" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
   </packagedElements>
   <templateSignatureProxies>
     <templateSignatureProxy Id="4bda404f-7e2b-4ea8-880f-505fb47016a6" parameters="" isLeaf="false" signatureId="0bb58ced-2533-4394-838d-623fcbb935f6">

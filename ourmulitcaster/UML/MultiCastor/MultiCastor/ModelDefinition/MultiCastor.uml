@@ -491,6 +491,12 @@
         Id="35a510a5-a7e8-49af-a56f-559a5f22c619"
         name="MMRPSender" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="31589738-6090-4165-a08d-92a6b0f4f10c"
+        LastKnownName="contoller"
+        LastKnownLocation="controller.uml" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
