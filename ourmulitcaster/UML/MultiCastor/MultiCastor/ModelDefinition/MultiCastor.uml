@@ -466,13 +466,13 @@
                     <literalString
                       Id="f2e7a232-5608-47e0-ac92-6b4fe3006560"
                       name="Lower"
-                      value="4" />
+                      value="5" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
                       Id="5e169ebf-6994-4a24-8353-7feded1aa008"
                       name="Upper"
-                      value="4" />
+                      value="5" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -612,6 +612,83 @@
           </redefinableTemplateSignature>
         </ownedRedefinableTemplateSignatureInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="137b18db-8fc7-4c98-8b28-ffbfc6e49be6"
+        name="ActionListener"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="b7394e58-7e04-46e3-9bf8-1ce65c62e88c"
+        name="MouseListener"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="e162f0b2-c668-439a-b46e-72ac4542669d"
+        name="ChangeListener"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="dec19089-378e-4cd1-a1bd-115b85b63d6b"
+        name="ComponentListener"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="0f5f9125-cfde-49b5-9c10-6124a9c8c091"
+        name="ListSelectionListener"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="3662826c-5775-449f-97ec-cef3e46f932b"
+        name="KeyListener"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="2baa648a-c7f5-4bdc-87e8-797295fa6999"
+        name="ItemListener"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="fca612f6-dc1b-4dd7-8e5e-1d4a406fd8fe"
+        name="ContainerListener"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="0085c502-e020-4c88-a078-04002ce5acd3"
+        name="DocumentListener"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="9832db08-7995-4392-a20e-ce49a62f00fd"
+        name="TableColumnModelListener"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="a0ca2371-b216-4232-a988-b3febf8c7d93"
+        name="WindowListener"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
