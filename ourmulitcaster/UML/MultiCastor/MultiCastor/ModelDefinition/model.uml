@@ -242,7 +242,8 @@
           </property>
           <property
             Id="c57e6349-bdd3-4c87-a81b-ce0ce13851a6"
-            name="!-myPacketBuilder"
+            name="myPacketBuilder"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
