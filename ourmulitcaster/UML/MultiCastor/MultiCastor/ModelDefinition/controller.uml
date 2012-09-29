@@ -142,6 +142,472 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="691d4fd3-38a5-45b0-89c1-26969299d5b5"
+            name="xm_parser"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="f1ff9f78-d11a-4f96-a855-792e916a972d"
+                LastKnownName="XMLParserInterface"
+                LastKnownLocation="controller.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b5be2a41-4f4b-408a-b7bb-da5684e35812"
+            name="!view_controller"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="675e14ce-47f8-455d-bad6-b84e097c8491"
+                LastKnownName="ViewController"
+                LastKnownLocation="model.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4a9788b2-bad4-425f-a3f7-4c77832b874b"
+            name="userInputData"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <lowerValueInternal>
+              <literalString
+                Id="d154729d-b58e-4213-beec-007d48e01534"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="395f6772-21c5-4c34-ac55-27c8f0612682"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="3ed80d21-1560-40dd-82c6-61e169df2749"
+                LastKnownName="UserInputData"
+                LastKnownLocation="controller.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="13da231d-2a47-46bb-b979-7dd9e430a827"
+            name="updateTask"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="085ebddc-0a1b-4271-b3de-ada10dccac55"
+                LastKnownName="UpdateTask"
+                LastKnownLocation="controller.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a3337a1a-6eb7-47e9-b62d-34fa651b9f12"
+            name="timers"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <lowerValueInternal>
+              <literalString
+                Id="b0922574-4fb9-4055-b5e4-200bf73337ab"
+                name="Lower"
+                value="3" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="a61f60ff-ef12-4257-a1a5-bebf10b1aa11"
+                name="Upper"
+                value="3" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="cb2e04bb-d555-4ca3-9ca7-624e610c21a7"
+                LastKnownName="Timer"
+                LastKnownLocation="controller.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9b23e349-e336-4540-8409-0e6e2a3c5981"
+            name="threads"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="baabf225-57b2-4e4d-87ed-36b81a54f85f"
+                LastKnownName="Map"
+                LastKnownLocation="model.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9eb36df8-4a65-4433-a9af-5d883c44be3e"
+            name="threadCounter"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="53d35f30-63bc-47cb-89cd-aff5c0058da0"
+            name="regularLoggingTask"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="22889bef-f3e4-48a8-96c9-126ca28796dc"
+                LastKnownName="RegularLoggingTask"
+                LastKnownLocation="controller.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9ae8008d-cdc5-48ef-81e9-4cf8cfa0f9ba"
+            name="printTableIntervall"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="106fc69a-1e01-4cfa-aed8-3b59aee92e5e"
+            name="mcMap_sender_l3"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="baabf225-57b2-4e4d-87ed-36b81a54f85f"
+                LastKnownName="Map"
+                LastKnownLocation="model.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3b714455-78e4-441c-acb3-e44b752a185e"
+            name="mcMap_sender_l2"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="baabf225-57b2-4e4d-87ed-36b81a54f85f"
+                LastKnownName="Map"
+                LastKnownLocation="model.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c7e95d4b-b959-4533-91d3-c61ddb47d0b9"
+            name="mcMap_receiver_l3"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="baabf225-57b2-4e4d-87ed-36b81a54f85f"
+                LastKnownName="Map"
+                LastKnownLocation="model.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6db12cf9-1245-4dbb-ad46-a9e58220920b"
+            name="mcMap_receiver_l2"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="baabf225-57b2-4e4d-87ed-36b81a54f85f"
+                LastKnownName="Map"
+                LastKnownLocation="model.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7a456708-ec90-4d60-870e-c76f4ccaaeb9"
+            name="mc_sender_l3"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <lowerValueInternal>
+              <literalString
+                Id="b456fc03-0a10-4637-9f86-70b0e1e00a3f"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="e9e2d606-bd93-4a67-9783-4c55f81b43fd"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="66213f8d-b144-4430-bca6-bc46a4a599d7"
+                LastKnownName="MulticastData"
+                LastKnownLocation="interfaces.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3d822aa9-68f7-47fe-8466-364168e6e405"
+            name="mc_sender_l2"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <lowerValueInternal>
+              <literalString
+                Id="2d25539f-8f4a-4511-9425-ccb0972371b9"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="94143a26-76e5-4092-9879-3879998244bb"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="66213f8d-b144-4430-bca6-bc46a4a599d7"
+                LastKnownName="MulticastData"
+                LastKnownLocation="interfaces.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="93b49e29-a7dc-4648-9799-6953776b3e21"
+            name="mc_receiver_l3"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <lowerValueInternal>
+              <literalString
+                Id="c149288e-fe01-4267-a880-c6654ef05956"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="4949180f-1ba0-4b0d-bd03-a61ef843c20a"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="66213f8d-b144-4430-bca6-bc46a4a599d7"
+                LastKnownName="MulticastData"
+                LastKnownLocation="interfaces.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="83aa9b27-5583-4d27-9882-7576b031d3f1"
+            name="mc_receiver_l2"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <lowerValueInternal>
+              <literalString
+                Id="60a26d7e-7365-40d4-9f50-d4f3d6679fd0"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="5fb4fd0c-8bd4-4f99-ba8a-7a65e9f4b705"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="66213f8d-b144-4430-bca6-bc46a4a599d7"
+                LastKnownName="MulticastData"
+                LastKnownLocation="interfaces.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="dab174a2-5f54-481f-8bda-2602140fc88f"
+            name="logger"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="1e024b08-6c10-474a-82cb-8ede853dc4ca"
+                LastKnownName="Logger"
+                LastKnownLocation="model.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="15caee7a-8822-4383-8324-c4bfdb5c589d"
+            name="lastConfigs"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <lowerValueInternal>
+              <literalString
+                Id="dceb5dca-c1af-43ba-8bff-2341fc4b17f0"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="660468ba-ed24-4bb9-862c-2ff23eb094d4"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="03556659-e2b7-477c-835d-0e5016b85bdd"
+            name="lang"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="3e930aea-81e3-4b39-8580-ec559a846af7"
+                LastKnownName="LanguageManager"
+                LastKnownLocation="model.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="a6812d25-731d-4c3e-a499-581f10bab8e7"
@@ -1068,6 +1534,21 @@
       <undefinedType
         Id="8fa7a331-acb1-4288-940d-5b5185f3c1f7"
         name="Index" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="085ebddc-0a1b-4271-b3de-ada10dccac55"
+        name="UpdateTask" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="cb2e04bb-d555-4ca3-9ca7-624e610c21a7"
+        name="Timer" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="22889bef-f3e4-48a8-96c9-126ca28796dc"
+        name="RegularLoggingTask" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

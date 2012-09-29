@@ -439,6 +439,56 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="02c5e3b6-a8ff-4d2f-8e01-234feb2065f1"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="28d05416-6615-4876-8e54-2900dcfa2d15"
+              LastKnownName="MulticastController"
+              LastKnownLocation="controller.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0a55a864-2643-45eb-9820-80c991bc976b"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f2e7a232-5608-47e0-ac92-6b4fe3006560"
+                      name="Lower"
+                      value="4" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="5e169ebf-6994-4a24-8353-7feded1aa008"
+                      name="Upper"
+                      value="4" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c4fb8e24-c132-4020-8930-0c8114b08d5d"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedRedefinableTemplateSignatureInternal>
           <redefinableTemplateSignature
@@ -496,6 +546,72 @@
         Id="31589738-6090-4165-a08d-92a6b0f4f10c"
         LastKnownName="contoller"
         LastKnownLocation="controller.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6b9acfc9-ce61-491e-862c-006156c78c50"
+        name="Class3"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <signatures>
+          <templateBinding
+            Id="c50cf478-8ef8-4247-9c2c-ded5b1406fa9">
+            <redefinableTemplateSignatureMoniker
+              Id="13b42688-64f3-4e05-b1bd-bf7bc5de1a28"
+              LastKnownLocation="MultiCastor.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="3440809d-f2fb-4874-99ae-78c1ed67f224">
+                  <actuals>
+                    <classMoniker
+                      Id="fe409638-17ef-4175-af9c-89a73078576d"
+                      LastKnownName="MulticastData"
+                      LastKnownLocation="data.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="08bbe82c-764b-45b9-93dd-8f3dc5b8d87d"
+                      LastKnownLocation="MultiCastor.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="1541bd33-0342-497a-8585-2c5b132c99dc"
+            parameters=""
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="6c45da64-2158-4226-92c2-d2d272c12deb">
+                <ownedParameterableElement>
+                  <class
+                    Id="80ac5d5b-0e6e-49d4-83e5-c24cc6f0bc51"
+                    name="KeyType"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+              <classifierTemplateParameter
+                Id="3548e3af-3b64-42af-ab4f-5166407ec053">
+                <ownedParameterableElement>
+                  <class
+                    Id="d1571f9e-d8c7-46ba-84e5-ee1a88c569f4"
+                    name="ValueType"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

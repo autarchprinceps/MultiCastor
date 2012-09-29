@@ -3117,6 +3117,24 @@
           <packageHasNamedElement>
             <Interface Id="1411ae2b-0e78-47fc-91d3-4cf638d608af" name="XMLParserInterface" isAbstract="false" isLeaf="false">
               <elementDefinition Id="18814613-fb82-440d-b88f-22a273307eea" />
+              <targetEnds>
+                <association Id="8182c1ce-72f6-481f-a628-a219863dae6b" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="a58c35bb-8330-4f40-87e0-d344489dc792" LastKnownName="MulticastController" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="2f8d247d-66d5-4e74-b889-eeb01b99d380" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="70b13f9b-9ec7-48b4-afee-49755c622238" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="b0ec51c1-b019-4510-8d4f-ad7dbb329ec6" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="cf275c2c-938c-45db-8241-c4efc049f911" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="c5ae7f9b-be18-4700-a774-e712e7db2c2b" />
+                </association>
+              </targetEnds>
               <ownedOperations>
                 <operation Id="e9480eaa-7488-40dc-8804-addb6e9af594" name="loadGUIConfig" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="9a59b853-8db8-405b-bb62-96ba6bf4af09" />
@@ -8098,6 +8116,32 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="cb489205-f9a1-4e29-b683-80f2930e628d" />
           </association>
+          <association Id="6905195d-d441-4311-9df4-626c51443755" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="a58c35bb-8330-4f40-87e0-d344489dc792" LastKnownName="MulticastController" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b9fc0fdb-616b-4ece-b32a-d0705410cb02" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="480a2567-ca16-4229-8b6e-37d89a803110" name="Lower" value="4">
+                      <elementDefinition Id="f2e7a232-5608-47e0-ac92-6b4fe3006560" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="0627cf97-6222-4d47-8e1a-0eaa71350dc0" name="Upper" value="4">
+                      <elementDefinition Id="5e169ebf-6994-4a24-8353-7feded1aa008" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="0a55a864-2643-45eb-9820-80c991bc976b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0fbfdf83-6a1a-44d6-a4c9-e8b79bff60fa" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c4fb8e24-c132-4020-8930-0c8114b08d5d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="02c5e3b6-a8ff-4d2f-8e01-234feb2065f1" />
+          </association>
         </targetEnds>
         <ownedRedefinableTemplateSignatureInternal>
           <redefinableTemplateSignature Id="a6b2c5d4-4a53-41a2-aedd-a3f7bf92b803" parameters="" isLeaf="false">
@@ -8234,6 +8278,198 @@
           <packageHasNamedElement>
             <class Id="a58c35bb-8330-4f40-87e0-d344489dc792" name="MulticastController" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="28d05416-6615-4876-8e54-2900dcfa2d15" />
+              <ownedAttributesInternal>
+                <property Id="e224de7a-c4b3-4f3f-8f02-effea96a7c18" name="xm_parser" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="691d4fd3-38a5-45b0-89c1-26969299d5b5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c4d6c7e1-c813-406c-a750-53a39bfb3e4c" LastKnownName="XMLParserInterface" />
+                  </type_NamedElement>
+                </property>
+                <property Id="042fb7f1-5d03-4f06-9abb-86f6969dda64" name="!view_controller" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b5be2a41-4f4b-408a-b7bb-da5684e35812" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+                  </type_NamedElement>
+                </property>
+                <property Id="b118c9d4-7925-46cf-b5f0-0302d5e84552" name="userInputData" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="60bd241a-da24-4874-8cb3-7734c5d3e9fc" name="Lower" value="*">
+                      <elementDefinition Id="d154729d-b58e-4213-beec-007d48e01534" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="035e25bd-12a0-4084-aa8e-749b0c378caf" name="Upper" value="*">
+                      <elementDefinition Id="395f6772-21c5-4c34-ac55-27c8f0612682" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="4a9788b2-bad4-425f-a3f7-4c77832b874b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="aafbe170-c6df-4a86-bf42-518e7866625f" LastKnownName="UserInputData" />
+                  </type_NamedElement>
+                </property>
+                <property Id="e5343bc8-0ec8-4db2-912a-6b4afa828ec2" name="updateTask" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="13da231d-2a47-46bb-b979-7dd9e430a827" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cf9616d3-8b9b-4fec-b7cf-af00c7abd258" LastKnownName="UpdateTask" />
+                  </type_NamedElement>
+                </property>
+                <property Id="8e4effe3-0670-494e-bc1b-ca9085fb9225" name="timers" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="9078021a-4884-4b94-8130-d889ede7b5fb" name="Lower" value="3">
+                      <elementDefinition Id="b0922574-4fb9-4055-b5e4-200bf73337ab" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="fa0af812-3338-49c8-a6b9-63c0ee7a5b52" name="Upper" value="3">
+                      <elementDefinition Id="a61f60ff-ef12-4257-a1a5-bebf10b1aa11" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="a3337a1a-6eb7-47e9-b62d-34fa651b9f12" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3860e97e-0bbd-4f32-aad1-97a151e38307" LastKnownName="Timer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="e8e0b726-5aff-4c73-b211-73f6fa8c439c" name="threads" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9b23e349-e336-4540-8409-0e6e2a3c5981" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4921ef70-1085-4def-9333-5463b3c690c2" LastKnownName="Map" />
+                  </type_NamedElement>
+                </property>
+                <property Id="da6572d2-3fb9-44b6-be2d-934c414d6384" name="threadCounter" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9eb36df8-4a65-4433-a9af-5d883c44be3e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="5d6e9767-b29c-4834-9ee5-8d3f365441d0" name="regularLoggingTask" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="53d35f30-63bc-47cb-89cd-aff5c0058da0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="45bf3848-2886-406e-b062-0b5238cd130b" LastKnownName="RegularLoggingTask" />
+                  </type_NamedElement>
+                </property>
+                <property Id="68d82497-94e3-43f3-9bea-a1a2447c3900" name="printTableIntervall" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9ae8008d-cdc5-48ef-81e9-4cf8cfa0f9ba" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="faa88d1e-20af-44de-a27d-32a66405a34f" name="mcMap_sender_l3" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="106fc69a-1e01-4cfa-aed8-3b59aee92e5e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4921ef70-1085-4def-9333-5463b3c690c2" LastKnownName="Map" />
+                  </type_NamedElement>
+                </property>
+                <property Id="9f49f8aa-8990-4b7e-b602-4606e2d357d8" name="mcMap_sender_l2" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3b714455-78e4-441c-acb3-e44b752a185e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4921ef70-1085-4def-9333-5463b3c690c2" LastKnownName="Map" />
+                  </type_NamedElement>
+                </property>
+                <property Id="0b07211f-9ff7-4bd4-abff-5846b7e3bfbe" name="mcMap_receiver_l3" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c7e95d4b-b959-4533-91d3-c61ddb47d0b9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4921ef70-1085-4def-9333-5463b3c690c2" LastKnownName="Map" />
+                  </type_NamedElement>
+                </property>
+                <property Id="00d67908-fbc7-420a-b1fe-d18a21a73aeb" name="mcMap_receiver_l2" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6db12cf9-1245-4dbb-ad46-a9e58220920b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4921ef70-1085-4def-9333-5463b3c690c2" LastKnownName="Map" />
+                  </type_NamedElement>
+                </property>
+                <property Id="ab089eb3-cdc8-4b79-bda6-13dfbe418381" name="mc_sender_l3" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="828a61e7-442a-48be-ba43-8a86f2ae0dfc" name="Lower" value="*">
+                      <elementDefinition Id="b456fc03-0a10-4637-9f86-70b0e1e00a3f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="8d625221-1b8f-4acc-9b62-50405a4b9827" name="Upper" value="*">
+                      <elementDefinition Id="e9e2d606-bd93-4a67-9783-4c55f81b43fd" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="7a456708-ec90-4d60-870e-c76f4ccaaeb9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ee08aa43-094a-4f64-a5a8-b24522bc1b77" LastKnownName="MulticastData" />
+                  </type_NamedElement>
+                </property>
+                <property Id="44757a8b-c3b9-4ab9-be79-a5469b3aeef7" name="mc_sender_l2" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="fb1e2e97-09b9-446b-8c9c-5632b72f05bf" name="Lower" value="*">
+                      <elementDefinition Id="2d25539f-8f4a-4511-9425-ccb0972371b9" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="7c70aa00-8c18-48fa-9715-f30f15a1e94e" name="Upper" value="*">
+                      <elementDefinition Id="94143a26-76e5-4092-9879-3879998244bb" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="3d822aa9-68f7-47fe-8466-364168e6e405" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ee08aa43-094a-4f64-a5a8-b24522bc1b77" LastKnownName="MulticastData" />
+                  </type_NamedElement>
+                </property>
+                <property Id="5351de1c-674a-4365-8028-54b42f34e039" name="mc_receiver_l3" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="d859ef8f-9157-4b34-9407-1d7336489c46" name="Lower" value="*">
+                      <elementDefinition Id="c149288e-fe01-4267-a880-c6654ef05956" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="391c5aac-b204-4281-b9db-38cd2f523ce2" name="Upper" value="*">
+                      <elementDefinition Id="4949180f-1ba0-4b0d-bd03-a61ef843c20a" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="93b49e29-a7dc-4648-9799-6953776b3e21" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ee08aa43-094a-4f64-a5a8-b24522bc1b77" LastKnownName="MulticastData" />
+                  </type_NamedElement>
+                </property>
+                <property Id="ebcace05-a72e-4011-9601-85b2ebcbb5f7" name="mc_receiver_l2" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="61b0f779-5960-4182-bb24-d48593910190" name="Lower" value="*">
+                      <elementDefinition Id="60a26d7e-7365-40d4-9f50-d4f3d6679fd0" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="933fb5fd-2881-4c25-9b31-f2903610bc97" name="Upper" value="*">
+                      <elementDefinition Id="5fb4fd0c-8bd4-4f99-ba8a-7a65e9f4b705" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="83aa9b27-5583-4d27-9882-7576b031d3f1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ee08aa43-094a-4f64-a5a8-b24522bc1b77" LastKnownName="MulticastData" />
+                  </type_NamedElement>
+                </property>
+                <property Id="a71ecaab-d401-4616-85a6-570181054a2a" name="logger" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="dab174a2-5f54-481f-8bda-2602140fc88f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cb7099a0-bab1-4bd4-95eb-971cc4dd5cf5" LastKnownName="Logger" />
+                  </type_NamedElement>
+                </property>
+                <property Id="574202ca-ddd5-4da9-87f7-f97836b71175" name="lastConfigs" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="36c91293-590f-4152-8c6a-1fc309417491" name="Lower" value="*">
+                      <elementDefinition Id="dceb5dca-c1af-43ba-8bff-2341fc4b17f0" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="df9030e0-2d63-4c46-a7a4-2bf3e4ec0917" name="Upper" value="*">
+                      <elementDefinition Id="660468ba-ed24-4bb9-862c-2ff23eb094d4" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="15caee7a-8822-4383-8324-c4bfdb5c589d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+                <property Id="c082b67f-7ece-4096-99b6-a615067ec347" name="lang" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="03556659-e2b7-477c-835d-0e5016b85bdd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="74742476-54e0-46cb-8029-55c9217cc421" LastKnownName="LanguageManager" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
               <ownedOperationsInternal>
                 <operation Id="151060bd-9a08-45d1-a8db-abc1c9fb8c4d" name="saveCompleteConfig" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="a6812d25-731d-4c3e-a499-581f10bab8e7" />
@@ -8773,6 +9009,21 @@
     <packageHasNamedElement>
       <referencedType Id="1ee4e9e9-24ad-4256-aa69-2cd947ef3b99" name="Index" isAbstract="false" isLeaf="false" cachedFullName="Index">
         <elementDefinition Id="8fa7a331-acb1-4288-940d-5b5185f3c1f7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cf9616d3-8b9b-4fec-b7cf-af00c7abd258" name="UpdateTask" isAbstract="false" isLeaf="false" cachedFullName="UpdateTask">
+        <elementDefinition Id="085ebddc-0a1b-4271-b3de-ada10dccac55" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3860e97e-0bbd-4f32-aad1-97a151e38307" name="Timer" isAbstract="false" isLeaf="false" cachedFullName="Timer">
+        <elementDefinition Id="cb2e04bb-d555-4ca3-9ca7-624e610c21a7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="45bf3848-2886-406e-b062-0b5238cd130b" name="RegularLoggingTask" isAbstract="false" isLeaf="false" cachedFullName="RegularLoggingTask">
+        <elementDefinition Id="22889bef-f3e4-48a8-96c9-126ca28796dc" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
