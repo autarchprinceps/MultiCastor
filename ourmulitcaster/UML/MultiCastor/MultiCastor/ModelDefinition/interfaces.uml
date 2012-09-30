@@ -10,6 +10,45 @@
         name="XMLParserInterface"
         isAbstract="false"
         isLeaf="false">
+        <targetEnds>
+          <association
+            Id="c5ae7f9b-be18-4700-a774-e712e7db2c2b"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="28d05416-6615-4876-8e54-2900dcfa2d15"
+              LastKnownName="MulticastController"
+              LastKnownLocation="controller.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="70b13f9b-9ec7-48b4-afee-49755c622238"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cf275c2c-938c-45db-8241-c4efc049f911"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedOperations>
           <operation
             Id="9a59b853-8db8-405b-bb62-96ba6bf4af09"

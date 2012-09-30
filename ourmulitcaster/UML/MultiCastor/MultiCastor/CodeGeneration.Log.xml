@@ -6,46 +6,46 @@
   <MessageClass Name="Error" Label="Fehler" Option="Fehler anzeigen" />
   <MessageClass Name="Property" Label="Eigenschaft" Option="Metadaten anzeigen" />
   <MessageClass Name="Diagnostic" Label="Meldung" Option="Diagnosemeldungen anzeigen" />
-  <Message Timestamp="2012-09-21T23:59:39" Importance="High" Text="Die Codegenerierung oder Texttransformation wurde gestartet." />
-  <Message Timestamp="2012-09-21T23:59:40" Importance="Diagnostic" Text="Name = ClassTemplate" />
-  <Message Timestamp="2012-09-21T23:59:40" Importance="Diagnostic" Text="Überschreiben = True" />
-  <Message Timestamp="2012-09-21T23:59:40" Importance="Diagnostic" Text="ProjectPath = ..\MultiCastorLib\MultiCastorLib.csproj" />
-  <Message Timestamp="2012-09-21T23:59:40" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
-  <Message Timestamp="2012-09-21T23:59:40" Importance="Diagnostic" Text="TargetName = {Name}" />
-  <Message Timestamp="2012-09-21T23:59:40" Importance="Diagnostic" Text="TemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
-  <Message Timestamp="2012-09-21T23:59:40" Importance="Diagnostic" Text="ResolvedTemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
-  <Message Timestamp="2012-09-21T23:59:40" Importance="Medium" Text="Die Textvorlagenbindung von MultiCastor: 'ClassTemplate' wendet ClassTemplate.t4 an für: 'MultiCastor::model::PacketAnalyzer' -  (Class) " />
-  <Error Timestamp="2012-09-21T23:59:40" Importance="High" Text="Die folgende Vorlagendatei-Pfadeigenschaft für 'MultiCastor::model::PacketAnalyzer' -  (Class) ist nicht vorhanden: E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
-  <Message Timestamp="2012-09-21T23:59:40" Importance="Diagnostic" Text="'MultiCastor::model::PacketAnalyzer' -  (Class): Es wurde keine Datei erstellt, da die 'AppliesToElement'-Methode der Vorlage 'ClassTemplate.t4' als 'false' ausgewertet wurde." />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="Name = EnumTemplate" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="Überschreiben = True" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="ProjectPath = ..\MultiCastorLib\MultiCastorLib.csproj" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="TargetName = {Name}" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="TemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="ResolvedTemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Medium" Text="Die Textvorlagenbindung von MultiCastor: 'EnumTemplate' wendet EnumTemplate.t4 an für: 'MultiCastor::model::PacketAnalyzer' -  (Class) " />
-  <Error Timestamp="2012-09-21T23:59:44" Importance="High" Text="Die folgende Vorlagendatei-Pfadeigenschaft für 'MultiCastor::model::PacketAnalyzer' -  (Class) ist nicht vorhanden: E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="'MultiCastor::model::PacketAnalyzer' -  (Class): Es wurde keine Datei erstellt, da die 'AppliesToElement'-Methode der Vorlage 'EnumTemplate.t4' als 'false' ausgewertet wurde." />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="Name = InterfaceTemplate" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="Überschreiben = True" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="ProjectPath = ..\MultiCastorLib\MultiCastorLib.csproj" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="TargetName = {Name}" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="TemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="ResolvedTemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Medium" Text="Die Textvorlagenbindung von MultiCastor: 'InterfaceTemplate' wendet InterfaceTemplate.t4 an für: 'MultiCastor::model::PacketAnalyzer' -  (Class) " />
-  <Error Timestamp="2012-09-21T23:59:44" Importance="High" Text="Die folgende Vorlagendatei-Pfadeigenschaft für 'MultiCastor::model::PacketAnalyzer' -  (Class) ist nicht vorhanden: E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="'MultiCastor::model::PacketAnalyzer' -  (Class): Es wurde keine Datei erstellt, da die 'AppliesToElement'-Methode der Vorlage 'InterfaceTemplate.t4' als 'false' ausgewertet wurde." />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="Name = StructTemplate" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="Überschreiben = True" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="ProjectPath = ..\MultiCastorLib\MultiCastorLib.csproj" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="TargetName = {Name}" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="TemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="ResolvedTemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Medium" Text="Die Textvorlagenbindung von MultiCastor: 'StructTemplate' wendet StructTemplate.t4 an für: 'MultiCastor::model::PacketAnalyzer' -  (Class) " />
-  <Error Timestamp="2012-09-21T23:59:44" Importance="High" Text="Die folgende Vorlagendatei-Pfadeigenschaft für 'MultiCastor::model::PacketAnalyzer' -  (Class) ist nicht vorhanden: E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="Diagnostic" Text="'MultiCastor::model::PacketAnalyzer' -  (Class): Es wurde keine Datei erstellt, da die 'AppliesToElement'-Methode der Vorlage 'StructTemplate.t4' als 'false' ausgewertet wurde." />
-  <Message Timestamp="2012-09-21T23:59:44" Importance="High" Text="Die Codegenerierung ist abgeschlossen. Fehler: 4. Warnungen: 0." />
+  <Message Timestamp="2012-09-26T14:52:21" Importance="High" Text="Die Codegenerierung oder Texttransformation wurde gestartet." />
+  <Message Timestamp="2012-09-26T14:52:21" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2012-09-26T14:52:21" Importance="Diagnostic" Text="Überschreiben = True" />
+  <Message Timestamp="2012-09-26T14:52:21" Importance="Diagnostic" Text="ProjectPath = ..\MultiCastorLib\MultiCastorLib.csproj" />
+  <Message Timestamp="2012-09-26T14:52:21" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2012-09-26T14:52:21" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2012-09-26T14:52:21" Importance="Diagnostic" Text="TemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2012-09-26T14:52:21" Importance="Diagnostic" Text="ResolvedTemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2012-09-26T14:52:21" Importance="Medium" Text="Die Textvorlagenbindung von MultiCastor: 'ClassTemplate' wendet ClassTemplate.t4 an für: 'MultiCastor::contoller::MulticastController' -  (Class) " />
+  <Error Timestamp="2012-09-26T14:52:21" Importance="High" Text="Die folgende Vorlagendatei-Pfadeigenschaft für 'MultiCastor::contoller::MulticastController' -  (Class) ist nicht vorhanden: E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2012-09-26T14:52:21" Importance="Diagnostic" Text="'MultiCastor::contoller::MulticastController' -  (Class): Es wurde keine Datei erstellt, da die 'AppliesToElement'-Methode der Vorlage 'ClassTemplate.t4' als 'false' ausgewertet wurde." />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="Name = EnumTemplate" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="Überschreiben = True" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="ProjectPath = ..\MultiCastorLib\MultiCastorLib.csproj" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="TemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="ResolvedTemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Medium" Text="Die Textvorlagenbindung von MultiCastor: 'EnumTemplate' wendet EnumTemplate.t4 an für: 'MultiCastor::contoller::MulticastController' -  (Class) " />
+  <Error Timestamp="2012-09-26T14:52:24" Importance="High" Text="Die folgende Vorlagendatei-Pfadeigenschaft für 'MultiCastor::contoller::MulticastController' -  (Class) ist nicht vorhanden: E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="'MultiCastor::contoller::MulticastController' -  (Class): Es wurde keine Datei erstellt, da die 'AppliesToElement'-Methode der Vorlage 'EnumTemplate.t4' als 'false' ausgewertet wurde." />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="Name = InterfaceTemplate" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="Überschreiben = True" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="ProjectPath = ..\MultiCastorLib\MultiCastorLib.csproj" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="TemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="ResolvedTemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Medium" Text="Die Textvorlagenbindung von MultiCastor: 'InterfaceTemplate' wendet InterfaceTemplate.t4 an für: 'MultiCastor::contoller::MulticastController' -  (Class) " />
+  <Error Timestamp="2012-09-26T14:52:24" Importance="High" Text="Die folgende Vorlagendatei-Pfadeigenschaft für 'MultiCastor::contoller::MulticastController' -  (Class) ist nicht vorhanden: E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="'MultiCastor::contoller::MulticastController' -  (Class): Es wurde keine Datei erstellt, da die 'AppliesToElement'-Methode der Vorlage 'InterfaceTemplate.t4' als 'false' ausgewertet wurde." />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="Überschreiben = True" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="ProjectPath = ..\MultiCastorLib\MultiCastorLib.csproj" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="TemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="ResolvedTemplateFilePath = E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Medium" Text="Die Textvorlagenbindung von MultiCastor: 'StructTemplate' wendet StructTemplate.t4 an für: 'MultiCastor::contoller::MulticastController' -  (Class) " />
+  <Error Timestamp="2012-09-26T14:52:24" Importance="High" Text="Die folgende Vorlagendatei-Pfadeigenschaft für 'MultiCastor::contoller::MulticastController' -  (Class) ist nicht vorhanden: E:\APPLICATIONS\VISUAL STUDIO 2012\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="Diagnostic" Text="'MultiCastor::contoller::MulticastController' -  (Class): Es wurde keine Datei erstellt, da die 'AppliesToElement'-Methode der Vorlage 'StructTemplate.t4' als 'false' ausgewertet wurde." />
+  <Message Timestamp="2012-09-26T14:52:24" Importance="High" Text="Die Codegenerierung ist abgeschlossen. Fehler: 4. Warnungen: 0." />
 </Log>

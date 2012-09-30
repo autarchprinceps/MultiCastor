@@ -3,4 +3,9 @@ MultiCastor
 
 multicast testing tool
 
-GPL
+
+License
+-------
+
+GPLv3
+http://gplv3.fsf.org/
