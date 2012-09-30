@@ -5281,6 +5281,45 @@
               LastKnownLocation="MultiCastor.uml" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association
+            Id="5c4a483a-ff82-4e7e-bdd4-1148b28a9535"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="28d05416-6615-4876-8e54-2900dcfa2d15"
+              LastKnownName="MulticastController"
+              LastKnownLocation="controller.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7e54233e-3e39-47e6-903f-5078aa298fd8"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e89658a6-27e1-4be1-a0a1-484245e31cd0"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="5b0444e8-f745-44a1-aa6e-ab643fdcac90"
