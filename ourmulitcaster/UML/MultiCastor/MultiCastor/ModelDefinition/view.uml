@@ -1279,5 +1279,36 @@
         Id="955c2ebc-56e0-43df-9905-216ef85bf3c8"
         name="Graphics" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cb9a2fee-9cab-43b3-9ce8-46a8ed665df2"
+        name="PanelAbout"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="df9466ba-fa50-4a0d-9998-fb0097d56538"
+            isSubstitutable="false">
+            <classMoniker
+              Id="d652e9d7-5df7-41e0-add1-971273551c58"
+              LastKnownName="JPanel"
+              LastKnownLocation="MultiCastor.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="8cd8565a-2d64-4b73-a84d-2ed3bda6def9"
+            name="mc_developers"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
   </packagedElements>
 </package>

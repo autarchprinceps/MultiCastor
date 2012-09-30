@@ -11323,6 +11323,22 @@
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="1fd83359-052b-4323-9265-8cb88a682c63" name="PanelAbout" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="cb9a2fee-9cab-43b3-9ce8-46a8ed665df2" />
+              <generalsInternal>
+                <generalization Id="8ae278ab-51cb-49c2-baab-127d218d53b5" isSubstitutable="false">
+                  <classMoniker Id="7c1e540c-a821-4e10-9b41-d4f878e4cf21" LastKnownName="JPanel" />
+                  <elementDefinition Id="df9466ba-fa50-4a0d-9998-fb0097d56538" />
+                </generalization>
+              </generalsInternal>
+              <ownedAttributesInternal>
+                <property Id="c7e4df54-0085-472b-abf1-b28fd7c3a7dc" name="mc_developers" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8cd8565a-2d64-4b73-a84d-2ed3bda6def9" />
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
