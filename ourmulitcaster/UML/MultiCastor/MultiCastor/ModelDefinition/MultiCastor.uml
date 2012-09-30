@@ -698,8 +698,8 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="2a677d7d-25ed-4f1f-ab06-98d99ee44f74"
-        name="PanelGraph"
+        Id="d652e9d7-5df7-41e0-add1-971273551c58"
+        name="JPanel"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
