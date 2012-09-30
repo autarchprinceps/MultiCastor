@@ -690,6 +690,20 @@
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="87b72a69-844f-4332-be87-550e6d5abf90"
+        LastKnownName="View"
+        LastKnownLocation="view.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2a677d7d-25ed-4f1f-ab06-98d99ee44f74"
+        name="PanelGraph"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

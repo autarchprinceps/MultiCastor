@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="87b72a69-844f-4332-be87-550e6d5abf90"
+  name="View" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="5396d295-0348-4b00-956e-dfd91b6303f4"
+        name="ReceiverGraph"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="a332e2c2-25ec-4884-80f9-50d78e980838"
+            isSubstitutable="false">
+            <classMoniker
+              Id="2a677d7d-25ed-4f1f-ab06-98d99ee44f74"
+              LastKnownName="PanelGraph"
+              LastKnownLocation="MultiCastor.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="03df8fc0-65a0-496d-81f8-aa9e6984e31d"
+            name="jitterRB"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="5f02297d-4a25-4679-85ea-8da712cc1259"
+                LastKnownName="JRadioButton"
+                LastKnownLocation="view.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="961fed96-a7e8-4a1c-b073-98775f487665"
+        name="valueType"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="24e72a8d-f3bf-4b19-ae15-47a865863c7e"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="5396d295-0348-4b00-956e-dfd91b6303f4"
+              LastKnownName="ReceiverGraph"
+              LastKnownLocation="view.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5acc4f78-9c3e-4773-8975-2bc5fd3e4639"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8b013695-503f-4a7c-844a-fabd6463acf9"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="f4f0e5a0-3afc-404a-8eb7-31803b1e80de"
+            name="JITTER" />
+          <enumerationLiteral
+            Id="de9d2c8f-ff2a-4e2e-a552-4f6b59cff072"
+            name="LOSTPKT" />
+          <enumerationLiteral
+            Id="ef9ce165-f67f-421d-a88d-7450da370712"
+            name="MEASPKT" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="5f02297d-4a25-4679-85ea-8da712cc1259"
+        name="JRadioButton" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

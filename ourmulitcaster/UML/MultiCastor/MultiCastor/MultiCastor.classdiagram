@@ -10732,6 +10732,76 @@
         <elementDefinition Id="017592f4-ff49-4130-9990-5ebd2a6a56d0" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="7c189c8a-137f-4a94-ab65-a05d8cb0b718" name="View">
+        <elementDefinition Id="87b72a69-844f-4332-be87-550e6d5abf90" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="777eabfc-a833-4b71-b3a3-dfdbbdf503f4" name="ReceiverGraph" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="5396d295-0348-4b00-956e-dfd91b6303f4" />
+              <generalsInternal>
+                <generalization Id="3e0ff856-28b9-43ae-8a5c-720c1d38db52" isSubstitutable="false">
+                  <classMoniker Id="95d89b3a-8245-4998-9d17-016bb505b5fc" LastKnownName="PanelGraph" />
+                  <elementDefinition Id="a332e2c2-25ec-4884-80f9-50d78e980838" />
+                </generalization>
+              </generalsInternal>
+              <ownedAttributesInternal>
+                <property Id="135c1f69-56c0-4bc5-8ed0-efe01110df1c" name="jitterRB" visibility="Package" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="03df8fc0-65a0-496d-81f8-aa9e6984e31d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="97f29f73-b86e-4f22-bfca-6b9074deed75" LastKnownName="JRadioButton" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <enumeration Id="eb001a95-b94f-44e9-847d-e55d9277a817" name="valueType" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="961fed96-a7e8-4a1c-b073-98775f487665" />
+              <targetEnds>
+                <association Id="266bd46e-d55d-49b1-8d14-daa02d8cbb66" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="777eabfc-a833-4b71-b3a3-dfdbbdf503f4" LastKnownName="ReceiverGraph" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="f547d52b-e261-4eba-97ca-272c3e3a3a4c" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="5acc4f78-9c3e-4773-8975-2bc5fd3e4639" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="7c5f7964-a33e-4f0e-9130-57d598b6f6d9" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="8b013695-503f-4a7c-844a-fabd6463acf9" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="24e72a8d-f3bf-4b19-ae15-47a865863c7e" />
+                </association>
+              </targetEnds>
+              <ownedLiterals>
+                <enumerationLiteral Id="8c5b32f1-fc00-414b-a14f-14710d3dfc32" name="JITTER">
+                  <elementDefinition Id="f4f0e5a0-3afc-404a-8eb7-31803b1e80de" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="882433b5-dfa5-4ea8-ad6d-41aa601840ec" name="LOSTPKT">
+                  <elementDefinition Id="de9d2c8f-ff2a-4e2e-a552-4f6b59cff072" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="e77ee3c9-7d87-4b90-a519-a616cab4454f" name="MEASPKT">
+                  <elementDefinition Id="ef9ce165-f67f-421d-a88d-7450da370712" />
+                </enumerationLiteral>
+              </ownedLiterals>
+            </enumeration>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="95d89b3a-8245-4998-9d17-016bb505b5fc" name="PanelGraph" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2a677d7d-25ed-4f1f-ab06-98d99ee44f74" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="97f29f73-b86e-4f22-bfca-6b9074deed75" name="JRadioButton" isAbstract="false" isLeaf="false" cachedFullName="JRadioButton">
+        <elementDefinition Id="5f02297d-4a25-4679-85ea-8da712cc1259" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <templateSignatureProxies>
     <templateSignatureProxy Id="4bda404f-7e2b-4ea8-880f-505fb47016a6" parameters="" isLeaf="false" signatureId="0bb58ced-2533-4394-838d-623fcbb935f6">
