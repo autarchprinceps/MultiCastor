@@ -515,7 +515,6 @@ public class ViewController implements ActionListener, MouseListener,
 	@Override
 	public void componentAdded(final ContainerEvent e) {
 		addKeyAndContainerListenerToAll(e.getChild());
-
 	}
 
 	/**
@@ -543,7 +542,6 @@ public class ViewController implements ActionListener, MouseListener,
 	@Override
 	public void componentRemoved(final ContainerEvent e) {
 		removeKeyAndContainerListenerToAll(e.getChild());
-
 	}
 
 	/**

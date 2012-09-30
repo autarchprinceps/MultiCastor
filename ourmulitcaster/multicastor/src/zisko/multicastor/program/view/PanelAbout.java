@@ -15,21 +15,26 @@ import zisko.multicastor.program.lang.LanguageManager;
 public class PanelAbout extends javax.swing.JPanel {
 
 	/* Namen der Entwickler der Version 1.0 als Konstanten. */
-	public static final String mc1_developer1 = "Bastian Wagener";
-	public static final String mc1_developer2 = "Johannes Beutel";
-	public static final String mc1_developer3 = "Thomas Lüder";
-	public static final String mc1_developer4 = "Daniel Becker";
-	public static final String mc1_developer5 = "Daniela Gerz";
-
-	public static final String mc1_developer6 = "Jannik Müller";
+//	public static final String mc1_developer1 = "Bastian Wagener";
+//	public static final String mc1_developer2 = "Johannes Beutel";
+//	public static final String mc1_developer3 = "Thomas Lüder";
+//	public static final String mc1_developer4 = "Daniel Becker";
+//	public static final String mc1_developer5 = "Daniela Gerz";
+//	public static final String mc1_developer6 = "Jannik Müller";
+	public static final String[] mc1_developers = { "Bastian Wagener", "Johannes Beutel", "Thomas Lüder", "Daniel Becker", "Daniela Gerz", "Jannik Müller" };
+	
 	/* Namen der Entwickler der Version 2.0 als Konstanten. */
-	public static final String mc2_developer1 = "Jonas Traub";
-	public static final String mc2_developer2 = "Matthis Hauschild";
-	public static final String mc2_developer3 = "Sebastian Koralewski";
-	public static final String mc2_developer4 = "Filip Haase";
-	public static final String mc2_developer5 = "Fabian Fäßler";
-
-	public static final String mc2_developer6 = "Christopher Westphal";
+//	public static final String mc2_developer1 = "Jonas Traub";
+//	public static final String mc2_developer2 = "Matthis Hauschild";
+//	public static final String mc2_developer3 = "Sebastian Koralewski";
+//	public static final String mc2_developer4 = "Filip Haase";
+//	public static final String mc2_developer5 = "Fabian Fäßler";
+//	public static final String mc2_developer6 = "Christopher Westphal";
+	public static final String[] mc2_developers = { "Jonas Traub", "Matthis Hauschild", "Sebastian Koralewski", "Filip Haase", "Fabian Fäßler", "Christopher Westphal" };
+	
+	/* Namen der Entwickler der Version 3.0 als Konstanten. */
+	public static final String[] mc3_developers = { "Kai Brennenstuhl", "Nick Herrmannsdörfer", "Stefan Hessler", "Patrick Robinson", "Erwin Stamm" };
+	
 	private final JLabel labelAbout1 = new JLabel();
 	private final JLabel labelAbout2 = new JLabel();
 	private final JLabel labelAbout3 = new JLabel();
@@ -133,12 +138,12 @@ public class PanelAbout extends javax.swing.JPanel {
 		panel_about_inner.add(Box.createRigidArea(new Dimension(0, 5)));
 
 		/* Auflistung der Entwickler Version 2.0 */
-		panel_about_inner.add(new JLabel(mc2_developer1));
-		panel_about_inner.add(new JLabel(mc2_developer2));
-		panel_about_inner.add(new JLabel(mc2_developer3));
-		panel_about_inner.add(new JLabel(mc2_developer4));
-		panel_about_inner.add(new JLabel(mc2_developer5));
-		panel_about_inner.add(new JLabel(mc2_developer6));
+		panel_about_inner.add(new JLabel(mc2_developers[0]));
+		panel_about_inner.add(new JLabel(mc2_developers[1]));
+		panel_about_inner.add(new JLabel(mc2_developers[2]));
+		panel_about_inner.add(new JLabel(mc2_developers[3]));
+		panel_about_inner.add(new JLabel(mc2_developers[4]));
+		panel_about_inner.add(new JLabel(mc2_developers[5]));
 
 		/* Platzhalter (20 Pixel hoch) */
 		panel_about_inner.add(Box.createRigidArea(new Dimension(0, 20)));
@@ -152,12 +157,12 @@ public class PanelAbout extends javax.swing.JPanel {
 		panel_about_inner.add(Box.createRigidArea(new Dimension(0, 5)));
 
 		/* Auflistung der Entwickler Version 1.0 */
-		panel_about_inner.add(new JLabel(mc1_developer1));
-		panel_about_inner.add(new JLabel(mc1_developer2));
-		panel_about_inner.add(new JLabel(mc1_developer3));
-		panel_about_inner.add(new JLabel(mc1_developer4));
-		panel_about_inner.add(new JLabel(mc1_developer5));
-		panel_about_inner.add(new JLabel(mc1_developer6));
+		panel_about_inner.add(new JLabel(mc1_developers[0]));
+		panel_about_inner.add(new JLabel(mc1_developers[1]));
+		panel_about_inner.add(new JLabel(mc1_developers[2]));
+		panel_about_inner.add(new JLabel(mc1_developers[3]));
+		panel_about_inner.add(new JLabel(mc1_developers[4]));
+		panel_about_inner.add(new JLabel(mc1_developers[5]));
 
 		/*
 		 * Box-Layout in X-Richtung definieren, um den generierten Inhalte
