@@ -1301,14 +1301,26 @@
             Id="8cd8565a-2d64-4b73-a84d-2ed3bda6def9"
             name="mc_developers"
             isLeaf="false"
-            isStatic="false"
+            isStatic="true"
             isReadOnly="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ee2a44a4-2679-4f93-8a49-5ae1e9ab7659"
+                LastKnownName="String[2][1..*]"
+                LastKnownLocation="view.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ee2a44a4-2679-4f93-8a49-5ae1e9ab7659"
+        name="String[2][1..*]" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

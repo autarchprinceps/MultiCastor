@@ -11333,8 +11333,11 @@
                 </generalization>
               </generalsInternal>
               <ownedAttributesInternal>
-                <property Id="c7e4df54-0085-472b-abf1-b28fd7c3a7dc" name="mc_developers" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="c7e4df54-0085-472b-abf1-b28fd7c3a7dc" name="mc_developers" isLeaf="false" isStatic="true" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="8cd8565a-2d64-4b73-a84d-2ed3bda6def9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="77fd3ea9-e204-4348-9232-67e79572bded" LastKnownName="String[2][1..*]" />
+                  </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
             </class>
@@ -11400,6 +11403,11 @@
     <packageHasNamedElement>
       <referencedType Id="9693b3cb-6865-4046-9bc2-bda31074ab59" name="Graphics" isAbstract="false" isLeaf="false" cachedFullName="Graphics">
         <elementDefinition Id="955c2ebc-56e0-43df-9905-216ef85bf3c8" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="77fd3ea9-e204-4348-9232-67e79572bded" name="String[2][1..*]" isAbstract="false" isLeaf="false" cachedFullName="String[2][1..*]">
+        <elementDefinition Id="ee2a44a4-2679-4f93-8a49-5ae1e9ab7659" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
