@@ -11774,6 +11774,230 @@
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="4a1d8676-c5eb-4645-bc3c-78806bb1e9b9" name="MiscFont" isAbstract="true" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="174128aa-4644-46d6-bb91-d3e53614245c" />
+              <ownedAttributesInternal>
+                <property Id="a3a57ab3-9102-43f2-881a-25b4d19f2a22" name="font_size" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2e57d116-cf2d-4731-83dd-bf935682addb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a72287ec-8fa3-4bb3-9cab-1dcb1a97dba7" LastKnownName="float" />
+                  </type_NamedElement>
+                </property>
+                <property Id="3edc3c1e-a610-4445-a17b-c04cb1f01cbe" name="font_style" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b20dc5bf-b722-4b62-b632-9be08110682d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </property>
+                <property Id="2314cda6-1842-434d-ba33-2377f52bdcb3" name="font_type" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d8665481-8a79-4503-a484-f86b3ecdd989" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="4ebc3a4e-00b1-427e-b5d5-d0397bd6cdc6" name="constructor" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="242e0ffd-6144-4688-bbad-089ee3e2b46d" />
+                </operation>
+                <operation Id="95984d02-1e63-436a-ac21-785586ebcc37" name="getFont" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="2e415758-683d-45be-a952-45316d081050" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="c975774c-be20-402e-85d3-ab06b9f3e50a" direction="Return" isUnique="false">
+                        <elementDefinition Id="1cebd1f1-43bc-48fa-8351-554b0f644edd" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="79928ed5-6b59-4e47-a1a8-93940cfd0710" LastKnownName="Font" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="2be55fb3-cef8-4bf0-9dbc-4ee523228430" name="getFont" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="9df1d1e9-695c-478f-8f4a-5009cf316979" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="f562aeba-1bf1-4f17-b0dc-19aaa95ba259" name="style" direction="In" isUnique="false">
+                        <elementDefinition Id="dc68726f-17db-4f60-ac6f-f055efcdcf66" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="c03f9762-9344-40e2-895d-7bf3bce922e0" name="size" direction="In" isUnique="false">
+                        <elementDefinition Id="d03629bf-8979-447f-b212-761ea2ff7187" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a72287ec-8fa3-4bb3-9cab-1dcb1a97dba7" LastKnownName="float" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="04ad4765-23da-4949-bff9-e6f2cb6c6901" direction="Return" isUnique="false">
+                        <elementDefinition Id="bea2f284-4b52-4be0-a8a7-1dafe0d4ed1d" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="79928ed5-6b59-4e47-a1a8-93940cfd0710" LastKnownName="Font" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="138aa47f-e560-4895-99b1-98a1b915577d" name="createFont" visibility="Private" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="f7874c20-83e7-4f79-85d7-f8defeafa1cb" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="05b67fd0-0e5d-4195-9328-63acb15dab96" direction="Return" isUnique="false">
+                        <elementDefinition Id="ae4bdd83-c54e-4e44-9e5e-aa4946ba7c83" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="79928ed5-6b59-4e47-a1a8-93940cfd0710" LastKnownName="Font" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="eaca0288-2e57-43ba-a94d-02983d294d49" name="TabData" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="be3628fa-78e4-4c7e-ae64-8f44817670f0" />
+              <ownedAttributesInternal>
+                <property Id="961b76d4-e847-4be9-9f28-dcd4a034345e" name="!btComponent" visibility="Package" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="786f96c6-c8dc-4899-8c4a-b672d8734596" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ded69be-3582-456d-a639-d4079394b23d" LastKnownName="ButtonTabComponent" />
+                  </type_NamedElement>
+                </property>
+                <property Id="e848b4d7-2060-4a3c-8286-55259b74b7ea" name="component" visibility="Package" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9941f80f-fd84-4750-8def-17c8eb3d5225" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c098816e-86de-4dd4-8c57-107bd34fd100" LastKnownName="Component" />
+                  </type_NamedElement>
+                </property>
+                <property Id="ecac93a2-383c-4059-988d-f2b1ece89585" name="title" visibility="Package" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="45b94615-3247-4744-a8a7-1d3c06399a4b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="90d8d3af-ea00-4d5b-a373-0a225118e5b8" name="constructor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="4d1b138d-2139-4d72-8e7a-91e5ea9b5b90" name="create" profile="StandardProfileL2">
+                      <elementDefinition Id="5389caac-9562-4a7c-882d-37c739ae85ce" />
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="b03fcbb6-69c7-4e35-953a-6a1e2c2e6f1a" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="4e15977d-7738-4bb2-bbeb-0feb3cb7e773" name="titel" direction="In" isUnique="false">
+                        <elementDefinition Id="d693d365-cec9-4a15-b714-a695d97e7b47" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="321e8dae-13bc-4dfd-84ac-9492298516bf" name="component" direction="In" isUnique="false">
+                        <elementDefinition Id="dfd2f922-4740-4a61-b939-870d709a31e1" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c098816e-86de-4dd4-8c57-107bd34fd100" LastKnownName="Component" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="6424f8a5-cce3-4f5e-bd9b-849e27fe7197" name="btComponent" direction="In" isUnique="false">
+                        <elementDefinition Id="a3b020e7-53ed-47f2-bf72-7bb38922aedb" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="7ded69be-3582-456d-a639-d4079394b23d" LastKnownName="ButtonTabComponent" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="ee6370b8-b25b-4b20-9330-e964f9889be9" name="getBtComponent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="0be4d5f7-85d7-4af5-817c-a9e7bda54533" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="e9a1176e-a13f-4a91-98de-a395708f53e9" direction="Return" isUnique="false">
+                        <elementDefinition Id="a08e8dfd-0565-493a-8f7e-3e4473e8f033" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="7ded69be-3582-456d-a639-d4079394b23d" LastKnownName="ButtonTabComponent" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="cff81784-9c38-4b25-9d0a-5e13dd002645" name="getComponent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="bfb5f32b-a9d3-4468-8b63-e7552d822d86" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7d37e285-c888-4316-9c90-a51d5942fa9a" direction="Return" isUnique="false">
+                        <elementDefinition Id="a0632eb6-de85-49eb-8f28-b03fbc7e4841" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c098816e-86de-4dd4-8c57-107bd34fd100" LastKnownName="Component" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="8faeb44f-e161-4662-be5a-57319c777980" name="getTitel" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="42bd4e10-3802-4fac-b7b1-bfdd4f1d6447" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="af601e41-bb57-4976-8ef5-f554224070ee" direction="Return" isUnique="false">
+                        <elementDefinition Id="836a8f04-5516-48f3-a0d1-8908f513b587" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="221a463e-1052-4a0b-9dd0-5680a97d9692" name="setBtComponent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="5a6d9638-4c76-4328-82de-dce0443b760f" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="6288c34e-9b49-48ca-9ffa-02e9c24b3c3a" name="btComponent" direction="In" isUnique="false">
+                        <elementDefinition Id="ff9951d0-b1ba-4175-9d6e-51f3b03f66d5" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="7ded69be-3582-456d-a639-d4079394b23d" LastKnownName="ButtonTabComponent" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="7908ed6b-9002-4817-ac43-07deea04349b" name="setComponent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="04ad0c08-c318-4240-9496-696e0ea75785" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="4f6d4997-a9ac-4923-9d8a-2fdf7a63ec20" name="component" direction="In" isUnique="false">
+                        <elementDefinition Id="a62c956f-b9c5-4fec-99bb-662c2e294040" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c098816e-86de-4dd4-8c57-107bd34fd100" LastKnownName="Component" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="6db70355-c04b-441a-af74-5007a87e2c9e" name="setTitle" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="403bdc95-b160-4376-b4bb-0d8f9c7b20ae" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="f93509be-dbdc-4477-bc4a-485ab14bc35c" name="title" direction="In" isUnique="false">
+                        <elementDefinition Id="acd8e61d-1b4b-4b78-ac31-1333e064fae0" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
@@ -11875,6 +12099,16 @@
     <packageHasNamedElement>
       <referencedType Id="be081c03-4d5c-4ba6-afb6-87281ea626b5" name="JPopupMenu" isAbstract="false" isLeaf="false" cachedFullName="JPopupMenu">
         <elementDefinition Id="ff51d63d-7cbb-4bda-a1bd-586947e96a76" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a72287ec-8fa3-4bb3-9cab-1dcb1a97dba7" name="float" isAbstract="false" isLeaf="false" cachedFullName="float">
+        <elementDefinition Id="0ed412f9-0a5c-4125-9762-fb96beda97cb" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7ded69be-3582-456d-a639-d4079394b23d" name="ButtonTabComponent" isAbstract="false" isLeaf="false" cachedFullName="ButtonTabComponent">
+        <elementDefinition Id="ce4d0b5c-5985-497e-934f-c52acc135bce" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
