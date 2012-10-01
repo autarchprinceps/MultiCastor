@@ -11639,6 +11639,141 @@
               </ownedLiterals>
             </enumeration>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="d4991917-31c9-436d-9e41-85e459752764" name="PopUpMenu" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="3146a18e-d2b1-4b95-9540-f3f1a3835454" />
+              <ownedAttributesInternal>
+                <property Id="66822072-7d1d-49df-8c46-4d986d2472c4" name="columns" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="bb9cb6f3-0cb8-4859-9a70-c992bb5a883f" name="Lower" value="*">
+                      <elementDefinition Id="0447df84-c623-4f18-a5cd-984ade96aa34" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c55e72aa-273a-417c-b7c9-dfa98746cfb5" name="Upper" value="*">
+                      <elementDefinition Id="bd435d64-ef30-4834-b925-b16f72ffe28a" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="5d261b22-f991-400a-ac48-6644aa1fc582" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d2d48805-845a-4afe-a91a-9409dd0f4238" LastKnownName="JCheckBox" />
+                  </type_NamedElement>
+                </property>
+                <property Id="1f7b6919-f386-4c24-8c8b-e87ccb457adc" name="menuPopUp" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8ed55f15-bde6-483f-9529-7b70ed5eb35e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="be081c03-4d5c-4ba6-afb6-87281ea626b5" LastKnownName="JPopupMenu" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="22cf4d03-e218-4413-9a41-40e358c240be" name="createColumnCheckBoxes" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="f242bd58-5b7c-4321-8aff-0d15e5cacb5d" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="e75f449f-633a-416c-a94c-fb06f45482bd" name="ctrl" direction="In" isUnique="false">
+                        <elementDefinition Id="e6928446-6e5c-4d2a-a081-759bc28faebe" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="805c71c9-b750-4007-b76b-1bccbdae3731" name="createTableHeaderPopup" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="5fcf5eb3-1873-4e81-8ba0-5dfa4e27a7b4" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="65cb29cd-7b0f-4c88-933d-50ad1fc1359e" name="table" direction="In" isUnique="false">
+                        <elementDefinition Id="48cf912c-d061-4b39-9615-97c2cc3c2c10" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="e309f1c3-18a9-48d4-966a-68507bd8d5ea" LastKnownName="JTable" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="fee69c7d-8a96-42f4-94a8-9e67ad51cc07" name="ctrl" direction="In" isUnique="false">
+                        <elementDefinition Id="e1657433-a654-4f53-9e50-89c1c1124b9d" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="2dc088ad-6968-4fd4-81a8-655758362790" name="e" direction="In" isUnique="false">
+                        <elementDefinition Id="c4b8dcf5-d873-4ff9-a134-ff0e301e85dd" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="83812c67-d82e-4985-89d1-9e9703ad9916" LastKnownName="MouseEvent" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="58b08876-4d1e-494c-ad4a-21abfcdb61c4" name="getColumns" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="bad2c5a5-6cb1-4c07-abff-5134151adf9a" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="d9bb1a05-8cf1-443e-9f9e-0438a43eb29c" direction="Return" isUnique="false">
+                        <lowerValueInternal>
+                          <literalString Id="019ca276-5e62-4e48-97c1-f5baaa0ee578" name="Lower" value="*">
+                            <elementDefinition Id="3799f826-5eda-428d-81e7-b17be0401307" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="a8d80478-7e6d-47f1-a8d0-caadb016dc39" name="Upper" value="*">
+                            <elementDefinition Id="cf0dce18-2ce3-4f92-a5c7-d135073592fe" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="9140860f-64b8-4606-8e39-58bed26cd3ac" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="d2d48805-845a-4afe-a91a-9409dd0f4238" LastKnownName="JCheckBox" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="886b989e-4c10-4429-a343-cf84cd2b02a9" name="getSelectedColumn" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="8d0bbef1-9ae4-464a-b220-fc0e6736bc32" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="1590c8ae-082a-4cc6-a2e5-7786cd315a06" direction="Return" isUnique="false">
+                        <elementDefinition Id="1d83cc61-1ae2-42a2-8145-ee64573c3dd6" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="991e4ec4-9f17-4b32-9182-241ef10d5589" name="isPopUpVisible" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="8baf7b9f-0c3d-42ce-85ae-6999f364c700" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="dba796f4-02b4-4afe-a67e-c079a2cbffb1" direction="Return" isUnique="false">
+                        <elementDefinition Id="3211714a-a366-4057-a535-22e0f0db92ed" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="6fa6cf6e-363f-4d03-a49e-bc95b1f2f720" LastKnownName="Boolean" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="1fbc6190-c9c1-48d8-9f6a-6d1605aa4736" name="updateCheckBoxes" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="22589329-bed5-4bb6-8b29-b11cf64ab4af" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="8fa6b822-0113-481e-9ae0-c1d2b7bfddc7" name="ctrl" direction="In" isUnique="false">
+                        <elementDefinition Id="85fcf56a-3544-4180-be02-b1947bb7037d" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
@@ -11730,6 +11865,16 @@
     <packageHasNamedElement>
       <referencedType Id="6e9ad1be-e3e4-4b5b-89d4-e42a67b2234f" name="Integer[30]" isAbstract="false" isLeaf="false" cachedFullName="Integer[30]">
         <elementDefinition Id="143a1faa-3980-4b1d-bf3f-a4f23744be64" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d2d48805-845a-4afe-a91a-9409dd0f4238" name="JCheckBox" isAbstract="false" isLeaf="false" cachedFullName="JCheckBox">
+        <elementDefinition Id="07eb39d8-98c3-44f8-8077-0a59dbaf7b41" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="be081c03-4d5c-4ba6-afb6-87281ea626b5" name="JPopupMenu" isAbstract="false" isLeaf="false" cachedFullName="JPopupMenu">
+        <elementDefinition Id="ff51d63d-7cbb-4bda-a1bd-586947e96a76" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
