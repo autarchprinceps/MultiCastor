@@ -9155,6 +9155,22 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="80a523c0-6cca-40e7-a617-e2b0b39587c7" />
                 </association>
+                <association Id="3e9c159e-7e98-40d5-92ce-c67dc10b64b9" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="a0264e71-f5b7-4db1-a058-08f7e998d8cd" LastKnownName="WrappingCellRenderer" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="65d2ac1c-a6fb-45b1-ab71-20cde75575e5" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="9aec0540-8c82-48cb-b40a-5718b8e70bec" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="06d280c0-572f-4f81-aa0c-360eb5d05cfd" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="ad36b748-953d-45f0-a120-2a4eff2a3888" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="0443cedc-888f-4c9f-82d0-ab28207e8e9d" />
+                </association>
               </targetEnds>
               <ownedAttributesInternal>
                 <property Id="e9e2a4c1-1911-441c-953d-b279d3cfbbd6" name="!guidata" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -12107,6 +12123,115 @@
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="a0264e71-f5b7-4db1-a058-08f7e998d8cd" name="WrappingCellRenderer" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="ba16141c-894a-4e39-a16e-2d82673b672c" />
+              <suppliersInternal>
+                <dependency Id="31104ce8-6736-478c-8eaa-44003c368c4c">
+                  <interfaceMoniker Id="1376d054-5290-4485-a6c0-2ae23a30c140" LastKnownName="TableCellRenderer" />
+                  <elementDefinition Id="db2c0262-033b-4b54-be1a-8d7b249f5be8" />
+                </dependency>
+              </suppliersInternal>
+              <ownedAttributesInternal>
+                <property Id="c3d68ebe-c85a-4e20-97bd-d3f4b374d1ae" name="ctrl" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="10f87c36-9d37-417a-ace2-e6d518642626" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+                  </type_NamedElement>
+                </property>
+                <property Id="dd0316c5-0893-4e5b-9cd7-4aae56e396b7" name="wrappedCellRenderer" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8dba7541-75a6-45ca-8e4c-a24f4cb21504" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5a4ed3e5-49c3-4f64-820e-cb180bd26824" LastKnownName="TableCellRenderer" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="8263753f-257b-4560-869a-1f8dc69a4675" name="constructor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="484a1609-c772-43a1-9a2f-10e5bcd32192" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7ccbaf44-b6f2-47ec-ac6e-5d27d496204f" name="cellRenderer" direction="In" isUnique="false">
+                        <elementDefinition Id="7b3012ba-abd0-43e7-8949-0583dd04041e" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="5a4ed3e5-49c3-4f64-820e-cb180bd26824" LastKnownName="TableCellRenderer" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="5d6e881f-bf60-407a-ade2-94ed7bc275e8" name="ctrl" direction="In" isUnique="false">
+                        <elementDefinition Id="358dc461-9823-4a5f-9a05-2976422aeffa" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="66b78e6b-1e96-429e-ac6f-a5413da0f95c" name="getTableCellRendererComponent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="94d9cc21-77ba-4f59-bfe5-d7fa82392211" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="3a316ac4-e8b4-4c99-b128-c1d18e5dfc2f" name="table" direction="In" isUnique="false">
+                        <elementDefinition Id="d5462e4d-e6f1-4d1f-955b-6db682fe0630" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="e309f1c3-18a9-48d4-966a-68507bd8d5ea" LastKnownName="JTable" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="5842f0a8-1f7e-4f98-b4d3-59afea2322f9" name="value" direction="In" isUnique="false">
+                        <elementDefinition Id="a0ca73b4-f6bd-44fc-9d23-122453086b94" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="8c9e4bb8-46f0-4dcb-b8c8-9effe2fb3546" LastKnownName="Object" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="1445d2f7-c359-4582-ac27-60154358262d" name="isSelected" direction="In" isUnique="false">
+                        <elementDefinition Id="e1b79387-55c0-4a19-af0b-63465c6adace" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="6fa6cf6e-363f-4d03-a49e-bc95b1f2f720" LastKnownName="Boolean" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="c6a771b9-1560-4caf-ae9b-4ea6726f6134" name="hasFocus" direction="In" isUnique="false">
+                        <elementDefinition Id="a666e627-c706-42b7-944f-7f6be543ba97" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="6fa6cf6e-363f-4d03-a49e-bc95b1f2f720" LastKnownName="Boolean" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7a52ab30-695c-4dd3-9a4d-7235ad120482" name="row" direction="In" isUnique="false">
+                        <elementDefinition Id="9890c6c5-9702-4899-abae-5a87de62d889" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="f4297c6a-cd25-4ee9-9b2d-5cfb1f6e90e4" name="column" direction="In" isUnique="false">
+                        <elementDefinition Id="155fcfa0-bfd8-4a9b-b8de-197b33d24128" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="de6ff18f-5961-4ba1-8afb-e41d18a03c7d" direction="Return" isUnique="false">
+                        <elementDefinition Id="529e50c3-166e-4f3c-9a79-c092c96b8f0d" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c098816e-86de-4dd4-8c57-107bd34fd100" LastKnownName="Component" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
@@ -12238,6 +12363,16 @@
     <packageHasNamedElement>
       <referencedType Id="3d9728d4-2a4c-4fdd-9a43-347178097ba3" name="Vector&lt;&gt;" isAbstract="false" isLeaf="false" cachedFullName="Vector&lt;&gt;">
         <elementDefinition Id="3e1bf4bd-edde-467d-a00a-a6f559a1b148" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="1376d054-5290-4485-a6c0-2ae23a30c140" name="TableCellRenderer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e257476c-ed85-4d1e-8b8d-e1420874a303" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="5a4ed3e5-49c3-4f64-820e-cb180bd26824" name="TableCellRenderer" isAbstract="false" isLeaf="false" cachedFullName="TableCellRenderer">
+        <elementDefinition Id="54239f96-8bd1-4ac3-a5d6-12f35370ee88" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
