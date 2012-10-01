@@ -2696,5 +2696,219 @@
         Id="ce4d0b5c-5985-497e-934f-c52acc135bce"
         name="ButtonTabComponent" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="58dc969f-57c4-4459-a22c-03b99a9f7e0c"
+        name="WideComboBox"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="2254f7bd-592e-4069-b04f-0300dd1cc057"
+            isSubstitutable="false">
+            <classMoniker
+              Id="2850eee6-c2ea-4ed6-aaf9-2f47c5b78447"
+              LastKnownName="JComboBox"
+              LastKnownLocation="MultiCastor.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="672564a7-fb0e-479b-ae31-756009181a0d"
+            name="layingOut"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="MultiCastor.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="b5775734-9884-45a1-922d-7a0373684c17"
+            name="constructor"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9ce04cc4-fe75-4816-b6f5-deb77568a3cb"
+                name="create"
+                profile="StandardProfileL2" />
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="a854fc79-8dc7-43d5-87e7-4be6c7b6a0e3"
+            name="constructor"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8e8bba0f-0e43-42bd-93fc-a1d4156f5ae5"
+                name="create"
+                profile="StandardProfileL2" />
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8ed4e92c-6e4c-4db7-b6fd-183bbbf27232"
+                  name="aModel"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="d69814ba-4821-486d-804e-03e173c982a4"
+                      LastKnownName="ComboBoxModel"
+                      LastKnownLocation="view.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f36a0782-d02e-4802-ac0b-f99e40ea83e3"
+            name="constructor"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="added378-a311-4315-9e44-060ec2b092da"
+                name="create"
+                profile="StandardProfileL2" />
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="39da9ef2-51bd-4180-a932-8b39d23f54be"
+                  name="items"
+                  direction="In"
+                  isUnique="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="94a92de0-aa49-4453-8d2f-4676f647a1d1"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="da4447aa-3b89-4562-b3b4-18f88eb9e83d"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="632cd5ef-0ca0-4816-8713-d4edad4eeca1"
+                      LastKnownName="Object"
+                      LastKnownLocation="view.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bca3a8d6-7317-4359-b5d4-9f00ee3b7dfe"
+            name="constructor"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e9d3058a-fc70-4eec-a9da-a61ef8253474"
+                name="create"
+                profile="StandardProfileL2" />
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="93fce05d-740e-4f98-ab80-5b9c455d3931"
+                  name="items"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="3e1bf4bd-edde-467d-a00a-a6f559a1b148"
+                      LastKnownName="Vector&lt;&gt;"
+                      LastKnownLocation="view.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="09a6df72-09c6-40c0-b693-c03730c94d38"
+            name="doLayout"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="8c8c0535-d925-4e1c-b20e-c095b759072d"
+            name="getSize"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4266b4b4-bfce-4451-94b4-71f244df5052"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="87e0e25a-875a-46f6-a89e-fb4f9f8bfe3b"
+                      LastKnownName="Dimension"
+                      LastKnownLocation="view.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="d69814ba-4821-486d-804e-03e173c982a4"
+        name="ComboBoxModel" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="632cd5ef-0ca0-4816-8713-d4edad4eeca1"
+        name="Object" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="49f09413-cc13-4357-81f8-876456fface4"
+        name="Vector" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="3e1bf4bd-edde-467d-a00a-a6f559a1b148"
+        name="Vector&lt;&gt;" />
+    </packageHasNamedElement>
   </packagedElements>
 </package>

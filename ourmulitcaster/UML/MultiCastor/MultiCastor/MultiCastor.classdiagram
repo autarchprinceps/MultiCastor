@@ -11998,6 +11998,115 @@
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="4fdefd59-00ab-49bd-a104-8bed3fa0fd6d" name="WideComboBox" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="58dc969f-57c4-4459-a22c-03b99a9f7e0c" />
+              <generalsInternal>
+                <generalization Id="7147f3e5-19c8-45b9-b80f-35f8d90500b3" isSubstitutable="false">
+                  <classMoniker Id="0711716b-8b85-4185-bec2-301400f86efd" LastKnownName="JComboBox" />
+                  <elementDefinition Id="2254f7bd-592e-4069-b04f-0300dd1cc057" />
+                </generalization>
+              </generalsInternal>
+              <ownedAttributesInternal>
+                <property Id="498ab1f4-e138-44f6-96a3-1a564d484018" name="layingOut" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="672564a7-fb0e-479b-ae31-756009181a0d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6fa6cf6e-363f-4d03-a49e-bc95b1f2f720" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="7c413b5a-3ec3-4167-9077-6b2dfc5d3fd1" name="constructor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="d6fde2d3-54b5-4a84-9b37-ab039367e61f" name="create" profile="StandardProfileL2">
+                      <elementDefinition Id="9ce04cc4-fe75-4816-b6f5-deb77568a3cb" />
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="b5775734-9884-45a1-922d-7a0373684c17" />
+                </operation>
+                <operation Id="05853c69-0e93-484d-993a-94383a176b67" name="constructor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="d6e92563-2466-4119-afc7-965e93e734bd" name="create" profile="StandardProfileL2">
+                      <elementDefinition Id="8e8bba0f-0e43-42bd-93fc-a1d4156f5ae5" />
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="a854fc79-8dc7-43d5-87e7-4be6c7b6a0e3" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="f25ccc40-a45a-4e08-9c50-d381cf2f7b4a" name="aModel" direction="In" isUnique="false">
+                        <elementDefinition Id="8ed4e92c-6e4c-4db7-b6fd-183bbbf27232" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="e2688bbd-b2af-4e87-9573-a7b5d5352a2c" LastKnownName="ComboBoxModel" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="337ade82-cbe2-4ec1-9a7d-2f4ba68eb79a" name="constructor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="c7c41b12-1029-4656-ae5f-5600406f90f2" name="create" profile="StandardProfileL2">
+                      <elementDefinition Id="added378-a311-4315-9e44-060ec2b092da" />
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="f36a0782-d02e-4802-ac0b-f99e40ea83e3" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="ce77e739-0993-4d31-a96c-481931c63d9b" name="items" direction="In" isUnique="false">
+                        <lowerValueInternal>
+                          <literalString Id="f7f208dd-2b57-4c25-9be7-1600250b9eb9" name="Lower" value="*">
+                            <elementDefinition Id="94a92de0-aa49-4453-8d2f-4676f647a1d1" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="513fde8b-ae23-4e4f-ac6c-9bd2402ceb65" name="Upper" value="*">
+                            <elementDefinition Id="da4447aa-3b89-4562-b3b4-18f88eb9e83d" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="39da9ef2-51bd-4180-a932-8b39d23f54be" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="8c9e4bb8-46f0-4dcb-b8c8-9effe2fb3546" LastKnownName="Object" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="a32934e5-ae4b-4fb5-8a2d-d01accce57c8" name="constructor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="5942a3ac-373b-4f97-8fc5-3c82b5ec1b16" name="create" profile="StandardProfileL2">
+                      <elementDefinition Id="e9d3058a-fc70-4eec-a9da-a61ef8253474" />
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="bca3a8d6-7317-4359-b5d4-9f00ee3b7dfe" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="fbdf1e88-6813-444b-b8eb-9b490535f616" name="items" direction="In" isUnique="false">
+                        <elementDefinition Id="93fce05d-740e-4f98-ab80-5b9c455d3931" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="3d9728d4-2a4c-4fdd-9a43-347178097ba3" LastKnownName="Vector&lt;&gt;" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="aaf571f6-696f-44a9-bb4f-7fe4c95db663" name="doLayout" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="09a6df72-09c6-40c0-b693-c03730c94d38" />
+                </operation>
+                <operation Id="6257a9e1-0a46-44dc-aeb0-28353e8a11cf" name="getSize" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="8c8c0535-d925-4e1c-b20e-c095b759072d" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="ba09ff58-e851-4dc1-a0c2-4d7218e441fd" direction="Return" isUnique="false">
+                        <elementDefinition Id="4266b4b4-bfce-4451-94b4-71f244df5052" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c05b8a7a-7d95-4cf9-bb31-5a3fa2612dad" LastKnownName="Dimension" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
@@ -12109,6 +12218,26 @@
     <packageHasNamedElement>
       <referencedType Id="7ded69be-3582-456d-a639-d4079394b23d" name="ButtonTabComponent" isAbstract="false" isLeaf="false" cachedFullName="ButtonTabComponent">
         <elementDefinition Id="ce4d0b5c-5985-497e-934f-c52acc135bce" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0711716b-8b85-4185-bec2-301400f86efd" name="JComboBox" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2850eee6-c2ea-4ed6-aaf9-2f47c5b78447" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="e2688bbd-b2af-4e87-9573-a7b5d5352a2c" name="ComboBoxModel" isAbstract="false" isLeaf="false" cachedFullName="ComboBoxModel">
+        <elementDefinition Id="d69814ba-4821-486d-804e-03e173c982a4" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="8c9e4bb8-46f0-4dcb-b8c8-9effe2fb3546" name="Object" isAbstract="false" isLeaf="false" cachedFullName="Object">
+        <elementDefinition Id="632cd5ef-0ca0-4816-8713-d4edad4eeca1" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3d9728d4-2a4c-4fdd-9a43-347178097ba3" name="Vector&lt;&gt;" isAbstract="false" isLeaf="false" cachedFullName="Vector&lt;&gt;">
+        <elementDefinition Id="3e1bf4bd-edde-467d-a00a-a6f559a1b148" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

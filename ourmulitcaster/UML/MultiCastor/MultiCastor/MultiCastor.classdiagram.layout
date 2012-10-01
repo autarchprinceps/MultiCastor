@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 61.625, 27.5" name="MultiCastor">
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 63.375, 27.5" name="MultiCastor">
   <logicalClassDesignerModelMoniker Id="ef48ba5f-d595-4e0d-941c-2aed97d3b1d1" />
   <nestedChildShapes>
     <classShape Id="6c6812f1-2c86-4638-8a22-c94f0f5c49c0" isExpanded="false" absoluteBounds="0.75, 4.125, 1.5, 0.5" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
@@ -157,6 +157,13 @@
       <nestedChildShapes>
         <AttributeElementListCompartment Id="619196cb-4967-475e-8a9c-5364b0253d90" absoluteBounds="52.265, 4.765, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
         <OperationElementListCompartment Id="151fb0a3-8bff-4959-ad29-9b59ef259518" absoluteBounds="52.265, 4.97617186754942, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3e3e9b52-7a25-4b0e-88e2-182e3cefa8c3" isExpanded="false" absoluteBounds="61.625, 16, 1.5, 0.5" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="0711716b-8b85-4185-bec2-301400f86efd" LastKnownName="JComboBox" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="53d5ea66-d2b8-4c1c-a273-bc7ac109919f" absoluteBounds="61.64, 16.39, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="a62d409f-5ea0-4503-82e6-7c2de82dac16" absoluteBounds="61.64, 16.601171867549418, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <packageShape Id="2a908f99-c0c6-4de8-85c6-bb067939d281" absoluteBounds="0.75, 0.75, 7.625, 3.125" customColor="255, 249, 230" hideQualifiedName="false">
@@ -1024,6 +1031,13 @@
     <packageShape Id="41d70def-7462-498b-9ee5-29d9e38f8e16" absoluteBounds="50, 5.25, 11.375, 14.375" customColor="255, 249, 230" hideQualifiedName="false">
       <packageMoniker Id="7c189c8a-137f-4a94-ab65-a05d8cb0b718" LastKnownName="View" />
       <nestedChildShapes>
+        <classShape Id="c020a3d7-751b-4727-a3e5-9d5e2ae16318" absoluteBounds="58.625, 16, 2.625, 2.0234374503294639" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+          <classMoniker Id="4fdefd59-00ab-49bd-a104-8bed3fa0fd6d" LastKnownName="WideComboBox" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="d55c7e9d-8bd7-4815-b0ef-6f7d38c94a03" absoluteBounds="58.64, 16.39, 2.5949999999999998, 0.36132811258236563" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="4e90dd98-dca8-44bc-addd-6cdd78d75080" absoluteBounds="58.64, 16.761328112582365, 2.5949999999999998, 1.162109337747097" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
         <classShape Id="fe6e76b9-f20e-4ee4-9baf-a8e2c8a7b558" absoluteBounds="53.5, 14.125, 5, 2.5039061854283027" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
           <classMoniker Id="eaca0288-2e57-43ba-a94d-02983d294d49" LastKnownName="TabData" />
           <nestedChildShapes>
@@ -1127,5 +1141,13 @@
         <classShapeMoniker Id="2e71a952-a937-46b5-b2e5-799135206d63" />
       </nodes>
     </associationConnector>
+    <generalizationConnector edgePoints="[(61.25 : 16.25); (61.625 : 16.25)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110">
+      <generalizationMoniker Id="7147f3e5-19c8-45b9-b80f-35f8d90500b3" />
+      <relativeChildShapes />
+      <nodes>
+        <classShapeMoniker Id="c020a3d7-751b-4727-a3e5-9d5e2ae16318" />
+        <classShapeMoniker Id="3e3e9b52-7a25-4b0e-88e2-182e3cefa8c3" />
+      </nodes>
+    </generalizationConnector>
   </nestedChildShapes>
 </logicalClassDesignerDiagram>
