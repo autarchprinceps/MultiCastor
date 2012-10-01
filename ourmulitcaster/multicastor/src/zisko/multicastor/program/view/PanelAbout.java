@@ -22,22 +22,14 @@ public class PanelAbout extends javax.swing.JPanel {
 			{ "Kai Brennenstuhl", "Nick Herrmannsdörfer", "Stefan Hessler",
 					"Patrick Robinson", "Erwin Stamm" } };
 
-	private final JLabel labelAbout1 = new JLabel();
-	private final JLabel labelAbout2 = new JLabel();
-	private final JLabel labelAbout3 = new JLabel();
+	private final JLabel[] labelAbout = { new JLabel(), new JLabel(), new JLabel() };
 	private final JLabel labelLicense = new JLabel();
-	private final JLabel labelMC1 = new JLabel();
-
-	private final JLabel labelMC2 = new JLabel();
+	private final JLabel[] labelMC = { new JLabel(), new JLabel() };
 	private LanguageManager lang;
 	private javax.swing.JLabel lb_image;
 	private javax.swing.JPanel panel_about_inner;
 	private javax.swing.JPanel panel_about_outer;
-	private javax.swing.JScrollPane sp_about; /*
-											 * Scrollbalken horizontal und
-											 * vertikal (falls Fenster
-											 * verkleinert wird).
-											 */
+	private javax.swing.JScrollPane sp_about;
 
 	public PanelAbout() {
 		initComponents();
@@ -47,11 +39,11 @@ public class PanelAbout extends javax.swing.JPanel {
 	public void reloadLanguage() {
 
 		labelLicense.setText(lang.getProperty("about.license"));
-		labelAbout1.setText(lang.getProperty("about.text1"));
-		labelAbout2.setText(lang.getProperty("about.text2"));
-		labelAbout3.setText(lang.getProperty("about.text3"));
-		labelMC1.setText(lang.getProperty("about.mc1"));
-		labelMC2.setText(lang.getProperty("about.mc2"));
+		labelAbout[0].setText(lang.getProperty("about.text1"));
+		labelAbout[1].setText(lang.getProperty("about.text2"));
+		labelAbout[2].setText(lang.getProperty("about.text3"));
+		labelMC[0].setText(lang.getProperty("about.mc1"));
+		labelMC[1].setText(lang.getProperty("about.mc2"));
 
 	}
 
@@ -106,20 +98,20 @@ public class PanelAbout extends javax.swing.JPanel {
 		 * Entwickler-Überschrift (Sorry für Crap-Code, aber musste schnell
 		 * gehen! -.-)
 		 */
-		labelAbout1.setText(lang.getProperty("about.text1"));
-		labelAbout2.setText(lang.getProperty("about.text2"));
-		labelAbout3.setText(lang.getProperty("about.text3"));
-		panel_about_inner.add(labelAbout1);
-		panel_about_inner.add(labelAbout2);
-		panel_about_inner.add(labelAbout3);
+		labelAbout[0].setText(lang.getProperty("about.text1"));
+		labelAbout[1].setText(lang.getProperty("about.text2"));
+		labelAbout[2].setText(lang.getProperty("about.text3"));
+		panel_about_inner.add(labelAbout[0]);
+		panel_about_inner.add(labelAbout[1]);
+		panel_about_inner.add(labelAbout[2]);
 
 		/* Platzhalter (20 Pixel hoch) */
 		panel_about_inner.add(Box.createRigidArea(new Dimension(0, 20)));
 
 		/* Entwickler-Überschrift */
-		labelMC2.setText(lang.getProperty("about.mc2"));
-		labelMC2.setFont(new Font("Helvetica", Font.BOLD, 12));
-		panel_about_inner.add(labelMC2);
+		labelMC[1].setText(lang.getProperty("about.mc2"));
+		labelMC[1].setFont(new Font("Helvetica", Font.BOLD, 12));
+		panel_about_inner.add(labelMC[1]);
 
 		/* Platzhalter (5 Pixel hoch) */
 		panel_about_inner.add(Box.createRigidArea(new Dimension(0, 5)));
@@ -136,9 +128,9 @@ public class PanelAbout extends javax.swing.JPanel {
 		panel_about_inner.add(Box.createRigidArea(new Dimension(0, 20)));
 
 		/* Entwickler-Überschrift */
-		labelMC1.setText(lang.getProperty("about.mc1"));
-		labelMC1.setFont(new Font("Helvetica", Font.BOLD, 12));
-		panel_about_inner.add(labelMC1);
+		labelMC[0].setText(lang.getProperty("about.mc1"));
+		labelMC[0].setFont(new Font("Helvetica", Font.BOLD, 12));
+		panel_about_inner.add(labelMC[0]);
 
 		/* Platzhalter (5 Pixel hoch) */
 		panel_about_inner.add(Box.createRigidArea(new Dimension(0, 5)));
