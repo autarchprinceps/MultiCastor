@@ -704,6 +704,58 @@
         isLeaf="false"
         isActiveClass="false" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2850eee6-c2ea-4ed6-aaf9-2f47c5b78447"
+        name="JComboBox"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fbbad35d-a0e9-4fb6-81a0-7dc8d9f0ee2a"
+        name="Vector"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <signatures>
+          <templateBinding
+            Id="6b35a714-cd37-4d08-baa3-1e2d76ff1aa5">
+            <redefinableTemplateSignatureMoniker
+              Id="dada0468-105b-4b88-ab7d-2e1296a9855c"
+              LastKnownLocation="MultiCastor.uml" />
+          </templateBinding>
+        </signatures>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="dada0468-105b-4b88-ab7d-2e1296a9855c"
+            parameters=""
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="5fbfd7ba-64da-48d5-b407-261956bca8d6">
+                <ownedParameterableElement>
+                  <class
+                    Id="da085c83-b5cf-4b41-a218-7e8c193a0a1a"
+                    name="T"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="e257476c-ed85-4d1e-8b8d-e1420874a303"
+        name="TableCellRenderer"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
