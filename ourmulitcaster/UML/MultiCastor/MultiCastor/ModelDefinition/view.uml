@@ -3618,7 +3618,71 @@
               LastKnownLocation="MultiCastor.uml" />
           </generalization>
         </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="411a841f-3e3b-46ca-836b-82a2a36dacfd"
+            name="!ctrl"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="675e14ce-47f8-455d-bad6-b84e097c8491"
+                LastKnownName="ViewController"
+                LastKnownLocation="model.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="52e4b56c-f96e-493b-bcf5-46bf594b76b2"
+            name="delete"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="964f322f-0c5c-4e79-a44a-c01aead9243e"
+                LastKnownName="JButton"
+                LastKnownLocation="view.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8b4364b4-bfd6-44f7-aa3a-9efb817d110f"
+            name="!lang"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="3e930aea-81e3-4b39-8580-ec559a846af7"
+                LastKnownName="LanguageManager"
+                LastKnownLocation="model.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="964f322f-0c5c-4e79-a44a-c01aead9243e"
+        name="JButton" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

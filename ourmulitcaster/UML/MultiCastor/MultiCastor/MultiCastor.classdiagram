@@ -12486,6 +12486,26 @@
                   <elementDefinition Id="05ceff26-ca3e-47cf-9eff-3f71a075508a" />
                 </generalization>
               </generalsInternal>
+              <ownedAttributesInternal>
+                <property Id="cf93724b-2e61-47b4-ab75-5554d3d71609" name="!ctrl" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="411a841f-3e3b-46ca-836b-82a2a36dacfd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+                  </type_NamedElement>
+                </property>
+                <property Id="72af202d-4208-45a7-9b1b-53361d2848fe" name="delete" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="52e4b56c-f96e-493b-bcf5-46bf594b76b2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="677670ae-8ff3-4e6e-986e-c86123540c36" LastKnownName="JButton" />
+                  </type_NamedElement>
+                </property>
+                <property Id="a2c34852-1bfc-4483-98c4-41bb51309909" name="!lang" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8b4364b4-bfd6-44f7-aa3a-9efb817d110f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="74742476-54e0-46cb-8029-55c9217cc421" LastKnownName="LanguageManager" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
             </class>
           </packageHasNamedElement>
         </packagedElements>
@@ -12664,6 +12684,11 @@
     <packageHasNamedElement>
       <referencedType Id="0016d59f-2d75-43bb-a340-25b1ecd64604" name="TitleBorder" isAbstract="false" isLeaf="false" cachedFullName="TitleBorder">
         <elementDefinition Id="3cf94ddc-397f-4e4c-8a01-b550aa3c5e85" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="677670ae-8ff3-4e6e-986e-c86123540c36" name="JButton" isAbstract="false" isLeaf="false" cachedFullName="JButton">
+        <elementDefinition Id="964f322f-0c5c-4e79-a44a-c01aead9243e" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
