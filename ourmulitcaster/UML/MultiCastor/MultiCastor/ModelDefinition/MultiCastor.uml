@@ -756,6 +756,24 @@
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6c4ac39b-6b80-4e8e-9142-c7436c6512d0"
+        name="TitledBorder"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="016feb6b-76f6-4114-a215-1cbb7e555534"
+        name="Color" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="3cf94ddc-397f-4e4c-8a01-b550aa3c5e85"
+        name="TitleBorder" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
