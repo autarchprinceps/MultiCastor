@@ -12232,6 +12232,282 @@
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="640179a8-fa00-45af-9109-e8111e44808a" name="MiscBorder" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="d2ac159d-b614-428b-a8e8-af51466a606a" />
+              <generalsInternal>
+                <generalization Id="f9fcd8f4-52ee-4c1c-aa1b-29f7cf31e6bf" isSubstitutable="false">
+                  <classMoniker Id="df0c5793-74f3-4ca3-b3f3-47cb3e62433c" LastKnownName="TitledBorder" />
+                  <elementDefinition Id="bb76c006-9d5c-436f-a939-3f6f2ea4e42e" />
+                </generalization>
+              </generalsInternal>
+              <ownedAttributesInternal>
+                <property Id="9d42dc9a-0f11-4072-bdac-91b8dab266aa" name="b_false" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="828dc5c9-8044-4b2a-b785-b8331ddd4305" name="Lower" value="*">
+                      <elementDefinition Id="f65640ce-2e73-4346-8199-4e7928e62c7e" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="182787a0-e069-4903-9ed3-c7dc361577d5" name="Upper" value="*">
+                      <elementDefinition Id="27d0c37c-a3f6-4df3-b732-ec9d61ee0922" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="b3e096cf-0513-432b-80c3-790ab46e1675" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ad46404-962a-4aa6-af31-9ad5035fb6fb" LastKnownName="TitledBorder" />
+                  </type_NamedElement>
+                </property>
+                <property Id="a6ec94a4-c44b-43c3-bc30-48c8482fd5ec" name="b_neutral" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="f214352c-e0d7-4b1d-9213-1481e4c4783b" name="Lower" value="*">
+                      <elementDefinition Id="be98820c-b937-4635-8ac9-2acafb114490" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="ac5a3a56-07b7-489a-a8b0-7cbe96fbc8a0" name="Upper" value="*">
+                      <elementDefinition Id="3b9da340-6041-4d83-940f-172e3d32e3a9" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="4e86f300-96d1-4ae5-806d-7fc0dd92056b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b94f0a4e-a393-4655-9717-1915445b584c" LastKnownName="TitledBorder" />
+                  </type_NamedElement>
+                </property>
+                <property Id="081511be-9eb3-4f15-979e-68fadfe7aa4c" name="b_true" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="5677fde4-cf50-4b82-933c-d22d12224a74" name="Lower" value="*">
+                      <elementDefinition Id="bb115088-56bf-42ca-a999-6ba09d71f7f5" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="cd5b4b3e-dd14-43c6-8206-760c21767c27" name="Upper" value="*">
+                      <elementDefinition Id="06135d94-5524-4b2e-977f-2f515c268f45" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="07ce7241-0be5-437d-a486-55088e3a1d72" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ad46404-962a-4aa6-af31-9ad5035fb6fb" LastKnownName="TitledBorder" />
+                  </type_NamedElement>
+                </property>
+                <property Id="021038d2-eade-4af0-8d2a-53a792d08ab3" name="c" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="970751b6-2147-4d7d-8d67-8f4cbb5e4d83" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="64d6df69-9a42-45f1-887a-1eb1ef6bb1f2" LastKnownName="Color" />
+                  </type_NamedElement>
+                </property>
+                <property Id="653598b7-f1df-40c2-af8e-0c4dad060577" name="disabledColor" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fd338450-7000-4251-9562-954875feaaaa" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="64d6df69-9a42-45f1-887a-1eb1ef6bb1f2" LastKnownName="Color" />
+                  </type_NamedElement>
+                </property>
+                <property Id="f958148f-d428-4676-86d0-a55321cb6db5" name="enabledColor" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2dfcead6-24ea-43f1-90d7-e8b2097e09c1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="64d6df69-9a42-45f1-887a-1eb1ef6bb1f2" LastKnownName="Color" />
+                  </type_NamedElement>
+                </property>
+                <property Id="f1dd2b0a-acbf-422f-8727-240de0af317c" name="f" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5e1b7b73-5c88-426e-b689-87224faf7cb4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="79928ed5-6b59-4e47-a1a8-93940cfd0710" LastKnownName="Font" />
+                  </type_NamedElement>
+                </property>
+                <property Id="5e73247a-64c1-4840-af1d-ea966c530e74" name="!lang" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c47cc9d5-a236-4415-9b37-98a6f8d728d7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="74742476-54e0-46cb-8029-55c9217cc421" LastKnownName="LanguageManager" />
+                  </type_NamedElement>
+                </property>
+                <property Id="3623a45e-7005-4c46-9970-0ea9f5d06ff1" name="lineColor" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1ea3d331-6c66-4206-b190-ff281eecff29" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="64d6df69-9a42-45f1-887a-1eb1ef6bb1f2" LastKnownName="Color" />
+                  </type_NamedElement>
+                </property>
+                <property Id="1f72520b-942b-45a0-84cc-85b165788c80" name="neutralLineColor" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7ee62112-b59d-4e0b-95f2-5c5c5d8aaefa" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="64d6df69-9a42-45f1-887a-1eb1ef6bb1f2" LastKnownName="Color" />
+                  </type_NamedElement>
+                </property>
+                <property Id="285e41ce-c3a3-47fc-aacf-d55ab53297a6" name="neutralTextColor" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="349b53c1-c670-4278-928d-4f805ab3917e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="64d6df69-9a42-45f1-887a-1eb1ef6bb1f2" LastKnownName="Color" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="b7ed2a58-b20f-4618-9388-fa779af7bbdc" name="getBorder" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="58b0e6b4-1c0c-4eac-9dc0-9f85a0e21c5c" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="92527dfe-8766-4c05-96f5-b6ecf1620f38" name="title" direction="In" isUnique="false">
+                        <elementDefinition Id="74eed87f-5ed8-4f99-ba06-aa1ac98fc1c6" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="d924340a-c201-43e0-9f66-1a41433ad141" LastKnownName="BorderTitle" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7d1643c6-b410-4b6f-8112-fb9441b62de7" name="bordertype" direction="In" isUnique="false">
+                        <elementDefinition Id="d4770fea-da50-4e93-be4a-0f908bb33c6b" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="f35ff0a1-7d6c-4950-806f-11b8a8076f88" LastKnownName="BorderType" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="33a2c7c2-1c9a-4faf-97c1-920ec9645737" direction="Return" isUnique="false">
+                        <elementDefinition Id="94ebf21d-3745-4df3-a7d5-a210f8faef82" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="5ad46404-962a-4aa6-af31-9ad5035fb6fb" LastKnownName="TitledBorder" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="60e6e508-6f9e-4eff-a312-40e65d8f1dee" name="reloadLanguage" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="9fdf6ef8-bb1d-4f52-a72a-18eb20291e14" />
+                </operation>
+                <operation Id="ea9c46d0-9eec-4056-83cd-5662ca8b9958" name="createBorder" visibility="Private" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="441bf198-ec79-428a-b970-57805c1f26c4" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="f5ba7f5d-6d52-4036-9c7d-2081d1d63c62" name="title" direction="In" isUnique="false">
+                        <elementDefinition Id="724f9aec-ab5d-4ed2-b036-b5cb3e822f06" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="ec429aa1-3cda-49ca-b72a-f8899a832847" name="titleColor" direction="In" isUnique="false">
+                        <elementDefinition Id="4b9edc6e-3150-4f46-816d-4031355cf51d" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="64d6df69-9a42-45f1-887a-1eb1ef6bb1f2" LastKnownName="Color" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="b696699d-4083-4ef3-b7ae-16e66338b051" name="lineColor" direction="In" isUnique="false">
+                        <elementDefinition Id="9461c499-5acb-4488-a14e-a3485eceb1dd" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="64d6df69-9a42-45f1-887a-1eb1ef6bb1f2" LastKnownName="Color" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="05c77f4c-d95e-4aa8-bbf0-47d140155de3" direction="Return" isUnique="false">
+                        <elementDefinition Id="794e7e8b-dea8-4e6a-bf63-96b808970a07" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="0016d59f-2d75-43bb-a340-25b1ecd64604" LastKnownName="TitleBorder" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="a6558ff3-2728-414e-8330-f7a7c76a023f" name="constructor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="e5f9506b-ba19-4bd0-b509-d1c18ca4fe5d" name="create" profile="StandardProfileL2">
+                      <elementDefinition Id="13a1816b-5bc9-4df8-ac3e-863542cca003" />
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="df4bbbe3-04a0-44f7-87ae-aae9ef0d0b2e" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="52c91fb4-461e-464c-ac5c-9ba126a57aca" name="title" direction="In" isUnique="false">
+                        <elementDefinition Id="65bda810-37b2-49bf-8b32-0908d7ff7af5" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <enumeration Id="c8e621dc-9cd0-475c-b705-bcf48f4d69f0" name="BorderTitle" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="ef40e7cb-0452-46c4-a225-1ceb036b58c4" />
+              <ownedLiterals>
+                <enumerationLiteral Id="a0dbc30d-3d54-4df4-9dce-f369c29a4d46" name="L2GROUP">
+                  <elementDefinition Id="676ae7be-fded-478c-9b19-aceaff2c11f2" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="98a6ebd2-4e5d-4d5d-b778-e737dc57fee7" name="L2SOURCE">
+                  <elementDefinition Id="ba74e609-f1b8-4278-8ac0-99bd6395f1cf" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="2b0b9a6b-f82e-4c7e-b4ef-011d6176a8c2" name="L3GROUP">
+                  <elementDefinition Id="26ef6ab7-e12a-4afb-97e4-31ba2bb2b88e" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="9f4c0125-1621-40c0-bee5-1eea9f937375" name="L3SOURCE">
+                  <elementDefinition Id="73841374-e621-49a2-aa26-8759eab1db5f" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="fb2e00ca-aa5b-4d87-952a-988f0c0b0119" name="LENGTH">
+                  <elementDefinition Id="cfabc895-d2cb-4a68-a482-0460bd15701b" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="c0923ab2-2728-44cd-9be0-a7608797f763" name="PORT">
+                  <elementDefinition Id="497b8ff3-4e1d-44a1-931e-81c84455f1e6" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="d2f24080-69e1-4e75-9318-57f3182f9b73" name="RATE">
+                  <elementDefinition Id="89d420e4-9c36-45d5-b824-4ae666bf35c4" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="5161fc3b-3b3a-478a-b90c-1c5295fb9ae1" name="TTL">
+                  <elementDefinition Id="bbc2fa46-9901-40fa-a6b2-ed7bcd79de54" />
+                </enumerationLiteral>
+              </ownedLiterals>
+            </enumeration>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <enumeration Id="ff0d299a-eac5-4b97-8fd7-621e360776fc" name="BorderType" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="6413fea4-e7c8-4c33-bd28-804578e6f5db" />
+              <ownedLiterals>
+                <enumerationLiteral Id="7c05e5bc-dfb0-4988-9c90-33936c1d2d9e" name="FALSE">
+                  <elementDefinition Id="27fb742a-e0e0-47fe-960c-a4cf90173c13" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="7d9581be-80e0-4d36-a993-e7abb75de4fb" name="NEUTRAL">
+                  <elementDefinition Id="0ee2bcd2-49d6-4a7b-9315-299e0537410a" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="ab5828b7-31cc-4e7b-b6a6-f3bbee145be9" name="TRUE">
+                  <elementDefinition Id="67d9af2e-df74-492f-8363-a72c1221cf5d" />
+                </enumerationLiteral>
+              </ownedLiterals>
+            </enumeration>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="7a2201c4-10c9-4f29-ab86-6b997a16675d" name="PanelMulticastControl" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="1cc66ac5-aef4-46bd-956f-352f4ea53f68" />
+              <generalsInternal>
+                <generalization Id="8ea34465-df0f-4e1d-804b-eb6d010c3d6b" isSubstitutable="false">
+                  <classMoniker Id="7c1e540c-a821-4e10-9b41-d4f878e4cf21" LastKnownName="JPanel" />
+                  <elementDefinition Id="05ceff26-ca3e-47cf-9eff-3f71a075508a" />
+                </generalization>
+              </generalsInternal>
+              <ownedAttributesInternal>
+                <property Id="cf93724b-2e61-47b4-ab75-5554d3d71609" name="!ctrl" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="411a841f-3e3b-46ca-836b-82a2a36dacfd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+                  </type_NamedElement>
+                </property>
+                <property Id="72af202d-4208-45a7-9b1b-53361d2848fe" name="delete" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="52e4b56c-f96e-493b-bcf5-46bf594b76b2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="677670ae-8ff3-4e6e-986e-c86123540c36" LastKnownName="JButton" />
+                  </type_NamedElement>
+                </property>
+                <property Id="a2c34852-1bfc-4483-98c4-41bb51309909" name="!lang" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8b4364b4-bfd6-44f7-aa3a-9efb817d110f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="74742476-54e0-46cb-8029-55c9217cc421" LastKnownName="LanguageManager" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
@@ -12373,6 +12649,46 @@
     <packageHasNamedElement>
       <referencedType Id="5a4ed3e5-49c3-4f64-820e-cb180bd26824" name="TableCellRenderer" isAbstract="false" isLeaf="false" cachedFullName="TableCellRenderer">
         <elementDefinition Id="54239f96-8bd1-4ac3-a5d6-12f35370ee88" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="df0c5793-74f3-4ca3-b3f3-47cb3e62433c" name="TitledBorder" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6c4ac39b-6b80-4e8e-9142-c7436c6512d0" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="5ad46404-962a-4aa6-af31-9ad5035fb6fb" name="TitledBorder" isAbstract="false" isLeaf="false" cachedFullName="MultiCastor::TitledBorder">
+        <elementDefinition Id="6c4ac39b-6b80-4e8e-9142-c7436c6512d0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b94f0a4e-a393-4655-9717-1915445b584c" name="TitledBorder" isAbstract="false" isLeaf="false" cachedFullName="MultiCastor::TitledBorder">
+        <elementDefinition Id="6c4ac39b-6b80-4e8e-9142-c7436c6512d0" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="64d6df69-9a42-45f1-887a-1eb1ef6bb1f2" name="Color" isAbstract="false" isLeaf="false" cachedFullName="Color">
+        <elementDefinition Id="016feb6b-76f6-4114-a215-1cbb7e555534" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d924340a-c201-43e0-9f66-1a41433ad141" name="BorderTitle" isAbstract="false" isLeaf="false" cachedFullName="MultiCastor::View::BorderTitle">
+        <elementDefinition Id="ef40e7cb-0452-46c4-a225-1ceb036b58c4" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f35ff0a1-7d6c-4950-806f-11b8a8076f88" name="BorderType" isAbstract="false" isLeaf="false" cachedFullName="MultiCastor::View::BorderType">
+        <elementDefinition Id="6413fea4-e7c8-4c33-bd28-804578e6f5db" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0016d59f-2d75-43bb-a340-25b1ecd64604" name="TitleBorder" isAbstract="false" isLeaf="false" cachedFullName="TitleBorder">
+        <elementDefinition Id="3cf94ddc-397f-4e4c-8a01-b550aa3c5e85" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="677670ae-8ff3-4e6e-986e-c86123540c36" name="JButton" isAbstract="false" isLeaf="false" cachedFullName="JButton">
+        <elementDefinition Id="964f322f-0c5c-4e79-a44a-c01aead9243e" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
