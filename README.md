@@ -12,6 +12,31 @@ MultiCastor v3 is currently under development and will support GMRP according to
 
 Development of MultiCastor is performed as an ongoing student project at the Cooperative State University Stuttgart (DHBW) in Germany.
 
+Developers
+----------
+
+### Version 3:
+* Patrick Robinson (autarchprinceps)
+* Erwin Stamm (groxar)
+* Nick Herrmannsdörfer (Tweety321)
+* Stefan Heßler (cranqcore)
+* Kai Brennenstuhl (Brenne)
+
+### Version 2:
+* Jonas Traub
+* Matthis Hauschild
+* Sebastian Koralewski
+* Filip Haase
+* Fabian Fäßler
+* Christopher Westphal
+
+### Version 1:
+* Bastian Wagener
+* Johannes Beutel
+* Thomas Lüder
+* Daniel Becker
+* Daniela Gerz
+* Jannik Müller
 
 License
 -------
