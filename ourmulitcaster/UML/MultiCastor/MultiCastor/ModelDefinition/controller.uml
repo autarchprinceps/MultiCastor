@@ -1626,13 +1626,6 @@
               LastKnownLocation="MultiCastor.uml" />
           </dependency>
           <dependency
-            Id="b0dbd1d2-f400-47b3-aa5a-55b172818420">
-            <interfaceMoniker
-              Id="dec19089-378e-4cd1-a1bd-115b85b63d6b"
-              LastKnownName="ComponentListener"
-              LastKnownLocation="MultiCastor.uml" />
-          </dependency>
-          <dependency
             Id="cc91d7bf-e350-4f4e-bdb4-4e345e97be46">
             <interfaceMoniker
               Id="0f5f9125-cfde-49b5-9c10-6124a9c8c091"
@@ -1672,6 +1665,13 @@
             <interfaceMoniker
               Id="a0ca2371-b216-4232-a988-b3febf8c7d93"
               LastKnownName="WindowListener"
+              LastKnownLocation="MultiCastor.uml" />
+          </dependency>
+          <dependency
+            Id="68b3ec09-c30e-4c06-a0e8-365a51d817d0">
+            <interfaceMoniker
+              Id="dec19089-378e-4cd1-a1bd-115b85b63d6b"
+              LastKnownName="ComponentListener"
               LastKnownLocation="MultiCastor.uml" />
           </dependency>
         </suppliersInternal>
