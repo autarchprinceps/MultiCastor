@@ -17,7 +17,6 @@ public class MiscTableModel extends AbstractTableModel {
 	private Typ typ = Typ.UNDEFINED;
 
 	public MiscTableModel(final ViewController ctrl, final Typ typ) {
-		;
 		this.typ = typ;
 		this.ctrl = ctrl;
 	}

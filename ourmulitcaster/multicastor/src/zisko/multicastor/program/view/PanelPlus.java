@@ -1,5 +1,5 @@
 package zisko.multicastor.program.view;
-
+//FrameMain delete?
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -20,18 +20,11 @@ import zisko.multicastor.program.lang.LanguageManager;
 @SuppressWarnings("serial")
 public class PanelPlus extends JPanel {
 
-	JLabel aboutText;
-	JLabel l2rText;
-	JLabel l3rText;
-	JLabel l3sText;
 	private JButton about;
-	@SuppressWarnings("unused")
-	private final FrameMain frame;
-	private JButton l2r;
-	private JButton l2s;
-	private JLabel l2sText;
-	private JButton l3r;
-	private JButton l3s;
+	private JLabel aboutText;
+	//private final FrameMain frame;
+	private JButton[][] lrs = new JButton[2][2];
+	private JLabel[][] lrsText = new JLabel[2][2];
 
 	private final LanguageManager lang;
 
@@ -46,9 +39,9 @@ public class PanelPlus extends JPanel {
 	 * @param pVCtrl
 	 *            Instanz des ViewControllers.
 	 */
-	public PanelPlus(final FrameMain pFrame, final ViewController pVCtrl) {
+	public PanelPlus(/*final FrameMain pFrame,*/ final ViewController pVCtrl) {
 		vCtrl = pVCtrl;
-		frame = pFrame;
+		//frame = pFrame;
 		lang = LanguageManager.getInstance();
 		initComponents(true);
 	}
@@ -73,70 +66,70 @@ public class PanelPlus extends JPanel {
 			final GridBagLayout gridBayLayout = new GridBagLayout();
 			setLayout(gridBayLayout);
 
-			l2s = new JButton();
-			l2s.setMinimumSize(new Dimension(100, 100));
-			gridBayLayout.setConstraints(l2s, new GridBagConstraints(0, 0, 1,
+			lrs[0][1] = new JButton();
+			lrs[0][1].setMinimumSize(new Dimension(100, 100));
+			gridBayLayout.setConstraints(lrs[0][1], new GridBagConstraints(0, 0, 1,
 					1, 1.0, 1.0, GridBagConstraints.CENTER,
 					GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
-			l2s.setIcon(new ImageIcon(getClass().getResource(
+			lrs[0][1].setIcon(new ImageIcon(getClass().getResource(
 					"/zisko/multicastor/resources/images/ipv4sender.png")));
-			l2s.setFont(MiscFont.getFont(0, 17));
-			l2s.setActionCommand("open_layer2_s");
-			l2s.addActionListener(vCtrl);
-			add(l2s);
-			l2sText = new JLabel();
-			gridBayLayout.setConstraints(l2sText, new GridBagConstraints(1, 0,
+			lrs[0][1].setFont(MiscFont.getFont(0, 17));
+			lrs[0][1].setActionCommand("open_layer2_s");
+			lrs[0][1].addActionListener(vCtrl);
+			add(lrs[0][1]);
+			lrsText[0][1] = new JLabel();
+			gridBayLayout.setConstraints(lrsText[0][1], new GridBagConstraints(1, 0,
 					1, 1, 1.0, 1.0, GridBagConstraints.CENTER,
 					GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
-			add(l2sText);
+			add(lrsText[0][1]);
 
-			l2r = new JButton();
-			gridBayLayout.setConstraints(l2r, new GridBagConstraints(0, 1, 1,
+			lrs[0][0] = new JButton();
+			gridBayLayout.setConstraints(lrs[0][0], new GridBagConstraints(0, 1, 1,
 					1, 1.0, 1.0, GridBagConstraints.CENTER,
 					GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
-			l2r.setIcon(new ImageIcon(getClass().getResource(
+			lrs[0][0].setIcon(new ImageIcon(getClass().getResource(
 					"/zisko/multicastor/resources/images/ipv4receiver.png")));
-			l2r.setFont(MiscFont.getFont(0, 17));
-			l2r.setActionCommand("open_layer2_r");
-			l2r.addActionListener(vCtrl);
-			add(l2r);
-			l2rText = new JLabel();
-			gridBayLayout.setConstraints(l2rText, new GridBagConstraints(1, 1,
+			lrs[0][0].setFont(MiscFont.getFont(0, 17));
+			lrs[0][0].setActionCommand("open_layer2_r");
+			lrs[0][0].addActionListener(vCtrl);
+			add(lrs[0][0]);
+			lrsText[0][0] = new JLabel();
+			gridBayLayout.setConstraints(lrsText[0][0], new GridBagConstraints(1, 1,
 					1, 1, 1.0, 1.0, GridBagConstraints.CENTER,
 					GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
-			add(l2rText);
+			add(lrsText[0][0]);
 
-			l3s = new JButton();
-			gridBayLayout.setConstraints(l3s, new GridBagConstraints(0, 2, 1,
+			lrs[1][1] = new JButton();
+			gridBayLayout.setConstraints(lrs[1][1], new GridBagConstraints(0, 2, 1,
 					1, 1.0, 1.0, GridBagConstraints.CENTER,
 					GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
-			l3s.setIcon(new ImageIcon(getClass().getResource(
+			lrs[1][1].setIcon(new ImageIcon(getClass().getResource(
 					"/zisko/multicastor/resources/images/ipv6sender.png")));
-			l3s.setFont(MiscFont.getFont(0, 17));
-			l3s.setActionCommand("open_layer3_s");
-			l3s.addActionListener(vCtrl);
-			add(l3s);
-			l3sText = new JLabel();
-			gridBayLayout.setConstraints(l3sText, new GridBagConstraints(1, 2,
+			lrs[1][1].setFont(MiscFont.getFont(0, 17));
+			lrs[1][1].setActionCommand("open_layer3_s");
+			lrs[1][1].addActionListener(vCtrl);
+			add(lrs[1][1]);
+			lrsText[1][1] = new JLabel();
+			gridBayLayout.setConstraints(lrsText[1][1], new GridBagConstraints(1, 2,
 					1, 1, 1.0, 1.0, GridBagConstraints.CENTER,
 					GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
-			add(l3sText);
+			add(lrsText[1][1]);
 
-			l3r = new JButton();
-			gridBayLayout.setConstraints(l3r, new GridBagConstraints(0, 3, 1,
+			lrs[1][0] = new JButton();
+			gridBayLayout.setConstraints(lrs[1][0], new GridBagConstraints(0, 3, 1,
 					1, 1.0, 1.0, GridBagConstraints.CENTER,
 					GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
-			l3r.setIcon(new ImageIcon(getClass().getResource(
+			lrs[1][0].setIcon(new ImageIcon(getClass().getResource(
 					"/zisko/multicastor/resources/images/ipv6receiver.png")));
-			l3r.setFont(MiscFont.getFont(0, 17));
-			l3r.setActionCommand("open_layer3_r");
-			l3r.addActionListener(vCtrl);
-			add(l3r);
-			l3rText = new JLabel();
-			gridBayLayout.setConstraints(l3rText, new GridBagConstraints(1, 3,
+			lrs[1][0].setFont(MiscFont.getFont(0, 17));
+			lrs[1][0].setActionCommand("open_layer3_r");
+			lrs[1][0].addActionListener(vCtrl);
+			add(lrs[1][0]);
+			lrsText[1][0] = new JLabel();
+			gridBayLayout.setConstraints(lrsText[1][0], new GridBagConstraints(1, 3,
 					1, 1, 1.0, 1.0, GridBagConstraints.CENTER,
 					GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
-			add(l3rText);
+			add(lrsText[1][0]);
 
 			about = new JButton();
 			gridBayLayout.setConstraints(about, new GridBagConstraints(0, 4, 1,
@@ -155,16 +148,16 @@ public class PanelPlus extends JPanel {
 			add(aboutText);
 		}
 
-		l2s.setText(lang.getProperty("mi.layer2Sender"));
-		l2r.setText(lang.getProperty("mi.layer2Receiver"));
-		l3s.setText(lang.getProperty("mi.layer3Sender"));
-		l3r.setText(lang.getProperty("mi.layer3Receiver"));
+		lrs[0][1].setText(lang.getProperty("mi.layer2Sender"));
+		lrs[0][0].setText(lang.getProperty("mi.layer2Receiver"));
+		lrs[1][1].setText(lang.getProperty("mi.layer3Sender"));
+		lrs[1][0].setText(lang.getProperty("mi.layer3Receiver"));
 		about.setText(lang.getProperty("mi.about"));
 
-		l2sText.setText(lang.getProperty("plus.l2sDescription"));
-		l2rText.setText(lang.getProperty("plus.l2rDescription"));
-		l3sText.setText(lang.getProperty("plus.l3sDescription"));
-		l3rText.setText(lang.getProperty("plus.l3rDescription"));
+		lrsText[0][1].setText(lang.getProperty("plus.l2sDescription"));
+		lrsText[0][0].setText(lang.getProperty("plus.l2rDescription"));
+		lrsText[1][1].setText(lang.getProperty("plus.l3sDescription"));
+		lrsText[1][0].setText(lang.getProperty("plus.l3rDescription"));
 		aboutText.setText(lang.getProperty("plus.aboutDescription"));
 
 		if(!firstInit) {
