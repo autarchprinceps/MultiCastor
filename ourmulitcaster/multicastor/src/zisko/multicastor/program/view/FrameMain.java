@@ -358,7 +358,6 @@ public class FrameMain extends JFrame {
 	 * Aeffnet einen gewuenschten Tab.
 	 */
 	public void openPane() {
-
 		if(subTitle.equals(" " + lang.getProperty("tab.l2s") + " ")) {
 			remove(panel[1][0]);
 			tabpane.insertTab(" L2 Sender ", null, panel[1][0], null, 0);
@@ -394,10 +393,8 @@ public class FrameMain extends JFrame {
 			tabpane.setTabComponentAt(0, new ButtonTabComponent(tabpane,
 					"/zisko/multicastor/resources/images/about.png", ctrl));
 		}
-
 		add(tabpane);
 		paneDel = false;
-
 	}
 
 	/**
@@ -411,7 +408,6 @@ public class FrameMain extends JFrame {
 	}
 
 	public void removePane() {
-
 		remove(tabpane);
 
 		final String title = tabpane.getTitleAt(0);
@@ -429,7 +425,6 @@ public class FrameMain extends JFrame {
 		} else if(title.equals(" " + lang.getProperty("mi.about") + " ")) {
 			add(panel_about);
 		}
-
 	}
 
 	public void setAboutPanelState(final int i) {

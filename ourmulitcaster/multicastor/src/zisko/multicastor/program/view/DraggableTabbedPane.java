@@ -46,14 +46,10 @@ public class DraggableTabbedPane extends JTabbedPane {
 	 */
 	public DraggableTabbedPane(final FrameMain parentFrame,
 			final ViewController pVCtrl) {
-
 		super();
-
 		vCtrl = pVCtrl;
-
 		lang = LanguageManager.getInstance();
 		frame = parentFrame;
-
 		addMouseMotionListener(new MouseMotionAdapter() {
 			@Override
 			public void mouseDragged(final MouseEvent e) {
