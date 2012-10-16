@@ -38,8 +38,8 @@
     <packs>
         <pack name="Base" required="yes">
             <description>The base files</description>
-            <file src="Readme.txt" targetdir="$INSTALL_PATH"/>
-            <file src="Licence.txt" targetdir="$INSTALL_PATH"/>
+            <file src="README.md" targetdir="$INSTALL_PATH"/>
+            <file src="LICENSE" targetdir="$INSTALL_PATH"/>
             <file src="script.bat" targetdir="$INSTALL_PATH"/>
             <parsable targetfile="$INSTALL_PATH/script.bat"/>
         </pack>
