@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE stax SYSTEM "stax.dtd">
+
+<stax>
+	<defaultcall function="Multicastor_Sender_Receiver_Functionality"/>
+
+<!--#########################################################################################-->
+
+	<function name = "receive_packet">
+		<function-map-args>
+			<function-arg-def name = "lib_path" type = "optional" default ="'/home/testuser/Desktop/dist/libs/ubuntu.x86_64/jnetpcap-1.3.0'">
+				<function-arg-description>
+				  Path to jnetpcap library
+				</function-arg-description>
+			</function-arg-def>
+			<function-arg-def name = "multicastor_path" type = "optional" default ="'/home/testuser/Desktop/dist/MultiCastor.jar'">
+                                <function-arg-description>
+                                  Path to multicastor tool
+                                </function-arg-description>
+                        </function-arg-def>
+			<function-arg-def name = "mode">
+                                <function-arg-description>
+                                  Mode type (mmrp, ipv4 or ipv6)
+                                </function-arg-description>
+                        </function-arg-def>
+			<function-arg-def name = "group">
+                                <function-arg-description>
+                                  Group address
+                                </function-arg-description>
+                        </function-arg-def>
+			<function-arg-def name = "source">
+                                <function-arg-description>
+                                  Source address
+                                </function-arg-description>
+                        </function-arg-def>
+			<function-arg-def name = "port" type = "optional" default ="'4711'">
+                                <function-arg-description>
+                                  Port to listen
+                                </function-arg-description>
+                        </function-arg-def>
+			<function-arg-def name = "logging_path" type = "optional" default ="'/home/testuser/Desktop/logging_receiver.txt'">
+                                <function-arg-description>
+                                  Path for log file
+                                </function-arg-description>
+                        </function-arg-def>
+		</function-map-args>
+		<sequence>
+			<script>
+			   if mode != 'ipv4':
+			      if mode != 'ipv6':
+			         if mode != 'mmrp':
+				    RC = 0
+			         else:
+	   			    mode_cmd= 'm'
+			      else:
+			         mode_cmd = '6'
+			   else:
+			      mode_cmd = '4'
+			</script>
+			<process name="'Receiver Multicast in %s Mode' % (mode)">
+				<location>'local'</location>
+				<command mode="'shell'">'java'</command>
+				<parms>'-Djava.library.path=%s -jar %s -R -%s --group=%s --source=%s --port=%s > %s' % (lib_path, multicastor_path, mode_cmd, group, source, port, logging_path )</parms>
+				<stderr mode="'stdout'"/>
+	                        <returnstdout/>
+			</process>
+			<if expr="RC != 0">
+				<message log="1">'Coult not run %s in %s Receiver Mode!' % ( multicastor_path, mode, RC )</message>
+			</if>
+		</sequence>
+	</function>
+
+	<function name = "send_packet">
+                <function-map-args>
+                        <function-arg-def name = "lib_path" type = "optional" default ="'/home/testuser/Desktop/dist/libs/ubuntu.x86_64/jnetpcap-1.3.0'">
+                                <function-arg-description>
+                                  Path to jnetpcap library
+                                </function-arg-description>
+                        </function-arg-def>
+                        <function-arg-def name = "multicastor_path" type = "optional" default ="'/home/testuser/Desktop/dist/MultiCastor.jar'">
+                                <function-arg-description>
+                                  Path to multicastor tool
+                                </function-arg-description>
+                        </function-arg-def>
+                        <function-arg-def name = "mode">
+                                <function-arg-description>
+                                  Mode type (mmrp, ipv4 or ipv6)
+                                </function-arg-description>
+                        </function-arg-def>
+                        <function-arg-def name = "group">
+                                <function-arg-description>
+                                  Group address
+                                </function-arg-description>
+                        </function-arg-def>
+                        <function-arg-def name = "source">
+                                <function-arg-description>
+                                  Source address
+                                </function-arg-description>
+                        </function-arg-def>
+                        <function-arg-def name = "port" type = "optional" default ="'4711'">
+                                <function-arg-description>
+                                  Port to listen
+                                </function-arg-description>
+                        </function-arg-def>
+			<function-arg-def name = "ttl" type = "optional" default ="'32'">
+                                <function-arg-description>
+                                  Time to live
+                                </function-arg-description>
+                        </function-arg-def>
+			<function-arg-def name = "packetlength" type = "optional" default ="'1024'">
+                                <function-arg-description>
+                                  Length of packet
+                                </function-arg-description>
+                        </function-arg-def>
+			<function-arg-def name = "packetrate" type = "optional" default ="'10'">
+                                <function-arg-description>
+                                  Packet rate to send
+                                </function-arg-description>
+                        </function-arg-def>
+                        <function-arg-def name = "logging_path" type = "optional" default ="'/home/testuser/Desktop/logging_sender.txt'">
+                                <function-arg-description>
+                                  Path for log file
+                                </function-arg-description>
+                        </function-arg-def>
+                </function-map-args>
+			<sequence>
+                        <script>
+                           if mode != 'ipv4':
+                              if mode != 'ipv6':
+                                 if mode != 'mmrp':
+                                    RC = 0
+                                 else:
+                                    mode_cmd= 'm'
+                              else:
+                                 mode_cmd = '6'
+                           else:
+                              mode_cmd = '4'
+                        </script>
+                        <process name="'Send Multicast in %s Mode' % (mode)">
+                                <location>'local'</location>
+                                <command mode="'shell'">'java'</command>
+                                <parms>'-Djava.library.path=%s -jar %s -S -%s --group=%s --source=%s --port=%s --ttl=%s --length=%s --rate=%s > %s' % (lib_path, multicastor_path, mode_cmd, group, source, port, ttl, packetlength, packetrate, logging_path )</parms>
+                                <stderr mode="'stdout'"/>
+                                <returnstdout/>
+                        </process>
+                        <if expr="RC != 0">
+                                <message log="1">'Coult not run %s in %s Sender Mode' % ( multicastor_path, mode, RC )</message>
+                        </if>
+                </sequence>
+        </function>
+
+<!--#########################################################################################-->
+
+	<function name = "Multicastor_Sender_Receiver_Functionality">
+		<sequence>
+			<block name="'Send and Receive Packages'">
+				<sequence>
+				<timer duration='21000'>
+					<parallel>
+					<call function="'receive_packet'">{ 'mode':'mmrp', 'group':'01:00:5e:00:00:01', 'source':'08:00:27:2c:b7:e2'}</call>
+					<call function="'send_packet'">{ 'mode':'mmrp', 'group':'01:00:5e:00:00:01', 'source':'08:00:27:2c:b7:e2'}</call>
+					</parallel>
+				</timer>
+				</sequence>
+			</block>
+			<testcase name="'Sender started'">
+				<sequence>
+				<script>
+				   try:
+                                      f = open('/home/testuser/Desktop/logging_sender.txt','r')
+                                      content_sender = f.readlines()
+                                      f.close()
+                                   except:
+                                      try:
+                                         f.close()
+                                      except:
+                                         None
+				   
+				   sender_started = 'false'
+
+			           for line in content_sender:
+				      if line.find('Multicast added:') != -1:
+				         sender_mode = line.split('SENDER_')[1].split( )[0]
+				         client_name = line.split('SENDER_'+sender_mode)[1].split( )[0]
+					 group_address = line.split('SENDER_'+sender_mode)[1].split( )[1]
+					 continue
+				      if line.find('MultiCast-Sender activated') != -1:
+				         sender_started = 'true'
+					 continue
+				      else:
+				         continue
+				</script>
+				<if expr="sender_started != 'true'">
+					<sequence>
+						<message log="1">
+						   'Sender nicht erfolgreich gestartet!'
+						</message>
+						<tcstatus result="'fail'"></tcstatus>
+					</sequence>
+					<else>
+					<sequence>
+						<message log="1">
+						   'Sender %s wurde erfolgreich auf der Maschine %s mit der Gruppenadresse %s gestartet!' % ( sender_mode, client_name, group_address )
+						</message>
+						<tcstatus result="'pass'"></tcstatus>
+					</sequence>
+					</else>
+				</if>
+				</sequence>
+			</testcase>
+			<testcase name="'Receiver started'">
+                                <sequence>
+				<script>
+				   try:
+				      f = open('/home/testuser/Desktop/logging_receiver.txt', 'r')
+				      content_receiver = f.readlines()
+				      f.close()
+				   except:
+				      try:
+				         f.close()
+				      except:
+				         None
+
+				   receiver_started = 'false'
+	
+				   for line in content_receiver:
+				      if line.find('Multicast added:') != -1:
+				         receiver_mode = line.split('RECEIVER_')[1].split( )[0]
+				         group_address = line.split('RECEIVER_'+receiver_mode)[1].split( )[1]
+				         continue
+				      if line.find('Started Receiver') != -1:
+				         receiver_started = 'true'
+				         continue
+				      else:
+				         continue
+				</script>
+				<if expr="receiver_started != 'true'">
+                                        <sequence>
+                                                <message log="1">
+                                                   'Receiver nicht erfolgreich gestartet!'
+                                                </message>
+                                                <tcstatus result="'fail'"></tcstatus>
+                                        </sequence>
+                                        <else>
+                                        <sequence>
+                                                <message log="1">
+                                                   'Receiver %s wurde erfolgreich mit der Gruppenadresse %s gestartet!' % ( receiver_mode, group_address )
+                                                </message>
+                                                <tcstatus result="'pass'"></tcstatus>
+                                        </sequence>
+                                        </else>
+                                </if>
+				</sequence>
+                        </testcase>
+			<testcase name="'Packages send and received'">
+				<sequence>
+				<script>
+				   tolleranz_allowed = '10'
+
+				   try:
+				      f = open('/home/testuser/Desktop/logging_receiver.txt', 'r')
+				      content_receiver = f.readlines()
+				      f.close()
+				      f = open('/home/testuser/Desktop/logging_sender.txt', 'r')
+				      content_sender = f.readlines()
+				      f.close()
+				   except:
+				      try:
+				         f.close()
+				      except:
+				         None
+
+				   received = 'false'
+				   send = 'false'
+				   received_packages_count = '0'
+				   send_packages_count = '0'
+
+				   for line in content_receiver:
+				      if line.find('#RECEIVED:') != -1:
+					 received_packages_count = int(line.split('#RECEIVED:')[1].split( )[0])
+				         received = 'true'
+				         continue
+				      else:
+				         continue
+
+				   for line in content_sender:
+				      if line.find('#SENT:') != -1:
+				         send_packages_count = int(line.split('#SENT:')[1].split( )[0])
+				         send = 'true'
+				         continue
+				      else:
+				         continue
+
+				   tolleranz_final = int(send_packages_count) - int(received_packages_count)
+				   if int(tolleranz_allowed) >  int(tolleranz_final):
+				      great_job = 'true'
+				   else:
+				      great_job = 'false'
+				</script>
+				<if expr="received != 'true' and send != 'true' and great_job != 'tre'">
+					<sequence>
+						<message log="1">
+						   'Es wurden %s Pakete verschickt und %s Pakete empfangen. \nDie erlaubte Tolleranz der verlorenen Pakete lag bei %s, war allerdings %s.' % (send_packages_count, received_packages_count, tolleranz_allowed, tolleranz_final)
+						</message>
+					</sequence>
+					<else>
+					<sequence>
+						<message log="1">
+						  'Es wurden %s Pakete verschickt und %s Pakete empfangen. \nDie erlaubte Tolleranz der verlorenen Pakete lag bei %s.' % (send_packages_count, received_packages_count, tolleranz_allowed)
+						</message>
+					</sequence>
+					</else>
+				</if>
+				</sequence>
+			</testcase>
+		</sequence>
+	</function>
+
+<!--#########################################################################################-->
+
+</stax>

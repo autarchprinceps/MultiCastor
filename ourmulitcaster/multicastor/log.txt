@@ -192,3 +192,16 @@
 [14.10.2012-20:15:35][INFO] Default GUI Configurationfile loaded.
 [14.10.2012-20:15:36][INFO] Multicast Konfiguration gespeichert
 [14.10.2012-20:15:36][INFO] GUI Konfiguration gespeichert
+[20.10.2012-18:36:13][INFO] Hostname: Paddy
+[20.10.2012-18:36:13][INFO] Hostadress: 192.168.168.1
+[20.10.2012-18:36:13][INFO] Username: autarch; User location: null - Europe/Berlin
+[20.10.2012-18:36:13][INFO] Java version: 1.7.0_07; Java vendor: Oracle Corporation
+[20.10.2012-18:36:13][INFO] File encoding: UTF-8
+[20.10.2012-18:36:13][INFO] Starting MultiCastor with a gui
+[20.10.2012-18:36:13][WARNING] Could not find any devices for Layer 2.
+ Do you have JNetPcap installed, and did you start as root / admin?
+ It seems like you could not use Layer 2 functionality while runtime.
+[20.10.2012-18:36:17][INFO] Configurationfile loaded.
+[20.10.2012-18:36:17][INFO] Default GUI Configurationfile loaded.
+[20.10.2012-19:30:23][INFO] Multicast Konfiguration gespeichert
+[20.10.2012-19:30:23][INFO] GUI Konfiguration gespeichert

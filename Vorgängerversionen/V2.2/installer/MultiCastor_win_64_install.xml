@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+
+<!-- 
+    A sample installation file.
+    Use it as a base for your own installers :-)
+    
+    To compile it :
+    - go in the bin directory where you installed IzPack
+    - call "compile ../sample/install.xml -b ../sample"
+-->
+
+<installation version="1.0">
+
+    <!-- 
+        The info section.
+        The meaning of the tags should be natural ...
+    -->
+    <info>
+        <appname>MultiCastor 2.0</appname>
+        <appversion>2.0</appversion>
+        <authors>
+            <!--<author name="Alexander Behm" email="alexander.behm@rootloot.de"/>-->
+        </authors>
+        <url>http://sourceforge.de</url>
+	<run-privileged />
+    </info>
+
+
+    <!-- 
+        The gui preferences indication.
+        Sets the installer window to 640x480. It will not be able to change the size.
+    -->
+    <guiprefs width="640" height="480" resizable="yes"/>
+
+    <!-- 
+        The locale section.
+        Asks here to include the English and French langpacks.
+    -->
+    <locale>
+        <langpack iso3="eng"/>
+    </locale>
+
+    <!-- 
+        The resources section.
+        The ids must be these ones if you want to use the LicencePanel and/or the InfoPanel.
+   -->
+	<resources>
+	<res src="shortcutSpec_64.xml" id="shortcutSpec.xml"/>
+	</resources>
+    <!-- 
+        The panels section.
+        We indicate here which panels we want to use. The order will be respected.
+    -->
+    <panels>
+        <panel classname="HelloPanel"/>
+	<panel classname="TargetPanel"/>
+        <panel classname="PacksPanel"/>
+	<panel classname="ShortcutPanel"/>
+        <panel classname="InstallPanel"/>
+    </panels>
+
+
+
+    <!-- 
+        The packs section.
+        We specify here our packs.
+    -->
+<packs>
+	<pack name="Pcap for Windows" required="no">
+        	<description>Required if you dont have WinPcap installed on your system</description>
+	        <file src="pcap.exe" targetdir="$INSTALL_PATH"/>
+		<executable targetfile="$INSTALL_PATH/pcap.exe" stage="postinstall">
+			<args>
+				<arg value="/S" />
+			</args>
+		</executable>
+        </pack>
+        <pack name="MultiCastor 2.0" required="yes">
+            <description>Multicastor 2.0</description>
+            <file src="Multicastor.jar" targetdir="$INSTALL_PATH"/>
+	    <file src="MultiCastor_win32.vbs" targetdir="$INSTALL_PATH"/>
+	    <file src="MultiCastor_win64.vbs" targetdir="$INSTALL_PATH"/>
+	    <file src="MultiCastor_manual.pdf" targetdir="$INSTALL_PATH"/>
+	    <file src="icon.ico" targetdir="$INSTALL_PATH"/>
+
+	    <fileset dir="libs" targetdir="$INSTALL_PATH\libs">
+                <include name="**"/>
+            </fileset>
+	    <fileset dir="starter" targetdir="$INSTALL_PATH\starter">
+                <include name="**"/>
+            </fileset>
+        </pack>
+    </packs>
+	<native type="izpack" name="ShellLink.dll"/>
+
+</installation>
