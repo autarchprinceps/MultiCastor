@@ -179,16 +179,16 @@ public class PanelMulticastConfig extends JPanel {
 
 		switch(ctrl.getSelectedTab()) {
 			case L3_SENDER:
-				tabpart = ctrl.getFrame().getPanel_sen_lay3();
+				tabpart = ctrl.getFrame().getPanel(1,1);
 				break;
 			case L3_RECEIVER:
-				tabpart = ctrl.getFrame().getPanel_rec_lay3();
+				tabpart = ctrl.getFrame().getPanel(0,1);
 				break;
 			case L2_SENDER:
-				tabpart = ctrl.getFrame().getPanel_sen_lay2();
+				tabpart = ctrl.getFrame().getPanel(1,0);
 				break;
 			case L2_RECEIVER:
-				tabpart = ctrl.getFrame().getPanel_rec_lay2();
+				tabpart = ctrl.getFrame().getPanel(0,0);
 				break;
 		}
 

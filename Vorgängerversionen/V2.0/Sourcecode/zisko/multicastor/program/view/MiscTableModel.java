@@ -24,7 +24,6 @@ public class MiscTableModel extends AbstractTableModel {
 	 */
 	public void insertUpdate(){
 		fireTableRowsInserted(0, ctrl.getMCCount(typ));
-		
 	}
 	/**
 	 * Funktion welche aufgerufen wird wenn eine Multicast gelsuecht wird.

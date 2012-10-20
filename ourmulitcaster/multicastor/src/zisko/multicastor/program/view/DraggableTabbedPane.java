@@ -46,14 +46,10 @@ public class DraggableTabbedPane extends JTabbedPane {
 	 */
 	public DraggableTabbedPane(final FrameMain parentFrame,
 			final ViewController pVCtrl) {
-
 		super();
-
 		vCtrl = pVCtrl;
-
 		lang = LanguageManager.getInstance();
 		frame = parentFrame;
-
 		addMouseMotionListener(new MouseMotionAdapter() {
 			@Override
 			public void mouseDragged(final MouseEvent e) {
@@ -160,13 +156,13 @@ public class DraggableTabbedPane extends JTabbedPane {
 	 */
 	public void closeTab(final String command) {
 		if(command.equals(" " + lang.getProperty("tab.l3r") + " ")) {
-			frame.getMi_open_l3r().setSelected(false);
+			frame.getMi_open_l(1,0).setSelected(false);
 		} else if(command.equals(" " + lang.getProperty("tab.l3s") + " ")) {
-			frame.getMi_open_l3s().setSelected(false);
+			frame.getMi_open_l(1,1).setSelected(false);
 		} else if(command.equals(" " + lang.getProperty("tab.l2r") + " ")) {
-			frame.getMi_open_l2r().setSelected(false);
+			frame.getMi_open_l(0,0).setSelected(false);
 		} else if(command.equals(" " + lang.getProperty("tab.l2s") + " ")) {
-			frame.getMi_open_l2s().setSelected(false);
+			frame.getMi_open_l(0,1).setSelected(false);
 		} else if(command.equals(" " + lang.getProperty("mi.about") + " ")) {
 			frame.getMi_open_about().setSelected(false);
 		}
@@ -246,56 +242,56 @@ public class DraggableTabbedPane extends JTabbedPane {
 						+ " "));
 			} else {
 				insertTab(" " + lang.getProperty("tab.l3r") + " ", null,
-						frame.getPanel_rec_lay3(), null, openTabsCount - 1);
+						frame.getPanel(0,1), null, openTabsCount - 1);
 				setTabComponentAt(openTabsCount - 1, new ButtonTabComponent(
 						this,
 						"/zisko/multicastor/resources/images/ipv6receiver.png",
 						vCtrl));
 				setSelectedIndex(openTabsCount - 1);
 			}
-			frame.getMi_open_l3r().setSelected(true);
+			frame.getMi_open_l(1,0).setSelected(true);
 		} else if(command.equals("open_layer3_s")) {
 			if(openTabs.containsKey(" " + lang.getProperty("tab.l3s") + " ")) {
 				setSelectedIndex(openTabs.get(" " + lang.getProperty("tab.l3s")
 						+ " "));
 			} else {
 				insertTab(" " + lang.getProperty("tab.l3s") + " ", null,
-						frame.getPanel_sen_lay3(), null, openTabsCount - 1);
+						frame.getPanel(1,1), null, openTabsCount - 1);
 				setTabComponentAt(openTabsCount - 1, new ButtonTabComponent(
 						this,
 						"/zisko/multicastor/resources/images/ipv6sender.png",
 						vCtrl));
 				setSelectedIndex(openTabsCount - 1);
 			}
-			frame.getMi_open_l3s().setSelected(true);
+			frame.getMi_open_l(1,1).setSelected(true);
 		} else if(command.equals("open_layer2_s")) {
 			if(openTabs.containsKey(" " + lang.getProperty("tab.l2s") + " ")) {
 				setSelectedIndex(openTabs.get(" " + lang.getProperty("tab.l2s")
 						+ " "));
 			} else {
 				insertTab(" " + lang.getProperty("tab.l2s") + " ", null,
-						frame.getPanel_sen_lay2(), null, openTabsCount - 1);
+						frame.getPanel(1,0), null, openTabsCount - 1);
 				setTabComponentAt(openTabsCount - 1, new ButtonTabComponent(
 						this,
 						"/zisko/multicastor/resources/images/ipv4sender.png",
 						vCtrl));
 				setSelectedIndex(openTabsCount - 1);
 			}
-			frame.getMi_open_l2s().setSelected(true);
+			frame.getMi_open_l(0,1).setSelected(true);
 		} else if(command.equals("open_layer2_r")) {
 			if(openTabs.containsKey(" " + lang.getProperty("tab.l2r") + " ")) {
 				setSelectedIndex(openTabs.get(" " + lang.getProperty("tab.l2r")
 						+ " "));
 			} else {
 				insertTab(" " + lang.getProperty("tab.l2r") + " ", null,
-						frame.getPanel_rec_lay2(), null, openTabsCount - 1);
+						frame.getPanel(0,0), null, openTabsCount - 1);
 				setTabComponentAt(openTabsCount - 1, new ButtonTabComponent(
 						this,
 						"/zisko/multicastor/resources/images/ipv4receiver.png",
 						vCtrl));
 				setSelectedIndex(openTabsCount - 1);
 			}
-			frame.getMi_open_l2r().setSelected(true);
+			frame.getMi_open_l(0,0).setSelected(true);
 		} else if(command.equals("open_about")) {
 			if(openTabs.containsKey(" " + lang.getProperty("mi.about") + " ")) {
 				setSelectedIndex(openTabs.get(" "

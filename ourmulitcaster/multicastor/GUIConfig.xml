@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <MultiCastor>
     <System>
-        <Time>Mon Oct 01 13:20:25 CEST 2012</Time>
-        <Hostname>apipw</Hostname>
-        <Hostaddress>141.31.69.220</Hostaddress>
+        <Time>Sat Oct 20 19:30:23 CEST 2012</Time>
+        <Hostname>Paddy</Hostname>
+        <Hostaddress>192.168.168.1</Hostaddress>
         <Username>autarch</Username>
         <Javaversion>1.7.0_07</Javaversion>
         <Javavendor>Oracle Corporation</Javavendor>
@@ -22,10 +22,10 @@
     </DEFAULT_L2>
     <Tabs>
         <L2_SENDER>visible</L2_SENDER>
-        <L2_RECEIVER>visible</L2_RECEIVER>
+        <L2_RECEIVER>selected</L2_RECEIVER>
         <L3_SENDER>visible</L3_SENDER>
         <L3_RECEIVER>visible</L3_RECEIVER>
-        <ABOUT>selected</ABOUT>
+        <ABOUT>visible</ABOUT>
         <PLUS>visible</PLUS>
     </Tabs>
     <Language>deutsch</Language>
