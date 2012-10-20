@@ -267,10 +267,10 @@ public class ViewController implements ActionListener, MouseListener,
 
 		else if(e.getSource() == f.getMi_saveSelectedMc()) {
 			// check if there are any Multicasts to save
-			if((f.getPanel_rec_lay2().getTable().getSelectedRowCount()
-					+ f.getPanel_rec_lay3().getTable().getSelectedRowCount()
-					+ f.getPanel_sen_lay2().getTable().getSelectedRowCount() + f
-					.getPanel_sen_lay3().getTable().getSelectedRowCount()) < 1) {
+			if((f.getPanel(0,0).getTable().getSelectedRowCount()
+					+ f.getPanel(0,1).getTable().getSelectedRowCount()
+					+ f.getPanel(1,0).getTable().getSelectedRowCount() + f
+					.getPanel(1,1).getTable().getSelectedRowCount()) < 1) {
 				JOptionPane.showMessageDialog(f,
 						lang.getProperty("message.noMcSelected"));
 			} else {
@@ -636,16 +636,16 @@ public class ViewController implements ActionListener, MouseListener,
 		PanelTabbed ret = null;
 		switch(typ) {
 			case L2_SENDER:
-				ret = f.getPanel_sen_lay2();
+				ret = f.getPanel(1,0);
 				break;
 			case L2_RECEIVER:
-				ret = f.getPanel_rec_lay2();
+				ret = f.getPanel(0,0);
 				break;
 			case L3_SENDER:
-				ret = f.getPanel_sen_lay3();
+				ret = f.getPanel(1,1);
 				break;
 			case L3_RECEIVER:
-				ret = f.getPanel_rec_lay3();
+				ret = f.getPanel(0,1);
 				break;
 		}
 		return ret;
@@ -712,16 +712,16 @@ public class ViewController implements ActionListener, MouseListener,
 		JTable tablepart = null;
 		switch(typ) {
 			case L2_RECEIVER:
-				tablepart = f.getPanel_rec_lay2().getTable();
+				tablepart = f.getPanel(0,0).getTable();
 				break;
 			case L2_SENDER:
-				tablepart = f.getPanel_sen_lay2().getTable();
+				tablepart = f.getPanel(1,0).getTable();
 				break;
 			case L3_RECEIVER:
-				tablepart = f.getPanel_rec_lay3().getTable();
+				tablepart = f.getPanel(0,1).getTable();
 				break;
 			case L3_SENDER:
-				tablepart = f.getPanel_sen_lay3().getTable();
+				tablepart = f.getPanel(1,1).getTable();
 				break;
 		}
 		return tablepart;
@@ -1636,16 +1636,16 @@ public class ViewController implements ActionListener, MouseListener,
 			PanelTabbed tabpart = null;
 			switch(typ) {
 				case L2_SENDER:
-					tabpart = f.getPanel_sen_lay2();
+					tabpart = f.getPanel(1,0);
 					break;
 				case L3_SENDER:
-					tabpart = f.getPanel_sen_lay3();
+					tabpart = f.getPanel(1,1);
 					break;
 				case L2_RECEIVER:
-					tabpart = f.getPanel_rec_lay2();
+					tabpart = f.getPanel(0,0);
 					break;
 				case L3_RECEIVER:
-					tabpart = f.getPanel_rec_lay3();
+					tabpart = f.getPanel(0,1);
 					break;
 			}
 			final int[] selectedRows = tabpart.getTable().getSelectedRows();
@@ -2414,16 +2414,16 @@ public class ViewController implements ActionListener, MouseListener,
 		PanelMulticastConfig configpart = null;
 		switch(typ) {
 			case L2_SENDER:
-				configpart = f.getPanel_sen_lay2().getPan_config();
+				configpart = f.getPanel(1,0).getPan_config();
 				break;
 			case L2_RECEIVER:
-				configpart = f.getPanel_rec_lay2().getPan_config();
+				configpart = f.getPanel(0,0).getPan_config();
 				break;
 			case L3_SENDER:
-				configpart = f.getPanel_sen_lay3().getPan_config();
+				configpart = f.getPanel(1,1).getPan_config();
 				break;
 			case L3_RECEIVER:
-				configpart = f.getPanel_rec_lay3().getPan_config();
+				configpart = f.getPanel(0,1).getPan_config();
 				break;
 		}
 		return configpart;
@@ -2441,16 +2441,16 @@ public class ViewController implements ActionListener, MouseListener,
 		PanelMulticastControl controlpart = null;
 		switch(typ) {
 			case L2_SENDER:
-				controlpart = f.getPanel_sen_lay2().getPan_control();
+				controlpart = f.getPanel(1,0).getPan_control();
 				break;
 			case L2_RECEIVER:
-				controlpart = f.getPanel_rec_lay2().getPan_control();
+				controlpart = f.getPanel(0,0).getPan_control();
 				break;
 			case L3_SENDER:
-				controlpart = f.getPanel_sen_lay3().getPan_control();
+				controlpart = f.getPanel(1,1).getPan_control();
 				break;
 			case L3_RECEIVER:
-				controlpart = f.getPanel_rec_lay3().getPan_control();
+				controlpart = f.getPanel(0,1).getPan_control();
 				break;
 		}
 		return controlpart;
@@ -2468,16 +2468,16 @@ public class ViewController implements ActionListener, MouseListener,
 		PanelStatusBar statusbarpart = null;
 		switch(typ) {
 			case L2_SENDER:
-				statusbarpart = f.getPanel_sen_lay2().getPan_status();
+				statusbarpart = f.getPanel(1,0).getPan_status();
 				break;
 			case L2_RECEIVER:
-				statusbarpart = f.getPanel_rec_lay2().getPan_status();
+				statusbarpart = f.getPanel(0,0).getPan_status();
 				break;
 			case L3_SENDER:
-				statusbarpart = f.getPanel_sen_lay3().getPan_status();
+				statusbarpart = f.getPanel(1,1).getPan_status();
 				break;
 			case L3_RECEIVER:
-				statusbarpart = f.getPanel_rec_lay3().getPan_status();
+				statusbarpart = f.getPanel(0,1).getPan_status();
 				break;
 		}
 		return statusbarpart;
@@ -2541,16 +2541,16 @@ public class ViewController implements ActionListener, MouseListener,
 		PanelTabbed tabpart = null;
 		switch(typ) {
 			case L3_SENDER:
-				tabpart = f.getPanel_sen_lay3();
+				tabpart = f.getPanel(1,1);
 				break;
 			case L3_RECEIVER:
-				tabpart = f.getPanel_rec_lay3();
+				tabpart = f.getPanel(0,1);
 				break;
 			case L2_SENDER:
-				tabpart = f.getPanel_sen_lay2();
+				tabpart = f.getPanel(1,0);
 				break;
 			case L2_RECEIVER:
-				tabpart = f.getPanel_rec_lay2();
+				tabpart = f.getPanel(0,0);
 				break;
 		}
 
@@ -3099,19 +3099,19 @@ public class ViewController implements ActionListener, MouseListener,
 				mc.saveMulticastConfig(chooser.getSelectedFile().getPath(), v);
 			} else {
 				final Vector<MulticastData> v = new Vector<MulticastData>();
-				for(final int row : f.getPanel_rec_lay2().getTable()
+				for(final int row : f.getPanel(0,0).getTable()
 						.getSelectedRows()) {
 					v.add(mc.getMC(row, Typ.L2_RECEIVER));
 				}
-				for(final int row : f.getPanel_rec_lay3().getTable()
+				for(final int row : f.getPanel(0,1).getTable()
 						.getSelectedRows()) {
 					v.add(mc.getMC(row, Typ.L3_RECEIVER));
 				}
-				for(final int row : f.getPanel_sen_lay2().getTable()
+				for(final int row : f.getPanel(1,0).getTable()
 						.getSelectedRows()) {
 					v.add(mc.getMC(row, Typ.L2_SENDER));
 				}
-				for(final int row : f.getPanel_sen_lay3().getTable()
+				for(final int row : f.getPanel(1,1).getTable()
 						.getSelectedRows()) {
 					v.add(mc.getMC(row, Typ.L3_SENDER));
 				}

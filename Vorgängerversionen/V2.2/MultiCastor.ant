@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="MultiCastor" default="create_run_jar">
+	<property name="filename" value="MultiCastor.jar" />
+
+	<target name="clean">
+		<delete file="${basedir}/dist/${filename}" failonerror="no" />
+	</target>
+
+    <target name="create_run_jar" depends="clean">
+        <jar destfile="${basedir}/dist/${filename}" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="program.controller.Main"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="C:/Users/emkey/workspace-swe/Multicastor/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/eclipse/plugins/org.junit_4.8.2.v4_8_2_v20110321-1705/junit.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/eclipse/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/emkey/workspace-swe/Multicastor/jnetpcap-1.3.0/jnetpcap.jar"/>
+        </jar>
+    </target>
+</project>

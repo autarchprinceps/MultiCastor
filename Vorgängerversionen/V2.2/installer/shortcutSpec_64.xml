@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<shortcuts>
+<skipIfNotSupported/>
+<programGroup defaultName="MultiCastor 2.0"
+            location="applications"/>
+<shortcut
+name="MultiCastor 2.0"
+target="$INSTALL_PATH/MultiCastor_win64.vbs"
+iconFile="$INSTALL_PATH/icon.ico"
+iconIndex="0"
+description="Launch MultiCastor 2.0"
+workingDirectory="$INSTALL_PATH"
+initialState="normal"
+programGroup="yes"
+desktop="yes"
+applications="no"
+startMenu="no"
+startup="no">
+
+<createForPack name="MultiCastor 2.0"/>
+</shortcut>
+
+<shortcut
+name="Uninstall"
+target="$INSTALL_PATH/Uninstaller/uninstaller.jar"
+
+description="Launch MultiCastor 2.0"
+workingDirectory="$INSTALL_PATH"
+initialState="normal"
+programGroup="yes"
+iconFile="$INSTALL_PATH/icon.ico"
+iconIndex="0"
+desktop="no"
+applications="no"
+startMenu="no"
+startup="no">
+
+<createForPack name="MultiCastor 2.0"/>
+</shortcut>
+
+</shortcuts>
