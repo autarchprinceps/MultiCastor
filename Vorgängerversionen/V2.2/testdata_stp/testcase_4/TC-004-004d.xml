@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<MultiCastor>
+    <Date>Mon May 07 23:12:13 CEST 2012</Date>
+    <Host>WIN-BR2G402E8G2</Host>
+    <Multicasts>
+        <RECEIVER_MMRP>
+            <active>false</active>
+            <groupAddress>01:00:5e:00:ab:ab</groupAddress>
+            <sourceAddress>ab:ab:ab:ab:ab:ab</sourceAddress>
+            <udpPort>-1</udpPort>
+            <packetLength>-1</packetLength>
+            <ttl>-1</ttl>
+            <packetRateDesired>-1</packetRateDesired>
+			<typ>RECEIVER_MMRP</typ>
+        </RECEIVER_MMRP>
+        <RECEIVER_V4>
+			<active>true</active>
+            <groupAddress>224.0.112.1</groupAddress>
+            <sourceAddress>127.0.0.1</sourceAddress>
+            <udpPort>112</udpPort>
+            <packetLength>1024</packetLength>
+            <ttl>32</ttl>
+            <packetRateDesired>10</packetRateDesired>
+            <typ>RECEIVER_V4</typ>
+        </RECEIVER_V4>
+		<SENDER_V4>
+            <active>true</active>
+            <groupAddress>224.0.112.1</groupAddress>
+            <sourceAddress>127.0.0.1</sourceAddress>
+            <udpPort>112</udpPort>
+            <packetLength>1024</packetLength>
+            <ttl>127</ttl>
+            <packetRateDesired>10</packetRateDesired>
+            <typ>SENDER_V4</typ>
+        </SENDER_V4>
+        <SENDER_MMRP>
+            <active>false</active>
+            <groupAddress>01:00:5e:00:ab:ab</groupAddress>
+            <sourceAddress>00:0c:29:23:48:3b</sourceAddress>
+            <udpPort>-1</udpPort>
+            <packetLength>1500</packetLength>
+            <ttl>-1</ttl>
+            <packetRateDesired>112</packetRateDesired>
+            <typ>SENDER_MMRP</typ>
+        </SENDER_MMRP>      
+    </Multicasts>
+</MultiCastor>
