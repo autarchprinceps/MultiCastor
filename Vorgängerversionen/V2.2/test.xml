@@ -1,0 +1,14 @@
+<MultiCastor>
+	<Multicasts>
+		<SENDER_V4>
+			<active>true</active>
+			<groupIp>224.0.0.1</groupIp>
+			<sourceIp>127.0.0.1</sourceIp>
+			<udpPort>4000</udpPort>
+			<packetLength>100</packetLength>
+			<ttl>21</ttl>
+			<packetRateDesired>120</packetRateDesired>
+			<typ>SENDER_V4</typ>
+		</SENDER_V4>
+	</Multicasts>
+</MultiCastor> 
