@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<MultiCastor>
+    <Date>Tue May 08 21:02:52 CEST 2012</Date>
+    <Host>WIN-BR2G402E8G2</Host>
+    <UserInputData>
+        <Date>Tue May 08 21:02:52 CEST 2012</Date>
+        <DefaultL3GroupAddress>192.168.2.1</DefaultL3GroupAddress>
+        <DefaultL3InterfaceAddress>127.0.0.1</DefaultL3InterfaceAddress>
+        <DefaultL2GroupAddress>01:00:5e:00:00:01</DefaultL2GroupAddress>
+        <DefaultL2InterfaceAddress>00:0c:29:23:48:3b</DefaultL2InterfaceAddress>
+        <DefaultL3UdpPort>4711</DefaultL3UdpPort>
+        <DefaultL3TTL>32</DefaultL3TTL>
+        <DefaultL3PacketRate>10</DefaultL3PacketRate>
+        <DefaultL3PacketLength>1024</DefaultL3PacketLength>
+        <DefaultL2PacketRate>10</DefaultL2PacketRate>
+        <DefaultL2PacketLength>1024</DefaultL2PacketLength>
+        <Language>en</Language>
+    </UserInputData>
+</MultiCastor>
