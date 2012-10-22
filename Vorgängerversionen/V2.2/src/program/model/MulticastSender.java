@@ -16,8 +16,8 @@ import program.interfaces.MulticastSenderInterface;
 import program.interfaces.MulticastThreadSuper;
 
 /**
- * Die MultiCastSender-Klasse k�mmert sich um das tats�chliche Senden der Multicast-
- * Objekte �ber das Netzwerk.
+ * Die MultiCastSender-Klasse kümmert sich um das tatsächliche Senden der Multicast-
+ * Objekte über das Netzwerk.
  * Sie extended {@link MulticastThreadSuper}, ist also ein Runnable.
  * Ein MultiCastSender hat eine Grundkonfiguration, die nicht mehr abge�ndert werden kann,
  * wie zum Beispiel die gesetzten IPs. Soll diese Grundkonfiguration ge�ndert werden, muss
@@ -30,7 +30,7 @@ public class MulticastSender extends MulticastThreadSuper implements MulticastSe
 	private PacketBuilder 	myPacketBuilder;
 
 	/**
-	 * Variablen f�r die verschiedenen Sendemethoden
+	 * Variablen für die verschiedenen Sendemethoden
 	 */
 	public static enum		sendingMethod 	{	/**
 												 * Senden unter Volllast, ohne auf die angegebene
