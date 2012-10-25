@@ -1,0 +1,6 @@
+CONFIG(22.10.2012-08:38:16): Starting MultiCastor with a GUI
+CONFIG(22.10.2012-08:38:16): Date: Mon Oct 22 08:38:16 CEST 2012
+CONFIG(22.10.2012-08:38:16): User: autarch
+INFO(22.10.2012-08:38:16): Host: apipw
+WARNING(22.10.2012-08:38:16): Could not find default configuration. Resetting to default
+INFO(22.10.2012-08:39:38): Saved Configfile to: C:\Users\autarch\Documents\GitHub\MultiCastor\Vorgängerversionen\V2.2\installer\MultiCastor.xml
