@@ -12864,6 +12864,24 @@
             <elementDefinition Id="b302c9f1-cda2-4c7b-8c41-333ba4356209" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association Id="ee01fb6f-25fe-46e2-91b5-42074233b88c" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="fd4e866b-78e5-4f56-a6c9-4ce0cbe4f6c3" LastKnownName="PanelTabbed" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ea800583-c3cb-48e9-9aa7-0481bf5a2e5c" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f04b43f7-fea2-4511-80b2-2313774150b2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1cb2ad1d-7f52-4547-94d4-7b6a27e5a975" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2af013b2-6335-4b14-8c2c-2f3db528d62f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="15832c01-8baf-474f-9ff7-52c77ceb78c8" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="b17a8f7e-10f2-4e65-9529-718f22e28e56" name="!typ" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="869604c2-06a2-4e12-a883-6ede105755dd" />
@@ -14773,6 +14791,327 @@
     <packageHasNamedElement>
       <referencedType Id="edc10fc2-1927-4e8c-8a33-114607d0ef81" name="Image" isAbstract="false" isLeaf="false" cachedFullName="Image">
         <elementDefinition Id="01c7eb34-7542-4bd9-a79e-4873c9d9120d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fd4e866b-78e5-4f56-a6c9-4ce0cbe4f6c3" name="PanelTabbed" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b49282cc-0b64-4ae4-b8be-448b32d392a0" />
+        <generalsInternal>
+          <generalization Id="32bd1a80-0346-482d-a410-b9e05bdfc050" isSubstitutable="false">
+            <classMoniker Id="7c1e540c-a821-4e10-9b41-d4f878e4cf21" LastKnownName="JPanel" />
+            <elementDefinition Id="701ccabb-a194-40ed-b2d6-f234aeacaa80" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="790edcfc-d702-4bfa-8e7b-0531cd324ad6" name="columns" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="17a73dbf-f1c2-46a9-b830-75a6de2245dd" name="Lower" value="*">
+                <elementDefinition Id="eaccdbdf-3541-46de-91d3-65d34d5973ce" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="b529d768-1f4d-45ab-9f77-b3d6012adc0a" name="Upper" value="*">
+                <elementDefinition Id="9f4cde22-e287-4fa6-a4cc-2ed036bceabf" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="9d3664c6-fea6-462d-ace8-a409d358b287" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a6ba306b-6e55-44eb-b27b-84daf3fb683f" LastKnownName="TableColumn" />
+            </type_NamedElement>
+          </property>
+          <property Id="7efba7bf-b398-4fec-8839-52b63d7c46ad" name="console_scrollpane" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ba5dc6b2-86fa-48ed-b915-c3d45c7a65b1" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="bafd3201-5496-4307-b5e6-cffe7f7c7933" LastKnownName="JScrollPane" />
+            </type_NamedElement>
+          </property>
+          <property Id="7e46f429-a302-43c6-802e-ccd6bcf30a91" name="!lang" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f531f23f-9734-440f-a5f2-6b4e89570e09" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="74742476-54e0-46cb-8029-55c9217cc421" LastKnownName="LanguageManager" />
+            </type_NamedElement>
+          </property>
+          <property Id="83569098-104d-44c0-a17a-fa60ce2894ac" name="model" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bfe3928e-5525-40b6-b74b-bb23416f58c5" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4e21921e-3660-4b14-a4d4-73af1b360808" LastKnownName="MiscTableModel" />
+            </type_NamedElement>
+          </property>
+          <property Id="8a87f818-5798-41d2-a90a-5853c445b990" name="!pan_config" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="585ef0f8-55db-43db-88a6-e88e34d8a3b1" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="60cb3b14-d079-4bea-b293-5e5c7fc6a1b6" LastKnownName="PanelMulticastConfig" />
+            </type_NamedElement>
+          </property>
+          <property Id="66c37517-b01e-4eb8-b313-48901e500db2" name="!pan_control" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="05b3ff30-fd55-4e15-a546-370a6f4556a4" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="1bc6211b-aa59-487d-b1a7-593caa0bbe16" LastKnownName="PanelMulticastControl" />
+            </type_NamedElement>
+          </property>
+          <property Id="9a01c6cf-9cce-411c-aa64-e589592e8f89" name="!pan_graph" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="82fc3e77-400f-4103-b62a-9b54914e17d1" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b99b9a8b-0404-4167-851a-c62001a8e452" LastKnownName="PanelGraph" />
+            </type_NamedElement>
+          </property>
+          <property Id="4415ab12-6ecd-4af0-8645-58636a2ecff2" name="pan_left" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c2d6dde8-2811-4618-a0a0-50aa697a5771" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+            </type_NamedElement>
+          </property>
+          <property Id="64fcd771-049a-43c8-831f-cfcd47b5493c" name="pan_options" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6e6ee03f-af6f-4909-b441-f80ab9c956ec" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+            </type_NamedElement>
+          </property>
+          <property Id="ebc43a1e-d20f-4ea3-92d0-00e8000f116a" name="pan_space" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="89a7b7e6-7bf7-4370-8eda-8dec8457935d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+            </type_NamedElement>
+          </property>
+          <property Id="12c26662-2394-4cf6-8e57-4706b5477c3c" name="!pan_status" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="18f963b5-304d-4085-8ce6-031e47123b50" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fa4ad3dd-d1b2-4858-a728-b430d1b2f817" LastKnownName="PanelStatusBar" />
+            </type_NamedElement>
+          </property>
+          <property Id="83e2d419-b37c-44ff-8d0f-bfa3bfbbbe60" name="pan_table" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2ff074eb-516c-480b-a25e-4d99a9435f1c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+            </type_NamedElement>
+          </property>
+          <property Id="8e3d9710-a398-459a-85fd-825c16b4a318" name="popupsAllowed" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3e746f83-bc47-4e82-a804-e5e104d74851" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6fa6cf6e-363f-4d03-a49e-bc95b1f2f720" LastKnownName="Boolean" />
+            </type_NamedElement>
+          </property>
+          <property Id="5f088f03-1f5e-4e4e-bf8a-6ef8a08f8af9" name="ta_console" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e62ac6e1-f8d0-46ed-934f-3ceb1212415a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="72dcb4d1-c152-4048-b90f-742310dafffe" LastKnownName="JTextArea" />
+            </type_NamedElement>
+          </property>
+          <property Id="fbac8dea-eb52-414d-a0ac-6199a7cbaab2" name="tab_console" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ad14a675-7fb9-4c0f-9d27-bd23b053b9e3" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e0c57da5-2a00-4bde-9d5d-73f71dec448d" LastKnownName="JTabbedPane" />
+            </type_NamedElement>
+          </property>
+          <property Id="ee654622-828e-4936-b563-3f59c2cc85c9" name="table" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="caa7fb7f-61b2-43fb-a746-6cbc8b87e19a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e309f1c3-18a9-48d4-966a-68507bd8d5ea" LastKnownName="JTable" />
+            </type_NamedElement>
+          </property>
+          <property Id="e9454c67-7521-4eb1-b9f0-dc4e74c34d18" name="table_scrollpane" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f82a3d29-381f-422e-be5e-3f40314a0cbc" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="bafd3201-5496-4307-b5e6-cffe7f7c7933" LastKnownName="JScrollPane" />
+            </type_NamedElement>
+          </property>
+          <property Id="d523bb91-93f6-414e-904e-0e7c67972033" name="!tablePanelBorder" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c97ae990-1f55-4a3d-af80-4b56e4a508ed" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f664435e-6424-4993-a8e2-0ad2801502b7" LastKnownName="MiscBorder" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="40fdee8f-ab24-4d4f-b61a-7f7e6fc95392" name="constructor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8593f4b3-e1f2-4c5e-b907-43b6d116d5c7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2d02d764-2b5e-4b4a-8621-a072dce76c42" name="ctrl" direction="In" isUnique="false">
+                  <elementDefinition Id="4f75969d-2e7c-4d5e-a998-fdc663ad99c4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="98e97ce2-fab6-4b91-bb90-dee9898d64c4" name="typ" direction="In" isUnique="false">
+                  <elementDefinition Id="542223a5-6dd5-4cdf-9235-edfcc3f08836" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a793742a-1ebb-4fcd-82de-8c08da018e12" LastKnownName="Typ" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="95a9c813-75b8-489f-b7af-6b8e8308d817" name="getColumns" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2236a751-729d-4cdc-9bb9-7bcdfb5f30e0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="119eb7ee-36f7-45d8-98e3-bd0453ccf24d" direction="Return" isUnique="false">
+                  <lowerValueInternal>
+                    <literalString Id="f1a5e1b8-f6c1-4933-b3f9-f832402bc3d0" name="Lower" value="*">
+                      <elementDefinition Id="1c8874d9-a461-47d6-9c4a-17fe4df69035" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="109319a6-656f-423c-84dd-01d10b920d65" name="Upper" value="*">
+                      <elementDefinition Id="aace1fe9-b849-4d78-8693-287ab474f2ed" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="e2d23c22-d7df-4a3f-92a5-1a555aa40b47" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a6ba306b-6e55-44eb-b27b-84daf3fb683f" LastKnownName="TableColumn" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="159bcbfc-b436-4cf1-8dc2-09f632837869" name="getConsole_scrollpane" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e55c3007-0c3e-4fcf-8878-a4bdaff0ec1f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="422e3964-c493-4091-8599-67887cd875d0" direction="Return" isUnique="false">
+                  <elementDefinition Id="0941fd9f-da18-4790-9b41-2db4d56428ae" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bafd3201-5496-4307-b5e6-cffe7f7c7933" LastKnownName="JScrollPane" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="d2c39104-4919-4e83-af02-fe80dcdb6155" name="getModel" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d060a6b6-537c-4d72-b749-5206d43d3008" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d275e796-3e34-414b-85dd-a7dee74e5bda" direction="Return" isUnique="false">
+                  <elementDefinition Id="cf084691-54dc-47fb-ba46-854f4258e635" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4e21921e-3660-4b14-a4d4-73af1b360808" LastKnownName="MiscTableModel" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="bfa4ca35-60ff-49d9-96d9-a605711c07af" name="getPan_config" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8584757e-f268-4237-b4f3-da462b233fb9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8591bae8-6e80-414b-8853-5c5219f090c7" direction="Return" isUnique="false">
+                  <elementDefinition Id="e5f618b4-8012-4e5a-9b8e-f51a1a9d6880" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="60cb3b14-d079-4bea-b293-5e5c7fc6a1b6" LastKnownName="PanelMulticastConfig" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0c6b7c4a-309f-4f0a-bcf9-cde4a6763913" name="getPan_control" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ca02f3d1-4454-49fc-a367-c18bddb474ce" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bc313fa2-5215-4093-a2e0-fc27ecc4d72f" direction="Return" isUnique="false">
+                  <elementDefinition Id="f6b409e2-c635-4926-8b15-39d23a9c39fa" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="1bc6211b-aa59-487d-b1a7-593caa0bbe16" LastKnownName="PanelMulticastControl" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="b0e7626b-45d6-41a6-b099-afaa689ef8b2" name="getPan_graph" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9ca5f41a-e481-43ea-9390-ff036701a3f5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="917ef909-824b-46eb-bef7-9a2b381bc6a3" direction="Return" isUnique="false">
+                  <elementDefinition Id="b061c3c3-e126-4349-aa8a-2f3cb92779ca" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b99b9a8b-0404-4167-851a-c62001a8e452" LastKnownName="PanelGraph" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="cf6fbfca-5a0b-4317-873d-09e5980562f6" name="getPan_left" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="52b783db-c551-4aa5-96b8-ec89b80cc213" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a436f391-1c63-4500-875a-82e08ad1c81e" direction="Return" isUnique="false">
+                  <elementDefinition Id="9f7231bd-db60-42c5-9ce7-06b4fb7e8a2b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="dcb6b5b3-8e23-4428-a0da-f7de221282c2" name="getPan_options" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="153d7111-805f-4392-bbdb-4a1552257fcd" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="57c68953-5daa-41a8-b428-060bedc590d9" direction="Return" isUnique="false">
+                  <elementDefinition Id="40a3d419-f110-4684-ac62-fa0e21051634" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="28edec86-d93f-44e4-8176-ee84c987a642" name="getPan_recGraph" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1e89b246-49d4-4a2a-b626-0d563937dc67" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="095423fa-c35c-4a6f-9985-170205827f6c" direction="Return" isUnique="false">
+                  <elementDefinition Id="5e69ff80-cb35-4124-9c17-663c80588fc2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="906e6b08-b0d9-45e9-921b-a1839344f7e9" LastKnownName="ReceiverGraph" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="a6ba306b-6e55-44eb-b27b-84daf3fb683f" name="TableColumn" isAbstract="false" isLeaf="false" cachedFullName="TableColumn">
+        <elementDefinition Id="caf2494f-2687-46b1-829e-ae35f4917088" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4e21921e-3660-4b14-a4d4-73af1b360808" name="MiscTableModel" isAbstract="false" isLeaf="false" cachedFullName="MultiCastor::MiscTableModel">
+        <elementDefinition Id="5271d708-0411-48c7-929f-24ef3ef0db06" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b99b9a8b-0404-4167-851a-c62001a8e452" name="PanelGraph" isAbstract="false" isLeaf="false" cachedFullName="PanelGraph">
+        <elementDefinition Id="07ac0bdb-efac-46bb-91dc-570637141ea7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="fa4ad3dd-d1b2-4858-a728-b430d1b2f817" name="PanelStatusBar" isAbstract="false" isLeaf="false" cachedFullName="MultiCastor::PanelStatusBar">
+        <elementDefinition Id="07441f2f-a9d9-47b3-a9f8-29ada7e16978" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="72dcb4d1-c152-4048-b90f-742310dafffe" name="JTextArea" isAbstract="false" isLeaf="false" cachedFullName="JTextArea">
+        <elementDefinition Id="87a1235f-b0a2-43f5-b8fc-5abffead9f99" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e0c57da5-2a00-4bde-9d5d-73f71dec448d" name="JTabbedPane" isAbstract="false" isLeaf="false" cachedFullName="MultiCastor::JTabbedPane">
+        <elementDefinition Id="216e3848-8c09-47f2-b92c-523a9e694f2d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f664435e-6424-4993-a8e2-0ad2801502b7" name="MiscBorder" isAbstract="false" isLeaf="false" cachedFullName="MiscBorder">
+        <elementDefinition Id="ed834959-de53-416a-956c-6f607dddb020" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="906e6b08-b0d9-45e9-921b-a1839344f7e9" name="ReceiverGraph" isAbstract="false" isLeaf="false" cachedFullName="ReceiverGraph">
+        <elementDefinition Id="a25c4a93-609c-4a86-999f-1440143506dd" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

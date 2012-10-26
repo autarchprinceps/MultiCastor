@@ -89,10 +89,6 @@ public class PanelTabbed extends JPanel {
 		return console_scrollpane;
 	}
 
-	public Dimension getGraphSize() {
-		return pan_graph.getSize();
-	}
-
 	public MiscTableModel getModel() {
 		return model;
 	}
@@ -117,9 +113,9 @@ public class PanelTabbed extends JPanel {
 		return pan_options;
 	}
 
-	public ReceiverGraph getPan_recGraph() {
-		return ((ReceiverGraph)pan_graph);
-	}
+//	public ReceiverGraph getPan_recGraph() {
+//		return ((ReceiverGraph)pan_graph);
+//	}
 
 	public JPanel getPan_space() {
 		return pan_space;

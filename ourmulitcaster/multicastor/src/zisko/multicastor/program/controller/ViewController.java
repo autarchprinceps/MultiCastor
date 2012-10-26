@@ -61,6 +61,7 @@ import zisko.multicastor.program.view.PanelMulticastControl;
 import zisko.multicastor.program.view.PanelStatusBar;
 import zisko.multicastor.program.view.PanelTabbed;
 import zisko.multicastor.program.view.PopUpMenu;
+import zisko.multicastor.program.view.ReceiverGraph;
 import zisko.multicastor.program.view.ReceiverGraph.valueType;
 import zisko.multicastor.program.view.SnakeGimmick;
 import zisko.multicastor.program.view.SnakeGimmick.SNAKE_DIRECTION;
@@ -267,10 +268,10 @@ public class ViewController implements ActionListener, MouseListener,
 
 		else if(e.getSource() == f.getMi_saveSelectedMc()) {
 			// check if there are any Multicasts to save
-			if((f.getPanel(0,0).getTable().getSelectedRowCount()
-					+ f.getPanel(0,1).getTable().getSelectedRowCount()
-					+ f.getPanel(1,0).getTable().getSelectedRowCount() + f
-					.getPanel(1,1).getTable().getSelectedRowCount()) < 1) {
+			if((f.getPanel(0, 0).getTable().getSelectedRowCount()
+					+ f.getPanel(0, 1).getTable().getSelectedRowCount()
+					+ f.getPanel(1, 0).getTable().getSelectedRowCount() + f
+					.getPanel(1, 1).getTable().getSelectedRowCount()) < 1) {
 				JOptionPane.showMessageDialog(f,
 						lang.getProperty("message.noMcSelected"));
 			} else {
@@ -636,16 +637,16 @@ public class ViewController implements ActionListener, MouseListener,
 		PanelTabbed ret = null;
 		switch(typ) {
 			case L2_SENDER:
-				ret = f.getPanel(1,0);
+				ret = f.getPanel(1, 0);
 				break;
 			case L2_RECEIVER:
-				ret = f.getPanel(0,0);
+				ret = f.getPanel(0, 0);
 				break;
 			case L3_SENDER:
-				ret = f.getPanel(1,1);
+				ret = f.getPanel(1, 1);
 				break;
 			case L3_RECEIVER:
-				ret = f.getPanel(0,1);
+				ret = f.getPanel(0, 1);
 				break;
 		}
 		return ret;
@@ -712,16 +713,16 @@ public class ViewController implements ActionListener, MouseListener,
 		JTable tablepart = null;
 		switch(typ) {
 			case L2_RECEIVER:
-				tablepart = f.getPanel(0,0).getTable();
+				tablepart = f.getPanel(0, 0).getTable();
 				break;
 			case L2_SENDER:
-				tablepart = f.getPanel(1,0).getTable();
+				tablepart = f.getPanel(1, 0).getTable();
 				break;
 			case L3_RECEIVER:
-				tablepart = f.getPanel(0,1).getTable();
+				tablepart = f.getPanel(0, 1).getTable();
 				break;
 			case L3_SENDER:
-				tablepart = f.getPanel(1,1).getTable();
+				tablepart = f.getPanel(1, 1).getTable();
 				break;
 		}
 		return tablepart;
@@ -926,40 +927,40 @@ public class ViewController implements ActionListener, MouseListener,
 			}
 
 			/* Auswahl des Lost Packages Graphen im Receiver L3 */
-			else if(arg0.getSource() == getPanTabbed(Typ.L3_RECEIVER)
-					.getPan_recGraph().getLostPktsRB()) {
-				getPanTabbed(Typ.L3_RECEIVER).getPan_recGraph()
+			else if(arg0.getSource() == ((ReceiverGraph)getPanTabbed(
+					Typ.L3_RECEIVER).getPan_graph()).getLostPktsRB()) {
+				((ReceiverGraph)getPanTabbed(Typ.L3_RECEIVER).getPan_graph())
 						.selectionChanged(valueType.LOSTPKT);
 			}
 			/* Auswahl des Jitter Graphen im Receiver L3 */
-			else if(arg0.getSource() == getPanTabbed(Typ.L3_RECEIVER)
-					.getPan_recGraph().getJitterRB()) {
-				getPanTabbed(Typ.L3_RECEIVER).getPan_recGraph()
+			else if(arg0.getSource() == ((ReceiverGraph)getPanTabbed(
+					Typ.L3_RECEIVER).getPan_graph()).getJitterRB()) {
+				((ReceiverGraph)getPanTabbed(Typ.L3_RECEIVER).getPan_graph())
 						.selectionChanged(valueType.JITTER);
 			}
 			/* Auswahl des Measured Packages Graphen im Receiver L3 */
-			else if(arg0.getSource() == getPanTabbed(Typ.L3_RECEIVER)
-					.getPan_recGraph().getMeasPktRtRB()) {
-				getPanTabbed(Typ.L3_RECEIVER).getPan_recGraph()
+			else if(arg0.getSource() == ((ReceiverGraph)getPanTabbed(
+					Typ.L3_RECEIVER).getPan_graph()).getMeasPktRtRB()) {
+				((ReceiverGraph)getPanTabbed(Typ.L3_RECEIVER).getPan_graph())
 						.selectionChanged(valueType.MEASPKT);
 			}
 
 			/* Auswahl des Lost Packages Graphen im Receiver L2 */
-			else if(arg0.getSource() == getPanTabbed(Typ.L2_RECEIVER)
-					.getPan_recGraph().getLostPktsRB()) {
-				getPanTabbed(Typ.L2_RECEIVER).getPan_recGraph()
+			else if(arg0.getSource() == ((ReceiverGraph)getPanTabbed(
+					Typ.L2_RECEIVER).getPan_graph()).getLostPktsRB()) {
+				((ReceiverGraph)getPanTabbed(Typ.L2_RECEIVER).getPan_graph())
 						.selectionChanged(valueType.LOSTPKT);
 			}
 			/* Auswahl des Jitter Graphen im Receiver L2 */
-			else if(arg0.getSource() == getPanTabbed(Typ.L2_RECEIVER)
-					.getPan_recGraph().getJitterRB()) {
-				getPanTabbed(Typ.L2_RECEIVER).getPan_recGraph()
+			else if(arg0.getSource() == ((ReceiverGraph)getPanTabbed(
+					Typ.L2_RECEIVER).getPan_graph()).getJitterRB()) {
+				((ReceiverGraph)getPanTabbed(Typ.L2_RECEIVER).getPan_graph())
 						.selectionChanged(valueType.JITTER);
 			}
 			/* Auswahl des Measured Packages Graphen im Receiver L2 */
-			else if(arg0.getSource() == getPanTabbed(Typ.L2_RECEIVER)
-					.getPan_recGraph().getMeasPktRtRB()) {
-				getPanTabbed(Typ.L2_RECEIVER).getPan_recGraph()
+			else if(arg0.getSource() == ((ReceiverGraph)getPanTabbed(
+					Typ.L2_RECEIVER).getPan_graph()).getMeasPktRtRB()) {
+				((ReceiverGraph)getPanTabbed(Typ.L2_RECEIVER).getPan_graph())
 						.selectionChanged(valueType.MEASPKT);
 			}
 		} else {
@@ -1636,16 +1637,16 @@ public class ViewController implements ActionListener, MouseListener,
 			PanelTabbed tabpart = null;
 			switch(typ) {
 				case L2_SENDER:
-					tabpart = f.getPanel(1,0);
+					tabpart = f.getPanel(1, 0);
 					break;
 				case L3_SENDER:
-					tabpart = f.getPanel(1,1);
+					tabpart = f.getPanel(1, 1);
 					break;
 				case L2_RECEIVER:
-					tabpart = f.getPanel(0,0);
+					tabpart = f.getPanel(0, 0);
 					break;
 				case L3_RECEIVER:
-					tabpart = f.getPanel(0,1);
+					tabpart = f.getPanel(0, 1);
 					break;
 			}
 			final int[] selectedRows = tabpart.getTable().getSelectedRows();
@@ -2385,11 +2386,13 @@ public class ViewController implements ActionListener, MouseListener,
 		}
 		if((getSelectedTab() == Typ.L2_RECEIVER)
 				|| (getSelectedTab() == Typ.L3_RECEIVER)) {
-			if(getPanTabbed(getSelectedTab()).getPan_recGraph().isVisible()
+			if(((ReceiverGraph)getPanTabbed(getSelectedTab()).getPan_graph())
+					.isVisible()
 					&& getPanTabbed(getSelectedTab()).getTab_console()
 							.isVisible()) {
-				getPanTabbed(getSelectedTab()).getPan_recGraph().resize(
-						new Dimension(getFrame().getSize().width - 262, 100));
+				((ReceiverGraph)getPanTabbed(getSelectedTab()).getPan_graph())
+						.resize(new Dimension(getFrame().getSize().width - 262,
+								100));
 			}
 		} else if((getSelectedTab() == Typ.L2_SENDER)
 				|| (getSelectedTab() == Typ.L3_SENDER)) {
@@ -2414,16 +2417,16 @@ public class ViewController implements ActionListener, MouseListener,
 		PanelMulticastConfig configpart = null;
 		switch(typ) {
 			case L2_SENDER:
-				configpart = f.getPanel(1,0).getPan_config();
+				configpart = f.getPanel(1, 0).getPan_config();
 				break;
 			case L2_RECEIVER:
-				configpart = f.getPanel(0,0).getPan_config();
+				configpart = f.getPanel(0, 0).getPan_config();
 				break;
 			case L3_SENDER:
-				configpart = f.getPanel(1,1).getPan_config();
+				configpart = f.getPanel(1, 1).getPan_config();
 				break;
 			case L3_RECEIVER:
-				configpart = f.getPanel(0,1).getPan_config();
+				configpart = f.getPanel(0, 1).getPan_config();
 				break;
 		}
 		return configpart;
@@ -2441,16 +2444,16 @@ public class ViewController implements ActionListener, MouseListener,
 		PanelMulticastControl controlpart = null;
 		switch(typ) {
 			case L2_SENDER:
-				controlpart = f.getPanel(1,0).getPan_control();
+				controlpart = f.getPanel(1, 0).getPan_control();
 				break;
 			case L2_RECEIVER:
-				controlpart = f.getPanel(0,0).getPan_control();
+				controlpart = f.getPanel(0, 0).getPan_control();
 				break;
 			case L3_SENDER:
-				controlpart = f.getPanel(1,1).getPan_control();
+				controlpart = f.getPanel(1, 1).getPan_control();
 				break;
 			case L3_RECEIVER:
-				controlpart = f.getPanel(0,1).getPan_control();
+				controlpart = f.getPanel(0, 1).getPan_control();
 				break;
 		}
 		return controlpart;
@@ -2468,16 +2471,16 @@ public class ViewController implements ActionListener, MouseListener,
 		PanelStatusBar statusbarpart = null;
 		switch(typ) {
 			case L2_SENDER:
-				statusbarpart = f.getPanel(1,0).getPan_status();
+				statusbarpart = f.getPanel(1, 0).getPan_status();
 				break;
 			case L2_RECEIVER:
-				statusbarpart = f.getPanel(0,0).getPan_status();
+				statusbarpart = f.getPanel(0, 0).getPan_status();
 				break;
 			case L3_SENDER:
-				statusbarpart = f.getPanel(1,1).getPan_status();
+				statusbarpart = f.getPanel(1, 1).getPan_status();
 				break;
 			case L3_RECEIVER:
-				statusbarpart = f.getPanel(0,1).getPan_status();
+				statusbarpart = f.getPanel(0, 1).getPan_status();
 				break;
 		}
 		return statusbarpart;
@@ -2541,16 +2544,16 @@ public class ViewController implements ActionListener, MouseListener,
 		PanelTabbed tabpart = null;
 		switch(typ) {
 			case L3_SENDER:
-				tabpart = f.getPanel(1,1);
+				tabpart = f.getPanel(1, 1);
 				break;
 			case L3_RECEIVER:
-				tabpart = f.getPanel(0,1);
+				tabpart = f.getPanel(0, 1);
 				break;
 			case L2_SENDER:
-				tabpart = f.getPanel(1,0);
+				tabpart = f.getPanel(1, 0);
 				break;
 			case L2_RECEIVER:
-				tabpart = f.getPanel(0,0);
+				tabpart = f.getPanel(0, 0);
 				break;
 		}
 
@@ -3099,19 +3102,19 @@ public class ViewController implements ActionListener, MouseListener,
 				mc.saveMulticastConfig(chooser.getSelectedFile().getPath(), v);
 			} else {
 				final Vector<MulticastData> v = new Vector<MulticastData>();
-				for(final int row : f.getPanel(0,0).getTable()
+				for(final int row : f.getPanel(0, 0).getTable()
 						.getSelectedRows()) {
 					v.add(mc.getMC(row, Typ.L2_RECEIVER));
 				}
-				for(final int row : f.getPanel(0,1).getTable()
+				for(final int row : f.getPanel(0, 1).getTable()
 						.getSelectedRows()) {
 					v.add(mc.getMC(row, Typ.L3_RECEIVER));
 				}
-				for(final int row : f.getPanel(1,0).getTable()
+				for(final int row : f.getPanel(1, 0).getTable()
 						.getSelectedRows()) {
 					v.add(mc.getMC(row, Typ.L2_SENDER));
 				}
-				for(final int row : f.getPanel(1,1).getTable()
+				for(final int row : f.getPanel(1, 1).getTable()
 						.getSelectedRows()) {
 					v.add(mc.getMC(row, Typ.L3_SENDER));
 				}
@@ -3236,8 +3239,8 @@ public class ViewController implements ActionListener, MouseListener,
 			for(int i = 0; i < getSelectedRows(typ).length; i++) {
 				graphData[i] = mc.getMC(getSelectedRows(typ)[i], typ);
 			}
-			getPanTabbed(typ).getPan_recGraph().updateGraph(graphData,
-					showupdate);
+			((ReceiverGraph)getPanTabbed(typ).getPan_graph()).updateGraph(
+					graphData, showupdate);
 
 		}
 	}

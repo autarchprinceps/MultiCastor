@@ -166,7 +166,7 @@ public class FrameMain extends JFrame {
 	}
 
 	public Dimension getGraphSize() {
-		return panel[0][1].getGraphSize();
+		return panel[0][1].getPan_graph().getSize();
 	}
 
 	public ImageIcon getImg_close() {
