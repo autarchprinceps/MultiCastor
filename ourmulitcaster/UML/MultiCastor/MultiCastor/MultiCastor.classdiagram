@@ -15058,14 +15058,276 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="28edec86-d93f-44e4-8176-ee84c987a642" name="getPan_recGraph" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="1e89b246-49d4-4a2a-b626-0d563937dc67" />
+          <operation Id="622d3d1b-3485-4d42-b6ec-e6e4c0e31d56" name="getPan_space" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2b45d33f-a204-49c2-ba6e-79339400f3ef" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="095423fa-c35c-4a6f-9985-170205827f6c" direction="Return" isUnique="false">
-                  <elementDefinition Id="5e69ff80-cb35-4124-9c17-663c80588fc2" />
+                <parameter Id="c21689ee-2f0c-4a1b-8b90-897bb3dde3c8" direction="Return" isUnique="false">
+                  <elementDefinition Id="0dcc9f8e-01ef-4d06-b2e2-3325b1ef1afd" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="906e6b08-b0d9-45e9-921b-a1839344f7e9" LastKnownName="ReceiverGraph" />
+                    <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1b913d1f-aecc-4bf5-a655-296864995277" name="getPan_table" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e081a6d3-bb80-4ef8-a2dd-796f9bc25d12" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="143acb4d-f3b5-41f8-b7ba-aa66372f6d1b" direction="Return" isUnique="false">
+                  <elementDefinition Id="2e469952-f9cb-434f-98a8-7b84aa791938" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="88cc87bf-30db-4757-aa20-e3116e1df56b" name="getPan_status" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4a68fd45-7435-4bcc-8a7c-fc8cd8223303" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d255ca65-237e-4ec3-8488-4494265ec414" direction="Return" isUnique="false">
+                  <elementDefinition Id="6995f99b-a340-432f-9634-2b3afda6a95e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="fa4ad3dd-d1b2-4858-a728-b430d1b2f817" LastKnownName="PanelStatusBar" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8d685baa-be01-415f-bf08-a5b450c7171b" name="getTa_console" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7476324a-bec2-4118-9e79-2118adc42b45" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c8091102-f725-4624-a4ba-6d12ea65aca4" direction="Return" isUnique="false">
+                  <elementDefinition Id="7d5184f1-382f-4ee0-9307-1ff19977c845" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="72dcb4d1-c152-4048-b90f-742310dafffe" LastKnownName="JTextArea" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1a60abb0-db5c-44aa-8ede-2262b412b089" name="getTab_console" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ff25a054-45e5-46ee-884e-b476d1e46636" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1683f0d4-c432-4370-86e0-fd7370f5c521" direction="Return" isUnique="false">
+                  <elementDefinition Id="8dacc186-bf9e-4a27-bfb8-b14ece641ec8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e0c57da5-2a00-4bde-9d5d-73f71dec448d" LastKnownName="JTabbedPane" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="fceca8ac-8989-45a7-b941-d9a707728c56" name="getTable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="93de0637-9f27-4d9f-a317-8000d63cc74e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e2c353d1-c477-48da-a482-9f7616ccb722" direction="Return" isUnique="false">
+                  <elementDefinition Id="d87e39f7-d930-4a41-8d30-7c54ef49c03c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e309f1c3-18a9-48d4-966a-68507bd8d5ea" LastKnownName="JTable" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="942332d3-7b71-43d9-aac9-48f25b5c81a7" name="getTable_scrollpane" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="70688b43-5cb6-4f94-b748-3b91ab695bc4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fa13f5a4-1280-4b08-ab4e-8eeaca3d509f" direction="Return" isUnique="false">
+                  <elementDefinition Id="f44b279a-d67e-4897-8070-3a06f0032871" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bafd3201-5496-4307-b5e6-cffe7f7c7933" LastKnownName="JScrollPane" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="757089a2-8afd-43df-88ca-9c2e4068fd0b" name="getTableModel" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0099b7dc-04dc-4464-a620-55e92ff986df" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a6dea9b2-fcd9-4691-b13e-89ef0e9f38fa" direction="Return" isUnique="false">
+                  <elementDefinition Id="90b06a1b-9e81-4f66-8070-035b5a29c971" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4e21921e-3660-4b14-a4d4-73af1b360808" LastKnownName="MiscTableModel" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1db56255-fe8a-4b5d-9eec-357bb5019316" name="isPopupsAllowed" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a7e7343e-7090-4d3d-ad6f-19518d52e112" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="95a42231-c938-40cd-a098-f1d749cf280c" direction="Return" isUnique="false">
+                  <elementDefinition Id="ce75828e-59c4-4ea4-8bdd-23cd733d4a49" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6fa6cf6e-363f-4d03-a49e-bc95b1f2f720" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="dc4fd044-e75b-43f8-895f-586b18421cd8" name="reloadLanguage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c4e5d68d-f512-420c-a91c-8a870d8252a1" />
+          </operation>
+          <operation Id="c6ff5e7c-e98f-4857-a748-c29cdedd4b47" name="setPanels" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="af63051e-5994-4c57-b3ac-34bedef7bb96" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f0b55446-34e7-455b-a4a6-dc2efc352e9a" name="config" direction="In" isUnique="false">
+                  <elementDefinition Id="c42f037e-08a7-4ff6-87bc-e35015ae991c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6fa6cf6e-363f-4d03-a49e-bc95b1f2f720" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="455ecd27-42e1-4335-9c84-e69a17cad205" name="control" direction="In" isUnique="false">
+                  <elementDefinition Id="afae8480-adaf-44f6-b379-db426e019c3e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6fa6cf6e-363f-4d03-a49e-bc95b1f2f720" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c7de0a59-af43-4928-8f6a-892c69cd0ed1" name="status" direction="In" isUnique="false">
+                  <elementDefinition Id="b27d8386-4d95-46ad-b304-4f528fc31df3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6fa6cf6e-363f-4d03-a49e-bc95b1f2f720" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9b9782fe-7880-4b4c-8468-1cb6de01bfa3" name="console" direction="In" isUnique="false">
+                  <elementDefinition Id="fb39969a-29f9-4283-88d5-eff73547b378" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6fa6cf6e-363f-4d03-a49e-bc95b1f2f720" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a2c03368-0b60-4558-9e2e-df313e1aebb5" name="graph" direction="In" isUnique="false">
+                  <elementDefinition Id="e7cccf09-5de8-4090-9c1d-fbe2a908e8bf" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6fa6cf6e-363f-4d03-a49e-bc95b1f2f720" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="04254ceb-17d6-4f1b-9e20-d4f6508e5a76" name="setPopupsAllowed" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8ebe1a42-fb40-445b-89ed-bb5db8d1f2a2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6f5c33eb-6f0f-4911-856a-4a7974766e3e" name="popupsAllowed" direction="In" isUnique="false">
+                  <elementDefinition Id="5e7e5789-0023-49b2-8e5f-ad8c085ceede" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6fa6cf6e-363f-4d03-a49e-bc95b1f2f720" LastKnownName="Boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c479478e-54af-443e-91c6-caccbff1b8a4" name="setTableModel" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="62524436-3b3e-426e-9132-4f41388d1fc9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b644d3da-29d1-483f-be5e-32ad579014d1" name="ctrl" direction="In" isUnique="false">
+                  <elementDefinition Id="557c4177-28b7-450a-92f6-db59f4d8bec3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b827d5e6-e6c2-4f26-88f2-ee6d4687fe89" name="typ" direction="In" isUnique="false">
+                  <elementDefinition Id="a4e4edd1-088f-4ce8-8cf6-b5516bb3fb1b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a793742a-1ebb-4fcd-82de-8c08da018e12" LastKnownName="Typ" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="b400ea1f-f5f4-49bb-af9b-18219179db54" name="initConfigPanel" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1ebcdb9b-0076-49c9-b23c-a446b5ec7356" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e4813fb4-72b1-4968-8e2c-e82b7f88ff8b" name="ctrl" direction="In" isUnique="false">
+                  <elementDefinition Id="cf0b7a56-eff4-404f-8bbf-f423d7e64001" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9492b2c1-0394-4b39-8459-e171f39160ac" name="typ" direction="In" isUnique="false">
+                  <elementDefinition Id="0b863427-c225-4658-bd08-3085aa209056" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a793742a-1ebb-4fcd-82de-8c08da018e12" LastKnownName="Typ" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="52216cd6-37c2-4bda-ad42-c59080b2ddbc" name="initConsolePanel" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="43527971-7d50-40d5-a903-f4efcdca9abf" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a6d15646-2679-4e8b-9c56-b0308dba7141" name="ctrl" direction="In" isUnique="false">
+                  <elementDefinition Id="b567d96d-f80c-43f6-b919-a9b46d0d5dc5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a6cf95b3-bac1-4767-81f8-75bf3aeab3ff" name="typ" direction="In" isUnique="false">
+                  <elementDefinition Id="99b1baad-d035-45e5-a273-40a58dea9385" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a793742a-1ebb-4fcd-82de-8c08da018e12" LastKnownName="Typ" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a2fa708b-4440-4ce5-8a9f-5e692e8fbabd" name="initControlPanel" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d5257712-a653-488c-8794-bcacb9b6d58b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e3e2dff0-335d-4a4b-b84d-d19163ec2836" name="ctrl" direction="In" isUnique="false">
+                  <elementDefinition Id="91fc8062-3138-42c4-b998-18e9d073da49" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="10dbdc26-42ee-485f-9f43-4772f7978e39" name="initStatusPanel" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7cd6a08e-f5d5-428b-9d98-73aa338ea48a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="81d2f4e8-2b96-48d3-837c-f2053f4060ab" name="ctrl" direction="In" isUnique="false">
+                  <elementDefinition Id="93040900-e969-46cb-860b-49b23770c79f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="895aee69-5723-4313-b358-640182295730" name="typ" direction="In" isUnique="false">
+                  <elementDefinition Id="d76b138e-6f9b-4a7a-8255-e432d47276c9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a793742a-1ebb-4fcd-82de-8c08da018e12" LastKnownName="Typ" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -15107,11 +15369,6 @@
     <packageHasNamedElement>
       <referencedType Id="f664435e-6424-4993-a8e2-0ad2801502b7" name="MiscBorder" isAbstract="false" isLeaf="false" cachedFullName="MiscBorder">
         <elementDefinition Id="ed834959-de53-416a-956c-6f607dddb020" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="906e6b08-b0d9-45e9-921b-a1839344f7e9" name="ReceiverGraph" isAbstract="false" isLeaf="false" cachedFullName="ReceiverGraph">
-        <elementDefinition Id="a25c4a93-609c-4a86-999f-1440143506dd" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
