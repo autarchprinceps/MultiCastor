@@ -15333,6 +15333,27 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation Id="5955d79f-716f-4129-bead-1162428b3885" name="initTablePanel" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1be3848b-6103-4739-a720-e6297584010a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0794bfcf-2542-49ff-82e8-fe6d53ae8573" name="ctrl" direction="In" isUnique="false">
+                  <elementDefinition Id="da9c4b5b-f686-44f1-877b-c124e6465e45" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f47cbd9e-2e71-484d-b34c-29d7ea75770c" name="typ" direction="In" isUnique="false">
+                  <elementDefinition Id="51bd352e-4d44-48fc-a294-9127fafa1557" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a793742a-1ebb-4fcd-82de-8c08da018e12" LastKnownName="Typ" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -15369,6 +15390,628 @@
     <packageHasNamedElement>
       <referencedType Id="f664435e-6424-4993-a8e2-0ad2801502b7" name="MiscBorder" isAbstract="false" isLeaf="false" cachedFullName="MiscBorder">
         <elementDefinition Id="ed834959-de53-416a-956c-6f607dddb020" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dd449f51-8d76-4515-8651-264eb4a91915" name="PanelMulticastConfig" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="081c7cd3-a6e4-436c-8adf-aadd0818cb18" />
+        <generalsInternal>
+          <generalization Id="df938700-6749-4357-be1a-058a9abd80c1" isSubstitutable="false">
+            <classMoniker Id="7c1e540c-a821-4e10-9b41-d4f878e4cf21" LastKnownName="JPanel" />
+            <elementDefinition Id="5e5bf458-2543-4141-9790-32508ef82efc" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="3dd4f6b8-a7f5-443f-8db4-f35941becdc8" name="bt_active" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0f7bc35a-0228-49e2-8281-e1b9ceee3dc0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="73fa5560-671f-4784-953c-6ef63007bae1" LastKnownName="JToggleButton" />
+            </type_NamedElement>
+          </property>
+          <property Id="c8b517c5-0fa9-41c0-9921-51202dfbf18b" name="bt_enter" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8327e4dc-3d80-4bf0-b320-4b3d2251b25d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="44fd3285-59c9-45e2-8863-ebe42888caa3" LastKnownName="JButton" />
+            </type_NamedElement>
+          </property>
+          <property Id="f97c8a34-bd0d-4f0f-b6a3-8d90e30bc0ee" name="!ctrl" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2caba26c-440b-455a-bf04-c37e569d49d6" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+            </type_NamedElement>
+          </property>
+          <property Id="649ef0ec-da5d-44dc-bc40-f3ee234a3353" name="!cb_sourceIPaddress" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e125c5f4-0c1e-4117-96c1-f9eae1be3684" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="554b0d76-1ec3-4abe-9ecc-0480f25db70f" LastKnownName="WideComboBox" />
+            </type_NamedElement>
+          </property>
+          <property Id="e556faee-f08f-425b-a677-c89830fcd2ec" name="!lang" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1768b9f6-6001-4aec-84cb-a423835dcf4f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="74742476-54e0-46cb-8029-55c9217cc421" LastKnownName="LanguageManager" />
+            </type_NamedElement>
+          </property>
+          <property Id="0808ed87-7d71-4cb2-9eac-790058bfa375" name="!mainBorder" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="59c4fe83-c92a-4e90-bfad-776254f4ae7d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f664435e-6424-4993-a8e2-0ad2801502b7" LastKnownName="MiscBorder" />
+            </type_NamedElement>
+          </property>
+          <property Id="9faf4c60-da15-4f0f-b29a-e541fee57d7d" name="pan_groupIPaddress" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="79bed6a8-4aec-4d0d-a6d3-a7ed463f0d35" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+            </type_NamedElement>
+          </property>
+          <property Id="5c4800b7-3398-478b-8737-1d03bf96fcb8" name="pan_packetlength" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5cee0ba8-8191-4050-bd6e-f3187e9f6c74" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+            </type_NamedElement>
+          </property>
+          <property Id="aba615e4-9bee-45c3-b688-c4eb1d4e1a2e" name="pan_packetrate" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7e209024-3855-4bc0-8c84-1462340177cf" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+            </type_NamedElement>
+          </property>
+          <property Id="1694f0fa-ad3d-460b-9e69-7ebb1d74aaa0" name="pan_sourceIPaddress" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fe260b03-ff19-4b33-9bab-a925b2061f3a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+            </type_NamedElement>
+          </property>
+          <property Id="f10810ea-1b53-4b35-92f0-67aafa61b255" name="pan_ttl" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="eac7668a-aedb-4583-80b4-743b03b39147" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+            </type_NamedElement>
+          </property>
+          <property Id="a9413dbf-496a-414c-9f4c-364d1c00a099" name="pan_udp_port" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f1adbee8-26f3-4f27-b4d8-4632a3a90da7" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+            </type_NamedElement>
+          </property>
+          <property Id="8746aa62-3f5b-4e7c-9942-8033f7f8171f" name="tf_groupIPaddress" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9585da17-f7d7-417e-bd29-b9773c1c06b7" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="13cdbe0c-22b6-4a00-8df6-e3a0aca2286d" LastKnownName="JTextField" />
+            </type_NamedElement>
+          </property>
+          <property Id="f7c5769d-346f-43d4-a8ad-5503afdaf54c" name="tf_packetrate" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cd5b5867-4c7f-4763-9872-7e0313e4e0f7" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="13cdbe0c-22b6-4a00-8df6-e3a0aca2286d" LastKnownName="JTextField" />
+            </type_NamedElement>
+          </property>
+          <property Id="13cbee61-b4aa-4598-9cc0-d6661bde5a1b" name="tf_ttl" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e99c3783-4093-4106-b96f-92fb2b287c0c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="13cdbe0c-22b6-4a00-8df6-e3a0aca2286d" LastKnownName="JTextField" />
+            </type_NamedElement>
+          </property>
+          <property Id="57a22dea-73fd-48a5-984d-f849a5f9e527" name="tf_udp_packetlength" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4bc51fa8-2984-4e38-86d3-fc283111e7bc" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="13cdbe0c-22b6-4a00-8df6-e3a0aca2286d" LastKnownName="JTextField" />
+            </type_NamedElement>
+          </property>
+          <property Id="0e19b659-8510-476c-ac35-90882e0bf566" name="tf_udp_port" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4fd5610c-886b-411b-8289-5e29ed46542d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="13cdbe0c-22b6-4a00-8df6-e3a0aca2286d" LastKnownName="JTextField" />
+            </type_NamedElement>
+          </property>
+          <property Id="315dd0bd-f0bc-457d-b2fd-d6d57f4b2ed5" name="!typ" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9dc17b96-7fb3-419b-94a8-24c6edeababf" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a793742a-1ebb-4fcd-82de-8c08da018e12" LastKnownName="Typ" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="229449f4-64db-405b-a799-0076a65ca4fd" name="constructor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="ac2d424e-e682-465f-8048-b6277b55c8f6" name="create" profile="StandardProfileL2">
+                <elementDefinition Id="3cff5424-14d8-4ba8-9878-51915998aa5d" />
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="f8436b1a-b9d6-47a1-a7f3-e89198bb6190" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bc730008-c5da-4494-b92f-9e3cde80b82c" name="ctrl" direction="In" isUnique="false">
+                  <elementDefinition Id="4a05851d-4514-455e-aec6-346842ad617c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b8bfe64e-5b5c-4db8-bfa8-93d79bda175b" name="typ" direction="In" isUnique="false">
+                  <elementDefinition Id="9c767cc6-24d3-4899-b296-ca00f8248c88" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a793742a-1ebb-4fcd-82de-8c08da018e12" LastKnownName="Typ" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="4a113423-8c73-4985-ad25-173d6eb191c0" name="getBt_enter" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8bd2fd51-f72e-42d4-b35d-64bf38a6c35e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5c18082b-8828-4347-9a55-eaef03657387" direction="Return" isUnique="false">
+                  <elementDefinition Id="4448a97c-913d-497e-8bbf-0559b65214a3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="44fd3285-59c9-45e2-8863-ebe42888caa3" LastKnownName="JButton" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="cecca806-9296-46a2-a118-f969f522dad9" name="getCb_sourceIPaddress" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a0c92d25-2147-4b47-8be2-d67c8ff1d365" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="92b75dff-0e96-47d4-a6f7-ee2cf5d791b3" direction="Return" isUnique="false">
+                  <elementDefinition Id="5366e1e1-bc80-4ec3-909b-d753e8a8b493" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="554b0d76-1ec3-4abe-9ecc-0480f25db70f" LastKnownName="WideComboBox" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8a44c6de-8dc5-47ae-8bac-e01cc7dbf73b" name="getPan_groupIPaddress" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="90eb23c7-041a-46b8-a1b6-ba686e0ccf57" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f85acd1d-7fd9-4cd6-8472-f51092e38e96" direction="Return" isUnique="false">
+                  <elementDefinition Id="556b11b6-5688-4401-8171-5d0b23ae74a2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a998604c-db8a-4f7d-b2d7-593b26cc2b08" name="getPan_packetlength" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8d1dfb2a-0c5a-41cd-8fa8-e05ec31eac7b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="28006534-039f-44ff-ba17-9a4bad8dae3d" direction="Return" isUnique="false">
+                  <elementDefinition Id="ccf25c25-f2e7-4bbc-8c4f-85f50cb35013" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="caae765e-a76f-4f26-83cb-1480c77932b5" name="getPan_packetrate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="537262a7-78ed-4f49-94bd-37752924e229" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c42a6a1a-d17a-45dd-9b97-cd2d259d6b2f" direction="Return" isUnique="false">
+                  <elementDefinition Id="1b98bbd1-757c-496e-9662-16b0e9aa4bf5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="cc6abd8c-85b0-4a43-927d-775caf89117c" name="getPan_sourceIPaddress" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a79026e6-14d8-4d2f-af73-3d06d2fbe965" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3a3f7108-5937-4650-9484-513f9de78589" direction="Return" isUnique="false">
+                  <elementDefinition Id="b9769925-f572-4ed4-bc06-e90078711bfd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="9bd6bf56-82fa-4981-b530-a87efb346988" name="getPan_ttl" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1bcbc8c7-099c-462e-8779-655886cf4028" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="457dd48f-68ee-4138-9189-a0a7f848bde6" direction="Return" isUnique="false">
+                  <elementDefinition Id="b306525e-e6c8-4341-bf2d-b0030b9aef97" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="687fcd6d-490e-4347-937d-aaa1c47a391d" name="getPan_udp_port" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e91dbf74-51d4-494b-b5fe-f2e74ad9812e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="db95c55c-478f-4a18-b4f9-c943de0b27ea" direction="Return" isUnique="false">
+                  <elementDefinition Id="31757589-6aa2-4547-be25-0822960b2f83" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="fa2fc78a-71c6-43e8-aeb3-28419b1b015c" LastKnownName="JPanel" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="2db6db75-e0b0-4514-bcae-e1d578687a70" name="getSelectedAddress" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ba9f6587-9ac3-4579-af07-c15cb0c67b12" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4a5be52a-ef5d-4fdf-b19e-963e63f1e6d8" name="typ" direction="In" isUnique="false">
+                  <elementDefinition Id="ef6e438e-41eb-4cce-9d51-2811035b1b96" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a793742a-1ebb-4fcd-82de-8c08da018e12" LastKnownName="Typ" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e0a1e83b-dfb6-4dcf-8e56-404866c76920" direction="Return" isUnique="false">
+                  <lowerValueInternal>
+                    <literalString Id="41dcd75c-5811-47b7-bc27-630056f9ed63" name="Lower" value="6">
+                      <elementDefinition Id="c06e32df-bcbd-40c4-8092-f62f6ee9da0f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="cb7916a3-82c4-41bf-8c42-1a0d9a9bebc7" name="Upper" value="6">
+                      <elementDefinition Id="b5aad06f-bcbb-4d3f-89d9-80c29ce59035" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="4e7cffed-103f-4fc6-92f3-5f0e224e6730" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="06704e96-d6ae-4344-8e49-2030479d816d" LastKnownName="byte" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="9bb65f00-621b-4b86-9b10-f23eedb3a799" name="getSelectedAddress" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fb75160c-5cf5-4c61-ab0b-2c2798e076e4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="10d8e347-b3d7-452e-bf08-a3b39abae8a7" name="typ" direction="In" isUnique="false">
+                  <elementDefinition Id="35f9cd44-900e-4ebe-b5cf-a8b6c85711d3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a793742a-1ebb-4fcd-82de-8c08da018e12" LastKnownName="Typ" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9b618577-e396-4a1b-8e24-b21835f3bb6f" name="iptype" direction="In" isUnique="false">
+                  <elementDefinition Id="e5cf8759-ca54-427e-bfda-285e6545006c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="013c11bc-200e-4c03-a1c4-4763b9977ff2" LastKnownName="IPType" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bd4b984c-ebb7-44f2-b6ca-bf8e9799a175" direction="Return" isUnique="false">
+                  <elementDefinition Id="4653884c-bd2c-4423-b5c7-56df074138bd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="136788ed-cf44-4d30-9d94-a67ba093c019" LastKnownName="InetAddress" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="e12e6249-9c53-4bc0-8b86-3189425b8f8b" name="getSelectedSourceIndex" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d78b701e-8541-4e90-a26f-812b9edb80a8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cfb94cfd-5574-476a-8767-2ab29f571087" direction="Return" isUnique="false">
+                  <elementDefinition Id="8e7be046-d3d3-42b2-98a7-7f13b8ffc509" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="fec34015-c24e-4b72-a42b-4d07db3ee8db" name="getSourceIP" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0bf2172b-4a64-469e-a60e-399d9ac2fd75" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d484b26b-187d-4ddd-8a0d-2d39e7ebd5a2" name="i" direction="In" isUnique="false">
+                  <elementDefinition Id="3ad807a4-a467-4abe-a271-a883dd3a3695" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="92622d78-15c9-412c-b86a-bc1bbf7149b0" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fae4e46b-fad3-4b75-8318-9288a0f45ef4" name="iptype" direction="In" isUnique="false">
+                  <elementDefinition Id="d6585827-1897-419c-81f7-e0cc3ebb1af1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="013c11bc-200e-4c03-a1c4-4763b9977ff2" LastKnownName="IPType" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d2cc9e4d-56dd-4777-94b5-1ad4874c1afa" direction="Return" isUnique="false">
+                  <elementDefinition Id="30733db5-9c04-4c69-98b1-2b795025d445" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c2bbac9f-8477-4124-a6eb-bd8a4a6d3ff3" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="43c35240-f264-4f7c-b46d-92b0112403b3" name="getTb_active" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="474857da-54af-4c31-a4a6-fa0bd47dd7b7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="75b00498-156b-4788-bc43-d45ac5e9bc84" direction="Return" isUnique="false">
+                  <elementDefinition Id="17be7fc6-8df4-40a5-a953-f05c2760d791" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="73fa5560-671f-4784-953c-6ef63007bae1" LastKnownName="JToggleButton" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="b7cefcfb-f0ae-43c2-adea-b660b2a25d0f" name="getTf_groupIPaddress" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f54063b9-404e-4706-ab48-de88f022ca3f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f35b1d5c-e807-482d-92de-f05fe2e97e3f" direction="Return" isUnique="false">
+                  <elementDefinition Id="da38a073-b973-4a0e-adda-c1bfca65a998" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="13cdbe0c-22b6-4a00-8df6-e3a0aca2286d" LastKnownName="JTextField" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="b65c586b-3c21-4e81-aaad-8e75474bebc5" name="getTf_packetrate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cc62a10f-d1e9-41fb-83ed-6c10ced6d8e1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fe43fe81-87d0-4795-9389-7f24b02c0643" direction="Return" isUnique="false">
+                  <elementDefinition Id="b07e1ef4-e3d2-43fb-9fbb-1634db87c867" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="13cdbe0c-22b6-4a00-8df6-e3a0aca2286d" LastKnownName="JTextField" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="3cd51bd0-6a1d-4923-9d25-dea5890fa046" name="getTf_sourceIPaddress" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b00b5f27-008b-45ab-8fca-cafda62906cb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ee848c09-3800-4561-97ec-5b79bb4f271f" direction="Return" isUnique="false">
+                  <elementDefinition Id="671f4eac-faaa-4eec-8d00-7c0c91207655" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="41fe58f4-1668-4224-abe7-3e283762c91b" LastKnownName="JComboBox" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="417c2acd-87d8-434b-83e6-8c58fbdb0160" name="getTf_ttl" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="277bb219-df88-4b1c-b087-18e08a05cbc6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="05df7efb-80b6-4023-b2a2-fa7d19b395ff" direction="Return" isUnique="false">
+                  <elementDefinition Id="9b9b4732-1457-49da-b30e-460200b40970" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="13cdbe0c-22b6-4a00-8df6-e3a0aca2286d" LastKnownName="JTextField" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="637c0620-9970-4fe0-9159-80709d9e23a3" name="getTf_udp_packetlength" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3176b0c7-f988-4fd8-9020-e1a3ba0f624f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9b981b3c-4eaa-4bb8-b2f6-d6a9693d4238" direction="Return" isUnique="false">
+                  <elementDefinition Id="31eff390-a46f-40ee-8d7a-eb3cca4775e0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="13cdbe0c-22b6-4a00-8df6-e3a0aca2286d" LastKnownName="JTextField" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="6e425416-2add-45af-8b06-01f37b33f66d" name="getTf_udp_port" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5f4550eb-cd35-4643-a1c4-34cf4defc137" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8d91e506-b2b7-42fe-a0d9-d315906cbcc0" direction="Return" isUnique="false">
+                  <elementDefinition Id="3237bb3d-e3d9-4b99-86eb-d1561e8ed776" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="13cdbe0c-22b6-4a00-8df6-e3a0aca2286d" LastKnownName="JTextField" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="48085670-f224-4903-8bd6-ac1fd9147acf" name="reloadLanguage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f7587b6e-848a-4f22-b64c-4b294c56c2e6" />
+          </operation>
+          <operation Id="e94a37c1-de3c-4163-8994-8102bfda7276" name="setBt_enter" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2f1ed9f1-ab27-4dea-8124-eb1d262ca0ed" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7d395c93-da1b-4b6d-a8c8-f4dcc59e5283" name="btEnter" direction="In" isUnique="false">
+                  <elementDefinition Id="f03e258a-3af3-45d8-82d0-80a3c61a7955" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="44fd3285-59c9-45e2-8863-ebe42888caa3" LastKnownName="JButton" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="82372f20-da5f-4fa0-941b-8be4f3e9c315" name="setTb_active" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8457f54b-9bd7-4cfe-9b15-f52335e615b4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="db20dce2-9316-4727-a2d0-51d9b40899cb" name="cbActive" direction="In" isUnique="false">
+                  <elementDefinition Id="1a7fd676-9b90-4232-aa0c-eb7c4c26cf02" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="73fa5560-671f-4784-953c-6ef63007bae1" LastKnownName="JToggleButton" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="b5e7de7f-a7aa-4293-ab5c-c252762a6ff6" name="setTf_groupIPaddress" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f0f47dac-8fd2-4feb-8693-0f3f7681fbe5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d76ef921-516a-42ca-ae72-211ec5262d94" name="tfGroupIPaddress" direction="In" isUnique="false">
+                  <elementDefinition Id="326fbc2c-ac9f-4449-a2a6-7c1714aa95c7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4ed3e51e-5ce6-44a4-89e5-282b7c0c696f" LastKnownName="JFormattedTextField" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="46977078-3b0f-40fd-b948-604151803bff" name="setTf_packetrate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0d477db4-6c25-4293-9cf9-408d4b9e0416" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1861be12-9b61-44e3-b209-c7646d237937" name="tfPacketrate" direction="In" isUnique="false">
+                  <elementDefinition Id="a11c0c3b-e449-4b2b-ac91-77ac5d352e6a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="13cdbe0c-22b6-4a00-8df6-e3a0aca2286d" LastKnownName="JTextField" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0877cd21-3e69-4576-9125-6bfc6d97eb81" name="setTf_ttl" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cdf66d42-716b-4873-8a76-bbc72b39d85d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c2fb9478-d64c-45b9-bbec-1b9c2b8954a0" name="tfTtl" direction="In" isUnique="false">
+                  <elementDefinition Id="1e250df9-1c4c-48f0-a4a6-0a8a2b7d0d7d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="13cdbe0c-22b6-4a00-8df6-e3a0aca2286d" LastKnownName="JTextField" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="bb917bc8-1173-41c9-8179-a4b07ebc87cc" name="setTf_udp_port" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bb301285-23ea-4bee-83df-bd864e04b842" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2f4fce21-6d2e-4f84-a4e6-2cb64c8b9c84" name="tfUdpPort" direction="In" isUnique="false">
+                  <elementDefinition Id="db86ef78-e94d-4028-9de1-29c8bb4e3227" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="13cdbe0c-22b6-4a00-8df6-e3a0aca2286d" LastKnownName="JTextField" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="4ecc96e0-cb69-40d7-905b-5ce9187a779d" name="setTf_udp_packetlength" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="eb1c9166-8591-4f0f-8099-6fca43d0d4c2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="515c5321-edea-49ff-b6ed-ecec8ada0bb9" name="tfUdpPacketlength" direction="In" isUnique="false">
+                  <elementDefinition Id="1496d416-d095-414e-b352-fbe91eb2914e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="13cdbe0c-22b6-4a00-8df6-e3a0aca2286d" LastKnownName="JTextField" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0ad9734d-03db-4ee2-8a5c-45e3ac69ac7c" name="createAddressFields" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="522baaa5-732f-4cba-9309-c9088226bf66" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="89a4dd85-1ec3-4930-b444-b21bc8b3e57a" name="ctrl" direction="In" isUnique="false">
+                  <elementDefinition Id="cc387edc-c897-4c0d-be4b-d9617e730e14" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5ddf4ce1-31fc-45de-990b-4cc2d53828fd" LastKnownName="ViewController" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6ee08edb-0413-488f-bbf4-d38f5b9e6473" name="typ" direction="In" isUnique="false">
+                  <elementDefinition Id="53e17564-8b8c-4f5e-a773-fa44c7f52d73" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a793742a-1ebb-4fcd-82de-8c08da018e12" LastKnownName="Typ" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="bda6121e-828d-4fb6-9d46-fe764ff0fadd" name="createGUIstandard" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6ceb2b8b-49e6-4e02-9d01-7fa7f3287eaf" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fbe3736b-72a5-4148-8e5c-6984105dfd5a" name="typ" direction="In" isUnique="false">
+                  <elementDefinition Id="e2069a1f-f5b8-4142-a27b-566bbda546f2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a793742a-1ebb-4fcd-82de-8c08da018e12" LastKnownName="Typ" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="6788b454-de74-478f-8714-ab8612519564" name="setToolTips" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a2baadc5-60f2-402a-9b8b-85fe01375824" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7f61624a-879d-46ff-b4f9-aa2d7e88798f" name="typ" direction="In" isUnique="false">
+                  <elementDefinition Id="073f28ad-3980-49ee-9b06-a3cd88907f71" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a793742a-1ebb-4fcd-82de-8c08da018e12" LastKnownName="Typ" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="73fa5560-671f-4784-953c-6ef63007bae1" name="JToggleButton" isAbstract="false" isLeaf="false" cachedFullName="JToggleButton">
+        <elementDefinition Id="55f9c81b-a06a-458d-92a4-9623eb4c2cea" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="44fd3285-59c9-45e2-8863-ebe42888caa3" name="JButton" isAbstract="false" isLeaf="false" cachedFullName="MultiCastor::JButton">
+        <elementDefinition Id="95aaf1cf-959d-4a67-889e-ed34173cc959" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="554b0d76-1ec3-4abe-9ecc-0480f25db70f" name="WideComboBox" isAbstract="false" isLeaf="false" cachedFullName="WideComboBox">
+        <elementDefinition Id="5e2a8946-f46d-41b6-ae31-3438ab9d729f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="13cdbe0c-22b6-4a00-8df6-e3a0aca2286d" name="JTextField" isAbstract="false" isLeaf="false" cachedFullName="JTextField">
+        <elementDefinition Id="e161168c-9040-49bd-be02-a16248010791" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="136788ed-cf44-4d30-9d94-a67ba093c019" name="InetAddress" isAbstract="false" isLeaf="false" cachedFullName="MultiCastor::InetAddress">
+        <elementDefinition Id="410f1ca4-6bc6-419b-b5f2-ab9f5194df8c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="41fe58f4-1668-4224-abe7-3e283762c91b" name="JComboBox" isAbstract="false" isLeaf="false" cachedFullName="MultiCastor::JComboBox">
+        <elementDefinition Id="2850eee6-c2ea-4ed6-aaf9-2f47c5b78447" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4ed3e51e-5ce6-44a4-89e5-282b7c0c696f" name="JFormattedTextField" isAbstract="false" isLeaf="false" cachedFullName="JFormattedTextField">
+        <elementDefinition Id="bffcf391-a4fb-45ce-ad51-2732326d88f6" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
