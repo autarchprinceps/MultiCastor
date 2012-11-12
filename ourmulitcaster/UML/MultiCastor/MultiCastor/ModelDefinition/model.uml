@@ -205,7 +205,8 @@
           </property>
           <property
             Id="01fdb422-f120-4e25-9b70-6345d4406a49"
-            name="!-mCtrl"
+            name="mCtrl"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -5474,7 +5475,8 @@
         <ownedAttributesInternal>
           <property
             Id="0e17585d-924f-4c6e-af64-5cadf205e163"
-            name="!~view"
+            name="view"
+            visibility="Package"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -5547,7 +5549,8 @@
           </property>
           <property
             Id="0e5a5fa9-ba4a-4be0-9596-465dc066f010"
-            name="!-viewController"
+            name="viewController"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -5697,7 +5700,8 @@
           </property>
           <property
             Id="ae7d71ae-94c4-4642-9fa0-8dae48c7fd69"
-            name="!-viewController:ViewController"
+            name="viewController"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -5705,7 +5709,14 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="675e14ce-47f8-455d-bad6-b84e097c8491"
+                LastKnownName="ViewController"
+                LastKnownLocation="model.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="728f5f4b-0c46-4df2-88ce-7554a70e978a"
             name="lang"
