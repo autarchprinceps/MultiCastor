@@ -1,0 +1,139 @@
+mi.autoSave			=AutoSave
+mi.changeWindowTitle=Change Window-Title
+mi.language			=Language
+mi.saveConfiguration=save GUI configuration
+mi.saveAllMc		=save all multicasts
+mi.saveSelectedMc	=save selected multicasts
+mi.loadConfiguration=load GUI Configuration
+mi.loadMc			=load multicasts
+mi.loadAdditionalMc	=load additional multicasts
+mi.errorFileNotFound=error file not found
+mi.snake			=Snake
+mi.help				=Help
+mi.exit				=Exit
+mi.about			=About
+mi.beginner			=Beginner
+mi.expert			=Expert
+mi.custom			=Custom
+mi.menu				=Menu
+mi.options			=Options
+mi.userLevel		=User Level
+mi.views			=Views
+mi.layer2Receiver	=Layer2 Receiver
+mi.layer2Sender		=Layer2 Sender
+mi.layer3Receiver	=Layer3 Receiver
+mi.layer3Sender		=Layer3 Sender
+mi.info				=Info
+tab.l2s				=L2 Sender
+tab.l3s				=L3 Sender
+tab.l2r				=L2 Receiver
+tab.l3r				=L3 Receiver
+tab.graph			=Graph
+tab.console			=Console	
+plus.l2rDescription		=Opens the Layer2 Receiver Panel. If the Tab is currently Closed the Tab gets opened. If it's open it get focused.
+plus.l2sDescription		=Opens the Layer2 (with MMRP) Sender Panel. If the Tab is currently Closed the Tab gets opened. If it's open it get focused.
+plus.l3rDescription		=Opens the Layer3 Receiver Panel. If the Tab is currently Closed the Tab gets opened. If it's open it get focused.
+plus.l3sDescription		=Opens the Layer3 Sender Panel. If the Tab is currently Closed the Tab gets opened. If it's open it get focused.
+plus.aboutDescription	=Opens the About Panel. If the Tab is currently Closed the Tab gets opened. If it's open it get focused.
+miscBorder.mcOverwiew	=MultiCast Overview
+miscBorder.mcControl	=MultiCast Control
+miscBorder.mcConfig		=MultiCast Configuration
+miscBorder.ipGroupAddress		=IP Group Address
+miscBorder.ipNetworkInterface	=IP Network Interface
+miscBorder.udpPort				=UDP Port
+miscBorder.packetRate			=Packet Rate
+miscBorder.packetLength			=Packet Length
+miscBorder.timeToLive			=Time to Live
+miscBorder.ipGroupAddress		=IP Group Address
+miscBorder.ipNetworkInterface	=IP Network Interface
+miscBorder.MacGroupAddress		=Mac Group Adress
+miscBorder.NetworkInterface		=Network Interface
+config.message.ipFirst			=Please choose IP first
+config.message.ipFirstShort		=IP first
+button.start		=Start
+button.stop			=Stop
+button.delete		=Delete
+button.deSelectAll	=(De-)Select All
+button.new			=New
+button.active		=Active
+button.inactive		=Inactive
+button.add			=Add
+button.change		=change
+button.changeAll	=change All
+status.mcSelected	=MultiCast Selected
+status.mcTotal		=MultiCast Total
+status.traffic		=Traffic
+status.in			=IN
+status.out			=OUT
+graph.time			=time
+graph.sec			=sec
+graph.y				=y
+graph.jitter		=jitter
+graph.lostPackets	=Lost Packets
+graph.measuredPacketRate=Measured Packet Rate
+graph.packetsPerSec	=Packets per Second (total)
+graph.current		=current
+
+# Will create a message like: Not enough memory. You have XXX MB. You need minimum XXX MB to start MultiCastor.
+# MC will show this message if there are not enough free memory in heap.
+error.memory.part1	=Not enough memory. You have 
+error.memory.part2	=You need minimum
+error.memory.part3	=to start MultiCastor.
+error.memory.title	=MultiCastor: MemoryError
+
+# MC will show this message if there are less them 10% free memory in heap.
+warning.memory.title=Your memory is about to expire.(<10% remaining)\n\
+ Please be careful, save your files and \
+ try to free memory with closing of sender/reciever or tabs.\n\n
+warning.memory.freeMemory =Free Memory
+warning.memory.allocMemory=Total Allocated Memory
+warning.memory.maxMemory  =Maximum Memory for JVM
+
+logger.info.startWithGui=Starting MultiCastor with a gui
+logger.info.startNoGui	=Starting MultiCastor without a gui
+logger.info.startGuiFile=Starting MultiCastor with a gui and file
+
+error.config.notSpecified=Configuration file not specified.\n\nUsage:\tjava -jar multiCastor.jar [-h] [-g] configuration-file-path\n\t\
+ type 'java -jar multiCastor.jar -h' for more information\n\n\
+ To start the tool without a graphical user interface,\n\
+ the configuration-file-path is required.
+
+error.config.wrongFormat =Configuration file in wrong format or corrupted. Please use a valid configuration file.\n\nUsage:\tjava -jar multiCastor.jar [-h] [-g] configuration-file-path\n\t\
+ type 'java -jar multiCastor.jar -h' for more information\n\n\
+ To start the tool without a graphical user interface,\n\
+ the configuration-file-path is required.
+ 
+error.invalidParameter	 =Not a valid parameter.\n\nUsage:\tjava -jar multiCastor.jar [-h] [-g] configuration-file-path\n\t\
+ type 'java -jar multiCastor.jar -h' for more information
+
+error.logfile.canNotWrite=Log file could not be written to disk. Please check if you have writing permission in the MultiCastor directory.
+
+console.helptext		 =Usage:\tjava -jar multiCastor.jar [-h] [-g] configuration-file-path\n\t\
+ type 'java -jar multiCastor.jar -h' for more information\n\n\
+ To start the tool without a graphical user interface,\n\
+ the configuration-file-path is required.\n\n\
+ For more information about a valid configuration file\n\
+ consult the user manual.\n\n\
+ Options:\n\
+ \t\t-h\tdisplays this help-message\n\
+ \t\t-g\tstart the MultiCastor-Tool without\n\
+ \t\t\ta graphical user interface
+ 
+info.longUpdateTime		 =Updatetime is rather long
+warning.longUpdateTime	 =Updating the user interface takes very long. Consider the help for more information.
+
+warning.invalidNetAdapter=Invalid Network Adapter. Network Interface has been set to localhost.
+
+toolTip.closeThisTab		=close this tab
+toolTip.mcAddressRange		=Select a Multicast IP Address, either IPv4 or IPv6
+toolTip.ipFirst				=Specify the IP address first, then select an interface
+toolTip.specifyUDPPort		=Specify an UDP port
+toolTip.specifyTTL			=Specify the time to live
+toolTip.specifyPacketRate	=Specify the packetrate
+toolTip.specifyPacketLength	=Specify the packetlength
+toolTip.selectNetInterface	=Select a network interface for multicast
+toolTip.selectMacAddress	=Select a multicast MAC Address
+
+message.setNewTitle			=Please enter a new title
+message.noMcCreated			=There is no Multicast data available for saving. Please create any Multicasts first.
+message.noMcSelected		=There is no Multicast data selected right now. You can select any row in the tables. You can select multiple rows by holding the Ctrl-Key.
