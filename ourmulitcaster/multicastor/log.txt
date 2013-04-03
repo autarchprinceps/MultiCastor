@@ -205,3 +205,90 @@
 [20.10.2012-18:36:17][INFO] Default GUI Configurationfile loaded.
 [20.10.2012-19:30:23][INFO] Multicast Konfiguration gespeichert
 [20.10.2012-19:30:23][INFO] GUI Konfiguration gespeichert
+[29.03.2013-16:38:25][INFO] Hostname: ghjkl
+[29.03.2013-16:38:25][INFO] Hostadress: 127.0.1.1
+[29.03.2013-16:38:25][INFO] Username: groxar; User location: null - Europe/Berlin
+[29.03.2013-16:38:25][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[29.03.2013-16:38:25][INFO] File encoding: UTF-8
+[29.03.2013-16:38:25][INFO] Starting MultiCastor with a gui
+[29.03.2013-16:38:25][WARNING] Could not find any devices for Layer 2.
+ Do you have JNetPcap installed, and did you start as root / admin?
+ It seems like you could not use Layer 2 functionality while runtime.
+[29.03.2013-16:38:27][INFO] Configurationfile loaded.
+[29.03.2013-16:38:27][INFO] Default GUI Configurationfile loaded.
+[29.03.2013-16:38:30][INFO] Multicast Konfiguration gespeichert
+[29.03.2013-16:38:30][INFO] GUI Konfiguration gespeichert
+[29.03.2013-16:48:53][INFO] Hostname: ghjkl
+[29.03.2013-16:48:53][INFO] Hostadress: 127.0.1.1
+[29.03.2013-16:48:53][INFO] Username: groxar; User location: null - Europe/Berlin
+[29.03.2013-16:48:53][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[29.03.2013-16:48:53][INFO] File encoding: UTF-8
+[29.03.2013-16:48:53][INFO] Starting MultiCastor with a gui
+[29.03.2013-16:48:53][WARNING] Could not find any devices for Layer 2.
+ Do you have JNetPcap installed, and did you start as root / admin?
+ It seems like you could not use Layer 2 functionality while runtime.
+[29.03.2013-16:48:55][INFO] Configurationfile loaded.
+[29.03.2013-16:48:55][INFO] Default GUI Configurationfile loaded.
+[29.03.2013-16:50:09][INFO] Multicast Konfiguration gespeichert
+[29.03.2013-16:50:09][INFO] GUI Konfiguration gespeichert
+[29.03.2013-16:53:20][INFO] Hostname: ghjkl
+[29.03.2013-16:53:20][INFO] Hostadress: 127.0.1.1
+[29.03.2013-16:53:20][INFO] Username: groxar; User location: null - Europe/Berlin
+[29.03.2013-16:53:20][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[29.03.2013-16:53:20][INFO] File encoding: UTF-8
+[29.03.2013-16:53:20][INFO] Starting MultiCastor with a gui
+[29.03.2013-16:53:20][WARNING] Could not find any devices for Layer 2.
+ Do you have JNetPcap installed, and did you start as root / admin?
+ It seems like you could not use Layer 2 functionality while runtime.
+[29.03.2013-16:53:21][INFO] Configurationfile loaded.
+[29.03.2013-16:53:21][INFO] Default GUI Configurationfile loaded.
+[29.03.2013-16:54:10][WARNING] 'Permission denied' Versuche default Port 4711 zu setzen ...
+[29.03.2013-16:54:12][INFO] MultiCast hinzugefügt :L3_RECEIVER_-1-0_/224.0.0.232
+[29.03.2013-16:54:14][INFO] L3_RECEIVER_-1-0_/224.0.0.232: Empfänger mit MC-Objekt gestartet.
+[29.03.2013-16:54:19][FINEST] /224.0.0.232	4711	/127.0.0.1	0	1	0	0	0	0	0	0	L3_RECEIVER	0-	UNDEFINED	SINGLE
+[29.03.2013-16:54:21][INFO] L3_RECEIVER_0-_/224.0.0.232: MC-Gruppe des MC-Objekts verlassen.
+[29.03.2013-16:54:38][INFO] MultiCast hinzugefügt :L3_SENDER_ghjkl-1-0_/224.0.0.232
+[29.03.2013-16:54:39][INFO] L3_SENDER_ghjkl0-d75c95fe_/224.0.0.232: MultiCast-Sender aktiviert
+[29.03.2013-16:54:39][INFO] L3_SENDER_ghjkl0-d75c95fe_/224.0.0.232: Bei Multicast Gruppe angemeldet /224.0.0.232 Bei Multicast Gruppe angemeldet PEAK.
+[29.03.2013-16:54:42][INFO] L3_RECEIVER_0-_/224.0.0.232: Empfänger mit MC-Objekt gestartet.
+[29.03.2013-16:54:51][INFO] L3_RECEIVER_0-_/224.0.0.232: MC-Gruppe des MC-Objekts verlassen.
+[29.03.2013-16:54:51][INFO] L3_RECEIVER_0-_/224.0.0.232: Empfänger mit MC-Objekt gestartet.
+[29.03.2013-16:55:13][INFO] L3_RECEIVER_0-_/224.0.0.232: MC-Gruppe des MC-Objekts verlassen.
+[29.03.2013-16:55:14][INFO] L3_RECEIVER_0-_/224.0.0.232: Empfänger mit MC-Objekt gestartet.
+[29.03.2013-16:55:16][INFO] L3_RECEIVER_0-_/224.0.0.232: MC-Gruppe des MC-Objekts verlassen.
+[29.03.2013-16:55:17][INFO] L3_RECEIVER_0-_/224.0.0.232: Empfänger mit MC-Objekt gestartet.
+[29.03.2013-16:55:19][FINEST] /224.0.0.232	4711	/127.0.0.1	23	0	23	920	L3_SENDER	ghjkl0-d75c95fe	
+[29.03.2013-16:55:19][FINEST] /224.0.0.232	4711	/127.0.0.1	0	0	0	0	0	0	0	0	L3_RECEIVER	0-	UNDEFINED	SINGLE
+[29.03.2013-16:55:42][INFO] L3_RECEIVER_0-_/224.0.0.232: MC-Gruppe des MC-Objekts verlassen.
+[29.03.2013-16:55:45][INFO] Versuchte einen bereits nicht laufenden MultiCast zu stoppen
+[29.03.2013-16:55:45][INFO] MultiCast gelöscht :/224.0.0.232	4711	/127.0.0.1	0	0	0	0	0	0	0	0	L3_RECEIVER	0-	UNDEFINED	SINGLE
+[29.03.2013-16:56:00][INFO] MultiCast hinzugefügt :L3_RECEIVER_-1-0_/224.0.0.232
+[29.03.2013-16:56:02][INFO] L3_RECEIVER_-1-0_/224.0.0.232: Empfänger mit MC-Objekt gestartet.
+[29.03.2013-16:56:19][FINEST] /224.0.0.232	4711	/127.0.0.1	23	0	23	2300	L3_SENDER	ghjkl0-d75c95fe	
+[29.03.2013-16:56:19][FINEST] /224.0.0.232	4711	/127.0.0.1	36617	0	0	23	23	0	23	391	L3_RECEIVER	ghjkl0-d75c95fe	MULTICASTOR	SINGLE
+[29.03.2013-16:57:19][FINEST] /224.0.0.232	4711	/127.0.0.1	23	0	23	3680	L3_SENDER	ghjkl0-d75c95fe	
+[29.03.2013-16:57:19][FINEST] /224.0.0.232	4711	/127.0.0.1	8582	0	0	23	23	0	23	1771	L3_RECEIVER	ghjkl0-d75c95fe	MULTICASTOR	SINGLE
+[29.03.2013-16:58:19][FINEST] /224.0.0.232	4711	/127.0.0.1	23	0	23	5060	L3_SENDER	ghjkl0-d75c95fe	
+[29.03.2013-16:58:19][FINEST] /224.0.0.232	4711	/127.0.0.1	26329	0	0	23	23	0	23	3151	L3_RECEIVER	ghjkl0-d75c95fe	MULTICASTOR	SINGLE
+[29.03.2013-16:59:19][FINEST] /224.0.0.232	4711	/127.0.0.1	23	0	23	6440	L3_SENDER	ghjkl0-d75c95fe	
+[29.03.2013-16:59:19][FINEST] /224.0.0.232	4711	/127.0.0.1	9867	0	0	23	23	0	23	4531	L3_RECEIVER	ghjkl0-d75c95fe	MULTICASTOR	SINGLE
+[29.03.2013-17:00:19][FINEST] /224.0.0.232	4711	/127.0.0.1	23	0	23	7820	L3_SENDER	ghjkl0-d75c95fe	
+[29.03.2013-17:00:19][FINEST] /224.0.0.232	4711	/127.0.0.1	27229	0	0	23	23	0	23	5911	L3_RECEIVER	ghjkl0-d75c95fe	MULTICASTOR	SINGLE
+[29.03.2013-17:00:44][INFO] L3_RECEIVER_ghjkl0-d75c95fe_/224.0.0.232: MC-Gruppe des MC-Objekts verlassen.
+[29.03.2013-17:00:45][INFO] L3_SENDER_ghjkl0-d75c95fe_/224.0.0.232: null
+[29.03.2013-17:00:46][INFO] L3_SENDER_ghjkl0-d75c95fe_/224.0.0.232: 8442 Packete insgesamt gesendet
+[29.03.2013-17:10:51][INFO] Die Aktualisierungszeit ist sehr lange: 1150 ms !!!!!!!!!!!!
+[29.03.2013-17:10:51][WARNING] Die Aktualisierung des GUI daürt sehr lange. Konsultieren sie das Benutzerhandbuch für mehr Informationen.
+[03.04.2013-14:12:45][INFO] Hostname: ghjkl
+[03.04.2013-14:12:45][INFO] Hostadress: 127.0.1.1
+[03.04.2013-14:12:45][INFO] Username: groxar; User location: null - Europe/Berlin
+[03.04.2013-14:12:45][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[03.04.2013-14:12:45][INFO] File encoding: UTF-8
+[03.04.2013-14:12:45][INFO] Starting MultiCastor with a gui
+[03.04.2013-14:12:45][WARNING] Could not find any devices for Layer 2.
+ Do you have JNetPcap installed, and did you start as root / admin?
+ It seems like you could not use Layer 2 functionality while runtime.
+[03.04.2013-14:12:46][INFO] Configurationfile loaded.
+[03.04.2013-14:12:46][INFO] Default GUI Configurationfile loaded.
+[03.04.2013-14:20:01][INFO] Multicast Konfiguration gespeichert
+[03.04.2013-14:20:01][INFO] GUI Konfiguration gespeichert

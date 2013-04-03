@@ -60,13 +60,13 @@ public class PanelGraph extends JPanel {
 	 * Einziger Konstruktor der Klasse
 	 * 
 	 * @param maxY
-	 *            der huechst muegliche Y-Wert (int)
+	 *            der hoechst moegliche Y-Wert (int)
 	 * @param labelOfX
 	 *            Beschriftung der X-Achse (String)
 	 * @param labelOfY
 	 *            Beschriftung der Y-Achse (String)
 	 * @param staticScale
-	 *            Bestimmt ob der huechstmuegliche Y-Wert automatisch angepasst
+	 *            Bestimmt ob der hoechst moegliche Y-Wert automatisch angepasst
 	 *            werden soll (false) oder nicht (true)
 	 */
 	public PanelGraph(final int maxY, final String labelOfX,
@@ -218,7 +218,7 @@ public class PanelGraph extends JPanel {
 	 *            bestimmt, ob ein Repaint des Panels erfolgt
 	 */
 	public void updateGraph(int value, final boolean repaint) {
-		// Pointer erhuehen oder bei Erreichen vom letzten Wert "Umbruch" auf 0
+		// Pointer erhoehen oder bei Erreichen vom letzten Wert "Umbruch" auf 0
 		if((dataPointer + 1) < numberOfValues) {
 			dataPointer++;
 		} else {
@@ -250,7 +250,7 @@ public class PanelGraph extends JPanel {
 
 			if(dynScaleCount > 10) {
 				dynScaleCount -= 5;
-				// huechsten Y-Wert herausfinden und ihn als (3/4) maxY
+				// hoechsten Y-Wert herausfinden und ihn als (3/4) maxY
 				// verwenden. Minimaler Y-Wert: 10
 				maxY = 10;
 				for(final int element : data) {
