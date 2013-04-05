@@ -213,6 +213,7 @@ public class PanelTabbed extends JPanel {
 	public void setTableModel(final ViewController ctrl, final Typ typ) {
 		model = new MiscTableModel(ctrl, typ);
 		table.setModel(model);
+		table.setRowSorter(model.getSorter());
 		final TableColumnModel colmodel = table.getColumnModel();
 		final Enumeration<TableColumn> e = colmodel.getColumns();
 		columns = new ArrayList<TableColumn>();
