@@ -97,11 +97,10 @@ public abstract class PopUpMenu {
 	}
 
 	public static boolean isPopUpVisible() {
-		boolean ret = false;
 		if(menuPopUp != null) {
-			ret = menuPopUp.isVisible();
+			return menuPopUp.isVisible();
 		}
-		return ret;
+		return false;
 	}
 
 	/**

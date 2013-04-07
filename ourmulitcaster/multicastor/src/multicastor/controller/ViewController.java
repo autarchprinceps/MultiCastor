@@ -635,22 +635,18 @@ public class ViewController implements ActionListener, MouseListener,
 	 * @return JPanel mit dem angeforderten Programmteil.
 	 */
 	public PanelTabbed getPanTabbed(final Typ typ) {
-		PanelTabbed ret = null;
 		switch(typ) {
 			case L2_SENDER:
-				ret = f.getPanel(1, 0);
-				break;
+				return f.getPanel(1, 0);
 			case L2_RECEIVER:
-				ret = f.getPanel(0, 0);
-				break;
+				return f.getPanel(0, 0);
 			case L3_SENDER:
-				ret = f.getPanel(1, 1);
-				break;
+				return f.getPanel(1, 1);
 			case L3_RECEIVER:
-				ret = f.getPanel(0, 1);
-				break;
+				return f.getPanel(0, 1);
+			default:
+				return null;
 		}
-		return ret;
 	}
 
 	/**
@@ -663,10 +659,7 @@ public class ViewController implements ActionListener, MouseListener,
 	 *         selektiert ist).
 	 */
 	public int[] getSelectedRows(final Typ typ) {
-		int[] ret = null;
-		ret = getTable(typ).getSelectedRows();
-		// System.out.println("ret: " + Arrays.toString(ret));
-		return ret;
+		return getTable(typ).getSelectedRows();
 	}
 
 	/**
@@ -748,7 +741,6 @@ public class ViewController implements ActionListener, MouseListener,
 	 *         String zurueck (Mbit/s) im Format "##0.000"
 	 */
 	public String getTotalTrafficDown() {
-		final DecimalFormat ret = new DecimalFormat("##0.000");
 		double sum = 0.0;
 
 		for(int i = 0; i < getTable(Typ.L3_RECEIVER).getModel().getRowCount(); i++) {
@@ -756,7 +748,7 @@ public class ViewController implements ActionListener, MouseListener,
 					+ Double.parseDouble(((String)getTable(Typ.L3_RECEIVER)
 							.getModel().getValueAt(i, 6)).replace(",", "."));
 		}
-		return ret.format(sum);
+		return (new DecimalFormat("##0.000")).format(sum);
 	}
 
 	/**
@@ -764,7 +756,6 @@ public class ViewController implements ActionListener, MouseListener,
 	 * Multicast Tool verschickt wird (IPv4 & IPv6).
 	 */
 	public String getTotalTrafficUP() {
-		final DecimalFormat ret = new DecimalFormat("##0.000");
 		double sum = 0.0;
 
 		for(int i = 0; i < getTable(Typ.L3_SENDER).getModel().getRowCount(); i++) {
@@ -772,7 +763,7 @@ public class ViewController implements ActionListener, MouseListener,
 					+ Double.parseDouble(((String)getTable(Typ.L3_SENDER)
 							.getModel().getValueAt(i, 6)).replace(",", "."));
 		}
-		return ret.format(sum);
+		return (new DecimalFormat("##0.000")).format(sum);
 	}
 
 	/**
@@ -784,22 +775,18 @@ public class ViewController implements ActionListener, MouseListener,
 	 * @return Gibt das UserInputData Objekt des entsprechenden Typs zurueck
 	 */
 	public UserInputData getUserInputData(final Typ typ) {
-		UserInputData ret = null;
 		switch(typ) {
 			case L3_SENDER:
-				ret = inputData_S3;
-				break;
+				return inputData_S3;
 			case L3_RECEIVER:
-				ret = inputData_R3;
-				break;
+				return inputData_R3;
 			case L2_SENDER:
-				ret = inputData_S2;
-				break;
+				return inputData_S2;
 			case L2_RECEIVER:
-				ret = inputData_R2;
-				break;
+				return inputData_R2;
+			default:
+				return null;
 		}
-		return ret;
 	}
 
 	/**
@@ -817,7 +804,6 @@ public class ViewController implements ActionListener, MouseListener,
 		inputData_S2 = new UserInputData();
 		inputData_R2 = new UserInputData();
 
-		// levelData = new UserlevelData();
 		f = new FrameMain(this);
 		addKeyAndContainerListenerToAll(f);
 		try {

@@ -185,17 +185,16 @@ public class UserInputData {
 	 * @return type (L2/L3 Sender/Receiver)
 	 */
 	public Typ getTyp() {
-		Typ ret = Typ.UNDEFINED;
 		if(selectedTab.equals(Typ.L3_SENDER.toString())) {
-			ret = Typ.L3_SENDER;
+			return Typ.L3_SENDER;
 		} else if(selectedTab.equals(Typ.L2_SENDER.toString())) {
-			ret = Typ.L2_SENDER;
+			return Typ.L2_SENDER;
 		} else if(selectedTab.equals(Typ.L3_RECEIVER.toString())) {
-			ret = Typ.L3_RECEIVER;
+			return Typ.L3_RECEIVER;
 		} else if(selectedTab.equals(Typ.L2_RECEIVER.toString())) {
-			ret = Typ.L2_RECEIVER;
+			return Typ.L2_RECEIVER;
 		}
-		return ret;
+		return Typ.UNDEFINED;
 	}
 
 	/**
@@ -214,11 +213,7 @@ public class UserInputData {
 	 * @return state of active button
 	 */
 	public boolean isActive() {
-		boolean ret = false;
-		if(activeButton.equals("true")) {
-			ret = true;
-		}
-		return ret;
+		return activeButton.equals("true");
 	}
 
 	/**
@@ -227,11 +222,7 @@ public class UserInputData {
 	 * @return returns whether auto save is enabled
 	 */
 	public boolean isAutoSaveEnabled() {
-		boolean ret = false;
-		if(isAutoSaveEnabled.equals("true")) {
-			ret = true;
-		}
-		return ret;
+		return isAutoSaveEnabled.equals("true");
 	}
 
 	/**

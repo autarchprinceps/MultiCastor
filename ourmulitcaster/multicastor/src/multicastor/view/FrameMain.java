@@ -29,7 +29,6 @@ import multicastor.lang.LanguageManager;
  */
 @SuppressWarnings("serial")
 public class FrameMain extends JFrame {
-
 	/**
 	 * Wird durch den Konstruktur spaeter mit der Instanz des ViewControllers
 	 * beschrieben.
@@ -317,26 +316,19 @@ public class FrameMain extends JFrame {
 	 *         beinhaltet.
 	 */
 	public PanelTabbed getPanelPart(final Typ typ) {
-		PanelTabbed ret = null;
 		switch(typ) {
-		// V1.5 Panels fuer L2/L3 hinzugefuegt
 			case L2_SENDER:
-				ret = panel[1][0];
-				break;
+				return panel[1][0];
 			case L3_SENDER:
-				ret = panel[1][1];
-				break;
+				return panel[1][1];
 			case L2_RECEIVER:
-				ret = panel[0][0];
-				break;
+				return panel[0][0];
 			case L3_RECEIVER:
-				ret = panel[0][1];
-				break;
+				return panel[0][1];
 			default:
 				System.out.println("Error in FrameMain - getPanelPart");
-				break;
+				return null;
 		}
-		return ret;
 	}
 
 	public DraggableTabbedPane getTabpane() {
