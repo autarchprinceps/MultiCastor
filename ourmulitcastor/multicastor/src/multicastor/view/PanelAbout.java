@@ -38,14 +38,12 @@ public class PanelAbout extends javax.swing.JPanel {
 
 	/** Methode, die beim Aendern der Sprache den Inhalt aktualisiert. */
 	public void reloadLanguage() {
-
 		labelLicense.setText(lang.getProperty("about.license"));
 		labelAbout[0].setText(lang.getProperty("about.text1"));
 		labelAbout[1].setText(lang.getProperty("about.text2"));
 		labelAbout[2].setText(lang.getProperty("about.text3"));
 		labelMC[0].setText(lang.getProperty("about.mc1"));
 		labelMC[1].setText(lang.getProperty("about.mc2"));
-
 	}
 
 	/**

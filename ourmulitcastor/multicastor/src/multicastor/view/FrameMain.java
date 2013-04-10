@@ -670,8 +670,7 @@ public class FrameMain extends JFrame {
 			m_menu.add(mi_loadconfig);
 			m_menu.add(mi_loadMc);
 			m_menu.add(mi_loadAdditionalMc);
-			m_menu.add(mi_exit); // [FF] WHHHHO... hab ein vergessenes Menu Ding
-									// gefunden
+			m_menu.add(mi_exit);
 			mb_menubar.add(m_menu);
 			mb_menubar.add(m_options);
 			mb_menubar.add(m_info);
@@ -724,7 +723,7 @@ public class FrameMain extends JFrame {
 			panel[1][0] = new PanelTabbed(ctrl, Typ.L2_SENDER);
 			panel[0][1] = new PanelTabbed(ctrl, Typ.L3_RECEIVER);
 			panel[1][1] = new PanelTabbed(ctrl, Typ.L3_SENDER);
-			panel_plus = new PanelPlus(/*this,*/ ctrl);
+			panel_plus = new PanelPlus(ctrl);
 			panel_about = new PanelAbout();
 
 			// V1.5: Variable int i um automatisch die Indexnummer korrekt zu
@@ -832,5 +831,4 @@ public class FrameMain extends JFrame {
 
 		setIconImage(icon.getImage());
 	}
-
 }

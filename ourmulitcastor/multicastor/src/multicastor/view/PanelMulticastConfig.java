@@ -36,7 +36,6 @@ public class PanelMulticastConfig extends JPanel {
 	private final ViewController ctrl;
 	private final LanguageManager lang;
 	private MiscBorder mainBorder;
-	// private JSlider;
 	private JPanel pan_groupIPaddress;
 	private JPanel pan_packetlength;
 	private JPanel pan_packetrate;

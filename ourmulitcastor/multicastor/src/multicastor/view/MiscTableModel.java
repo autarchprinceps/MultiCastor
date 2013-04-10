@@ -42,7 +42,7 @@ public class MiscTableModel extends AbstractTableModel {
 		try {
 			fireTableRowsUpdated(0, ctrl.getMCCount(typ));
 		} catch(IndexOutOfBoundsException e) {
-			
+			// TODO			
 		}
 	}
 
@@ -53,7 +53,7 @@ public class MiscTableModel extends AbstractTableModel {
 		try {
 			fireTableRowsDeleted(0, ctrl.getMCCount(typ));
 		} catch(IndexOutOfBoundsException e) {
-			
+			// TODO
 		}
 	}
 
