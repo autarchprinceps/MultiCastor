@@ -262,8 +262,7 @@ public class PanelMulticastConfig extends JPanel {
 		// V1.5 [FH] Use cb_sourceIPadress for all kinds
 		cb_sourceIPaddress = new WideComboBox();
 		if((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
-			cb_sourceIPaddress.addItem(lang
-					.getProperty("config.message.ipFirst"));
+			cb_sourceIPaddress.addItem(lang.getProperty("config.message.ipFirst"));
 		} else {
 			cb_sourceIPaddress.addItem("");
 			final Vector<String> names = NetworkAdapter.getMacAdapterNames();
