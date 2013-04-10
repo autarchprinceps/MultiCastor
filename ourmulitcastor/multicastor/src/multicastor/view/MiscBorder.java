@@ -159,9 +159,8 @@ public class MiscBorder extends TitledBorder {
 	 */
 	private static TitledBorder createBorder(final String title,
 			final Color titleColor, final Color lineColor) {
-		final TitledBorder b = new TitledBorder(new LineBorder(lineColor),
+		return new TitledBorder(new LineBorder(lineColor),
 				title, TitledBorder.LEFT, TitledBorder.TOP, f, titleColor);
-		return b;
 	}
 
 	/**

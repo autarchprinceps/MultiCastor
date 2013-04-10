@@ -67,12 +67,10 @@ public class DraggableTabbedPane extends JTabbedPane {
 						draggingPlus = true;
 					} else if(tabNumber >= 0) {
 						draggedTabIndex = tabNumber;
-						bounds = getUI().getTabBounds(DraggableTabbedPane.this,
-								tabNumber);
+						bounds = getUI().getTabBounds(DraggableTabbedPane.this, tabNumber);
 
 						// Paint the tabbed pane to a buffer
-						final Image totalImage = new BufferedImage(getWidth(),
-								getHeight(), BufferedImage.TYPE_INT_ARGB);
+						final Image totalImage = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_ARGB);
 						final Graphics totalGraphics = totalImage.getGraphics();
 						totalGraphics.setClip(bounds);
 
@@ -82,8 +80,7 @@ public class DraggableTabbedPane extends JTabbedPane {
 						paintComponent(totalGraphics);
 
 						// Paint just the dragged tab to the buffer
-						tabImage = new BufferedImage(bounds.width,
-								bounds.height, BufferedImage.TYPE_INT_ARGB);
+						tabImage = new BufferedImage(bounds.width, bounds.height, BufferedImage.TYPE_INT_ARGB);
 						final Graphics graphics = tabImage.getGraphics();
 						graphics.drawImage(totalImage, 0, 0, bounds.width,
 								bounds.height, bounds.x, bounds.y, bounds.x

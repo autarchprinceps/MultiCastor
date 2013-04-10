@@ -65,14 +65,7 @@ public class FrameMain extends JFrame {
 	private JMenuItem mi_loadconfig;
 	private JMenuItem mi_loadMc;
 	private JCheckBoxMenuItem mi_open_about;
-//	private JCheckBoxMenuItem mi_open_l2r;
-//	private JCheckBoxMenuItem mi_open_l2s;
-//	private JCheckBoxMenuItem mi_open_l3r;
-//	private JCheckBoxMenuItem mi_open_l3s;
 	private JCheckBoxMenuItem[][] mi_open_l = new JCheckBoxMenuItem[2][2];
-//	private JMenuItem mi_profile1;
-//	private JMenuItem mi_profile2;
-//	private JMenuItem mi_profile3;
 	private JMenuItem[] mi_profiles = new JMenuItem[3];
 	private JMenuItem mi_saveAllMc;
 	private JMenuItem mi_saveconfig;
@@ -95,25 +88,6 @@ public class FrameMain extends JFrame {
 	 */
 	private PanelPlus panel_plus;
 
-//	/**
-//	 * Das Layer 2 Receiver Panel neu in V1.5
-//	 */
-//	private PanelTabbed panel_rec_lay2;
-//
-//	/**
-//	 * Das Layer 3 Receiver Panel neu in V1.5
-//	 */
-//	private PanelTabbed panel_rec_lay3;
-//
-//	/**
-//	 * Das Layer 2 Sender Panel neu in V1.5
-//	 */
-//	private PanelTabbed panel_sen_lay2;
-//	/**
-//	 * Das Layer 3 Sender Panel neu in V1.5
-//	 */
-//	private PanelTabbed panel_sen_lay3;
-	
 	private PanelTabbed[][] panel = new PanelTabbed[2][2];//(rec,sen)(l2,l3)
 	
 	private String subTitle;
@@ -144,7 +118,6 @@ public class FrameMain extends JFrame {
 		baseTitle = "MultiCastor";
 		updateTitle();
 		tabpane.addChangeListener(new ChangeListener() {
-
 			@Override
 			public void stateChanged(final ChangeEvent e) {
 				updateTitle();
@@ -234,29 +207,9 @@ public class FrameMain extends JFrame {
 		return mi_open_about;
 	}
 
-//	public JCheckBoxMenuItem getMi_open_l2r() {
-//		return mi_open_l2r;
-//	}
-//
-//	public JCheckBoxMenuItem getMi_open_l2s() {
-//		return mi_open_l2s;
-//	}
-//
-//	public JCheckBoxMenuItem getMi_open_l3r() {
-//		return mi_open_l3r;
-//	}
-//
-//	public JCheckBoxMenuItem getMi_open_l3s() {
-//		return mi_open_l3s;
-//	}
-	
 	public JCheckBoxMenuItem getMi_open_l(int i1, int i2) {
 		return mi_open_l[i1][i2];
 	}
-
-//	public JMenuItem getMi_profile(int num) {
-//		return mi_profiles[num];
-//	}
 
 	public JMenuItem getMi_saveAllMc() {
 		return mi_saveAllMc;
@@ -287,22 +240,6 @@ public class FrameMain extends JFrame {
 		return panel_about;
 	}
 
-//	public PanelTabbed getPanel_rec_lay2() {
-//		return panel_rec_lay2;
-//	}
-//
-//	public PanelTabbed getPanel_rec_lay3() {
-//		return panel_rec_lay3;
-//	}
-//
-//	public PanelTabbed getPanel_sen_lay2() {
-//		return panel_sen_lay2;
-//	}
-//
-//	public PanelTabbed getPanel_sen_lay3() {
-//		return panel_sen_lay3;
-//	}
-	
 	public PanelTabbed getPanel(int i1, int i2) {
 		return panel[i1][i2];
 	}
@@ -448,15 +385,7 @@ public class FrameMain extends JFrame {
 	 *            True / False fuer an / aus.
 	 */
 	public void setAutoSave(final boolean b) {
-		if(b) {
-			// mi_autoSave.setIcon(new
-			// ImageIcon(getClass().getResource("/multicastor/images/check.png")));
-			mi_autoSave.setSelected(true);
-		} else {
-			// mi_autoSave.setIcon(new
-			// ImageIcon(getClass().getResource("/multicastor/images/uncheck.png")));
-			mi_autoSave.setSelected(false);
-		}
+		mi_autoSave.setSelected(b);
 	}
 
 	/**

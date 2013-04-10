@@ -69,14 +69,12 @@ public class ButtonTabComponent extends JPanel {
 		 */
 		@Override
 		public void actionPerformed(final ActionEvent e) {
-
 			final int i = pane.indexOfTabComponent(ButtonTabComponent.this);
 			if(i != -1) {
 				pane.closeTab(pane.getTitleAt(i));
 				pane.remove(i);
 				vCtrl.autoSave();
 			}
-
 		}
 
 		/**
@@ -106,10 +104,8 @@ public class ButtonTabComponent extends JPanel {
 				g2.setColor(Color.MAGENTA);
 			}
 			final int delta = 6;
-			g2.drawLine(delta, delta, getWidth() - delta - 1, getHeight()
-					- delta - 1);
-			g2.drawLine(getWidth() - delta - 1, delta, delta, getHeight()
-					- delta - 1);
+			g2.drawLine(delta, delta, getWidth() - delta - 1, getHeight() - delta - 1);
+			g2.drawLine(getWidth() - delta - 1, delta, delta, getHeight() - delta - 1);
 			g2.dispose();
 		}
 	}
