@@ -98,7 +98,8 @@ public class MulticastSender extends MulticastThreadSuper implements
 	 */
 	public MulticastSender(final MulticastData mcBean, final Logger _logger) {
 		super(mcBean);
-
+		
+		messages = _logger;
 		// Den hostName setzen
 		try {
 			mcData.setHostID(InetAddress.getLocalHost().getHostName());
@@ -110,7 +111,6 @@ public class MulticastSender extends MulticastThreadSuper implements
 		}
 
 		// uebrige Variablen initialisieren
-		messages = _logger;
 		myPacketBuilder = new PacketBuilder(mcData);
 		udpPort = mcData.getUdpPort();
 		ttl = (byte)mcData.getTtl();

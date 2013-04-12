@@ -1,12 +1,26 @@
 <?xml version="1.0"?>
 <MultiCastor>
     <System>
-        <Time>Wed Apr 03 14:46:58 CEST 2013</Time>
-        <Hostname>ghjkl</Hostname>
-        <Hostaddress>127.0.1.1</Hostaddress>
-        <Username>groxar</Username>
-        <Javaversion>1.7.0_15</Javaversion>
+        <Time>Fri Apr 12 10:30:53 CEST 2013</Time>
+        <Hostname/>
+        <Hostname/>
+        <Hostaddress/>
+        <Username>autarch</Username>
+        <Javaversion>1.7.0_17</Javaversion>
         <Javavendor>Oracle Corporation</Javavendor>
     </System>
-    <Multicasts/>
+    <Multicasts>
+        <L3_SENDER>
+            <active>false</active>
+            <groupIp>224.0.0.1</groupIp>
+            <groupMac/>
+            <packetLength>60</packetLength>
+            <packetRateDesired>2</packetRateDesired>
+            <sourceIp>127.0.0.1</sourceIp>
+            <sourceMac/>
+            <ttl>22</ttl>
+            <typ>L3_SENDER</typ>
+            <udpPort>2222</udpPort>
+        </L3_SENDER>
+    </Multicasts>
 </MultiCastor>

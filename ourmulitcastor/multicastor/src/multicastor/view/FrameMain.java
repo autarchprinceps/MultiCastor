@@ -110,7 +110,7 @@ public class FrameMain extends JFrame {
 		initWindow(ctrl);
 		initMenuBar(ctrl, true);
 		initPanels(ctrl, true);
-		setVisible(true);
+		
 		addComponentListener(ctrl);
 		addKeyListener(ctrl);
 		addWindowListener(ctrl);
@@ -123,7 +123,7 @@ public class FrameMain extends JFrame {
 				updateTitle();
 			}
 		});
-
+		setVisible(true);
 	}
 
 	public int getAboutPanelState() {
