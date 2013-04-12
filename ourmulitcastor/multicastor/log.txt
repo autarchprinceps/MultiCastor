@@ -1,420 +1,250 @@
-[11.09.2012-10:21:52][INFO] Hostname: ghjkl
-[11.09.2012-10:21:52][INFO] Hostadress: 127.0.1.1
-[11.09.2012-10:21:52][INFO] Username: groxar; User location: null - Europe/Berlin
-[11.09.2012-10:21:52][INFO] Java version: 1.7.0_03; Java vendor: Oracle Corporation
-[11.09.2012-10:21:52][INFO] File encoding: UTF-8
-[11.09.2012-10:21:52][INFO] Starting MultiCastor with a gui
-[11.09.2012-10:21:52][WARNING] Could not find any devices for Layer 2.
+[12.04.2013-10:53:03][INFO] Unable to get hostname and hostadress
+[12.04.2013-10:53:03][INFO] Username: autarch; User location: null - Europe/Berlin
+[12.04.2013-10:53:03][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
+[12.04.2013-10:53:03][INFO] File encoding: UTF-8
+[12.04.2013-10:53:03][INFO] Starting MultiCastor with a gui
+[12.04.2013-10:53:03][WARNING] Could not find any devices for Layer 2.
  Do you have JNetPcap installed, and did you start as root / admin?
  It seems like you could not use Layer 2 functionality while runtime.
-[11.09.2012-10:21:58][WARNING] Default configurationfile was not found. MultiCastor starts without preconfigured Multicasts and with default GUI configuration.
-[11.09.2012-10:21:59][WARNING] Default GUI configurationfile was not found. MultiCastor starts without preconfigured Multicasts and with default GUI configuration.
-[11.09.2012-10:22:17][INFO] Saved Multicastconfiguration.
-[11.09.2012-10:22:17][INFO] Saved GUI Configuration.
-[11.09.2012-10:43:12][INFO] Hostname: apnlm
-[11.09.2012-10:43:12][INFO] Hostadress: 127.0.1.1
-[11.09.2012-10:43:12][INFO] Username: autarch; User location: null - Europe/Berlin
-[11.09.2012-10:43:12][INFO] Java version: 1.7.0_03; Java vendor: Oracle Corporation
-[11.09.2012-10:43:12][INFO] File encoding: UTF-8
-[11.09.2012-10:43:12][INFO] Starting MultiCastor with a gui
-[11.09.2012-10:43:12][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[11.09.2012-10:43:13][INFO] Configurationfile loaded.
-[11.09.2012-10:43:13][INFO] Default GUI Configurationfile loaded.
-[11.09.2012-10:43:16][INFO] Saved Multicastconfiguration.
-[11.09.2012-10:43:16][INFO] Saved GUI Configuration.
-[11.09.2012-10:43:36][INFO] Hostname: apnlm
-[11.09.2012-10:43:36][INFO] Hostadress: 127.0.1.1
-[11.09.2012-10:43:36][INFO] Username: autarch; User location: null - Europe/Berlin
-[11.09.2012-10:43:36][INFO] Java version: 1.7.0_03; Java vendor: Oracle Corporation
-[11.09.2012-10:43:36][INFO] File encoding: UTF-8
-[11.09.2012-10:43:36][INFO] Starting MultiCastor with a gui
-[11.09.2012-10:43:36][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[11.09.2012-10:43:39][INFO] Configurationfile loaded.
-[11.09.2012-10:43:39][INFO] Default GUI Configurationfile loaded.
-[11.09.2012-10:43:40][INFO] Saved Multicastconfiguration.
-[11.09.2012-10:43:40][INFO] Saved GUI Configuration.
-[11.09.2012-10:43:49][INFO] Hostname: apnlm
-[11.09.2012-10:43:49][INFO] Hostadress: 127.0.1.1
-[11.09.2012-10:43:49][INFO] Username: autarch; User location: null - Europe/Berlin
-[11.09.2012-10:43:49][INFO] Java version: 1.7.0_03; Java vendor: Oracle Corporation
-[11.09.2012-10:43:49][INFO] File encoding: UTF-8
-[11.09.2012-10:43:49][INFO] Starting MultiCastor with a gui
-[11.09.2012-10:43:49][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[11.09.2012-10:43:49][INFO] Configurationfile loaded.
-[11.09.2012-10:43:49][INFO] Default GUI Configurationfile loaded.
-[11.09.2012-10:43:51][INFO] Saved Multicastconfiguration.
-[11.09.2012-10:43:51][INFO] Saved GUI Configuration.
-[11.09.2012-10:51:01][INFO] Hostname: apnlm
-[11.09.2012-10:51:01][INFO] Hostadress: 127.0.1.1
-[11.09.2012-10:51:01][INFO] Username: autarch; User location: null - Europe/Berlin
-[11.09.2012-10:51:01][INFO] Java version: 1.7.0_03; Java vendor: Oracle Corporation
-[11.09.2012-10:51:01][INFO] File encoding: UTF-8
-[11.09.2012-10:51:01][INFO] Starting MultiCastor with a gui
-[11.09.2012-10:51:01][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[11.09.2012-10:51:02][INFO] Configurationfile loaded.
-[11.09.2012-10:51:02][INFO] Default GUI Configurationfile loaded.
-[11.09.2012-10:56:06][INFO] Multicast Konfiguration gespeichert
-[11.09.2012-10:56:06][INFO] GUI Konfiguration gespeichert
-[11.09.2012-16:58:26][INFO] Hostname: Paddy
-[11.09.2012-16:58:26][INFO] Hostadress: 192.168.39.36
-[11.09.2012-16:58:26][INFO] Username: autarch; User location: null - Europe/Berlin
-[11.09.2012-16:58:26][INFO] Java version: 1.7.0_07; Java vendor: Oracle Corporation
-[11.09.2012-16:58:26][INFO] File encoding: Cp1252
-[11.09.2012-16:58:26][INFO] Starting MultiCastor with a gui
-[11.09.2012-16:58:26][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[11.09.2012-16:58:40][INFO] Configurationfile loaded.
-[11.09.2012-16:58:40][INFO] Default GUI Configurationfile loaded.
-[11.09.2012-16:58:41][INFO] Multicast Konfiguration gespeichert
-[11.09.2012-16:58:41][INFO] GUI Konfiguration gespeichert
-[12.09.2012-22:03:05][INFO] Hostname: Paddy
-[12.09.2012-22:03:05][INFO] Hostadress: 192.168.39.36
-[12.09.2012-22:03:05][INFO] Username: autarch; User location: null - Europe/Berlin
-[12.09.2012-22:03:05][INFO] Java version: 1.7.0_07; Java vendor: Oracle Corporation
-[12.09.2012-22:03:05][INFO] File encoding: UTF-8
-[12.09.2012-22:03:05][INFO] Starting MultiCastor with a gui
-[12.09.2012-22:03:05][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[12.09.2012-22:03:16][INFO] Configurationfile loaded.
-[12.09.2012-22:03:16][INFO] Default GUI Configurationfile loaded.
-[12.09.2012-22:03:18][INFO] Multicast Konfiguration gespeichert
-[12.09.2012-22:03:18][INFO] GUI Konfiguration gespeichert
-[30.09.2012-16:19:53][INFO] Hostname: Paddy
-[30.09.2012-16:19:53][INFO] Hostadress: 192.168.39.36
-[30.09.2012-16:19:53][INFO] Username: autarch; User location: null - Europe/Berlin
-[30.09.2012-16:19:53][INFO] Java version: 1.7.0_07; Java vendor: Oracle Corporation
-[30.09.2012-16:19:53][INFO] File encoding: UTF-8
-[30.09.2012-16:19:53][INFO] Starting MultiCastor with a gui
-[30.09.2012-16:19:53][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[30.09.2012-16:20:23][INFO] Configurationfile loaded.
-[30.09.2012-16:20:23][INFO] Default GUI Configurationfile loaded.
-[30.09.2012-16:20:37][INFO] Multicast Konfiguration gespeichert
-[30.09.2012-16:20:37][INFO] GUI Konfiguration gespeichert
-[01.10.2012-13:20:08][INFO] Hostname: apipw
-[01.10.2012-13:20:08][INFO] Hostadress: 141.31.69.220
-[01.10.2012-13:20:08][INFO] Username: autarch; User location: null - Europe/Berlin
-[01.10.2012-13:20:08][INFO] Java version: 1.7.0_07; Java vendor: Oracle Corporation
-[01.10.2012-13:20:08][INFO] File encoding: UTF-8
-[01.10.2012-13:20:08][INFO] Starting MultiCastor with a gui
-[01.10.2012-13:20:08][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[01.10.2012-13:20:14][INFO] Configurationfile loaded.
-[01.10.2012-13:20:14][INFO] Default GUI Configurationfile loaded.
-[01.10.2012-13:20:25][INFO] Multicast Konfiguration gespeichert
-[01.10.2012-13:20:25][INFO] GUI Konfiguration gespeichert
-[14.10.2012-17:10:21][INFO] Hostname: Paddy
-[14.10.2012-17:10:21][INFO] Hostadress: 192.168.168.1
-[14.10.2012-17:10:21][INFO] Username: autarch; User location: null - Europe/Berlin
-[14.10.2012-17:10:21][INFO] Java version: 1.7.0_07; Java vendor: Oracle Corporation
-[14.10.2012-17:10:21][INFO] File encoding: UTF-8
-[14.10.2012-17:10:21][INFO] Starting MultiCastor with a gui
-[14.10.2012-17:10:29][INFO] Saved Multicastconfiguration.
-[14.10.2012-17:10:21][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[14.10.2012-17:10:30][INFO] Configurationfile loaded.
-[14.10.2012-17:10:30][INFO] Default GUI Configurationfile loaded.
-[14.10.2012-17:19:01][INFO] Hostname: Paddy
-[14.10.2012-17:19:01][INFO] Hostadress: 192.168.168.1
-[14.10.2012-17:19:01][INFO] Username: autarch; User location: null - Europe/Berlin
-[14.10.2012-17:19:01][INFO] Java version: 1.7.0_07; Java vendor: Oracle Corporation
-[14.10.2012-17:19:01][INFO] File encoding: UTF-8
-[14.10.2012-17:19:01][INFO] Starting MultiCastor with a gui
-[14.10.2012-17:19:01][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[14.10.2012-17:19:04][INFO] Configurationfile loaded.
-[14.10.2012-17:19:04][INFO] Default GUI Configurationfile loaded.
-[14.10.2012-17:19:09][INFO] Multicast Konfiguration gespeichert
-[14.10.2012-17:19:09][INFO] GUI Konfiguration gespeichert
-[14.10.2012-18:37:05][INFO] Hostname: Paddy
-[14.10.2012-18:37:05][INFO] Hostadress: 192.168.168.1
-[14.10.2012-18:37:05][INFO] Username: autarch; User location: null - Europe/Berlin
-[14.10.2012-18:37:05][INFO] Java version: 1.7.0_07; Java vendor: Oracle Corporation
-[14.10.2012-18:37:05][INFO] File encoding: UTF-8
-[14.10.2012-18:37:05][INFO] Starting MultiCastor with a gui
-[14.10.2012-18:37:05][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[14.10.2012-18:37:06][INFO] Configurationfile loaded.
-[14.10.2012-18:37:06][INFO] Default GUI Configurationfile loaded.
-[14.10.2012-18:37:08][INFO] Multicast Konfiguration gespeichert
-[14.10.2012-18:37:08][INFO] GUI Konfiguration gespeichert
-[14.10.2012-18:54:52][INFO] Hostname: Paddy
-[14.10.2012-18:54:52][INFO] Hostadress: 192.168.168.1
-[14.10.2012-18:54:52][INFO] Username: autarch; User location: null - Europe/Berlin
-[14.10.2012-18:54:52][INFO] Java version: 1.7.0_07; Java vendor: Oracle Corporation
-[14.10.2012-18:54:52][INFO] File encoding: UTF-8
-[14.10.2012-18:54:52][INFO] Starting MultiCastor with a gui
-[14.10.2012-18:54:52][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[14.10.2012-18:54:54][INFO] Configurationfile loaded.
-[14.10.2012-18:54:54][INFO] Default GUI Configurationfile loaded.
-[14.10.2012-18:55:00][INFO] Multicast Konfiguration gespeichert
-[14.10.2012-18:55:00][INFO] GUI Konfiguration gespeichert
-[14.10.2012-18:55:15][INFO] Hostname: Paddy
-[14.10.2012-18:55:15][INFO] Hostadress: 192.168.168.1
-[14.10.2012-18:55:15][INFO] Username: autarch; User location: null - Europe/Berlin
-[14.10.2012-18:55:15][INFO] Java version: 1.7.0_07; Java vendor: Oracle Corporation
-[14.10.2012-18:55:15][INFO] File encoding: UTF-8
-[14.10.2012-18:55:15][INFO] Starting MultiCastor with a gui
-[14.10.2012-18:55:15][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[14.10.2012-18:55:17][INFO] Configurationfile loaded.
-[14.10.2012-18:55:17][INFO] Default GUI Configurationfile loaded.
-[14.10.2012-18:57:30][INFO] Multicast Konfiguration gespeichert
-[14.10.2012-18:57:30][INFO] GUI Konfiguration gespeichert
-[14.10.2012-20:15:33][INFO] Hostname: Paddy
-[14.10.2012-20:15:33][INFO] Hostadress: 192.168.168.1
-[14.10.2012-20:15:33][INFO] Username: autarch; User location: null - Europe/Berlin
-[14.10.2012-20:15:33][INFO] Java version: 1.7.0_07; Java vendor: Oracle Corporation
-[14.10.2012-20:15:33][INFO] File encoding: UTF-8
-[14.10.2012-20:15:33][INFO] Starting MultiCastor with a gui
-[14.10.2012-20:15:33][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[14.10.2012-20:15:35][INFO] Configurationfile loaded.
-[14.10.2012-20:15:35][INFO] Default GUI Configurationfile loaded.
-[14.10.2012-20:15:36][INFO] Multicast Konfiguration gespeichert
-[14.10.2012-20:15:36][INFO] GUI Konfiguration gespeichert
-[20.10.2012-18:36:13][INFO] Hostname: Paddy
-[20.10.2012-18:36:13][INFO] Hostadress: 192.168.168.1
-[20.10.2012-18:36:13][INFO] Username: autarch; User location: null - Europe/Berlin
-[20.10.2012-18:36:13][INFO] Java version: 1.7.0_07; Java vendor: Oracle Corporation
-[20.10.2012-18:36:13][INFO] File encoding: UTF-8
-[20.10.2012-18:36:13][INFO] Starting MultiCastor with a gui
-[20.10.2012-18:36:13][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[20.10.2012-18:36:17][INFO] Configurationfile loaded.
-[20.10.2012-18:36:17][INFO] Default GUI Configurationfile loaded.
-[20.10.2012-19:30:23][INFO] Multicast Konfiguration gespeichert
-[20.10.2012-19:30:23][INFO] GUI Konfiguration gespeichert
-[29.03.2013-16:38:25][INFO] Hostname: ghjkl
-[29.03.2013-16:38:25][INFO] Hostadress: 127.0.1.1
-[29.03.2013-16:38:25][INFO] Username: groxar; User location: null - Europe/Berlin
-[29.03.2013-16:38:25][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
-[29.03.2013-16:38:25][INFO] File encoding: UTF-8
-[29.03.2013-16:38:25][INFO] Starting MultiCastor with a gui
-[29.03.2013-16:38:25][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[29.03.2013-16:38:27][INFO] Configurationfile loaded.
-[29.03.2013-16:38:27][INFO] Default GUI Configurationfile loaded.
-[29.03.2013-16:38:30][INFO] Multicast Konfiguration gespeichert
-[29.03.2013-16:38:30][INFO] GUI Konfiguration gespeichert
-[29.03.2013-16:48:53][INFO] Hostname: ghjkl
-[29.03.2013-16:48:53][INFO] Hostadress: 127.0.1.1
-[29.03.2013-16:48:53][INFO] Username: groxar; User location: null - Europe/Berlin
-[29.03.2013-16:48:53][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
-[29.03.2013-16:48:53][INFO] File encoding: UTF-8
-[29.03.2013-16:48:53][INFO] Starting MultiCastor with a gui
-[29.03.2013-16:48:53][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[29.03.2013-16:48:55][INFO] Configurationfile loaded.
-[29.03.2013-16:48:55][INFO] Default GUI Configurationfile loaded.
-[29.03.2013-16:50:09][INFO] Multicast Konfiguration gespeichert
-[29.03.2013-16:50:09][INFO] GUI Konfiguration gespeichert
-[29.03.2013-16:53:20][INFO] Hostname: ghjkl
-[29.03.2013-16:53:20][INFO] Hostadress: 127.0.1.1
-[29.03.2013-16:53:20][INFO] Username: groxar; User location: null - Europe/Berlin
-[29.03.2013-16:53:20][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
-[29.03.2013-16:53:20][INFO] File encoding: UTF-8
-[29.03.2013-16:53:20][INFO] Starting MultiCastor with a gui
-[29.03.2013-16:53:20][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[29.03.2013-16:53:21][INFO] Configurationfile loaded.
-[29.03.2013-16:53:21][INFO] Default GUI Configurationfile loaded.
-[29.03.2013-16:54:10][WARNING] 'Permission denied' Versuche default Port 4711 zu setzen ...
-[29.03.2013-16:54:12][INFO] MultiCast hinzugefügt :L3_RECEIVER_-1-0_/224.0.0.232
-[29.03.2013-16:54:14][INFO] L3_RECEIVER_-1-0_/224.0.0.232: Empfänger mit MC-Objekt gestartet.
-[29.03.2013-16:54:19][FINEST] /224.0.0.232	4711	/127.0.0.1	0	1	0	0	0	0	0	0	L3_RECEIVER	0-	UNDEFINED	SINGLE
-[29.03.2013-16:54:21][INFO] L3_RECEIVER_0-_/224.0.0.232: MC-Gruppe des MC-Objekts verlassen.
-[29.03.2013-16:54:38][INFO] MultiCast hinzugefügt :L3_SENDER_ghjkl-1-0_/224.0.0.232
-[29.03.2013-16:54:39][INFO] L3_SENDER_ghjkl0-d75c95fe_/224.0.0.232: MultiCast-Sender aktiviert
-[29.03.2013-16:54:39][INFO] L3_SENDER_ghjkl0-d75c95fe_/224.0.0.232: Bei Multicast Gruppe angemeldet /224.0.0.232 Bei Multicast Gruppe angemeldet PEAK.
-[29.03.2013-16:54:42][INFO] L3_RECEIVER_0-_/224.0.0.232: Empfänger mit MC-Objekt gestartet.
-[29.03.2013-16:54:51][INFO] L3_RECEIVER_0-_/224.0.0.232: MC-Gruppe des MC-Objekts verlassen.
-[29.03.2013-16:54:51][INFO] L3_RECEIVER_0-_/224.0.0.232: Empfänger mit MC-Objekt gestartet.
-[29.03.2013-16:55:13][INFO] L3_RECEIVER_0-_/224.0.0.232: MC-Gruppe des MC-Objekts verlassen.
-[29.03.2013-16:55:14][INFO] L3_RECEIVER_0-_/224.0.0.232: Empfänger mit MC-Objekt gestartet.
-[29.03.2013-16:55:16][INFO] L3_RECEIVER_0-_/224.0.0.232: MC-Gruppe des MC-Objekts verlassen.
-[29.03.2013-16:55:17][INFO] L3_RECEIVER_0-_/224.0.0.232: Empfänger mit MC-Objekt gestartet.
-[29.03.2013-16:55:19][FINEST] /224.0.0.232	4711	/127.0.0.1	23	0	23	920	L3_SENDER	ghjkl0-d75c95fe	
-[29.03.2013-16:55:19][FINEST] /224.0.0.232	4711	/127.0.0.1	0	0	0	0	0	0	0	0	L3_RECEIVER	0-	UNDEFINED	SINGLE
-[29.03.2013-16:55:42][INFO] L3_RECEIVER_0-_/224.0.0.232: MC-Gruppe des MC-Objekts verlassen.
-[29.03.2013-16:55:45][INFO] Versuchte einen bereits nicht laufenden MultiCast zu stoppen
-[29.03.2013-16:55:45][INFO] MultiCast gelöscht :/224.0.0.232	4711	/127.0.0.1	0	0	0	0	0	0	0	0	L3_RECEIVER	0-	UNDEFINED	SINGLE
-[29.03.2013-16:56:00][INFO] MultiCast hinzugefügt :L3_RECEIVER_-1-0_/224.0.0.232
-[29.03.2013-16:56:02][INFO] L3_RECEIVER_-1-0_/224.0.0.232: Empfänger mit MC-Objekt gestartet.
-[29.03.2013-16:56:19][FINEST] /224.0.0.232	4711	/127.0.0.1	23	0	23	2300	L3_SENDER	ghjkl0-d75c95fe	
-[29.03.2013-16:56:19][FINEST] /224.0.0.232	4711	/127.0.0.1	36617	0	0	23	23	0	23	391	L3_RECEIVER	ghjkl0-d75c95fe	MULTICASTOR	SINGLE
-[29.03.2013-16:57:19][FINEST] /224.0.0.232	4711	/127.0.0.1	23	0	23	3680	L3_SENDER	ghjkl0-d75c95fe	
-[29.03.2013-16:57:19][FINEST] /224.0.0.232	4711	/127.0.0.1	8582	0	0	23	23	0	23	1771	L3_RECEIVER	ghjkl0-d75c95fe	MULTICASTOR	SINGLE
-[29.03.2013-16:58:19][FINEST] /224.0.0.232	4711	/127.0.0.1	23	0	23	5060	L3_SENDER	ghjkl0-d75c95fe	
-[29.03.2013-16:58:19][FINEST] /224.0.0.232	4711	/127.0.0.1	26329	0	0	23	23	0	23	3151	L3_RECEIVER	ghjkl0-d75c95fe	MULTICASTOR	SINGLE
-[29.03.2013-16:59:19][FINEST] /224.0.0.232	4711	/127.0.0.1	23	0	23	6440	L3_SENDER	ghjkl0-d75c95fe	
-[29.03.2013-16:59:19][FINEST] /224.0.0.232	4711	/127.0.0.1	9867	0	0	23	23	0	23	4531	L3_RECEIVER	ghjkl0-d75c95fe	MULTICASTOR	SINGLE
-[29.03.2013-17:00:19][FINEST] /224.0.0.232	4711	/127.0.0.1	23	0	23	7820	L3_SENDER	ghjkl0-d75c95fe	
-[29.03.2013-17:00:19][FINEST] /224.0.0.232	4711	/127.0.0.1	27229	0	0	23	23	0	23	5911	L3_RECEIVER	ghjkl0-d75c95fe	MULTICASTOR	SINGLE
-[29.03.2013-17:00:44][INFO] L3_RECEIVER_ghjkl0-d75c95fe_/224.0.0.232: MC-Gruppe des MC-Objekts verlassen.
-[29.03.2013-17:00:45][INFO] L3_SENDER_ghjkl0-d75c95fe_/224.0.0.232: null
-[29.03.2013-17:00:46][INFO] L3_SENDER_ghjkl0-d75c95fe_/224.0.0.232: 8442 Packete insgesamt gesendet
-[29.03.2013-17:10:51][INFO] Die Aktualisierungszeit ist sehr lange: 1150 ms !!!!!!!!!!!!
-[29.03.2013-17:10:51][WARNING] Die Aktualisierung des GUI daürt sehr lange. Konsultieren sie das Benutzerhandbuch für mehr Informationen.
-[03.04.2013-14:12:45][INFO] Hostname: ghjkl
-[03.04.2013-14:12:45][INFO] Hostadress: 127.0.1.1
-[03.04.2013-14:12:45][INFO] Username: groxar; User location: null - Europe/Berlin
-[03.04.2013-14:12:45][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
-[03.04.2013-14:12:45][INFO] File encoding: UTF-8
-[03.04.2013-14:12:45][INFO] Starting MultiCastor with a gui
-[03.04.2013-14:12:45][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[03.04.2013-14:12:46][INFO] Configurationfile loaded.
-[03.04.2013-14:12:46][INFO] Default GUI Configurationfile loaded.
-[03.04.2013-14:20:01][INFO] Multicast Konfiguration gespeichert
-[03.04.2013-14:20:01][INFO] GUI Konfiguration gespeichert
-[03.04.2013-14:46:36][INFO] Hostname: ghjkl
-[03.04.2013-14:46:36][INFO] Hostadress: 127.0.1.1
-[03.04.2013-14:46:36][INFO] Username: groxar; User location: null - Europe/Berlin
-[03.04.2013-14:46:36][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
-[03.04.2013-14:46:36][INFO] File encoding: UTF-8
-[03.04.2013-14:46:36][INFO] Starting MultiCastor with a gui
-[03.04.2013-14:46:36][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[03.04.2013-14:46:37][INFO] Configurationfile loaded.
-[03.04.2013-14:46:37][INFO] Default GUI Configurationfile loaded.
-[03.04.2013-14:46:58][INFO] Multicast Konfiguration gespeichert
-[03.04.2013-14:46:58][INFO] GUI Konfiguration gespeichert
-[04.04.2013-10:19:56][INFO] Hostname: eyebeem-paddyx-xen
-[04.04.2013-10:20:16][INFO] Hostadress: 192.168.43.14
-[04.04.2013-10:20:16][INFO] Username: autarch; User location: null - Europe/Berlin
-[04.04.2013-10:20:16][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
-[04.04.2013-10:20:16][INFO] File encoding: UTF-8
-[04.04.2013-10:20:16][INFO] Starting MultiCastor with a gui
-[04.04.2013-10:20:21][INFO] Saved Multicastconfiguration.
-[04.04.2013-10:20:16][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[04.04.2013-10:20:23][INFO] Configurationfile loaded.
-[04.04.2013-10:20:23][INFO] Default GUI Configurationfile loaded.
-[04.04.2013-10:21:22][INFO] Unable to get hostname and hostadress
-[04.04.2013-10:21:22][INFO] Username: autarch; User location: null - Europe/Berlin
-[04.04.2013-10:21:22][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
-[04.04.2013-10:21:22][INFO] File encoding: UTF-8
-[04.04.2013-10:21:22][INFO] Starting MultiCastor with a gui
-[04.04.2013-10:21:22][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[04.04.2013-10:21:26][INFO] Configurationfile loaded.
-[04.04.2013-10:21:26][INFO] Default GUI Configurationfile loaded.
-[04.04.2013-10:23:26][INFO] Multicast Konfiguration gespeichert
-[04.04.2013-10:23:36][INFO] GUI Konfiguration gespeichert
-[05.04.2013-08:12:18][INFO] Unable to get hostname and hostadress
-[05.04.2013-08:12:18][INFO] Username: autarch; User location: null - Europe/Berlin
-[05.04.2013-08:12:18][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
-[05.04.2013-08:12:18][INFO] File encoding: UTF-8
-[05.04.2013-08:12:18][INFO] Starting MultiCastor with a gui
-[05.04.2013-08:12:18][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[05.04.2013-08:12:19][INFO] Configurationfile loaded.
-[05.04.2013-08:12:19][INFO] Default GUI Configurationfile loaded.
-[05.04.2013-08:12:22][INFO] Multicast Konfiguration gespeichert
-[05.04.2013-08:12:22][INFO] GUI Konfiguration gespeichert
-[05.04.2013-08:37:29][INFO] Unable to get hostname and hostadress
-[05.04.2013-08:37:29][INFO] Username: autarch; User location: null - Europe/Berlin
-[05.04.2013-08:37:29][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
-[05.04.2013-08:37:29][INFO] File encoding: UTF-8
-[05.04.2013-08:37:29][INFO] Starting MultiCastor with a gui
-[05.04.2013-08:37:29][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[05.04.2013-08:37:31][INFO] Configurationfile loaded.
-[05.04.2013-08:37:31][INFO] Default GUI Configurationfile loaded.
-[05.04.2013-08:37:32][INFO] Die Aktualisierungszeit ist sehr lange: 334 ms !!!!!!!!!!!!
-[05.04.2013-08:37:32][WARNING] Die Aktualisierung des GUI daürt sehr lange. Konsultieren sie das Benutzerhandbuch für mehr Informationen.
-[05.04.2013-08:38:08][INFO] Multicast Konfiguration gespeichert
-[05.04.2013-08:38:08][INFO] GUI Konfiguration gespeichert
-[10.04.2013-14:15:31][INFO] Unable to get hostname and hostadress
-[10.04.2013-14:15:31][INFO] Username: autarch; User location: null - Europe/Berlin
-[10.04.2013-14:15:31][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
-[10.04.2013-14:15:31][INFO] File encoding: UTF-8
-[10.04.2013-14:15:31][INFO] Starting MultiCastor with a gui
-[10.04.2013-14:15:31][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[10.04.2013-14:15:33][INFO] Configurationfile loaded.
-[10.04.2013-14:15:33][INFO] Default GUI Configurationfile loaded.
-[10.04.2013-14:17:02][INFO] Multicast Konfiguration gespeichert
-[10.04.2013-14:17:02][INFO] GUI Konfiguration gespeichert
-[10.04.2013-14:17:06][INFO] Unable to get hostname and hostadress
-[10.04.2013-14:17:06][INFO] Username: autarch; User location: null - Europe/Berlin
-[10.04.2013-14:17:06][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
-[10.04.2013-14:17:06][INFO] File encoding: UTF-8
-[10.04.2013-14:17:06][INFO] Starting MultiCastor with a gui
-[10.04.2013-14:17:06][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[10.04.2013-14:17:08][INFO] Configurationfile loaded.
-[10.04.2013-14:17:08][INFO] Default GUI Configurationfile loaded.
-[10.04.2013-14:17:18][INFO] Multicast Konfiguration gespeichert
-[10.04.2013-14:17:18][INFO] GUI Konfiguration gespeichert
-[12.04.2013-10:05:29][INFO] Unable to get hostname and hostadress
-[12.04.2013-10:05:29][INFO] Username: autarch; User location: null - Europe/Berlin
-[12.04.2013-10:05:29][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
-[12.04.2013-10:05:29][INFO] File encoding: UTF-8
-[12.04.2013-10:05:29][INFO] Starting MultiCastor with a gui
-[12.04.2013-10:05:29][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[12.04.2013-10:05:31][INFO] Configurationfile loaded.
-[12.04.2013-10:05:31][INFO] Default GUI Configurationfile loaded.
-[12.04.2013-10:14:00][INFO] Unable to get hostname and hostadress
-[12.04.2013-10:14:00][INFO] Username: autarch; User location: null - Europe/Berlin
-[12.04.2013-10:14:00][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
-[12.04.2013-10:14:00][INFO] File encoding: UTF-8
-[12.04.2013-10:14:00][INFO] Starting MultiCastor with a gui
-[12.04.2013-10:14:00][WARNING] Could not find any devices for Layer 2.
- Do you have JNetPcap installed, and did you start as root / admin?
- It seems like you could not use Layer 2 functionality while runtime.
-[12.04.2013-10:14:01][INFO] Configurationfile loaded.
-[12.04.2013-10:14:01][INFO] Default GUI Configurationfile loaded.
-[12.04.2013-10:14:21][WARNING] L3_SENDER_-1-0_/224.0.0.1: Hostname kann nicht ermittelt werden. Fehlermeldung:
+[12.04.2013-10:53:05][WARNING] Default configurationfile was not found. MultiCastor starts without preconfigured Multicasts and with default GUI configuration.
+[12.04.2013-10:53:08][WARNING] Default GUI configurationfile was not found. MultiCastor starts without preconfigured Multicasts and with default GUI configuration.
+[12.04.2013-10:53:44][WARNING] L3_SENDER_-1-0_/224.0.0.1: Unable to get Host-Name. Error is:
 eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekannt
-[12.04.2013-10:15:00][INFO] MultiCast hinzugefügt :L3_SENDER_-1-0_/224.0.0.1
-[12.04.2013-10:15:01][INFO] Multicast Konfiguration gespeichert
-[12.04.2013-10:15:01][INFO] GUI Konfiguration gespeichert
-[12.04.2013-10:15:01][INFO] L3_SENDER_-1-0_/224.0.0.1: null
-[12.04.2013-10:30:41][INFO] Unable to get hostname and hostadress
-[12.04.2013-10:30:41][INFO] Username: autarch; User location: null - Europe/Berlin
-[12.04.2013-10:30:41][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
-[12.04.2013-10:30:41][INFO] File encoding: UTF-8
-[12.04.2013-10:30:41][INFO] Starting MultiCastor with a gui
-[12.04.2013-10:30:41][WARNING] Could not find any devices for Layer 2.
+[12.04.2013-10:53:49][INFO] MultiCast added :L3_SENDER_-1-0_/224.0.0.1
+[12.04.2013-10:53:55][INFO] L3_SENDER_0-b01b12ea_/224.0.0.1: MultiCast-Sender activated
+[12.04.2013-10:53:55][INFO] L3_SENDER_0-b01b12ea_/224.0.0.1: Joined Multicast-group /224.0.0.1 Joined Multicast-group PEAK.
+[12.04.2013-10:54:01][INFO] L3_SENDER_0-b01b12ea_/224.0.0.1: null
+[12.04.2013-10:54:02][INFO] L3_SENDER_0-b01b12ea_/224.0.0.1: 11 packets send in total
+[12.04.2013-10:54:03][INFO] L3_SENDER_1-a9bd1e85_/224.0.0.1: MultiCast-Sender activated
+[12.04.2013-10:54:03][INFO] L3_SENDER_1-a9bd1e85_/224.0.0.1: Joined Multicast-group /224.0.0.1 Joined Multicast-group PEAK.
+[12.04.2013-10:54:10][INFO] Saved Multicastconfiguration.
+[12.04.2013-10:54:10][INFO] Saved GUI Configuration.
+[12.04.2013-10:54:10][INFO] L3_SENDER_1-a9bd1e85_/224.0.0.1: null
+[12.04.2013-10:55:52][INFO] Unable to get hostname and hostadress
+[12.04.2013-10:55:52][INFO] Username: autarch; User location: null - Europe/Berlin
+[12.04.2013-10:55:52][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
+[12.04.2013-10:55:52][INFO] File encoding: UTF-8
+[12.04.2013-10:55:52][INFO] Starting MultiCastor with a gui
+[12.04.2013-10:55:52][WARNING] Could not find any devices for Layer 2.
  Do you have JNetPcap installed, and did you start as root / admin?
  It seems like you could not use Layer 2 functionality while runtime.
-[12.04.2013-10:30:42][INFO] Configurationfile loaded.
-[12.04.2013-10:30:42][WARNING] L3_SENDER_-1-0_/224.0.0.1: Unable to get Host-Name. Error is:
+[12.04.2013-10:55:54][INFO] Configurationfile loaded.
+[12.04.2013-10:55:54][WARNING] L3_SENDER_-1-0_/224.0.0.1: Unable to get Host-Name. Error is:
 eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekannt
-[12.04.2013-10:30:43][INFO] MultiCast added :L3_SENDER_-1-0_/224.0.0.1
-[12.04.2013-10:30:54][INFO] Saved Multicastconfiguration.
+[12.04.2013-10:55:55][INFO] MultiCast added :L3_SENDER_-1-0_/224.0.0.1
+[12.04.2013-10:55:55][INFO] L3_SENDER_0-c6ef8d4c_/224.0.0.1: MultiCast-Sender activated
+[12.04.2013-10:55:55][INFO] L3_SENDER_0-c6ef8d4c_/224.0.0.1: Joined Multicast-group /224.0.0.1 Joined Multicast-group PEAK.
+[12.04.2013-10:55:55][INFO] Default GUI Configurationfile loaded.
+[12.04.2013-10:56:35][INFO] L3_SENDER_0-c6ef8d4c_/224.0.0.1: null
+[12.04.2013-10:56:35][INFO] L3_SENDER_0-c6ef8d4c_/224.0.0.1: 44 packets send in total
+[12.04.2013-10:56:35][INFO] L3_SENDER_1-49eea29b_/224.0.0.1: MultiCast-Sender activated
+[12.04.2013-10:56:35][INFO] L3_SENDER_1-49eea29b_/224.0.0.1: Joined Multicast-group /224.0.0.1 Joined Multicast-group PEAK.
+[12.04.2013-10:56:38][INFO] L3_SENDER_1-49eea29b_/224.0.0.1: null
+[12.04.2013-10:56:38][INFO] L3_SENDER_1-49eea29b_/224.0.0.1: 7 packets send in total
+[12.04.2013-10:56:44][INFO] L3_SENDER_2-a05c496f_/224.0.0.1: MultiCast-Sender activated
+[12.04.2013-10:56:44][INFO] L3_SENDER_2-a05c496f_/224.0.0.1: Joined Multicast-group /224.0.0.1 Joined Multicast-group PEAK.
+[12.04.2013-10:56:51][INFO] L3_SENDER_2-a05c496f_/224.0.0.1: null
+[12.04.2013-10:56:52][INFO] L3_SENDER_2-a05c496f_/224.0.0.1: 12 packets send in total
+[12.04.2013-10:57:14][WARNING] L3_SENDER_-1-0_/224.1.0.1: Unable to get Host-Name. Error is:
+eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekannt
+[12.04.2013-10:57:16][INFO] MultiCast added :L3_SENDER_-1-0_/224.1.0.1
+[12.04.2013-10:57:22][INFO] L3_SENDER_3-36612feb_/224.1.0.1: MultiCast-Sender activated
+[12.04.2013-10:57:22][INFO] L3_SENDER_3-36612feb_/224.1.0.1: Joined Multicast-group /224.1.0.1 Joined Multicast-group PEAK.
+[12.04.2013-10:57:23][INFO] L3_SENDER_4-69a54eeb_/224.0.0.1: MultiCast-Sender activated
+[12.04.2013-10:57:23][INFO] L3_SENDER_4-69a54eeb_/224.0.0.1: Joined Multicast-group /224.0.0.1 Joined Multicast-group PEAK.
+[12.04.2013-10:57:27][INFO] L3_SENDER_3-36612feb_/224.1.0.1: null
+[12.04.2013-10:57:28][INFO] L3_SENDER_3-36612feb_/224.1.0.1: 10 packets send in total
+[12.04.2013-10:57:39][INFO] L3_SENDER_4-69a54eeb_/224.0.0.1: null
+[12.04.2013-10:57:40][INFO] L3_SENDER_4-69a54eeb_/224.0.0.1: 21 packets send in total
+[12.04.2013-10:57:44][INFO] L3_SENDER_5-98e16005_/224.0.0.1: MultiCast-Sender activated
+[12.04.2013-10:57:44][INFO] L3_SENDER_5-98e16005_/224.0.0.1: Joined Multicast-group /224.0.0.1 Joined Multicast-group PEAK.
+[12.04.2013-10:57:51][FINEST] /224.0.0.1	22222	/127.0.0.1	1	5	22	9	L3_SENDER	5-98e16005	
+[12.04.2013-10:58:07][INFO] L3_SENDER_6-1d80a36f_/224.1.0.1: MultiCast-Sender activated
+[12.04.2013-10:58:07][INFO] L3_SENDER_6-1d80a36f_/224.1.0.1: Joined Multicast-group /224.1.0.1 Joined Multicast-group PEAK.
+[12.04.2013-10:58:32][INFO] L3_SENDER_5-98e16005_/224.0.0.1: null
+[12.04.2013-10:58:32][INFO] L3_SENDER_6-1d80a36f_/224.1.0.1: null
+[12.04.2013-10:58:32][INFO] L3_SENDER_5-98e16005_/224.0.0.1: 52 packets send in total
+[12.04.2013-10:58:32][INFO] L3_SENDER_6-1d80a36f_/224.1.0.1: 29 packets send in total
+[12.04.2013-10:58:42][INFO] Saved Multicastconfiguration.
+[12.04.2013-10:58:42][INFO] Saved GUI Configuration.
+[12.04.2013-10:58:42][INFO] L3_SENDER_6-1d80a36f_/224.1.0.1: null
+[12.04.2013-10:58:42][INFO] L3_SENDER_5-98e16005_/224.0.0.1: null
+[12.04.2013-11:00:33][INFO] Unable to get hostname and hostadress
+[12.04.2013-11:00:33][INFO] Username: autarch; User location: null - Europe/Berlin
+[12.04.2013-11:00:33][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
+[12.04.2013-11:00:33][INFO] File encoding: UTF-8
+[12.04.2013-11:00:33][INFO] Starting MultiCastor with a gui
+[12.04.2013-11:00:33][WARNING] Could not find any devices for Layer 2.
+ Do you have JNetPcap installed, and did you start as root / admin?
+ It seems like you could not use Layer 2 functionality while runtime.
+[12.04.2013-11:00:35][INFO] Configurationfile loaded.
+[12.04.2013-11:00:35][WARNING] L3_SENDER_-1-0_/224.1.0.1: Unable to get Host-Name. Error is:
+eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekannt
+[12.04.2013-11:00:36][INFO] MultiCast added :L3_SENDER_-1-0_/224.1.0.1
+[12.04.2013-11:00:36][WARNING] L3_SENDER_-1-0_/224.0.0.1: Unable to get Host-Name. Error is:
+eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekannt
+[12.04.2013-11:00:37][INFO] MultiCast added :L3_SENDER_-1-0_/224.0.0.1
+[12.04.2013-11:00:37][INFO] Default GUI Configurationfile loaded.
+[12.04.2013-11:00:39][INFO] L3_SENDER_0-a5d1ed83_/224.0.0.1: MultiCast-Sender activated
+[12.04.2013-11:00:39][INFO] L3_SENDER_0-a5d1ed83_/224.0.0.1: Joined Multicast-group /224.0.0.1 Joined Multicast-group PEAK.
+[12.04.2013-11:00:40][INFO] L3_SENDER_1-fe99bb36_/224.1.0.1: MultiCast-Sender activated
+[12.04.2013-11:00:40][INFO] L3_SENDER_1-fe99bb36_/224.1.0.1: Joined Multicast-group /224.1.0.1 Joined Multicast-group PEAK.
+[12.04.2013-11:00:41][INFO] L3_SENDER_1-fe99bb36_/224.1.0.1: null
+[12.04.2013-11:00:42][INFO] L3_SENDER_1-fe99bb36_/224.1.0.1: 6 packets send in total
+[12.04.2013-11:01:04][INFO] L3_SENDER_0-a5d1ed83_/224.0.0.1: null
+[12.04.2013-11:01:05][INFO] L3_SENDER_0-a5d1ed83_/224.0.0.1: 30 packets send in total
+[12.04.2013-11:01:22][INFO] Saved Multicastconfiguration.
+[12.04.2013-11:01:22][INFO] Saved GUI Configuration.
+[12.04.2013-11:01:22][INFO] L3_SENDER_0-a5d1ed83_/224.0.0.1: null
+[12.04.2013-11:01:22][INFO] L3_SENDER_1-fe99bb36_/224.1.0.1: null
+[12.04.2013-11:05:39][INFO] Unable to get hostname and hostadress
+[12.04.2013-11:05:39][INFO] Username: autarch; User location: null - Europe/Berlin
+[12.04.2013-11:05:39][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
+[12.04.2013-11:05:39][INFO] File encoding: UTF-8
+[12.04.2013-11:05:39][INFO] Starting MultiCastor with a gui
+[12.04.2013-11:05:39][WARNING] Could not find any devices for Layer 2.
+ Do you have JNetPcap installed, and did you start as root / admin?
+ It seems like you could not use Layer 2 functionality while runtime.
+[12.04.2013-11:05:41][INFO] Configurationfile loaded.
+[12.04.2013-11:05:41][WARNING] L3_SENDER_-1-0_/224.0.0.1: Unable to get Host-Name. Error is:
+eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekannt
+[12.04.2013-11:05:44][INFO] MultiCast added :L3_SENDER_-1-0_/224.0.0.1
+[12.04.2013-11:05:44][WARNING] L3_SENDER_-1-0_/224.1.0.1: Unable to get Host-Name. Error is:
+eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekannt
+[12.04.2013-11:05:45][INFO] MultiCast added :L3_SENDER_-1-0_/224.1.0.1
+[12.04.2013-11:05:45][INFO] Default GUI Configurationfile loaded.
+[12.04.2013-11:05:58][INFO] L3_SENDER_0-4f156b5a_/224.1.0.1: MultiCast-Sender activated
+[12.04.2013-11:05:58][INFO] L3_SENDER_0-4f156b5a_/224.1.0.1: Joined Multicast-group /224.1.0.1 Joined Multicast-group PEAK.
+[12.04.2013-11:06:20][INFO] L3_SENDER_0-4f156b5a_/224.1.0.1: null
+[12.04.2013-11:06:20][INFO] L3_SENDER_0-4f156b5a_/224.1.0.1: 26 packets send in total
+[12.04.2013-11:06:22][INFO] Saved Multicastconfiguration.
+[12.04.2013-11:06:22][INFO] Saved GUI Configuration.
+[12.04.2013-11:06:22][INFO] L3_SENDER_-1-0_/224.0.0.1: null
+[12.04.2013-11:06:22][INFO] L3_SENDER_0-4f156b5a_/224.1.0.1: null
+[12.04.2013-11:15:17][INFO] Unable to get hostname and hostadress
+[12.04.2013-11:15:17][INFO] Username: autarch; User location: null - Europe/Berlin
+[12.04.2013-11:15:17][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
+[12.04.2013-11:15:17][INFO] File encoding: UTF-8
+[12.04.2013-11:15:17][INFO] Starting MultiCastor with a gui
+[12.04.2013-11:15:17][WARNING] Could not find any devices for Layer 2.
+ Do you have JNetPcap installed, and did you start as root / admin?
+ It seems like you could not use Layer 2 functionality while runtime.
+[12.04.2013-11:15:18][INFO] Configurationfile loaded.
+[12.04.2013-11:15:18][WARNING] L3_SENDER_-1-0_/224.1.0.1: Unable to get Host-Name. Error is:
+eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekannt
+[12.04.2013-11:15:20][INFO] MultiCast added :L3_SENDER_-1-0_/224.1.0.1
+[12.04.2013-11:15:20][WARNING] L3_SENDER_-1-0_/224.0.0.1: Unable to get Host-Name. Error is:
+eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekannt
+[12.04.2013-11:15:21][INFO] MultiCast added :L3_SENDER_-1-0_/224.0.0.1
+[12.04.2013-11:15:21][INFO] Default GUI Configurationfile loaded.
+[12.04.2013-11:15:33][INFO] L3_SENDER_0-a9370dee_/224.0.0.1: MultiCast-Sender activated
+[12.04.2013-11:15:33][INFO] L3_SENDER_0-a9370dee_/224.0.0.1: Joined Multicast-group /224.0.0.1 Joined Multicast-group PEAK.
+[12.04.2013-11:15:34][INFO] L3_SENDER_0-a9370dee_/224.0.0.1: null
+[12.04.2013-11:15:35][INFO] L3_SENDER_0-a9370dee_/224.0.0.1: 6 packets send in total
+[12.04.2013-11:15:38][INFO] L3_SENDER_1-15583c09_/224.1.0.1: MultiCast-Sender activated
+[12.04.2013-11:15:38][INFO] L3_SENDER_1-15583c09_/224.1.0.1: Joined Multicast-group /224.1.0.1 Joined Multicast-group PEAK.
+[12.04.2013-11:15:39][INFO] L3_SENDER_1-15583c09_/224.1.0.1: null
+[12.04.2013-11:15:40][INFO] L3_SENDER_1-15583c09_/224.1.0.1: 6 packets send in total
+[12.04.2013-11:15:40][INFO] L3_SENDER_2-7bb2ca27_/224.1.0.1: MultiCast-Sender activated
+[12.04.2013-11:15:40][INFO] L3_SENDER_2-7bb2ca27_/224.1.0.1: Joined Multicast-group /224.1.0.1 Joined Multicast-group PEAK.
+[12.04.2013-11:15:41][INFO] L3_SENDER_2-7bb2ca27_/224.1.0.1: null
+[12.04.2013-11:15:41][INFO] L3_SENDER_2-7bb2ca27_/224.1.0.1: 5 packets send in total
+[12.04.2013-11:15:46][INFO] Saved Multicastconfiguration.
+[12.04.2013-11:15:46][INFO] Saved GUI Configuration.
+[12.04.2013-11:15:46][INFO] L3_SENDER_2-7bb2ca27_/224.1.0.1: null
+[12.04.2013-11:15:46][INFO] L3_SENDER_0-a9370dee_/224.0.0.1: null
+[12.04.2013-11:15:49][INFO] Unable to get hostname and hostadress
+[12.04.2013-11:15:49][INFO] Username: autarch; User location: null - Europe/Berlin
+[12.04.2013-11:15:49][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
+[12.04.2013-11:15:49][INFO] File encoding: UTF-8
+[12.04.2013-11:15:49][INFO] Starting MultiCastor with a gui
+[12.04.2013-11:15:49][WARNING] Could not find any devices for Layer 2.
+ Do you have JNetPcap installed, and did you start as root / admin?
+ It seems like you could not use Layer 2 functionality while runtime.
+[12.04.2013-11:15:50][INFO] Configurationfile loaded.
+[12.04.2013-11:15:51][WARNING] L3_SENDER_-1-0_/224.0.0.1: Unable to get Host-Name. Error is:
+eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekannt
+[12.04.2013-11:15:52][INFO] MultiCast added :L3_SENDER_-1-0_/224.0.0.1
+[12.04.2013-11:15:52][WARNING] L3_SENDER_-1-0_/224.1.0.1: Unable to get Host-Name. Error is:
+eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekannt
+[12.04.2013-11:15:53][INFO] MultiCast added :L3_SENDER_-1-0_/224.1.0.1
+[12.04.2013-11:15:53][INFO] Default GUI Configurationfile loaded.
+[12.04.2013-11:16:00][INFO] L3_SENDER_0-d3ae8406_/224.1.0.1: MultiCast-Sender activated
+[12.04.2013-11:16:00][INFO] L3_SENDER_0-d3ae8406_/224.1.0.1: Joined Multicast-group /224.1.0.1 Joined Multicast-group PEAK.
+[12.04.2013-11:16:12][INFO] L3_SENDER_0-d3ae8406_/224.1.0.1: null
+[12.04.2013-11:16:12][INFO] L3_SENDER_0-d3ae8406_/224.1.0.1: 16 packets send in total
+[12.04.2013-11:16:14][INFO] L3_SENDER_1-c2ee97d_/224.0.0.1: MultiCast-Sender activated
+[12.04.2013-11:16:14][INFO] L3_SENDER_1-c2ee97d_/224.0.0.1: Joined Multicast-group /224.0.0.1 Joined Multicast-group PEAK.
+[12.04.2013-11:16:24][INFO] L3_SENDER_1-c2ee97d_/224.0.0.1: null
+[12.04.2013-11:16:25][INFO] L3_SENDER_1-c2ee97d_/224.0.0.1: 15 packets send in total
+[12.04.2013-11:16:25][INFO] L3_SENDER_2-da8ca7e8_/224.0.0.1: MultiCast-Sender activated
+[12.04.2013-11:16:25][INFO] L3_SENDER_2-da8ca7e8_/224.0.0.1: Joined Multicast-group /224.0.0.1 Joined Multicast-group PEAK.
+[12.04.2013-11:16:27][INFO] L3_SENDER_3-1fbb448e_/224.1.0.1: MultiCast-Sender activated
+[12.04.2013-11:16:27][INFO] L3_SENDER_3-1fbb448e_/224.1.0.1: Joined Multicast-group /224.1.0.1 Joined Multicast-group PEAK.
+[12.04.2013-11:16:47][FINEST] /224.1.0.1	2323	/127.0.0.1	1	3	23	22	L3_SENDER	3-1fbb448e	
+[12.04.2013-11:16:47][FINEST] /224.0.0.1	22222	/127.0.0.1	1	2	22	24	L3_SENDER	2-da8ca7e8	
+[12.04.2013-11:16:55][INFO] Saved Multicastconfiguration.
+[12.04.2013-11:16:55][INFO] Saved GUI Configuration.
+[12.04.2013-11:16:55][INFO] L3_SENDER_3-1fbb448e_/224.1.0.1: null
+[12.04.2013-11:16:55][INFO] L3_SENDER_2-da8ca7e8_/224.0.0.1: null
+[12.04.2013-11:18:17][INFO] Unable to get hostname and hostadress
+[12.04.2013-11:18:17][INFO] Username: autarch; User location: null - Europe/Berlin
+[12.04.2013-11:18:17][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
+[12.04.2013-11:18:17][INFO] File encoding: UTF-8
+[12.04.2013-11:18:17][INFO] Starting MultiCastor with a gui
+[12.04.2013-11:18:17][WARNING] Could not find any devices for Layer 2.
+ Do you have JNetPcap installed, and did you start as root / admin?
+ It seems like you could not use Layer 2 functionality while runtime.
+[12.04.2013-11:18:18][INFO] Configurationfile loaded.
+[12.04.2013-11:18:18][WARNING] L3_SENDER_-1-0_/224.1.0.1: Unable to get Host-Name. Error is:
+eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekannt
+[12.04.2013-11:18:19][INFO] MultiCast added :L3_SENDER_-1-0_/224.1.0.1
+[12.04.2013-11:18:19][INFO] L3_SENDER_0-df5a9fd0_/224.1.0.1: MultiCast-Sender activated
+[12.04.2013-11:18:19][INFO] L3_SENDER_0-df5a9fd0_/224.1.0.1: Joined Multicast-group /224.1.0.1 Joined Multicast-group PEAK.
+[12.04.2013-11:18:19][WARNING] L3_SENDER_-1-0_/224.0.0.1: Unable to get Host-Name. Error is:
+eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekannt
+[12.04.2013-11:18:20][INFO] MultiCast added :L3_SENDER_-1-0_/224.0.0.1
+[12.04.2013-11:18:20][INFO] L3_SENDER_1-1a6c7a3e_/224.0.0.1: MultiCast-Sender activated
+[12.04.2013-11:18:20][INFO] L3_SENDER_1-1a6c7a3e_/224.0.0.1: Joined Multicast-group /224.0.0.1 Joined Multicast-group PEAK.
+[12.04.2013-11:18:20][INFO] Default GUI Configurationfile loaded.
+[12.04.2013-11:18:24][INFO] L3_SENDER_1-1a6c7a3e_/224.0.0.1: null
+[12.04.2013-11:18:24][INFO] L3_SENDER_1-1a6c7a3e_/224.0.0.1: 8 packets send in total
+[12.04.2013-11:18:25][INFO] L3_SENDER_0-df5a9fd0_/224.1.0.1: null
+[12.04.2013-11:18:25][INFO] L3_SENDER_0-df5a9fd0_/224.1.0.1: 10 packets send in total
+[12.04.2013-11:19:05][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.0.0.1
+[12.04.2013-11:19:08][INFO] L3_RECEIVER_-1-0_/224.0.0.1: Started Receiver with MC Object.
+[12.04.2013-11:19:15][FINEST] /224.0.0.1	22222	/127.0.0.1	0	1	0	0	0	0	0	0	L3_RECEIVER	0-	UNDEFINED	SINGLE
+[12.04.2013-11:19:17][INFO] L3_SENDER_2-18b898cc_/224.0.0.1: MultiCast-Sender activated
+[12.04.2013-11:19:17][INFO] L3_SENDER_2-18b898cc_/224.0.0.1: Joined Multicast-group /224.0.0.1 Joined Multicast-group PEAK.
+[12.04.2013-11:20:04][INFO] L3_RECEIVER_2-18b898cc_/224.0.0.1: Left Multicastgroup of MC Object.
+[12.04.2013-11:20:07][INFO] L3_RECEIVER_2-18b898cc_/224.0.0.1: Started Receiver with MC Object.
+[12.04.2013-11:20:15][FINEST] /224.0.0.1	22222	/127.0.0.1	1	2	22	60	L3_SENDER	2-18b898cc	
+[12.04.2013-11:20:15][FINEST] /224.0.0.1	22222	/127.0.0.1	0	0	0	1	1	2	22	7	L3_RECEIVER	2-18b898cc	MULTICASTOR	SINGLE
+[12.04.2013-11:20:34][INFO] Saved Multicastconfiguration.
+[12.04.2013-11:20:34][INFO] Saved GUI Configuration.
+[12.04.2013-11:20:34][INFO] L3_SENDER_2-18b898cc_/224.0.0.1: null
+[12.04.2013-11:20:34][INFO] L3_SENDER_0-df5a9fd0_/224.1.0.1: null
+[12.04.2013-11:21:36][INFO] Unable to get hostname and hostadress
+[12.04.2013-11:21:36][INFO] Username: autarch; User location: null - Europe/Berlin
+[12.04.2013-11:21:36][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
+[12.04.2013-11:21:36][INFO] File encoding: UTF-8
+[12.04.2013-11:21:36][INFO] Starting MultiCastor with a gui
+[12.04.2013-11:21:36][WARNING] Could not find any devices for Layer 2.
+ Do you have JNetPcap installed, and did you start as root / admin?
+ It seems like you could not use Layer 2 functionality while runtime.
+[12.04.2013-11:21:37][INFO] Configurationfile loaded.
+[12.04.2013-11:21:37][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.0.0.1
+[12.04.2013-11:21:37][INFO] L3_RECEIVER_-1-0_/224.0.0.1: Started Receiver with MC Object.
+[12.04.2013-11:21:37][WARNING] L3_SENDER_-1-0_/224.0.0.1: Unable to get Host-Name. Error is:
+eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekannt
+[12.04.2013-11:21:38][INFO] MultiCast added :L3_SENDER_-1-0_/224.0.0.1
+[12.04.2013-11:21:38][INFO] L3_SENDER_0-fa2b30c_/224.0.0.1: MultiCast-Sender activated
+[12.04.2013-11:21:38][INFO] L3_SENDER_0-fa2b30c_/224.0.0.1: Joined Multicast-group /224.0.0.1 Joined Multicast-group PEAK.
+[12.04.2013-11:21:39][WARNING] L3_SENDER_-1-0_/224.1.0.1: Unable to get Host-Name. Error is:
+eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekannt
+[12.04.2013-11:21:40][INFO] MultiCast added :L3_SENDER_-1-0_/224.1.0.1
+[12.04.2013-11:21:40][INFO] Default GUI Configurationfile loaded.
+[12.04.2013-11:21:56][INFO] Saved Multicastconfiguration.
+[12.04.2013-11:21:57][INFO] Saved GUI Configuration.
+[12.04.2013-11:21:57][INFO] L3_SENDER_-1-0_/224.1.0.1: null
+[12.04.2013-11:21:57][INFO] L3_SENDER_0-fa2b30c_/224.0.0.1: null

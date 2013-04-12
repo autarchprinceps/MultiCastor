@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <MultiCastor>
     <System>
-        <Time>Fri Apr 12 10:15:01 CEST 2013</Time>
+        <Time>Fri Apr 12 11:21:56 CEST 2013</Time>
         <Hostname/>
         <Hostname/>
         <Hostaddress/>
@@ -29,6 +29,6 @@
         <ABOUT>visible</ABOUT>
         <PLUS>visible</PLUS>
     </Tabs>
-    <Language>deutsch</Language>
+    <Language>english</Language>
     <WindowName>MCastor 2.0</WindowName>
 </MultiCastor>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <MultiCastor>
     <System>
-        <Time>Fri Apr 12 10:30:53 CEST 2013</Time>
+        <Time>Fri Apr 12 11:21:56 CEST 2013</Time>
         <Hostname/>
         <Hostname/>
         <Hostaddress/>
@@ -10,17 +10,41 @@
         <Javavendor>Oracle Corporation</Javavendor>
     </System>
     <Multicasts>
-        <L3_SENDER>
-            <active>false</active>
+        <L3_RECEIVER>
+            <active>true</active>
             <groupIp>224.0.0.1</groupIp>
             <groupMac/>
             <packetLength>60</packetLength>
-            <packetRateDesired>2</packetRateDesired>
+            <packetRateDesired>1</packetRateDesired>
+            <sourceIp>127.0.0.1</sourceIp>
+            <sourceMac/>
+            <ttl>22</ttl>
+            <typ>L3_RECEIVER</typ>
+            <udpPort>22222</udpPort>
+        </L3_RECEIVER>
+        <L3_SENDER>
+            <active>false</active>
+            <groupIp>224.1.0.1</groupIp>
+            <groupMac/>
+            <packetLength>60</packetLength>
+            <packetRateDesired>1</packetRateDesired>
+            <sourceIp>127.0.0.1</sourceIp>
+            <sourceMac/>
+            <ttl>23</ttl>
+            <typ>L3_SENDER</typ>
+            <udpPort>2323</udpPort>
+        </L3_SENDER>
+        <L3_SENDER>
+            <active>true</active>
+            <groupIp>224.0.0.1</groupIp>
+            <groupMac/>
+            <packetLength>60</packetLength>
+            <packetRateDesired>1</packetRateDesired>
             <sourceIp>127.0.0.1</sourceIp>
             <sourceMac/>
             <ttl>22</ttl>
             <typ>L3_SENDER</typ>
-            <udpPort>2222</udpPort>
+            <udpPort>22222</udpPort>
         </L3_SENDER>
     </Multicasts>
 </MultiCastor>

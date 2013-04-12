@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.JTable;
+import org.jdesktop.swingx.JXTable;
 import javax.swing.JTextArea;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.table.TableColumn;
@@ -40,7 +41,7 @@ public class PanelTabbed extends JPanel {
 	private boolean popupsAllowed = true;
 	private JTextArea ta_console;
 	private JTabbedPane tab_console;
-	private JTable table;
+	private JXTable table;
 	private JScrollPane table_scrollpane;
 	private MiscBorder tablePanelBorder;
 
@@ -213,7 +214,7 @@ public class PanelTabbed extends JPanel {
 	public void setTableModel(final ViewController ctrl, final Typ typ) {
 		model = new MiscTableModel(ctrl, typ);
 		table.setModel(model);
-		table.setRowSorter(model.getSorter());
+		//table.setRowSorter(model.getSorter());
 		final TableColumnModel colmodel = table.getColumnModel();
 		final Enumeration<TableColumn> e = colmodel.getColumns();
 		columns = new ArrayList<TableColumn>();
@@ -338,7 +339,7 @@ public class PanelTabbed extends JPanel {
 	 */
 	private void initTablePanel(final ViewController ctrl, final Typ typ) {
 		pan_table = new JPanel();
-		table = new JTable();
+		table = new JXTable();
 		setTableModel(ctrl, typ);
 
 		table.setDefaultRenderer(Object.class,
