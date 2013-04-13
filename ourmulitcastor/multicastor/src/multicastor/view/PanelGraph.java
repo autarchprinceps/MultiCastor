@@ -45,7 +45,6 @@ public class PanelGraph extends JPanel {
 			.getDefaultConfiguration();
 
 	// snake-gimmick variablen
-	private SnakeGimmick mySG = null;
 	private Dimension panelSize = new Dimension(600, 100);
 
 	private double pixProX = 0.0, // Pixel, die pro X-/Y-Einheit zur verfuegung
@@ -106,35 +105,7 @@ public class PanelGraph extends JPanel {
 		return panelSize;
 	}
 
-	/**
-	 * Bewegt die Snake in eine der 4 Himmelsrichtungen
-	 * 
-	 * @param d
-	 *            die Richtung
-	 * @return der Status der Snake<br>
-	 *         1: Apfel gefunden<br>
-	 *         0: nichts passiert<br>
-	 *         -1:Snake ist gecrashed
-	 */
-	public int moveSnake(final SnakeGimmick.SNAKE_DIRECTION d) {
-		final int retV = mySG.moveSnake(d);
-		if(retV == -1) {
-			mySG.initSnake();
-		}
-		return retV;
-	}
 
-	/**
-	 * Macht dasselbe wie moveSnake, aber macht zusuetzlich ein viewUpdate
-	 * 
-	 * @param d
-	 */
-	public void moveSnakeAndUpdateView(final SNAKE_DIRECTION d) {
-		if(runSnake) {
-			moveSnake(d);
-			paintComponent(getGraphics());
-		}
-	}
 
 	public void reloadLanguage() {
 		lblX = lang.getProperty("graph.sec");
@@ -180,21 +151,6 @@ public class PanelGraph extends JPanel {
 	 */
 	public void setMaxY(final int maxY) {
 		this.maxY = maxY;
-	}
-
-	/**
-	 * Aktiviert oder deaktiviert das Snake-Gimmick.
-	 * 
-	 * @param active
-	 */
-	public void snake(final Boolean active) {
-		if(active) {
-			mySG = new SnakeGimmick();
-		}
-		runSnake = active;
-		if(!active) {
-			mySG = null;
-		}
 	}
 
 	/**
@@ -432,10 +388,6 @@ public class PanelGraph extends JPanel {
 			}
 		} // Ende if-Abfrage ob dataPointer!=-1
 
-		// Ist das Gimmick aktiviert? wenn ja, zeichne es
-		if(runSnake) {
-			mySG.drawSnake(g);
-		}
 	}
 
 }

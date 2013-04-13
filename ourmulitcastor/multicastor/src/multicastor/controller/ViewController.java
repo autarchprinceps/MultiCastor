@@ -290,19 +290,7 @@ public class ViewController implements ActionListener, MouseListener,
 
 		else if(e.getSource() == f.getMi_loadAdditionalMc()) {
 			loadFileEvent(true);
-		}
-
-		else if(e.getSource() == f.getMi_snake()) {
-			if((getSelectedTab() != Typ.UNDEFINED)
-					&& (getSelectedTab() != Typ.CONFIG)) {
-				if(getFrame().getPanelPart(getSelectedTab()).getPan_graph().runSnake) {
-					getFrame().getPanelPart(getSelectedTab()).getPan_graph()
-							.snake(false);
-				} else {
-					getFrame().getPanelPart(getSelectedTab()).getPan_graph()
-							.snake(true);
-				}
-			}
+		
 		} else if(e.getSource() == f.getMi_exit()) {
 			closeProgram();
 		}
@@ -3138,15 +3126,12 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	private void setBTStartStopDelete(final Typ typ) {
 		final int[] selectedLine = getSelectedRows(typ);
-		if(selectedLine.length == 1) {
+		if(selectedLine.length != 0) {
 			getPanControl(typ).getDelete().setEnabled(true);
 			getPanControl(typ).getStartStop().setEnabled(true);
-		} else if(selectedLine.length == 0) {
+		} else  {
 			getPanControl(typ).getStartStop().setEnabled(false);
 			getPanControl(typ).getDelete().setEnabled(false);
-		} else {
-			getPanControl(typ).getDelete().setEnabled(true);
-			getPanControl(typ).getStartStop().setEnabled(true);
 		}
 	}
 

@@ -24,7 +24,6 @@ import multicastor.model.MulticastMmrpSender;
 import multicastor.model.MulticastReceiver;
 import multicastor.model.MulticastSender;
 import multicastor.model.RegularLoggingTask;
-import multicastor.model.RunSnakeRun;
 import multicastor.model.UpdateTask;
 import multicastor.model.WrongConfigurationException;
 import multicastor.model.xmlParser;
@@ -84,7 +83,7 @@ public class MulticastController {
 	/** Referenz auf einen Timer fuer updateTask */
 	private final Timer timer1;
 	/** Referenz auf einen Timer fuer messageCheck */
-	private Timer timer2;
+	//private Timer timer2;
 	/** Referenz auf einen Timer fuer regularLoggingTask */
 	private final Timer timer3;
 	/**
@@ -178,11 +177,6 @@ public class MulticastController {
 				mcMap_sender_l2, mcMap_receiver_l2, view_controller);
 		timer1 = new Timer();
 		timer1.schedule(updateTask, 3000, 1000);
-		if(view_controller != null) {
-			final RunSnakeRun n = new RunSnakeRun(view_controller);
-			timer2 = new Timer();
-			timer2.schedule(n, 3000, 100);
-		}
 
 		regularLoggingTask = new RegularLoggingTask(logger, mcMap_sender_l3,
 				mcMap_receiver_l3);

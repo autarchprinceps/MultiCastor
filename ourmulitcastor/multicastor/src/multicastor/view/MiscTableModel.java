@@ -276,8 +276,9 @@ public class MiscTableModel extends AbstractTableModel {
 	 * Funktion welche aufgerufen wird wenn eine Multicast hinzugefuegt wird.
 	 */
 	public void insertUpdate() {
-		System.out.println(ctrl.getMCCount(typ));
-		fireTableRowsInserted(0, ctrl.getMCCount(typ)-1);
+		int numMc = ctrl.getMCCount(typ)-1;
+		if(numMc >= 0)
+			fireTableRowsInserted(0, numMc);
 
 	}
 
@@ -286,11 +287,7 @@ public class MiscTableModel extends AbstractTableModel {
 	 * Funktion welche angibt ob eine Zelle in der Tabelle editierbar ist oder nicht
 	 */
 	public boolean isCellEditable(final int rowIndex, final int columnIndex) {
-		if((columnIndex == 0) && stateCheckboxEnabled) {
-			return true;
-		} else {
-			return false;
-		}
+		return ((columnIndex == 0) && stateCheckboxEnabled);
 	}
 
 	public boolean isStateCheckboxEnabled() {
@@ -329,7 +326,7 @@ public class MiscTableModel extends AbstractTableModel {
 				case 7:
 				case 8:
 					data.setPacketCount(((Long)aValue).longValue());
-					System.out.println("SET!!");
+					System.out.println("SET!!");break;
 				case 9:
 				case 10:
 				default:
