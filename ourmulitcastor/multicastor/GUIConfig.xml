@@ -1,12 +1,11 @@
 <?xml version="1.0"?>
 <MultiCastor>
     <System>
-        <Time>Fri Apr 12 10:15:01 CEST 2013</Time>
-        <Hostname/>
-        <Hostname/>
-        <Hostaddress/>
-        <Username>autarch</Username>
-        <Javaversion>1.7.0_17</Javaversion>
+        <Time>Sat Apr 13 16:02:43 CEST 2013</Time>
+        <Hostname>ghjkl</Hostname>
+        <Hostaddress>127.0.1.1</Hostaddress>
+        <Username>groxar</Username>
+        <Javaversion>1.7.0_15</Javaversion>
         <Javavendor>Oracle Corporation</Javavendor>
     </System>
     <DEFAULT_L3>
@@ -26,9 +25,9 @@
         <L2_RECEIVER>visible</L2_RECEIVER>
         <L3_SENDER>selected</L3_SENDER>
         <L3_RECEIVER>visible</L3_RECEIVER>
-        <ABOUT>visible</ABOUT>
+        <ABOUT>invisible</ABOUT>
         <PLUS>visible</PLUS>
     </Tabs>
-    <Language>deutsch</Language>
+    <Language>english</Language>
     <WindowName>MCastor 2.0</WindowName>
 </MultiCastor>

@@ -471,7 +471,7 @@ public class ViewController implements ActionListener, MouseListener,
 
 	/**
 	 * Funktion welche aufgerufen wird wenn sich der Aussenabstand der
-	 * Tabellenspalte uendert.
+	 * Tabellenspalte ändert.
 	 */
 	@Override
 	public void columnMarginChanged(final ChangeEvent arg0) {
