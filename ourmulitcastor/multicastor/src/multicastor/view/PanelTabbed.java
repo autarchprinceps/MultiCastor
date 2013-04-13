@@ -7,7 +7,6 @@ import java.util.Enumeration;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
-import javax.swing.JTable;
 import org.jdesktop.swingx.JXTable;
 import javax.swing.JTextArea;
 import javax.swing.ScrollPaneConstants;
@@ -140,7 +139,7 @@ public class PanelTabbed extends JPanel {
 		return tab_console;
 	}
 
-	public JTable getTable() {
+	public JXTable getTable() {
 		return table;
 	}
 
@@ -362,7 +361,7 @@ public class PanelTabbed extends JPanel {
 		table.setFont(MiscFont.getFont(0, 10));
 		table.getTableHeader().setFont(MiscFont.getFont(0, 10));
 		table.getSelectionModel().addListSelectionListener(ctrl);
-		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+		table.setAutoResizeMode(JXTable.AUTO_RESIZE_OFF);
 		table.getTableHeader().addMouseListener(ctrl);
 
 		table_scrollpane = new JScrollPane(table);

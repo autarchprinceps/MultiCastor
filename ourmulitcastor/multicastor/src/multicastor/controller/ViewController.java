@@ -31,7 +31,6 @@ import java.util.Vector;
 import javax.swing.JCheckBox;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import javax.swing.JTable;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.event.DocumentEvent;
@@ -42,6 +41,8 @@ import javax.swing.event.TableColumnModelEvent;
 import javax.swing.event.TableColumnModelListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.TableColumn;
+
+import org.jdesktop.swingx.JXTable;
 
 import multicastor.data.GUIData;
 import multicastor.data.MulticastData;
@@ -703,23 +704,19 @@ public class ViewController implements ActionListener, MouseListener,
 	 *            Programmteil aus welchem die Tabelle angeforder wird.
 	 * @return Die JTable welche angefordert wurde.
 	 */
-	public JTable getTable(final Typ typ) {
-		JTable tablepart = null;
+	public JXTable getTable(final Typ typ) {
 		switch(typ) {
 			case L2_RECEIVER:
-				tablepart = f.getPanel(0, 0).getTable();
-				break;
+				return f.getPanel(0, 0).getTable();
 			case L2_SENDER:
-				tablepart = f.getPanel(1, 0).getTable();
-				break;
+				return f.getPanel(1, 0).getTable();
 			case L3_RECEIVER:
-				tablepart = f.getPanel(0, 1).getTable();
-				break;
+				return f.getPanel(0, 1).getTable();
 			case L3_SENDER:
-				tablepart = f.getPanel(1, 1).getTable();
-				break;
+				return f.getPanel(1, 1).getTable();
+			default:
+				return null;
 		}
-		return tablepart;
 	}
 
 	/**
@@ -2365,10 +2362,10 @@ public class ViewController implements ActionListener, MouseListener,
 		if(getSelectedTab() != Typ.UNDEFINED) {
 			if(getFrame().getSize().width > 1000) {
 				getTable(getSelectedTab()).setAutoResizeMode(
-						JTable.AUTO_RESIZE_SUBSEQUENT_COLUMNS);
+						JXTable.AUTO_RESIZE_SUBSEQUENT_COLUMNS);
 			} else {
 				getTable(getSelectedTab()).setAutoResizeMode(
-						JTable.AUTO_RESIZE_OFF);
+						JXTable.AUTO_RESIZE_OFF);
 			}
 		}
 		if((getSelectedTab() == Typ.L2_RECEIVER)
@@ -3002,8 +2999,10 @@ public class ViewController implements ActionListener, MouseListener,
 	 * @param typ
 	 *            Programmteil in welchem der Start Button gedrueckt wurde
 	 */
+	// TODO FIXME Sortierung
 	private void pressBTStartStop(final Typ typ) {
 		final int[] selectedLine = getSelectedRows(typ);
+		// TODO FIXME add isEqual zwischen SelectedRow und MCData
 		boolean oneActive = false;
 
 		if(selectedLine.length == 1) {

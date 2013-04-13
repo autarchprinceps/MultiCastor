@@ -5,7 +5,8 @@ import javax.swing.JCheckBox;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JPopupMenu;
-import javax.swing.JTable;
+
+import org.jdesktop.swingx.JXTable;
 
 import multicastor.controller.ViewController;
 
@@ -56,7 +57,7 @@ public abstract class PopUpMenu {
 	 * @param e
 	 *            Das MouseEvent welches das Popup �ffnet
 	 */
-	public static void createTableHeaderPopup(final JTable table,
+	public static void createTableHeaderPopup(final JXTable table,
 			final ViewController ctrl, final MouseEvent e) {
 		createColumnCheckBoxes(ctrl);
 		if(menuPopUp != null) {

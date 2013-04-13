@@ -248,3 +248,34 @@ eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekan
 [12.04.2013-11:21:57][INFO] Saved GUI Configuration.
 [12.04.2013-11:21:57][INFO] L3_SENDER_-1-0_/224.1.0.1: null
 [12.04.2013-11:21:57][INFO] L3_SENDER_0-fa2b30c_/224.0.0.1: null
+[13.04.2013-17:48:16][INFO] Unable to get hostname and hostadress
+[13.04.2013-17:48:16][INFO] Username: autarch; User location: null - Europe/Berlin
+[13.04.2013-17:48:16][INFO] Java version: 1.7.0_17; Java vendor: Oracle Corporation
+[13.04.2013-17:48:16][INFO] File encoding: UTF-8
+[13.04.2013-17:48:16][INFO] Starting MultiCastor with a gui
+[13.04.2013-17:48:16][WARNING] Could not find any devices for Layer 2.
+ Do you have JNetPcap installed, and did you start as root / admin?
+ It seems like you could not use Layer 2 functionality while runtime.
+[13.04.2013-17:48:19][INFO] Configurationfile loaded.
+[13.04.2013-17:48:19][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.0.0.1
+[13.04.2013-17:48:19][INFO] L3_RECEIVER_-1-0_/224.0.0.1: Started Receiver with MC Object.
+[13.04.2013-17:48:19][WARNING] L3_SENDER_-1-0_/224.1.0.1: Unable to get Host-Name. Error is:
+eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekannt
+[13.04.2013-17:48:22][INFO] MultiCast added :L3_SENDER_-1-0_/224.1.0.1
+[13.04.2013-17:48:22][WARNING] L3_SENDER_-1-0_/224.0.0.1: Unable to get Host-Name. Error is:
+eyebeem-paddyx-xen: eyebeem-paddyx-xen: Der Name oder der Dienst ist nicht bekannt
+[13.04.2013-17:48:23][INFO] MultiCast added :L3_SENDER_-1-0_/224.0.0.1
+[13.04.2013-17:48:23][INFO] L3_SENDER_0-5c5fa1a6_/224.0.0.1: MultiCast-Sender activated
+[13.04.2013-17:48:23][INFO] L3_SENDER_0-5c5fa1a6_/224.0.0.1: Joined Multicast-group /224.0.0.1 Joined Multicast-group PEAK.
+[13.04.2013-17:48:23][INFO] Default GUI Configurationfile loaded.
+[13.04.2013-17:48:32][INFO] L3_SENDER_0-5c5fa1a6_/224.0.0.1: null
+[13.04.2013-17:48:33][INFO] L3_SENDER_0-5c5fa1a6_/224.0.0.1: 14 packets send in total
+[13.04.2013-17:48:34][INFO] L3_SENDER_1-a25211f9_/224.0.0.1: MultiCast-Sender activated
+[13.04.2013-17:48:34][INFO] L3_SENDER_1-a25211f9_/224.0.0.1: Joined Multicast-group /224.0.0.1 Joined Multicast-group PEAK.
+[13.04.2013-17:48:54][INFO] L3_SENDER_1-a25211f9_/224.0.0.1: null
+[13.04.2013-17:48:55][INFO] L3_SENDER_1-a25211f9_/224.0.0.1: 25 packets send in total
+[13.04.2013-17:48:58][INFO] L3_RECEIVER_1-a25211f9_/224.0.0.1: Left Multicastgroup of MC Object.
+[13.04.2013-17:49:04][INFO] Saved Multicastconfiguration.
+[13.04.2013-17:49:04][INFO] Saved GUI Configuration.
+[13.04.2013-17:49:04][INFO] L3_SENDER_1-a25211f9_/224.0.0.1: null
+[13.04.2013-17:49:04][INFO] L3_SENDER_-1-0_/224.1.0.1: null

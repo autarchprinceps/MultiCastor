@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <MultiCastor>
     <System>
-        <Time>Fri Apr 12 11:21:56 CEST 2013</Time>
+        <Time>Sat Apr 13 17:49:04 CEST 2013</Time>
         <Hostname/>
         <Hostname/>
         <Hostaddress/>
@@ -11,7 +11,19 @@
     </System>
     <Multicasts>
         <L3_RECEIVER>
-            <active>true</active>
+            <active>false</active>
+            <groupIp>224.0.0.1</groupIp>
+            <groupMac/>
+            <packetLength>0</packetLength>
+            <packetRateDesired>0</packetRateDesired>
+            <sourceIp>127.0.0.1</sourceIp>
+            <sourceMac/>
+            <ttl>0</ttl>
+            <typ>L3_RECEIVER</typ>
+            <udpPort>22222</udpPort>
+        </L3_RECEIVER>
+        <L3_SENDER>
+            <active>false</active>
             <groupIp>224.0.0.1</groupIp>
             <groupMac/>
             <packetLength>60</packetLength>
@@ -19,9 +31,9 @@
             <sourceIp>127.0.0.1</sourceIp>
             <sourceMac/>
             <ttl>22</ttl>
-            <typ>L3_RECEIVER</typ>
+            <typ>L3_SENDER</typ>
             <udpPort>22222</udpPort>
-        </L3_RECEIVER>
+        </L3_SENDER>
         <L3_SENDER>
             <active>false</active>
             <groupIp>224.1.0.1</groupIp>
@@ -33,18 +45,6 @@
             <ttl>23</ttl>
             <typ>L3_SENDER</typ>
             <udpPort>2323</udpPort>
-        </L3_SENDER>
-        <L3_SENDER>
-            <active>true</active>
-            <groupIp>224.0.0.1</groupIp>
-            <groupMac/>
-            <packetLength>60</packetLength>
-            <packetRateDesired>1</packetRateDesired>
-            <sourceIp>127.0.0.1</sourceIp>
-            <sourceMac/>
-            <ttl>22</ttl>
-            <typ>L3_SENDER</typ>
-            <udpPort>22222</udpPort>
         </L3_SENDER>
     </Multicasts>
 </MultiCastor>
