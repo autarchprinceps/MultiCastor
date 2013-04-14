@@ -3015,8 +3015,7 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	// TODO FIXME Sortierung
 	private void pressBTStartStop(final Typ typ) {
-		final int[] selectedLine = getSelectedRows(typ);
-		// TODO FIXME add isEqual zwischen SelectedRow und MCData		
+		final int[] selectedLine = getSelectedRows(typ);	
 		boolean oneActive = false;
 
 		if(selectedLine.length == 1) {
