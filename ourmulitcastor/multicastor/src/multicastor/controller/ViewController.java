@@ -660,7 +660,12 @@ public class ViewController implements ActionListener, MouseListener,
 	 *         selektiert ist).
 	 */
 	public int[] getSelectedRows(final Typ typ) {
-		return getTable(typ).getSelectedRows();
+		JXTable t = getTable(typ);
+		int[] result = t.getSelectedRows();
+		for(int i = 0; i < result.length; i++) {
+			result[i] = t.convertRowIndexToModel(result[i]);
+		}
+		return result;
 	}
 
 	/**
@@ -1634,6 +1639,9 @@ public class ViewController implements ActionListener, MouseListener,
 					break;
 			}
 			final int[] selectedRows = tabpart.getTable().getSelectedRows();
+			for(int i = 0; i < selectedRows.length; i++) {
+				selectedRows[i] = tabpart.getTable().convertRowIndexToModel(selectedRows[i]);
+			}
 			getPanStatus(typ).getLb_multicasts_selected().setText(
 					selectedRows.length + " "
 							+ lang.getProperty("status.mcSelected") + " ");
@@ -2542,6 +2550,9 @@ public class ViewController implements ActionListener, MouseListener,
 		}
 
 		final int[] selectedRows = tabpart.getTable().getSelectedRows();
+		for(int i = 0; i < selectedRows.length; i++) {
+			selectedRows[i] = tabpart.getTable().convertRowIndexToModel(selectedRows[i]);
+		}
 		tabpart.getPan_status()
 				.getLb_multicasts_selected()
 				.setText(
@@ -2930,6 +2941,9 @@ public class ViewController implements ActionListener, MouseListener,
 	private void pressBTDelete(final Typ typ) {
 		final int[] selectedRows = getTable(typ).getSelectedRows();
 		for(int i = 0; i < selectedRows.length; i++) {
+			selectedRows[i] = getTable(typ).convertRowIndexToModel(selectedRows[i]);
+		}
+		for(int i = 0; i < selectedRows.length; i++) {
 			// System.out.println("luesche zeile: "+selectedRows[i]);
 			deleteMC(getMCData(selectedRows[i] - i, typ));
 		}
@@ -3002,7 +3016,7 @@ public class ViewController implements ActionListener, MouseListener,
 	// TODO FIXME Sortierung
 	private void pressBTStartStop(final Typ typ) {
 		final int[] selectedLine = getSelectedRows(typ);
-		// TODO FIXME add isEqual zwischen SelectedRow und MCData
+		// TODO FIXME add isEqual zwischen SelectedRow und MCData		
 		boolean oneActive = false;
 
 		if(selectedLine.length == 1) {
@@ -3090,19 +3104,19 @@ public class ViewController implements ActionListener, MouseListener,
 				final Vector<MulticastData> v = new Vector<MulticastData>();
 				for(final int row : f.getPanel(0, 0).getTable()
 						.getSelectedRows()) {
-					v.add(mc.getMC(row, Typ.L2_RECEIVER));
+					v.add(mc.getMC(f.getPanel(0, 0).getTable().convertRowIndexToModel(row), Typ.L2_RECEIVER));
 				}
 				for(final int row : f.getPanel(0, 1).getTable()
 						.getSelectedRows()) {
-					v.add(mc.getMC(row, Typ.L3_RECEIVER));
+					v.add(mc.getMC(f.getPanel(0, 1).getTable().convertRowIndexToModel(row), Typ.L3_RECEIVER));
 				}
 				for(final int row : f.getPanel(1, 0).getTable()
 						.getSelectedRows()) {
-					v.add(mc.getMC(row, Typ.L2_SENDER));
+					v.add(mc.getMC(f.getPanel(1, 0).getTable().convertRowIndexToModel(row), Typ.L2_SENDER));
 				}
 				for(final int row : f.getPanel(1, 1).getTable()
 						.getSelectedRows()) {
-					v.add(mc.getMC(row, Typ.L3_SENDER));
+					v.add(mc.getMC(f.getPanel(1, 1).getTable().convertRowIndexToModel(row), Typ.L3_SENDER));
 				}
 				mc.saveMulticastConfig(chooser.getSelectedFile().getPath(), v);
 			}
