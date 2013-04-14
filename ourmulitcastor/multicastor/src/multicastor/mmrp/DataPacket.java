@@ -30,8 +30,8 @@ public class DataPacket {
 		}
 
 		// Set the length of the data which should be send
-		packet[12] = (byte)(data.length / 255);
-		packet[13] = (byte)(data.length % 255);
+		packet[12] = (byte)(data.length / 256);
+		packet[13] = (byte)(data.length % 256);
 
 		// Put the data into the packet
 		for(int i = 0; i < data.length; i++) {

@@ -217,3 +217,176 @@
 [13.04.2013-21:14:19][INFO] Saved Multicastconfiguration.
 [13.04.2013-21:14:19][INFO] Saved GUI Configuration.
 [13.04.2013-21:14:19][INFO] L3_SENDER_ghjkl0-c7a5b0ec_/224.34.34.34: null
+[14.04.2013-17:37:46][INFO] Hostname: ghjkl
+[14.04.2013-17:37:46][INFO] Hostadress: 127.0.1.1
+[14.04.2013-17:37:46][INFO] Username: groxar; User location: null - Europe/Berlin
+[14.04.2013-17:37:46][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[14.04.2013-17:37:46][INFO] File encoding: UTF-8
+[14.04.2013-17:37:46][INFO] Starting MultiCastor with a gui
+[14.04.2013-17:37:46][WARNING] Could not find any devices for Layer 2.
+ Do you have JNetPcap installed, and did you start as root / admin?
+ It seems like you could not use Layer 2 functionality while runtime.
+[14.04.2013-17:37:49][INFO] Configurationfile loaded.
+[14.04.2013-17:37:49][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.42.23.32
+[14.04.2013-17:37:49][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.34.34.34
+[14.04.2013-17:37:49][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.52.23.23
+[14.04.2013-17:37:49][INFO] MultiCast added :L3_SENDER_ghjkl-1-0_/224.34.34.34
+[14.04.2013-17:37:49][INFO] L3_SENDER_ghjkl0-45651d63_/224.34.34.34: MultiCast-Sender activated
+[14.04.2013-17:37:49][INFO] L3_SENDER_ghjkl0-45651d63_/224.34.34.34: Joined Multicast-group /224.34.34.34 Joined Multicast-group PEAK.
+[14.04.2013-17:37:49][INFO] Default GUI Configurationfile loaded.
+[14.04.2013-17:37:54][INFO] L3_SENDER_ghjkl0-45651d63_/224.34.34.34: null
+[14.04.2013-17:37:54][INFO] L3_SENDER_ghjkl0-45651d63_/224.34.34.34: 1161 packets send in total
+[14.04.2013-17:37:57][INFO] Saved Multicastconfiguration.
+[14.04.2013-17:37:57][INFO] Saved GUI Configuration.
+[14.04.2013-17:37:57][INFO] L3_SENDER_ghjkl0-45651d63_/224.34.34.34: null
+[14.04.2013-17:41:02][INFO] Hostname: ghjkl
+[14.04.2013-17:41:02][INFO] Hostadress: 127.0.1.1
+[14.04.2013-17:41:02][INFO] Username: groxar; User location: null - Europe/Berlin
+[14.04.2013-17:41:02][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[14.04.2013-17:41:02][INFO] File encoding: UTF-8
+[14.04.2013-17:41:02][INFO] Starting MultiCastor with a gui
+[14.04.2013-17:41:02][WARNING] Could not find any devices for Layer 2.
+ Do you have JNetPcap installed, and did you start as root / admin?
+ It seems like you could not use Layer 2 functionality while runtime.
+[14.04.2013-17:41:04][INFO] Configurationfile loaded.
+[14.04.2013-17:41:04][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.52.23.23
+[14.04.2013-17:41:04][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.34.34.34
+[14.04.2013-17:41:04][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.42.23.32
+[14.04.2013-17:41:04][INFO] MultiCast added :L3_SENDER_ghjkl-1-0_/224.34.34.34
+[14.04.2013-17:41:04][INFO] Default GUI Configurationfile loaded.
+[14.04.2013-17:41:06][INFO] Saved Multicastconfiguration.
+[14.04.2013-17:41:06][INFO] Saved GUI Configuration.
+[14.04.2013-17:41:06][INFO] L3_SENDER_ghjkl-1-0_/224.34.34.34: null
+[14.04.2013-17:44:19][INFO] Hostname: ghjkl
+[14.04.2013-17:44:19][INFO] Hostadress: 127.0.1.1
+[14.04.2013-17:44:19][INFO] Username: root; User location: null - Europe/Berlin
+[14.04.2013-17:44:19][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[14.04.2013-17:44:19][INFO] File encoding: UTF-8
+[14.04.2013-17:44:19][INFO] Starting MultiCastor with a gui
+[14.04.2013-17:44:19][WARNING] Could not find any devices for Layer 2.
+ Do you have JNetPcap installed, and did you start as root / admin?
+ It seems like you could not use Layer 2 functionality while runtime.
+[14.04.2013-17:44:22][INFO] Configurationfile loaded.
+[14.04.2013-17:44:22][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.42.23.32
+[14.04.2013-17:44:22][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.34.34.34
+[14.04.2013-17:44:22][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.52.23.23
+[14.04.2013-17:44:22][INFO] MultiCast added :L3_SENDER_ghjkl-1-0_/224.34.34.34
+[14.04.2013-17:44:22][INFO] Default GUI Configurationfile loaded.
+[14.04.2013-17:44:27][INFO] Saved Multicastconfiguration.
+[14.04.2013-17:44:27][INFO] Saved GUI Configuration.
+[14.04.2013-17:44:27][INFO] L3_SENDER_ghjkl-1-0_/224.34.34.34: null
+[14.04.2013-17:50:43][INFO] Hostname: ghjkl
+[14.04.2013-17:50:43][INFO] Hostadress: 127.0.1.1
+[14.04.2013-17:50:43][INFO] Username: root; User location: null - Europe/Berlin
+[14.04.2013-17:50:43][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[14.04.2013-17:50:43][INFO] File encoding: UTF-8
+[14.04.2013-17:50:43][INFO] Starting MultiCastor with a gui
+[14.04.2013-17:50:43][INFO] Configurationfile loaded.
+[14.04.2013-17:50:43][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.52.23.23
+[14.04.2013-17:50:43][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.34.34.34
+[14.04.2013-17:50:43][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.42.23.32
+[14.04.2013-17:50:43][INFO] MultiCast added :L3_SENDER_ghjkl-1-0_/224.34.34.34
+[14.04.2013-17:50:43][INFO] Default GUI Configurationfile loaded.
+[14.04.2013-17:51:39][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_01:23:23:23:23:23
+[14.04.2013-17:51:42][INFO] MultiCast added :L2_RECEIVER_ghjkl-1-0_01:23:23:23:23:23
+[14.04.2013-17:51:55][INFO] L2_SENDER_ghjkl0-c7a871af_01:23:23:23:23:23: multicast sender activated
+[14.04.2013-17:51:58][INFO] L2_SENDER_ghjkl0-c7a871af_01:23:23:23:23:23: multicast sender deactivated
+[14.04.2013-17:51:58][INFO] L2_SENDER_ghjkl0-c7a871af_01:23:23:23:23:23: 697 packets send in total
+[14.04.2013-17:52:53][INFO] L2_SENDER_ghjkl1-1413d993_01:23:23:23:23:23: multicast sender activated
+[14.04.2013-17:52:54][INFO] L2_SENDER_ghjkl1-1413d993_01:23:23:23:23:23: multicast sender deactivated
+[14.04.2013-17:52:54][INFO] L2_SENDER_ghjkl1-1413d993_01:23:23:23:23:23: 270 packets send in total
+[14.04.2013-17:53:12][INFO] L2_SENDER_ghjkl2-4ab08c1c_01:23:23:23:23:23: multicast sender activated
+[14.04.2013-17:53:13][INFO] L2_SENDER_ghjkl2-4ab08c1c_01:23:23:23:23:23: multicast sender deactivated
+[14.04.2013-17:53:13][INFO] L2_SENDER_ghjkl2-4ab08c1c_01:23:23:23:23:23: 184 packets send in total
+[14.04.2013-18:02:45][INFO] Updatetime is rather long: 1042 ms !!!!!!!!!!!!
+[14.04.2013-18:02:45][WARNING] Updating the user interface takes very long. Consider the help for more information.
+[14.04.2013-18:16:19][INFO] Tried to stop a not running Multicast.
+[14.04.2013-18:16:19][INFO] MultiCast deleted :null	-2	null	-1	-1	-1	232	0	2	-1	0	L2_SENDER	ghjkl2-4ab08c1c	UNDEFINED	NONE
+[14.04.2013-18:16:19][INFO] MultiCast added :L2_SENDER_ghjkl2-4ab08c1c_01:23:23:23:23:23
+[14.04.2013-18:16:20][INFO] Tried to stop a not running Multicast.
+[14.04.2013-18:16:20][INFO] MultiCast deleted :null	-2	null	-1	-1	-1	232	0	2	-1	0	L2_SENDER	ghjkl2-4ab08c1c	UNDEFINED	NONE
+[14.04.2013-18:16:20][INFO] MultiCast added :L2_SENDER_ghjkl2-4ab08c1c_01:23:23:23:23:23
+[14.04.2013-18:16:23][INFO] Tried to stop a not running Multicast.
+[14.04.2013-18:16:23][INFO] MultiCast deleted :null	-2	null	-1	-1	-1	232	0	2	-1	0	L2_SENDER	ghjkl2-4ab08c1c	UNDEFINED	NONE
+[14.04.2013-18:16:23][INFO] MultiCast added :L2_SENDER_ghjkl2-4ab08c1c_01:23:23:23:23:23
+[14.04.2013-18:16:30][INFO] L2_SENDER_ghjkl3-72337a76_01:23:23:23:23:23: multicast sender activated
+[14.04.2013-18:16:30][INFO] L2_SENDER_ghjkl3-72337a76_01:23:23:23:23:23: multicast sender deactivated
+[14.04.2013-18:16:30][INFO] L2_SENDER_ghjkl3-72337a76_01:23:23:23:23:23: 142 packets send in total
+[14.04.2013-18:19:16][INFO] L2_SENDER_ghjkl4-a54c840b_01:23:23:23:23:23: multicast sender activated
+[14.04.2013-18:19:51][INFO] L2_SENDER_ghjkl4-a54c840b_01:23:23:23:23:23: multicast sender deactivated
+[14.04.2013-18:19:51][INFO] L2_SENDER_ghjkl4-a54c840b_01:23:23:23:23:23: 6907 packets send in total
+[14.04.2013-19:31:10][INFO] Updatetime is rather long: 994 ms !!!!!!!!!!!!
+[14.04.2013-19:31:10][WARNING] Updating the user interface takes very long. Consider the help for more information.
+[14.04.2013-19:52:51][INFO] Saved Multicastconfiguration.
+[14.04.2013-19:52:51][INFO] Saved GUI Configuration.
+[14.04.2013-19:52:51][INFO] L3_SENDER_ghjkl-1-0_/224.34.34.34: null
+[14.04.2013-19:52:51][INFO] L2_SENDER_ghjkl4-a54c840b_01:23:23:23:23:23: multicast sender deactivated
+[14.04.2013-20:46:03][INFO] Hostname: ghjkl
+[14.04.2013-20:46:03][INFO] Hostadress: 127.0.1.1
+[14.04.2013-20:46:03][INFO] Username: root; User location: null - Europe/Berlin
+[14.04.2013-20:46:03][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[14.04.2013-20:46:03][INFO] File encoding: UTF-8
+[14.04.2013-20:46:03][INFO] Starting MultiCastor with a gui
+[14.04.2013-20:46:03][INFO] Configurationfile loaded.
+[14.04.2013-20:46:03][INFO] MultiCast added :L2_RECEIVER_ghjkl-1-0_00:00:00:00:00:00
+[14.04.2013-20:46:03][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.42.23.32
+[14.04.2013-20:46:03][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.34.34.34
+[14.04.2013-20:46:03][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.52.23.23
+[14.04.2013-20:46:03][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_00:00:00:00:00:00
+[14.04.2013-20:46:03][INFO] MultiCast added :L3_SENDER_ghjkl-1-0_/224.34.34.34
+[14.04.2013-20:46:03][INFO] Default GUI Configurationfile loaded.
+[14.04.2013-20:46:15][INFO] L2_SENDER_ghjkl0-8224bdab_00:00:00:00:00:00: multicast sender activated
+[14.04.2013-20:46:15][INFO] L2_SENDER_ghjkl0-8224bdab_00:00:00:00:00:00: multicast sender deactivated
+[14.04.2013-20:46:15][INFO] L2_SENDER_ghjkl0-8224bdab_00:00:00:00:00:00: 5 packets send in total
+[14.04.2013-20:46:38][INFO] Tried to stop a not running Multicast.
+[14.04.2013-20:46:38][INFO] MultiCast deleted :null	-2	null	-1	-1	-1	232	0	0	-1	0	L2_SENDER	ghjkl0-8224bdab	UNDEFINED	NONE
+[14.04.2013-20:46:38][INFO] MultiCast added :L2_SENDER_ghjkl0-8224bdab_01:00:00:00:00:00
+[14.04.2013-20:46:41][INFO] L2_SENDER_ghjkl1-4f54c96_01:00:00:00:00:00: multicast sender activated
+[14.04.2013-20:46:41][INFO] L2_SENDER_ghjkl1-4f54c96_01:00:00:00:00:00: multicast sender deactivated
+[14.04.2013-20:46:42][INFO] L2_SENDER_ghjkl1-4f54c96_01:00:00:00:00:00: 17 packets send in total
+[14.04.2013-20:46:51][INFO] Tried to stop a not running Multicast.
+[14.04.2013-20:46:51][INFO] MultiCast deleted :null	-2	null	-1	-1	-1	232	0	1	-1	0	L2_SENDER	ghjkl1-4f54c96	UNDEFINED	NONE
+[14.04.2013-20:46:51][INFO] MultiCast added :L2_SENDER_ghjkl1-4f54c96_01:00:00:00:00:00
+[14.04.2013-20:46:53][INFO] L2_SENDER_ghjkl2-32860b7f_01:00:00:00:00:00: multicast sender activated
+[14.04.2013-20:46:53][INFO] L2_SENDER_ghjkl2-32860b7f_01:00:00:00:00:00: multicast sender deactivated
+[14.04.2013-20:46:53][INFO] L2_SENDER_ghjkl2-32860b7f_01:00:00:00:00:00: 22 packets send in total
+[14.04.2013-20:47:09][INFO] Tried to stop a not running Multicast.
+[14.04.2013-20:47:09][INFO] MultiCast deleted :null	-2	null	-1	-1	-1	232	0	2	-1	0	L2_SENDER	ghjkl2-32860b7f	UNDEFINED	NONE
+[14.04.2013-20:47:09][INFO] MultiCast added :L2_SENDER_ghjkl2-32860b7f_01:00:00:00:00:00
+[14.04.2013-20:47:10][INFO] L2_SENDER_ghjkl3-d25eecae_01:00:00:00:00:00: multicast sender activated
+[14.04.2013-20:47:11][INFO] L2_SENDER_ghjkl3-d25eecae_01:00:00:00:00:00: multicast sender deactivated
+[14.04.2013-20:47:11][INFO] L2_SENDER_ghjkl3-d25eecae_01:00:00:00:00:00: 64 packets send in total
+[14.04.2013-20:47:19][INFO] Tried to stop a not running Multicast.
+[14.04.2013-20:47:19][INFO] MultiCast deleted :null	-2	null	-1	-1	-1	232	0	3	-1	0	L2_SENDER	ghjkl3-d25eecae	UNDEFINED	NONE
+[14.04.2013-20:47:19][INFO] MultiCast added :L2_SENDER_ghjkl3-d25eecae_01:00:00:00:00:00
+[14.04.2013-20:47:20][INFO] L2_SENDER_ghjkl4-2da77761_01:00:00:00:00:00: multicast sender activated
+[14.04.2013-20:47:20][INFO] L2_SENDER_ghjkl4-2da77761_01:00:00:00:00:00: multicast sender deactivated
+[14.04.2013-20:47:20][INFO] L2_SENDER_ghjkl4-2da77761_01:00:00:00:00:00: 20 packets send in total
+[14.04.2013-20:47:30][INFO] Tried to stop a not running Multicast.
+[14.04.2013-20:47:30][INFO] MultiCast deleted :null	-2	null	-1	-1	-1	232	0	4	-1	0	L2_SENDER	ghjkl4-2da77761	UNDEFINED	NONE
+[14.04.2013-20:47:31][INFO] MultiCast added :L2_SENDER_ghjkl4-2da77761_01:00:00:00:00:00
+[14.04.2013-20:47:31][INFO] L2_SENDER_ghjkl5-37242a50_01:00:00:00:00:00: multicast sender activated
+[14.04.2013-20:47:31][INFO] L2_SENDER_ghjkl5-37242a50_01:00:00:00:00:00: multicast sender deactivated
+[14.04.2013-20:47:31][INFO] L2_SENDER_ghjkl5-37242a50_01:00:00:00:00:00: 45 packets send in total
+[14.04.2013-20:47:38][INFO] Tried to stop a not running Multicast.
+[14.04.2013-20:47:38][INFO] MultiCast deleted :null	-2	null	-1	-1	-1	232	0	5	-1	0	L2_SENDER	ghjkl5-37242a50	UNDEFINED	NONE
+[14.04.2013-20:47:38][INFO] MultiCast added :L2_SENDER_ghjkl5-37242a50_01:00:00:00:00:00
+[14.04.2013-20:47:39][INFO] L2_SENDER_ghjkl6-8d4503b8_01:00:00:00:00:00: multicast sender activated
+[14.04.2013-20:47:40][INFO] L2_SENDER_ghjkl6-8d4503b8_01:00:00:00:00:00: multicast sender deactivated
+[14.04.2013-20:47:40][INFO] L2_SENDER_ghjkl6-8d4503b8_01:00:00:00:00:00: 33 packets send in total
+[14.04.2013-20:47:44][INFO] L2_SENDER_ghjkl7-67a42296_01:00:00:00:00:00: multicast sender activated
+[14.04.2013-20:48:03][INFO] MultiCast deleted :null	-2	null	0	0	0	232	0	0	-1	0	L2_RECEIVER	ghjkl0-8224bdab	UNDEFINED	SINGLE
+[14.04.2013-20:48:03][INFO] MultiCast added :L2_RECEIVER_ghjkl0-8224bdab_01:00:00:00:00:00
+[14.04.2013-20:48:14][INFO] L2_SENDER_ghjkl7-67a42296_01:00:00:00:00:00: multicast sender deactivated
+[14.04.2013-20:48:14][INFO] MultiCast deleted :null	-2	null	-1	-1	-1	232	200	7	-1	5686	L2_SENDER	ghjkl7-67a42296	UNDEFINED	NONE
+[14.04.2013-20:48:14][INFO] MultiCast added :L2_SENDER_ghjkl7-67a42296_01:00:00:00:00:00
+[14.04.2013-20:48:14][INFO] L2_SENDER_ghjkl8-392be698_01:00:00:00:00:00: multicast sender activated
+[14.04.2013-20:48:14][INFO] L2_SENDER_ghjkl8-392be698_01:00:00:00:00:00: 5820 packets send in total
+[14.04.2013-20:48:15][INFO] L2_SENDER_ghjkl8-392be698_01:00:00:00:00:00: multicast sender deactivated
+[14.04.2013-20:48:15][INFO] L2_SENDER_ghjkl8-392be698_01:00:00:00:00:00: 234 packets send in total
+[14.04.2013-20:48:16][INFO] L2_SENDER_ghjkl9-fc8f5385_01:00:00:00:00:00: multicast sender activated
+[14.04.2013-20:48:25][INFO] Saved Multicastconfiguration.
+[14.04.2013-20:48:25][INFO] Saved GUI Configuration.
+[14.04.2013-20:48:25][INFO] L3_SENDER_ghjkl-1-0_/224.34.34.34: null
+[14.04.2013-20:48:25][INFO] L2_SENDER_ghjkl9-fc8f5385_01:00:00:00:00:00: multicast sender deactivated
+[14.04.2013-20:48:26][INFO] L2_SENDER_ghjkl9-fc8f5385_01:00:00:00:00:00: 1955 packets send in total
