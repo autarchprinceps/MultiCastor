@@ -62,12 +62,10 @@ import multicastor.view.PanelStatusBar;
 import multicastor.view.PanelTabbed;
 import multicastor.view.PopUpMenu;
 import multicastor.view.ReceiverGraph;
-import multicastor.view.SnakeGimmick;
 import multicastor.view.WideComboBox;
 import multicastor.view.MiscBorder.BorderTitle;
 import multicastor.view.MiscBorder.BorderType;
 import multicastor.view.ReceiverGraph.valueType;
-import multicastor.view.SnakeGimmick.SNAKE_DIRECTION;
 
 /**
  * Steuerungsklasse des GUI
@@ -155,12 +153,6 @@ public class ViewController implements ActionListener, MouseListener,
 
 	/**
 	 * Snake is very funny stuff in this program.
-	 */
-	private SnakeGimmick.SNAKE_DIRECTION snakeDir = SNAKE_DIRECTION.E;
-
-	/**
-	 * Standardkonstruktor der GUI, hierbei wird die GUI noch nicht
-	 * initialisiert!
 	 */
 	public ViewController() {
 		lang = LanguageManager.getInstance();
@@ -681,14 +673,7 @@ public class ViewController implements ActionListener, MouseListener,
 		return typ;
 	}
 
-	/**
-	 * Hilfsfunktion welche die Richtung im SnakeProgramm zurueckgibt.
-	 * 
-	 * @return Richtung in welche die "Snake" laufen soll
-	 */
-	public SNAKE_DIRECTION getSnakeDir() {
-		return snakeDir;
-	}
+
 
 	/**
 	 * Hilfsfunktion welche die Tabelle des jeweiligen Programmteil zurueckgibt.
@@ -959,20 +944,6 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	@Override
 	public void keyPressed(final KeyEvent arg0) {
-		switch(arg0.getKeyCode()) {
-			case 38:
-				snakeDir = SnakeGimmick.SNAKE_DIRECTION.N;
-				break;
-			case 40:
-				snakeDir = SnakeGimmick.SNAKE_DIRECTION.S;
-				break;
-			case 37:
-				snakeDir = SnakeGimmick.SNAKE_DIRECTION.W;
-				break;
-			case 39:
-				snakeDir = SnakeGimmick.SNAKE_DIRECTION.E;
-			default:
-		}
 	}
 
 	/**

@@ -203,8 +203,6 @@ public class MulticastData {
 				if(tmp.length() > 2) {
 					tmp = tmp.substring(tmp.length() - 2, tmp.length());
 				}
-				System.out.println(tmp + " : " + mmrpGroupMac[i]);
-
 				if(tmp.length() == 1) {
 					tmp = "0" + tmp;
 				}
@@ -215,7 +213,6 @@ public class MulticastData {
 				}
 			}
 		}
-		System.out.println(s);
 		return s;
 	}
 

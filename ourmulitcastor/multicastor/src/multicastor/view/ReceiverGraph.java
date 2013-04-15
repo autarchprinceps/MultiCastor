@@ -8,7 +8,6 @@ import javax.swing.JRadioButton;
 import multicastor.controller.ViewController;
 import multicastor.data.MulticastData;
 
-
 /**
  * Diese Klasse ist ein "Wrapper" fuer die PanelGraph-Klasse. Sie luesst den
  * user zwischen 3 Graphen "wechseln": <br>
@@ -45,9 +44,8 @@ public class ReceiverGraph extends PanelGraph {
 	private valueType curValueType = valueType.JITTER;
 
 	/**
-	 * Konstruktor. Erwartet einen
-	 * {@link multicastor.controller.viewController} als
-	 * Parameter, der die Radiobuttons ueberwacht.
+	 * Konstruktor. Erwartet einen {@link multicastor.controller.viewController}
+	 * als Parameter, der die Radiobuttons ueberwacht.
 	 * 
 	 * @param ctrl
 	 *            der {@link controller.viewController} der
@@ -153,8 +151,8 @@ public class ReceiverGraph extends PanelGraph {
 	/**
 	 * Diese Methode updated den Graph, indem sie je nach ausgewuehltem
 	 * Radiobutton die entsprechenden Daten aus den
-	 * {@link multicastor.data.MulticastData}-Objekt extrahiert.
-	 * Danach wird intern die updateGraph(int)-Methode aufgerufen.
+	 * {@link multicastor.data.MulticastData}-Objekt extrahiert. Danach wird
+	 * intern die updateGraph(int)-Methode aufgerufen.
 	 * 
 	 * @param mcDataArray
 	 * @param repaint
@@ -163,29 +161,29 @@ public class ReceiverGraph extends PanelGraph {
 	public void updateGraph(final MulticastData[] mcDataArray,
 			final boolean repaint) {
 		int newValue = 0;
-		if(mcDataArray.length != 0) {
-			switch(curValueType) {
-				case JITTER:
-					for(final MulticastData element : mcDataArray) {
-						newValue += element.getJitter();
-					}
-					break;
-				case LOSTPKT:
-					for(final MulticastData element : mcDataArray) {
-						newValue += element.getPacketLossPerSecond();
-					}
-					break;
-				case MEASPKT:
-					for(final MulticastData element : mcDataArray) {
-						newValue += element.getPacketRateMeasured();
-					}
-					break;
+		if (mcDataArray.length != 0) {
+			switch (curValueType) {
+			case JITTER:
+				for (final MulticastData element : mcDataArray) {
+					newValue += element.getJitter();
+				}
+				break;
+			case LOSTPKT:
+				for (final MulticastData element : mcDataArray) {
+					newValue += element.getPacketLossPerSecond();
+				}
+				break;
+			case MEASPKT:
+				for (final MulticastData element : mcDataArray) {
+					newValue += element.getPacketRateMeasured();
+				}
+				break;
 			}
 		} else {
 			newValue = 0;
 		}
 		this.updateGraph(newValue, repaint);
-		if(repaint && !runSnake) {
+		if (repaint) {
 			jitterRB.repaint();
 			lostPktsRB.repaint();
 			measPktRtRB.repaint();

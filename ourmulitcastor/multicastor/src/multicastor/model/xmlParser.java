@@ -471,23 +471,20 @@ public class xmlParser implements
 							case active:
 								if(val.equals("true")) {
 									mcd.setActive(true);
-									break;
 								} else {
 									mcd.setActive(false);
-									break;
-								}
+								}break;
 							case groupIp:
 								if(!val.isEmpty()) {
 									if(InputValidator.checkMC_IPv4(val) != null) {
 										final Inet4Address adr = (Inet4Address)InputValidator
 												.checkMC_IPv4(val);
 										mcd.setGroupIp(adr);
-										break;
 									} else if(InputValidator.checkMC_IPv6(val) != null) {
 										final Inet6Address adr = (Inet6Address)InputValidator
 												.checkMC_IPv6(val);
 										mcd.setGroupIp(adr);
-										break;
+										
 									} else {
 										throwWrongContentException(stag, val,
 												mcNummer);
@@ -501,7 +498,7 @@ public class xmlParser implements
 																								// L3_SENDER
 									throwEmptyContentException(stag, val,
 											mcNummer);
-								}
+								}break;
 							case sourceIp:
 								if(!val.isEmpty()) {
 									if(InputValidator.checkIPv4(val) != null) {
@@ -519,7 +516,6 @@ public class xmlParser implements
 													.checkIPv4("127.0.0.1");
 											mcd.setSourceIp(adr);
 										}
-										break;
 									} else if(InputValidator.checkIPv6(val) != null) {
 										Inet6Address adr = (Inet6Address)InputValidator
 												.checkIPv6(val);
@@ -535,7 +531,6 @@ public class xmlParser implements
 													.checkIPv6("::1");
 											mcd.setSourceIp(adr);
 										}
-										break;
 									} else {
 										throwWrongContentException(stag, val,
 												mcNummer);
@@ -544,7 +539,7 @@ public class xmlParser implements
 										|| (mcList.item(i).getNodeName() == "L3_RECEIVER")) {
 									throwEmptyContentException(stag, val,
 											mcNummer);
-								}
+								}break;
 							case udpPort:
 								if(!val.isEmpty()) {
 									if(InputValidator.checkPort(val) > 0) {
@@ -559,7 +554,6 @@ public class xmlParser implements
 											mcd.setUdpPort(0);
 										}
 									}
-									break;
 								} else if(mcList.item(i).getNodeName() == "L3_SENDER") { // [FF]
 																							// SENDER_V4
 																							// ||
@@ -568,7 +562,7 @@ public class xmlParser implements
 																							// L3_SENDER
 									throwEmptyContentException(stag, val,
 											mcNummer);
-								}
+								}break;
 							case packetLength:
 								if(!val.isEmpty()) {
 									if((InputValidator
@@ -586,7 +580,6 @@ public class xmlParser implements
 										throwWrongContentException(stag, val,
 												mcNummer);
 									}
-									break;
 								} else if(mcList.item(i).getNodeName() == "L3_SENDER") { // [FF]
 																							// SENDER_V4
 																							// ||
@@ -595,7 +588,7 @@ public class xmlParser implements
 																							// L3_SENDER
 									throwEmptyContentException(stag, val,
 											mcNummer);
-								}
+								}break;
 							case ttl:
 								if(!val.isEmpty()) {
 									if(InputValidator.checkTimeToLive(val) > 0) {
@@ -609,7 +602,6 @@ public class xmlParser implements
 										throwWrongContentException(stag, val,
 												mcNummer);
 									}
-									break;
 								} else if(mcList.item(i).getNodeName() == "L3_SENDER") { // [FF]
 																							// SENDER_V4
 																							// ||
@@ -618,7 +610,7 @@ public class xmlParser implements
 																							// L3_SENDER
 									throwEmptyContentException(stag, val,
 											mcNummer);
-								}
+								}break;
 							case packetRateDesired:
 								if(!val.isEmpty()) {
 									if(InputValidator.checkPacketRate(val) > 0) {
@@ -633,7 +625,6 @@ public class xmlParser implements
 										throwWrongContentException(stag, val,
 												mcNummer);
 									}
-									break;
 								} else if(mcList.item(i).getNodeName() == "L3_SENDER") { // [FF]
 																							// SENDER_V4
 																							// ||
@@ -642,7 +633,7 @@ public class xmlParser implements
 																							// L3_SENDER
 									throwEmptyContentException(stag, val,
 											mcNummer);
-								}
+								}break;
 							case typ:
 								if(!val.isEmpty()) {
 									final MulticastData.Typ typ = MulticastData.Typ
@@ -653,7 +644,7 @@ public class xmlParser implements
 										throwWrongContentException(stag, val,
 												mcNummer);
 									}
-									break;
+									
 								} else if(mcList.item(i).getNodeName() == "L3_SENDER") { // [FF]
 																							// SENDER_V4
 																							// ||
@@ -662,7 +653,7 @@ public class xmlParser implements
 																							// L3_SENDER
 									throwEmptyContentException(stag, val,
 											mcNummer);
-								}
+								}break;
 							case sourceMac:
 								if(!val.isEmpty()) {
 									try {
@@ -676,6 +667,7 @@ public class xmlParser implements
 										// you want to
 									}
 								}
+								break;
 							case groupMac:
 								if(!val.isEmpty()) {
 									try {
