@@ -20,29 +20,28 @@ public class MiscTableModel extends AbstractTableModel {
 	private Typ typ = Typ.UNDEFINED;
 	
 	// TODO inject into JTable instance
-	private TableRowSorter<MiscTableModel> sorter;
+	// private TableRowSorter<MiscTableModel> sorter;
 
 	/**
 	 * @return sorter
 	 */
-	public TableRowSorter<MiscTableModel> getSorter() {
-		return sorter;
-	}
+	// public TableRowSorter<MiscTableModel> getSorter() {
+	//	return sorter;
+	//}
 
 	public MiscTableModel(final ViewController ctrl, final Typ typ) {
 		this.typ = typ;
 		this.ctrl = ctrl;
-		sorter = new TableRowSorter<MiscTableModel>(this);
+		// sorter = new TableRowSorter<MiscTableModel>(this);
 	}
 
 	/**
 	 * Funktion welche aufgerufen wird wenn eine Multicast geuendert wird.
 	 */
 	public void changeUpdate() {
-		try {
-			fireTableRowsUpdated(0, ctrl.getMCCount(typ));
-		} catch(IndexOutOfBoundsException e) {
-			// TODO			
+		int lastIndex = ctrl.getMCCount(typ) - 1;
+		if(lastIndex >= 0) {
+			fireTableRowsUpdated(0, lastIndex);
 		}
 	}
 
@@ -50,10 +49,9 @@ public class MiscTableModel extends AbstractTableModel {
 	 * Funktion welche aufgerufen wird wenn eine Multicast gelsuecht wird.
 	 */
 	public void deleteUpdate() {
-		try {
-			fireTableRowsDeleted(0, ctrl.getMCCount(typ));
-		} catch(IndexOutOfBoundsException e) {
-			// TODO
+		int lastIndex = ctrl.getMCCount(typ) - 1;
+		if(lastIndex >= 0) {
+			fireTableRowsDeleted(0, lastIndex);
 		}
 	}
 
@@ -276,10 +274,10 @@ public class MiscTableModel extends AbstractTableModel {
 	 * Funktion welche aufgerufen wird wenn eine Multicast hinzugefuegt wird.
 	 */
 	public void insertUpdate() {
-		int numMc = ctrl.getMCCount(typ)-1;
-		if(numMc >= 0)
-			fireTableRowsInserted(0, numMc);
-
+		int lastIndex = ctrl.getMCCount(typ) - 1;
+		if(lastIndex >= 0) {
+			fireTableRowsInserted(0, lastIndex);
+		}
 	}
 
 	@Override

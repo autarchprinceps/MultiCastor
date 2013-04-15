@@ -31,7 +31,6 @@ import java.util.Vector;
 import javax.swing.JCheckBox;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import javax.swing.JTable;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.event.DocumentEvent;
@@ -42,6 +41,8 @@ import javax.swing.event.TableColumnModelEvent;
 import javax.swing.event.TableColumnModelListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.TableColumn;
+
+import org.jdesktop.swingx.JXTable;
 
 import multicastor.data.GUIData;
 import multicastor.data.MulticastData;
@@ -647,7 +648,12 @@ public class ViewController implements ActionListener, MouseListener,
 	 *         selektiert ist).
 	 */
 	public int[] getSelectedRows(final Typ typ) {
-		return getTable(typ).getSelectedRows();
+		JXTable t = getTable(typ);
+		int[] result = t.getSelectedRows();
+		for(int i = 0; i < result.length; i++) {
+			result[i] = t.convertRowIndexToModel(result[i]);
+		}
+		return result;
 	}
 
 	/**
@@ -691,23 +697,19 @@ public class ViewController implements ActionListener, MouseListener,
 	 *            Programmteil aus welchem die Tabelle angeforder wird.
 	 * @return Die JTable welche angefordert wurde.
 	 */
-	public JTable getTable(final Typ typ) {
-		JTable tablepart = null;
+	public JXTable getTable(final Typ typ) {
 		switch(typ) {
 			case L2_RECEIVER:
-				tablepart = f.getPanel(0, 0).getTable();
-				break;
+				return f.getPanel(0, 0).getTable();
 			case L2_SENDER:
-				tablepart = f.getPanel(1, 0).getTable();
-				break;
+				return f.getPanel(1, 0).getTable();
 			case L3_RECEIVER:
-				tablepart = f.getPanel(0, 1).getTable();
-				break;
+				return f.getPanel(0, 1).getTable();
 			case L3_SENDER:
-				tablepart = f.getPanel(1, 1).getTable();
-				break;
+				return f.getPanel(1, 1).getTable();
+			default:
+				return null;
 		}
-		return tablepart;
 	}
 
 	/**
@@ -1625,6 +1627,9 @@ public class ViewController implements ActionListener, MouseListener,
 					break;
 			}
 			final int[] selectedRows = tabpart.getTable().getSelectedRows();
+			for(int i = 0; i < selectedRows.length; i++) {
+				selectedRows[i] = tabpart.getTable().convertRowIndexToModel(selectedRows[i]);
+			}
 			getPanStatus(typ).getLb_multicasts_selected().setText(
 					selectedRows.length + " "
 							+ lang.getProperty("status.mcSelected") + " ");
@@ -2353,10 +2358,10 @@ public class ViewController implements ActionListener, MouseListener,
 		if(getSelectedTab() != Typ.UNDEFINED) {
 			if(getFrame().getSize().width > 1000) {
 				getTable(getSelectedTab()).setAutoResizeMode(
-						JTable.AUTO_RESIZE_SUBSEQUENT_COLUMNS);
+						JXTable.AUTO_RESIZE_SUBSEQUENT_COLUMNS);
 			} else {
 				getTable(getSelectedTab()).setAutoResizeMode(
-						JTable.AUTO_RESIZE_OFF);
+						JXTable.AUTO_RESIZE_OFF);
 			}
 		}
 		if((getSelectedTab() == Typ.L2_RECEIVER)
@@ -2533,6 +2538,9 @@ public class ViewController implements ActionListener, MouseListener,
 		}
 
 		final int[] selectedRows = tabpart.getTable().getSelectedRows();
+		for(int i = 0; i < selectedRows.length; i++) {
+			selectedRows[i] = tabpart.getTable().convertRowIndexToModel(selectedRows[i]);
+		}
 		tabpart.getPan_status()
 				.getLb_multicasts_selected()
 				.setText(
@@ -2921,6 +2929,9 @@ public class ViewController implements ActionListener, MouseListener,
 	private void pressBTDelete(final Typ typ) {
 		final int[] selectedRows = getTable(typ).getSelectedRows();
 		for(int i = 0; i < selectedRows.length; i++) {
+			selectedRows[i] = getTable(typ).convertRowIndexToModel(selectedRows[i]);
+		}
+		for(int i = 0; i < selectedRows.length; i++) {
 			// System.out.println("luesche zeile: "+selectedRows[i]);
 			deleteMC(getMCData(selectedRows[i] - i, typ));
 		}
@@ -2990,8 +3001,9 @@ public class ViewController implements ActionListener, MouseListener,
 	 * @param typ
 	 *            Programmteil in welchem der Start Button gedrueckt wurde
 	 */
+	// TODO FIXME Sortierung
 	private void pressBTStartStop(final Typ typ) {
-		final int[] selectedLine = getSelectedRows(typ);
+		final int[] selectedLine = getSelectedRows(typ);	
 		boolean oneActive = false;
 
 		if(selectedLine.length == 1) {
@@ -3079,19 +3091,19 @@ public class ViewController implements ActionListener, MouseListener,
 				final Vector<MulticastData> v = new Vector<MulticastData>();
 				for(final int row : f.getPanel(0, 0).getTable()
 						.getSelectedRows()) {
-					v.add(mc.getMC(row, Typ.L2_RECEIVER));
+					v.add(mc.getMC(f.getPanel(0, 0).getTable().convertRowIndexToModel(row), Typ.L2_RECEIVER));
 				}
 				for(final int row : f.getPanel(0, 1).getTable()
 						.getSelectedRows()) {
-					v.add(mc.getMC(row, Typ.L3_RECEIVER));
+					v.add(mc.getMC(f.getPanel(0, 1).getTable().convertRowIndexToModel(row), Typ.L3_RECEIVER));
 				}
 				for(final int row : f.getPanel(1, 0).getTable()
 						.getSelectedRows()) {
-					v.add(mc.getMC(row, Typ.L2_SENDER));
+					v.add(mc.getMC(f.getPanel(1, 0).getTable().convertRowIndexToModel(row), Typ.L2_SENDER));
 				}
 				for(final int row : f.getPanel(1, 1).getTable()
 						.getSelectedRows()) {
-					v.add(mc.getMC(row, Typ.L3_SENDER));
+					v.add(mc.getMC(f.getPanel(1, 1).getTable().convertRowIndexToModel(row), Typ.L3_SENDER));
 				}
 				mc.saveMulticastConfig(chooser.getSelectedFile().getPath(), v);
 			}
