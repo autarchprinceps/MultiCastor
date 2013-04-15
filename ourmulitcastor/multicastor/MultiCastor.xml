@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <MultiCastor>
     <System>
-        <Time>Sun Apr 14 20:48:25 CEST 2013</Time>
+        <Time>Mon Apr 15 10:07:02 CEST 2013</Time>
         <Hostname>ghjkl</Hostname>
         <Hostaddress>127.0.1.1</Hostaddress>
         <Username>root</Username>
@@ -9,77 +9,17 @@
         <Javavendor>Oracle Corporation</Javavendor>
     </System>
     <Multicasts>
-        <L2_RECEIVER>
-            <active>true</active>
-            <groupIp/>
-            <groupMac>01:00:00:00:00:00</groupMac>
-            <packetLength>0</packetLength>
-            <packetRateDesired>0</packetRateDesired>
-            <sourceIp/>
-            <sourceMac>00:00:00:00:00:00</sourceMac>
-            <ttl>0</ttl>
-            <typ>L2_RECEIVER</typ>
-            <udpPort>-2</udpPort>
-        </L2_RECEIVER>
-        <L3_RECEIVER>
-            <active>false</active>
-            <groupIp>224.52.23.23</groupIp>
-            <groupMac/>
-            <packetLength>0</packetLength>
-            <packetRateDesired>0</packetRateDesired>
-            <sourceIp>127.0.0.1</sourceIp>
-            <sourceMac/>
-            <ttl>0</ttl>
-            <typ>L3_RECEIVER</typ>
-            <udpPort>4711</udpPort>
-        </L3_RECEIVER>
-        <L3_RECEIVER>
-            <active>false</active>
-            <groupIp>224.34.34.34</groupIp>
-            <groupMac/>
-            <packetLength>0</packetLength>
-            <packetRateDesired>0</packetRateDesired>
-            <sourceIp>127.0.0.1</sourceIp>
-            <sourceMac/>
-            <ttl>0</ttl>
-            <typ>L3_RECEIVER</typ>
-            <udpPort>4711</udpPort>
-        </L3_RECEIVER>
-        <L3_RECEIVER>
-            <active>false</active>
-            <groupIp>224.42.23.32</groupIp>
-            <groupMac/>
-            <packetLength>0</packetLength>
-            <packetRateDesired>0</packetRateDesired>
-            <sourceIp>127.0.0.1</sourceIp>
-            <sourceMac/>
-            <ttl>0</ttl>
-            <typ>L3_RECEIVER</typ>
-            <udpPort>3563</udpPort>
-        </L3_RECEIVER>
         <L2_SENDER>
-            <active>true</active>
+            <active>false</active>
             <groupIp/>
-            <groupMac>01:00:00:00:00:00</groupMac>
-            <packetLength>270</packetLength>
-            <packetRateDesired>232</packetRateDesired>
+            <groupMac>01:23:45:67:89:13</groupMac>
+            <packetLength>233</packetLength>
+            <packetRateDesired>2323</packetRateDesired>
             <sourceIp/>
             <sourceMac>00:00:00:00:00:00</sourceMac>
             <ttl>-1</ttl>
             <typ>L2_SENDER</typ>
             <udpPort>-2</udpPort>
         </L2_SENDER>
-        <L3_SENDER>
-            <active>false</active>
-            <groupIp>224.34.34.34</groupIp>
-            <groupMac/>
-            <packetLength>343</packetLength>
-            <packetRateDesired>232</packetRateDesired>
-            <sourceIp>127.0.0.1</sourceIp>
-            <sourceMac/>
-            <ttl>23</ttl>
-            <typ>L3_SENDER</typ>
-            <udpPort>4711</udpPort>
-        </L3_SENDER>
     </Multicasts>
 </MultiCastor>

@@ -390,3 +390,221 @@
 [14.04.2013-20:48:25][INFO] L3_SENDER_ghjkl-1-0_/224.34.34.34: null
 [14.04.2013-20:48:25][INFO] L2_SENDER_ghjkl9-fc8f5385_01:00:00:00:00:00: multicast sender deactivated
 [14.04.2013-20:48:26][INFO] L2_SENDER_ghjkl9-fc8f5385_01:00:00:00:00:00: 1955 packets send in total
+[14.04.2013-21:47:42][INFO] Hostname: ghjkl
+[14.04.2013-21:47:42][INFO] Hostadress: 127.0.1.1
+[14.04.2013-21:47:42][INFO] Username: root; User location: null - Europe/Berlin
+[14.04.2013-21:47:42][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[14.04.2013-21:47:42][INFO] File encoding: UTF-8
+[14.04.2013-21:47:42][INFO] Starting MultiCastor with a gui
+[14.04.2013-21:47:42][INFO] Configurationfile loaded.
+[14.04.2013-21:47:42][INFO] MultiCast added :L2_RECEIVER_ghjkl-1-0_00:00:00:00:00:00
+[14.04.2013-21:47:42][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.52.23.23
+[14.04.2013-21:47:42][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.34.34.34
+[14.04.2013-21:47:42][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.42.23.32
+[14.04.2013-21:47:42][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_00:00:00:00:00:00
+[14.04.2013-21:47:42][INFO] L2_SENDER_ghjkl0-5d7acce8_00:00:00:00:00:00: multicast sender activated
+[14.04.2013-21:47:42][INFO] MultiCast added :L3_SENDER_ghjkl-1-0_/224.34.34.34
+[14.04.2013-21:47:42][INFO] Default GUI Configurationfile loaded.
+[14.04.2013-21:47:47][INFO] L2_SENDER_ghjkl0-5d7acce8_00:00:00:00:00:00: multicast sender deactivated
+[14.04.2013-21:47:47][INFO] L2_SENDER_ghjkl0-5d7acce8_00:00:00:00:00:00: 1139 packets send in total
+[14.04.2013-21:48:05][INFO] Tried to stop a not running Multicast.
+[14.04.2013-21:48:05][INFO] MultiCast deleted :null	-2	null	-1	-1	-1	232	0	0	-1	0	L2_SENDER	ghjkl0-5d7acce8	UNDEFINED	NONE
+[14.04.2013-21:48:05][INFO] MultiCast added :L2_SENDER_ghjkl0-5d7acce8_01:00:00:00:00:00
+[14.04.2013-21:48:06][INFO] L2_SENDER_ghjkl1-e33a85_01:00:00:00:00:00: multicast sender activated
+[14.04.2013-21:48:07][INFO] L2_SENDER_ghjkl1-e33a85_01:00:00:00:00:00: multicast sender deactivated
+[14.04.2013-21:48:07][INFO] L2_SENDER_ghjkl1-e33a85_01:00:00:00:00:00: 342 packets send in total
+[15.04.2013-09:29:16][INFO] Hostname: ghjkl
+[15.04.2013-09:29:16][INFO] Hostadress: 127.0.1.1
+[15.04.2013-09:29:16][INFO] Username: root; User location: null - Europe/Berlin
+[15.04.2013-09:29:16][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[15.04.2013-09:29:16][INFO] File encoding: UTF-8
+[15.04.2013-09:29:16][INFO] Starting MultiCastor with a gui
+[15.04.2013-09:29:16][INFO] Configurationfile loaded.
+[15.04.2013-09:29:16][INFO] MultiCast added :L2_RECEIVER_ghjkl-1-0_00:00:00:00:00:00
+[15.04.2013-09:29:16][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.52.23.23
+[15.04.2013-09:29:16][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.34.34.34
+[15.04.2013-09:29:16][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.42.23.32
+[15.04.2013-09:29:16][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_00:00:00:00:00:00
+[15.04.2013-09:29:16][INFO] L2_SENDER_ghjkl0-496eb94_00:00:00:00:00:00: multicast sender activated
+[15.04.2013-09:29:16][INFO] MultiCast added :L3_SENDER_ghjkl-1-0_/224.34.34.34
+[15.04.2013-09:29:16][INFO] Default GUI Configurationfile loaded.
+[15.04.2013-09:29:22][INFO] L2_SENDER_ghjkl0-496eb94_00:00:00:00:00:00: multicast sender deactivated
+[15.04.2013-09:29:22][INFO] L2_SENDER_ghjkl0-496eb94_00:00:00:00:00:00: 1167 packets send in total
+[15.04.2013-09:29:31][INFO] Saved Multicastconfiguration.
+[15.04.2013-09:29:31][INFO] Saved GUI Configuration.
+[15.04.2013-09:29:31][INFO] L3_SENDER_ghjkl-1-0_/224.34.34.34: null
+[15.04.2013-09:29:31][INFO] L2_SENDER_ghjkl0-496eb94_00:00:00:00:00:00: multicast sender deactivated
+[15.04.2013-09:31:02][INFO] Hostname: ghjkl
+[15.04.2013-09:31:02][INFO] Hostadress: 127.0.1.1
+[15.04.2013-09:31:02][INFO] Username: root; User location: null - Europe/Berlin
+[15.04.2013-09:31:02][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[15.04.2013-09:31:02][INFO] File encoding: UTF-8
+[15.04.2013-09:31:02][INFO] Starting MultiCastor with a gui
+[15.04.2013-09:31:02][INFO] Configurationfile loaded.
+[15.04.2013-09:31:02][INFO] MultiCast added :L2_RECEIVER_ghjkl-1-0_00:00:00:00:00:00
+[15.04.2013-09:31:02][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.42.23.32
+[15.04.2013-09:31:02][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.34.34.34
+[15.04.2013-09:31:02][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.52.23.23
+[15.04.2013-09:31:02][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_01:00:00:00:00:00
+[15.04.2013-09:31:02][INFO] MultiCast added :L3_SENDER_ghjkl-1-0_/224.34.34.34
+[15.04.2013-09:31:02][INFO] Default GUI Configurationfile loaded.
+[15.04.2013-09:31:13][INFO] Saved Multicastconfiguration.
+[15.04.2013-09:31:13][INFO] Saved GUI Configuration.
+[15.04.2013-09:31:13][INFO] L3_SENDER_ghjkl-1-0_/224.34.34.34: null
+[15.04.2013-09:31:13][INFO] L2_SENDER_ghjkl-1-0_01:00:00:00:00:00: multicast sender deactivated
+[15.04.2013-09:34:37][INFO] Hostname: ghjkl
+[15.04.2013-09:34:37][INFO] Hostadress: 127.0.1.1
+[15.04.2013-09:34:37][INFO] Username: root; User location: null - Europe/Berlin
+[15.04.2013-09:34:37][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[15.04.2013-09:34:37][INFO] File encoding: UTF-8
+[15.04.2013-09:34:37][INFO] Starting MultiCastor with a gui
+[15.04.2013-09:34:37][INFO] Configurationfile loaded.
+[15.04.2013-09:34:37][INFO] MultiCast added :L2_RECEIVER_ghjkl-1-0_00:00:00:00:00:00
+[15.04.2013-09:34:37][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.52.23.23
+[15.04.2013-09:34:37][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.34.34.34
+[15.04.2013-09:34:37][INFO] MultiCast added :L3_RECEIVER_-1-0_/224.42.23.32
+[15.04.2013-09:34:37][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_01:00:00:00:00:00
+[15.04.2013-09:34:37][INFO] MultiCast added :L3_SENDER_ghjkl-1-0_/224.34.34.34
+[15.04.2013-09:34:37][INFO] Default GUI Configurationfile loaded.
+[15.04.2013-09:34:43][INFO] Tried to stop a not running Multicast.
+[15.04.2013-09:34:43][INFO] MultiCast deleted :null	-2	null	-1	-1	-1	-1	-1	-1	-1	-1	L2_RECEIVER	ghjkl-1-0	UNDEFINED	NONE
+[15.04.2013-09:34:43][INFO] MultiCast added :L2_RECEIVER_ghjkl-1-0_01:00:00:00:00:00
+[15.04.2013-09:34:55][INFO] Saved Multicastconfiguration.
+[15.04.2013-09:34:55][INFO] Saved GUI Configuration.
+[15.04.2013-09:34:55][INFO] L3_SENDER_ghjkl-1-0_/224.34.34.34: null
+[15.04.2013-09:34:55][INFO] L2_SENDER_ghjkl-1-0_01:00:00:00:00:00: multicast sender deactivated
+[15.04.2013-09:35:16][INFO] Hostname: ghjkl
+[15.04.2013-09:35:16][INFO] Hostadress: 127.0.1.1
+[15.04.2013-09:35:16][INFO] Username: root; User location: null - Europe/Berlin
+[15.04.2013-09:35:16][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[15.04.2013-09:35:16][INFO] File encoding: UTF-8
+[15.04.2013-09:35:16][INFO] Starting MultiCastor with a gui
+[15.04.2013-09:35:16][WARNING] Default configurationfile was not found. MultiCastor starts without preconfigured Multicasts and with default GUI configuration.
+[15.04.2013-09:35:20][INFO] Default GUI Configurationfile loaded.
+[15.04.2013-09:35:38][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_01:00:00:00:00:00
+[15.04.2013-09:35:43][INFO] Saved Multicastconfiguration.
+[15.04.2013-09:35:43][INFO] Saved GUI Configuration.
+[15.04.2013-09:35:43][INFO] L2_SENDER_ghjkl-1-0_01:00:00:00:00:00: multicast sender deactivated
+[15.04.2013-09:35:47][INFO] Hostname: ghjkl
+[15.04.2013-09:35:47][INFO] Hostadress: 127.0.1.1
+[15.04.2013-09:35:47][INFO] Username: root; User location: null - Europe/Berlin
+[15.04.2013-09:35:47][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[15.04.2013-09:35:47][INFO] File encoding: UTF-8
+[15.04.2013-09:35:47][INFO] Starting MultiCastor with a gui
+[15.04.2013-09:35:47][INFO] Configurationfile loaded.
+[15.04.2013-09:35:47][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_00:00:00:00:00:00
+[15.04.2013-09:35:47][INFO] Default GUI Configurationfile loaded.
+[15.04.2013-09:35:52][INFO] Saved Multicastconfiguration.
+[15.04.2013-09:35:52][INFO] Saved GUI Configuration.
+[15.04.2013-09:35:52][INFO] L2_SENDER_ghjkl-1-0_00:00:00:00:00:00: multicast sender deactivated
+[15.04.2013-09:54:20][INFO] Hostname: ghjkl
+[15.04.2013-09:54:20][INFO] Hostadress: 127.0.1.1
+[15.04.2013-09:54:20][INFO] Username: root; User location: null - Europe/Berlin
+[15.04.2013-09:54:20][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[15.04.2013-09:54:20][INFO] File encoding: UTF-8
+[15.04.2013-09:54:20][INFO] Starting MultiCastor with a gui
+[15.04.2013-09:54:20][INFO] Configurationfile loaded.
+[15.04.2013-09:54:20][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_00:00:00:00:00:00
+[15.04.2013-09:54:20][INFO] Default GUI Configurationfile loaded.
+[15.04.2013-09:54:24][INFO] L2_SENDER_ghjkl0-e8bcf863_00:00:00:00:00:00: multicast sender activated
+[15.04.2013-09:54:25][INFO] L2_SENDER_ghjkl0-e8bcf863_00:00:00:00:00:00: multicast sender deactivated
+[15.04.2013-09:54:25][INFO] L2_SENDER_ghjkl0-e8bcf863_00:00:00:00:00:00: 20 packets send in total
+[15.04.2013-09:54:30][INFO] Saved Multicastconfiguration.
+[15.04.2013-09:54:30][INFO] Saved GUI Configuration.
+[15.04.2013-09:54:30][INFO] L2_SENDER_ghjkl0-e8bcf863_00:00:00:00:00:00: multicast sender deactivated
+[15.04.2013-09:54:37][INFO] Hostname: ghjkl
+[15.04.2013-09:54:37][INFO] Hostadress: 127.0.1.1
+[15.04.2013-09:54:37][INFO] Username: root; User location: null - Europe/Berlin
+[15.04.2013-09:54:37][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[15.04.2013-09:54:37][INFO] File encoding: UTF-8
+[15.04.2013-09:54:37][INFO] Starting MultiCastor with a gui
+[15.04.2013-09:54:37][INFO] Configurationfile loaded.
+[15.04.2013-09:54:37][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_00:00:00:00:00:00
+[15.04.2013-09:54:37][INFO] Default GUI Configurationfile loaded.
+[15.04.2013-09:54:53][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_01:00:23:23:23:23
+[15.04.2013-09:55:05][INFO] Saved Multicastconfiguration.
+[15.04.2013-09:55:05][INFO] Saved GUI Configuration.
+[15.04.2013-09:55:11][INFO] L2_SENDER_ghjkl0-29e52d4_01:00:23:23:23:23: multicast sender activated
+[15.04.2013-09:55:11][INFO] L2_SENDER_ghjkl0-29e52d4_01:00:23:23:23:23: multicast sender deactivated
+[15.04.2013-09:55:11][INFO] L2_SENDER_ghjkl0-29e52d4_01:00:23:23:23:23: 73 packets send in total
+[15.04.2013-09:55:16][INFO] Saved Multicastconfiguration.
+[15.04.2013-09:55:16][INFO] Saved GUI Configuration.
+[15.04.2013-09:55:16][INFO] L2_SENDER_ghjkl-1-0_00:00:00:00:00:00: multicast sender deactivated
+[15.04.2013-09:55:16][INFO] L2_SENDER_ghjkl0-29e52d4_01:00:23:23:23:23: multicast sender deactivated
+[15.04.2013-09:55:37][INFO] Hostname: ghjkl
+[15.04.2013-09:55:37][INFO] Hostadress: 127.0.1.1
+[15.04.2013-09:55:37][INFO] Username: root; User location: null - Europe/Berlin
+[15.04.2013-09:55:37][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[15.04.2013-09:55:37][INFO] File encoding: UTF-8
+[15.04.2013-09:55:37][INFO] Starting MultiCastor with a gui
+[15.04.2013-09:55:37][INFO] Configurationfile loaded.
+[15.04.2013-09:55:37][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_00:00:00:00:00:00
+[15.04.2013-09:55:37][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_00:00:00:00:00:00
+[15.04.2013-09:55:37][INFO] Default GUI Configurationfile loaded.
+[15.04.2013-10:01:22][INFO] Hostname: ghjkl
+[15.04.2013-10:01:22][INFO] Hostadress: 127.0.1.1
+[15.04.2013-10:01:22][INFO] Username: root; User location: null - Europe/Berlin
+[15.04.2013-10:01:22][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[15.04.2013-10:01:22][INFO] File encoding: UTF-8
+[15.04.2013-10:01:22][INFO] Starting MultiCastor with a gui
+[15.04.2013-10:01:22][INFO] Configurationfile loaded.
+[15.04.2013-10:01:22][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_00:00:00:00:00:00
+[15.04.2013-10:01:22][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_00:00:00:00:00:00
+[15.04.2013-10:01:22][INFO] Default GUI Configurationfile loaded.
+[15.04.2013-10:01:37][INFO] Hostname: ghjkl
+[15.04.2013-10:01:37][INFO] Hostadress: 127.0.1.1
+[15.04.2013-10:01:37][INFO] Username: root; User location: null - Europe/Berlin
+[15.04.2013-10:01:37][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[15.04.2013-10:01:37][INFO] File encoding: UTF-8
+[15.04.2013-10:01:37][INFO] Starting MultiCastor with a gui
+[15.04.2013-10:01:37][INFO] Configurationfile loaded.
+[15.04.2013-10:01:37][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_00:00:00:00:00:00
+[15.04.2013-10:01:37][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_00:00:00:00:00:00
+[15.04.2013-10:01:37][INFO] Default GUI Configurationfile loaded.
+[15.04.2013-10:02:12][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_01:23:45:67:89:00
+[15.04.2013-10:02:40][INFO] Tried to stop a not running Multicast.
+[15.04.2013-10:02:40][INFO] MultiCast deleted :null	0	null	-1	-1	-1	232	-1	-1	-1	-1	L2_SENDER	ghjkl-1-0	UNDEFINED	NONE
+[15.04.2013-10:02:40][INFO] Tried to stop a not running Multicast.
+[15.04.2013-10:02:40][INFO] MultiCast deleted :null	0	null	-1	-1	-1	2323	-1	-1	-1	-1	L2_SENDER	ghjkl-1-0	UNDEFINED	NONE
+[15.04.2013-10:03:41][INFO] Saved Multicastconfiguration.
+[15.04.2013-10:03:41][INFO] Saved GUI Configuration.
+[15.04.2013-10:03:41][INFO] L2_SENDER_ghjkl-1-0_01:23:45:67:89:00: multicast sender deactivated
+[15.04.2013-10:03:45][INFO] Hostname: ghjkl
+[15.04.2013-10:03:45][INFO] Hostadress: 127.0.1.1
+[15.04.2013-10:03:45][INFO] Username: root; User location: null - Europe/Berlin
+[15.04.2013-10:03:45][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[15.04.2013-10:03:45][INFO] File encoding: UTF-8
+[15.04.2013-10:03:45][INFO] Starting MultiCastor with a gui
+[15.04.2013-10:03:45][INFO] Configurationfile loaded.
+[15.04.2013-10:03:45][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_00:00:00:00:00:00
+[15.04.2013-10:03:45][INFO] Default GUI Configurationfile loaded.
+[15.04.2013-10:04:06][INFO] Tried to stop a not running Multicast.
+[15.04.2013-10:04:06][INFO] MultiCast deleted :null	-2	null	-1	-1	-1	2323	-1	-1	-1	-1	L2_SENDER	ghjkl-1-0	UNDEFINED	NONE
+[15.04.2013-10:04:06][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_01:23:45:67:89:00
+[15.04.2013-10:05:58][INFO] Saved Multicastconfiguration.
+[15.04.2013-10:05:58][INFO] Saved GUI Configuration.
+[15.04.2013-10:05:58][INFO] L2_SENDER_ghjkl-1-0_01:23:45:67:89:00: multicast sender deactivated
+[15.04.2013-10:06:02][INFO] Hostname: ghjkl
+[15.04.2013-10:06:02][INFO] Hostadress: 127.0.1.1
+[15.04.2013-10:06:02][INFO] Username: root; User location: null - Europe/Berlin
+[15.04.2013-10:06:02][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[15.04.2013-10:06:02][INFO] File encoding: UTF-8
+[15.04.2013-10:06:02][INFO] Starting MultiCastor with a gui
+[15.04.2013-10:06:02][INFO] Configurationfile loaded.
+[15.04.2013-10:06:02][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_00:00:00:00:00:00
+[15.04.2013-10:06:02][INFO] Default GUI Configurationfile loaded.
+[15.04.2013-10:06:20][INFO] Tried to stop a not running Multicast.
+[15.04.2013-10:06:20][INFO] MultiCast deleted :null	-2	null	-1	-1	-1	2323	-1	-1	-1	-1	L2_SENDER	ghjkl-1-0	UNDEFINED	NONE
+[15.04.2013-10:06:20][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_01:23:45:67:89:13
+[15.04.2013-10:07:02][INFO] Saved Multicastconfiguration.
+[15.04.2013-10:07:02][INFO] Saved GUI Configuration.
+[15.04.2013-10:07:02][INFO] L2_SENDER_ghjkl-1-0_01:23:45:67:89:13: multicast sender deactivated
+[15.04.2013-10:07:08][INFO] Hostname: ghjkl
+[15.04.2013-10:07:08][INFO] Hostadress: 127.0.1.1
+[15.04.2013-10:07:08][INFO] Username: root; User location: null - Europe/Berlin
+[15.04.2013-10:07:08][INFO] Java version: 1.7.0_15; Java vendor: Oracle Corporation
+[15.04.2013-10:07:08][INFO] File encoding: UTF-8
+[15.04.2013-10:07:08][INFO] Starting MultiCastor with a gui
+[15.04.2013-10:07:08][INFO] Configurationfile loaded.
+[15.04.2013-10:07:08][INFO] MultiCast added :L2_SENDER_ghjkl-1-0_00:00:00:00:00:00
+[15.04.2013-10:07:08][INFO] Default GUI Configurationfile loaded.

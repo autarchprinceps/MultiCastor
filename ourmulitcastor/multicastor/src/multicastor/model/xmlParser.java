@@ -246,7 +246,7 @@ public class xmlParser implements
 			system.appendChild(el = doc.createElement("Hostaddress"));
 			el.setTextContent(InetAddress.getLocalHost().getHostAddress());
 		} catch(final UnknownHostException e) {
-			// already loged at the program start. Just create empty tags
+			// already logged at the program start. Just create empty tags
 			system.appendChild(el = doc.createElement("Hostname"));
 			system.appendChild(el = doc.createElement("Hostaddress"));
 		}
@@ -272,8 +272,7 @@ public class xmlParser implements
 		// System.out.println("Here's the xml:\n\n" + xmlString);
 
 		final File xmlfile = new File(pfad);
-		BufferedWriter writer = null;
-		writer = new BufferedWriter(new FileWriter(xmlfile));
+		BufferedWriter writer = new BufferedWriter(new FileWriter(xmlfile));
 		final String prolog = "<?xml version=\"1.0\"?>\n";
 		writer.write(prolog + xmlString);
 		writer.close();

@@ -165,7 +165,7 @@ pip-log.txt
 ##########
 #Custom
 ##########
-ourmulticastor/multicastor/MultiCastor.xml
-ourmulticastor/multicastor/log.txt
-ourmutlicastor/mutlicastor/GUIConfig.xml
+MultiCastor.xml
+log.txt
+GUIConfig.xml
 
