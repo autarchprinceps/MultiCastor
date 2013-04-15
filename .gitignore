@@ -161,3 +161,11 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+
+##########
+#Custom
+##########
+ourmulticastor/multicastor/MultiCastor.xml
+ourmulticastor/multicastor/log.txt
+ourmutlicastor/mutlicastor/GUIConfig.xml
+

@@ -324,7 +324,7 @@ public class MiscTableModel extends AbstractTableModel {
 				case 7:
 				case 8:
 					data.setPacketCount(((Long)aValue).longValue());
-					System.out.println("SET!!");
+					System.out.println("SET!!");break;
 				case 9:
 				case 10:
 				default:
