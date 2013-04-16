@@ -796,11 +796,12 @@ public class ViewController implements ActionListener, MouseListener,
 
 		f = new FrameMain(this);
 		addKeyAndContainerListenerToAll(f);
-		try {
+		// Sinn?
+		/*try {
 			Thread.sleep(500);
 		} catch(final InterruptedException e) {
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 	/**
@@ -3001,7 +3002,6 @@ public class ViewController implements ActionListener, MouseListener,
 	 * @param typ
 	 *            Programmteil in welchem der Start Button gedrueckt wurde
 	 */
-	// TODO FIXME Sortierung
 	private void pressBTStartStop(final Typ typ) {
 		final int[] selectedLine = getSelectedRows(typ);	
 		boolean oneActive = false;

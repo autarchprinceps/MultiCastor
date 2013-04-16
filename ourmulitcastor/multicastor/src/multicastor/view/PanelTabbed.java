@@ -340,8 +340,8 @@ public class PanelTabbed extends JPanel {
 		pan_table = new JPanel();
 		table = new JXTable();
 		setTableModel(ctrl, typ);
-
-		table.setDefaultRenderer(Object.class,
+		// TODO FIXME Markierung
+		/*table.setDefaultRenderer(Object.class,
 				new WrappingCellRenderer(
 						table.getDefaultRenderer(Object.class), ctrl));
 		table.setDefaultRenderer(
@@ -357,7 +357,7 @@ public class PanelTabbed extends JPanel {
 						table.getDefaultRenderer(Double.class), ctrl));
 		table.setDefaultRenderer(Long.class,
 				new WrappingCellRenderer(table.getDefaultRenderer(Long.class),
-						ctrl));
+						ctrl));*/
 		table.setFont(MiscFont.getFont(0, 10));
 		table.getTableHeader().setFont(MiscFont.getFont(0, 10));
 		table.getSelectionModel().addListSelectionListener(ctrl);
