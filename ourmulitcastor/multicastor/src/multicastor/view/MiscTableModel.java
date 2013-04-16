@@ -18,20 +18,9 @@ public class MiscTableModel extends AbstractTableModel {
 	private boolean stateCheckboxEnabled = true;
 	private Typ typ = Typ.UNDEFINED;
 
-	// TODO inject into JTable instance
-	// private TableRowSorter<MiscTableModel> sorter;
-
-	/**
-	 * @return sorter
-	 */
-	// public TableRowSorter<MiscTableModel> getSorter() {
-	// return sorter;
-	// }
-
 	public MiscTableModel(final ViewController ctrl, final Typ typ) {
 		this.typ = typ;
 		this.ctrl = ctrl;
-		// sorter = new TableRowSorter<MiscTableModel>(this);
 	}
 
 	/**

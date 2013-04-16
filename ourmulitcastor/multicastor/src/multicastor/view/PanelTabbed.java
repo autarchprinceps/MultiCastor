@@ -114,10 +114,6 @@ public class PanelTabbed extends JPanel {
 		return pan_options;
 	}
 
-	// public ReceiverGraph getPan_recGraph() {
-	// return ((ReceiverGraph)pan_graph);
-	// }
-
 	public JPanel getPan_space() {
 		return pan_space;
 	}
@@ -339,19 +335,7 @@ public class PanelTabbed extends JPanel {
 		pan_table = new JPanel();
 		table = new JXTable();
 		setTableModel(ctrl, typ);
-		// TODO FIXME Markierung
-		/*
-		 * table.setDefaultRenderer(Object.class, new WrappingCellRenderer(
-		 * table.getDefaultRenderer(Object.class), ctrl));
-		 * table.setDefaultRenderer( Boolean.class, new
-		 * WrappingCellRenderer(table .getDefaultRenderer(Boolean.class),
-		 * ctrl)); table.setDefaultRenderer( Integer.class, new
-		 * WrappingCellRenderer(table .getDefaultRenderer(Integer.class),
-		 * ctrl)); table.setDefaultRenderer(Double.class, new
-		 * WrappingCellRenderer( table.getDefaultRenderer(Double.class), ctrl));
-		 * table.setDefaultRenderer(Long.class, new
-		 * WrappingCellRenderer(table.getDefaultRenderer(Long.class), ctrl));
-		 */
+
 		table.setFont(MiscFont.getFont(0, 10));
 		table.getTableHeader().setFont(MiscFont.getFont(0, 10));
 		table.getSelectionModel().addListSelectionListener(ctrl);
