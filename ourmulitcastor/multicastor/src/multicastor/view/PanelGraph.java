@@ -105,8 +105,6 @@ public class PanelGraph extends JPanel {
 		return panelSize;
 	}
 
-
-
 	public void reloadLanguage() {
 		lblX = lang.getProperty("graph.sec");
 		lblY = lang.getProperty("graph.packetsPerSec");
@@ -117,7 +115,7 @@ public class PanelGraph extends JPanel {
 	 * zuweist.
 	 */
 	public void reset() {
-		for(int i = 0; i < numberOfValues; i++) {
+		for (int i = 0; i < numberOfValues; i++) {
 			data[i] = Integer.MIN_VALUE;
 		}
 		dynScaleCount = 0;
@@ -176,42 +174,42 @@ public class PanelGraph extends JPanel {
 	 */
 	public void updateGraph(int value, final boolean repaint) {
 		// Pointer erhoehen oder bei Erreichen vom letzten Wert "Umbruch" auf 0
-		if((dataPointer + 1) < numberOfValues) {
+		if ((dataPointer + 1) < numberOfValues) {
 			dataPointer++;
 		} else {
 			dataPointer = 0;
 		}
 
 		// Werte < 0 sind nicht erlaubt
-		if(value < 0) {
+		if (value < 0) {
 			value = 0;
 		}
 		// Ist der maxY-Wert fest?
-		if(staticScale) {
+		if (staticScale) {
 			// Pruefen ob Werte im "Rahmen" liegen
-			if(value > maxY) {
+			if (value > maxY) {
 				value = maxY;
 			}
 		} else {
 			// Skala soll angepasst werden, wenn sich die Y-Werte veruendern
-			if(value > maxY) {
+			if (value > maxY) {
 				maxY = value;
 				dynScaleCount = 0;
 			}
-			if(value > ((3 * maxY) / 4)) {
+			if (value > ((3 * maxY) / 4)) {
 				dynScaleCount = 0;
 			}
-			if(value < (maxY / 2)) {
+			if (value < (maxY / 2)) {
 				dynScaleCount++;
 			}
 
-			if(dynScaleCount > 10) {
+			if (dynScaleCount > 10) {
 				dynScaleCount -= 5;
 				// hoechsten Y-Wert herausfinden und ihn als (3/4) maxY
 				// verwenden. Minimaler Y-Wert: 10
 				maxY = 10;
-				for(final int element : data) {
-					if(maxY < ((element * 4) / 3)) {
+				for (final int element : data) {
+					if (maxY < ((element * 4) / 3)) {
 						maxY = ((element * 4) / 3);
 					}
 				}
@@ -219,7 +217,7 @@ public class PanelGraph extends JPanel {
 		}
 
 		data[dataPointer] = value;
-		if(repaint) {
+		if (repaint) {
 			paintComponent(getGraphics());
 		}
 	}
@@ -264,7 +262,7 @@ public class PanelGraph extends JPanel {
 		g.setColor(Color.gray);
 
 		// X-Achsen zeichnen (Raster)
-		for(int i = 0; i <= 2; i++) {
+		for (int i = 0; i <= 2; i++) {
 			g.drawLine(22, 15 + (30 * i), x3, 15 + (30 * i));
 		}
 
@@ -274,15 +272,15 @@ public class PanelGraph extends JPanel {
 		// double-Werte
 		int time = 0; // Zeitwert, an X-Achse aufgetragen
 		x = 0.0;
-		for(int i = 6; i >= 0; i--) {
+		for (int i = 6; i >= 0; i--) {
 			x = (gWidth / 6.0) * i;
-			g.drawLine(x2 - (int)x, 12, x2 - (int)x, 78);
+			g.drawLine(x2 - (int) x, 12, x2 - (int) x, 78);
 
 			// X-Achse beschriften
-			if(time == 0) {
-				g.drawString(time + "", x2 - ((int)x + 2), 88);
+			if (time == 0) {
+				g.drawString(time + "", x2 - ((int) x + 2), 88);
 			} else {
-				g.drawString(time + "", x2 - ((int)x + 5), 88);
+				g.drawString(time + "", x2 - ((int) x + 5), 88);
 			}
 
 			time += 10;
@@ -306,10 +304,10 @@ public class PanelGraph extends JPanel {
 		// Zu klein wuere das Panel bei
 		// der ungefuehren lblY-String - Breite + Platzhalter und dem aktuellen
 		// Wert
-		if(data[dataPointer] != Integer.MIN_VALUE) {
+		if (data[dataPointer] != Integer.MIN_VALUE) {
 			actualValue = data[dataPointer];
 		}
-		if(((lblY.length() * 5) + 35) < x2) {
+		if (((lblY.length() * 5) + 35) < x2) {
 			g.drawString(
 					lang.getProperty("graph.current") + ": " + actualValue,
 					(x2 - 70), 9);
@@ -330,7 +328,7 @@ public class PanelGraph extends JPanel {
 		// Steht der dataPointer noch auf -1 (Initialwert), wurden noch keine
 		// Daten empfangen
 		// und der gesamte Codeblock zum Funktion zeichnen uebersprungen
-		if(dataPointer != -1) {
+		if (dataPointer != -1) {
 			// Pixel pro X-Wert (Sekunde)
 			pixProX = gWidth / 60.0;
 			g.setColor(Color.GREEN);
@@ -338,15 +336,15 @@ public class PanelGraph extends JPanel {
 			// 1. Huelfte der Werte zeichnen (Werte an den Stellen dataPointer
 			// bis 0)
 			x = ursprungX;
-			for(int i = dataPointer; i > 0; i--, x += pixProX) {
+			for (int i = dataPointer; i > 0; i--, x += pixProX) {
 				// Wenn Wert ungleich Initialisierungswert
-				if((data[i] != Integer.MIN_VALUE)
+				if ((data[i] != Integer.MIN_VALUE)
 						&& (data[i - 1] != Integer.MIN_VALUE)) {
 					// Y-Koordinate des Datenwertes errechnen
-					yCoord1 = (int)(data[i] * pixProY);
-					yCoord2 = (int)(data[i - 1] * pixProY);
-					g.drawLine((int)x, (ursprungY - yCoord1),
-							(int)(x + pixProX), (ursprungY - yCoord2));
+					yCoord1 = (int) (data[i] * pixProY);
+					yCoord2 = (int) (data[i - 1] * pixProY);
+					g.drawLine((int) x, (ursprungY - yCoord1),
+							(int) (x + pixProX), (ursprungY - yCoord2));
 					// System.out.println(i + ". Aufruf. x= " + (int)x);
 					// System.out.println("(1)Zeichne dp "+dataPointer+" & i " +
 					// i + ": " + x + ", " + (ursprungY - yCoord1) + ", " +
@@ -358,27 +356,27 @@ public class PanelGraph extends JPanel {
 
 			// Funktionswert am Ende des Arrays mit 0. Array Wert verbinden,
 			// wenn beide != Initialisierungswert
-			if((data[0] != Integer.MIN_VALUE)
+			if ((data[0] != Integer.MIN_VALUE)
 					&& (data[numberOfValues - 2] != Integer.MIN_VALUE)) {
-				yCoord1 = (int)(data[0] * pixProY);
-				yCoord2 = (int)(data[numberOfValues - 1] * pixProY);
+				yCoord1 = (int) (data[0] * pixProY);
+				yCoord2 = (int) (data[numberOfValues - 1] * pixProY);
 				x = ursprungX + (dataPointer * pixProX);
-				g.drawLine((int)x, (ursprungY - yCoord1), (int)(x + pixProX),
+				g.drawLine((int) x, (ursprungY - yCoord1), (int) (x + pixProX),
 						(ursprungY - yCoord2));
 			}
 
 			// 2. Huelfte der Werte zeichnen (Werte an den Stellen
 			// numberOfValues bis dataPointer)
 			x = ursprungX + ((dataPointer + 1) * pixProX);
-			for(int i = (numberOfValues - 1); i > (dataPointer + 1); i--, x += pixProX) {
+			for (int i = (numberOfValues - 1); i > (dataPointer + 1); i--, x += pixProX) {
 				// Wenn Wert ungleich Initialisierungswert
-				if((data[i] != Integer.MIN_VALUE)
+				if ((data[i] != Integer.MIN_VALUE)
 						&& (data[i - 1] != Integer.MIN_VALUE)) {
 					// Y-Koordinate des Datenwertes errechnen
-					yCoord1 = (int)(data[i] * pixProY);
-					yCoord2 = (int)(data[i - 1] * pixProY);
-					g.drawLine((int)x, (ursprungY - yCoord1),
-							(int)(x + pixProX), (ursprungY - yCoord2));
+					yCoord1 = (int) (data[i] * pixProY);
+					yCoord2 = (int) (data[i - 1] * pixProY);
+					g.drawLine((int) x, (ursprungY - yCoord1),
+							(int) (x + pixProX), (ursprungY - yCoord2));
 					// System.out.println("(2)Zeichne dp "+dataPointer+" & i " +
 					// i + ": " + x + ", " + (ursprungY - yCoord1) + ", " +
 					// (x+pixProX) + ", " + (ursprungY - yCoord2));

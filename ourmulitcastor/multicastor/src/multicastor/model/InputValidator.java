@@ -21,7 +21,7 @@ public class InputValidator {
 	 *         falls kein Interface mit der Adresse existiert false
 	 */
 	public static Boolean checkAdapters(final InetAddress address) {
-		if(NetworkAdapter.findAddressIndex(address.toString().substring(1)) == -1) {
+		if (NetworkAdapter.findAddressIndex(address.toString().substring(1)) == -1) {
 			return false;
 		} else {
 			return true;
@@ -39,21 +39,21 @@ public class InputValidator {
 	 */
 	public static InetAddress checkIPv4(final String adresse) {
 		Inet4Address adr;
-		if(!adresse
+		if (!adresse
 				.matches("([0-9]{1,3})\\.+([0-9]{1,3})\\.+([0-9]{1,3})\\.+([0-9]{1,3})")) {
 			return null;
 		}
 
 		try {
 			try {
-				adr = (Inet4Address)InetAddress.getByName(adresse);
-			} catch(final ClassCastException e) {
+				adr = (Inet4Address) InetAddress.getByName(adresse);
+			} catch (final ClassCastException e) {
 				return null;
 			}
-		} catch(final UnknownHostException e) {
+		} catch (final UnknownHostException e) {
 			return null;
 		}
-		if(!adr.isMulticastAddress()) {
+		if (!adr.isMulticastAddress()) {
 			return adr;
 		} else {
 			return null;
@@ -74,10 +74,10 @@ public class InputValidator {
 		int plen;
 		try {
 			plen = Integer.parseInt(pacLen);
-		} catch(final NumberFormatException e) {
+		} catch (final NumberFormatException e) {
 			return -2;
 		}
-		if((plen >= 52) && (plen <= 65507)) {
+		if ((plen >= 52) && (plen <= 65507)) {
 			return plen;
 		} else {
 			return -1;
@@ -98,8 +98,8 @@ public class InputValidator {
 		boolean bool;
 		Inet6Address add;
 
-		if(!adresse.matches("\\A(?:" + "(?:" + "(?:[A-Fa-f0-9]{1,4}:){6}" + "|"
-				+ "(?=(?:[A-Fa-f0-9]{0,4}:){0,6}"
+		if (!adresse.matches("\\A(?:" + "(?:" + "(?:[A-Fa-f0-9]{1,4}:){6}"
+				+ "|" + "(?=(?:[A-Fa-f0-9]{0,4}:){0,6}"
 				+ "(?:[0-9]{1,3}\\.){3}[0-9]{1,3}" + "\\Z)" +
 
 				"(([0-9a-fA-F]{1,4}:){0,5}|:)((:[0-9a-fA-F]{1,4}){1,5}:|:)"
@@ -115,16 +115,16 @@ public class InputValidator {
 
 		try {
 			try {
-				add = (Inet6Address)InetAddress.getByName(adresse);
-			} catch(final ClassCastException e) {
+				add = (Inet6Address) InetAddress.getByName(adresse);
+			} catch (final ClassCastException e) {
 				return null;
 			}
-		} catch(final UnknownHostException e) {
+		} catch (final UnknownHostException e) {
 			return null;
 		}
 		bool = !add.isMulticastAddress()
 				&& !add.getHostAddress().matches("0:0:0:0:0:0:0:0");
-		if(bool) {
+		if (bool) {
 			return add;
 		} else {
 			return null;
@@ -145,10 +145,10 @@ public class InputValidator {
 		int plen;
 		try {
 			plen = Integer.parseInt(pacLen);
-		} catch(final NumberFormatException e) {
+		} catch (final NumberFormatException e) {
 			return -2;
 		}
-		if((plen >= 52) && (plen <= 65527)) {
+		if ((plen >= 52) && (plen <= 65527)) {
 			return plen;
 		} else {
 			return -1;
@@ -165,21 +165,21 @@ public class InputValidator {
 	 */
 	public static InetAddress checkMC_IPv4(final String adresse) {
 		Inet4Address adr;
-		if(!adresse
+		if (!adresse
 				.matches("([0-9]{1,3})\\.+([0-9]{1,3})\\.+([0-9]{1,3})\\.+([0-9]{1,3})")) {
 			return null;
 		}
 
 		try {
 			try {
-				adr = (Inet4Address)InetAddress.getByName(adresse);
-			} catch(final ClassCastException e) {
+				adr = (Inet4Address) InetAddress.getByName(adresse);
+			} catch (final ClassCastException e) {
 				return null;
 			}
-		} catch(final UnknownHostException e) {
+		} catch (final UnknownHostException e) {
 			return null;
 		}
-		if(adr.isMulticastAddress()) {
+		if (adr.isMulticastAddress()) {
 			return adr;
 		} else {
 			return null;
@@ -197,8 +197,8 @@ public class InputValidator {
 	public static InetAddress checkMC_IPv6(final String adresse) {
 		Inet6Address add;
 
-		if(!adresse.matches("\\A(?:" + "(?:" + "(?:[A-Fa-f0-9]{1,4}:){6}" + "|"
-				+ "(?=(?:[A-Fa-f0-9]{0,4}:){0,6}"
+		if (!adresse.matches("\\A(?:" + "(?:" + "(?:[A-Fa-f0-9]{1,4}:){6}"
+				+ "|" + "(?=(?:[A-Fa-f0-9]{0,4}:){0,6}"
 				+ "(?:[0-9]{1,3}\\.){3}[0-9]{1,3}" + "\\Z)" +
 
 				"(([0-9a-fA-F]{1,4}:){0,5}|:)((:[0-9a-fA-F]{1,4}){1,5}:|:)"
@@ -214,15 +214,15 @@ public class InputValidator {
 
 		try {
 			try {
-				add = (Inet6Address)InetAddress.getByName(adresse);
-			} catch(final ClassCastException e) {
+				add = (Inet6Address) InetAddress.getByName(adresse);
+			} catch (final ClassCastException e) {
 				return null;
 			}
-		} catch(final UnknownHostException e) {
+		} catch (final UnknownHostException e) {
 			return null;
 		}
 
-		if(add.isMulticastAddress()) {
+		if (add.isMulticastAddress()) {
 			return add;
 		} else {
 			return null;
@@ -242,10 +242,10 @@ public class InputValidator {
 		int plen;
 		try {
 			plen = Integer.parseInt(pacLen);
-		} catch(final NumberFormatException e) {
+		} catch (final NumberFormatException e) {
 			return -2;
 		}
-		if((plen >= 52) && (plen <= 1500)) {
+		if ((plen >= 52) && (plen <= 1500)) {
 			return plen;
 		} else {
 			return -1;
@@ -258,7 +258,7 @@ public class InputValidator {
 	public static boolean checkMulticastGroup(final String mac) {
 		final String adresse = mac.toString();
 
-		if(!adresse.matches("([A-Fa-f0-9]{0,1}(1|3|5|7|9|B|D|F))(:)"
+		if (!adresse.matches("([A-Fa-f0-9]{0,1}(1|3|5|7|9|B|D|F))(:)"
 				+ "([A-Fa-f0-9]{0,2}(:)){4}[A-Fa-f0-9]{0,2}")
 				|| // Erstmal check auf richtige Standartadresse
 				adresse.matches("((f|F){2}(:)){5}(f|F){2}")) {
@@ -284,10 +284,10 @@ public class InputValidator {
 		int pr;
 		try {
 			pr = Integer.parseInt(pRate);
-		} catch(final NumberFormatException e) {
+		} catch (final NumberFormatException e) {
 			return -2;
 		}
-		if((pr >= 1) && (pr <= 65535)) {
+		if ((pr >= 1) && (pr <= 65535)) {
 			return pr;
 		} else {
 			return -1;
@@ -308,10 +308,10 @@ public class InputValidator {
 		int pr;
 		try {
 			pr = Integer.parseInt(pRate);
-		} catch(final NumberFormatException e) {
+		} catch (final NumberFormatException e) {
 			return -2;
 		}
-		if((pr >= 10) && (pr <= 65535)) {
+		if ((pr >= 10) && (pr <= 65535)) {
 			return pr;
 		} else {
 			return -1;
@@ -331,10 +331,10 @@ public class InputValidator {
 		int prt;
 		try {
 			prt = Integer.parseInt(port);
-		} catch(final NumberFormatException e) {
+		} catch (final NumberFormatException e) {
 			return -2;
 		}
-		if(((prt >= 1) && (prt <= 65535))) {
+		if (((prt >= 1) && (prt <= 65535))) {
 			return prt;
 		} else {
 			return -1;
@@ -354,10 +354,10 @@ public class InputValidator {
 		int tl;
 		try {
 			tl = Integer.parseInt(ttl);
-		} catch(final NumberFormatException e) {
+		} catch (final NumberFormatException e) {
 			return -2;
 		}
-		if((tl >= 1) && (tl <= 32)) {
+		if ((tl >= 1) && (tl <= 32)) {
 			return tl;
 		} else {
 			return -1;

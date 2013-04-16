@@ -14,7 +14,7 @@ public class ByteTools {
 	 * @return das Boolean
 	 */
 	public static boolean byteToBoolean(final byte[] theByte) {
-		if(theByte[0] != 0) {
+		if (theByte[0] != 0) {
 			return true;
 		} else {
 			return false;
@@ -43,13 +43,13 @@ public class ByteTools {
 	 * @return das resultierende int
 	 */
 	public static long byteToLong(final byte[] theByte) {
-		return (((long)(theByte[0] & 0xFF) << 56)
-				| ((long)(theByte[1] & 0xFF) << 48)
-				| ((long)(theByte[2] & 0xFF) << 40)
-				| ((long)(theByte[3] & 0xFF) << 32)
-				| ((long)(theByte[4] & 0xFF) << 24)
-				| ((long)(theByte[5] & 0xFF) << 16)
-				| ((long)(theByte[6] & 0xFF) << 8) | (theByte[7] & 0xFF));
+		return (((long) (theByte[0] & 0xFF) << 56)
+				| ((long) (theByte[1] & 0xFF) << 48)
+				| ((long) (theByte[2] & 0xFF) << 40)
+				| ((long) (theByte[3] & 0xFF) << 32)
+				| ((long) (theByte[4] & 0xFF) << 24)
+				| ((long) (theByte[5] & 0xFF) << 16)
+				| ((long) (theByte[6] & 0xFF) << 8) | (theByte[7] & 0xFF));
 	}
 
 	/**
@@ -60,12 +60,12 @@ public class ByteTools {
 	 * @return byte[4] Array
 	 */
 	public static byte[] convertToByte(final boolean theBoolean) {
-		if(theBoolean) {
+		if (theBoolean) {
 			return new byte[] { // true: mit Einsen fuellen
-			(byte)255, (byte)255, (byte)255, (byte)255 };
+			(byte) 255, (byte) 255, (byte) 255, (byte) 255 };
 		} else {
 			return new byte[] { // false: mit Nullen fuellen
-			(byte)0, (byte)0, (byte)0, (byte)0 };
+			(byte) 0, (byte) 0, (byte) 0, (byte) 0 };
 		}
 	}
 
@@ -77,9 +77,9 @@ public class ByteTools {
 	 * @return byte[4] Array
 	 */
 	public static byte[] convertToByte(final int theInteger) {
-		return new byte[] { (byte)(theInteger >>> 24),
-				(byte)(theInteger >>> 16), (byte)(theInteger >>> 8),
-				(byte)theInteger };
+		return new byte[] { (byte) (theInteger >>> 24),
+				(byte) (theInteger >>> 16), (byte) (theInteger >>> 8),
+				(byte) theInteger };
 	}
 
 	/**
@@ -90,10 +90,10 @@ public class ByteTools {
 	 *            return byte[8]-Array
 	 */
 	public static byte[] convertToByte(final long theLong) {
-		return new byte[] { (byte)(theLong >>> 56), (byte)(theLong >>> 48),
-				(byte)(theLong >>> 40), (byte)(theLong >>> 32),
-				(byte)(theLong >>> 24), (byte)(theLong >>> 16),
-				(byte)(theLong >>> 8), (byte)theLong };
+		return new byte[] { (byte) (theLong >>> 56), (byte) (theLong >>> 48),
+				(byte) (theLong >>> 40), (byte) (theLong >>> 32),
+				(byte) (theLong >>> 24), (byte) (theLong >>> 16),
+				(byte) (theLong >>> 8), (byte) theLong };
 	}
 
 	/**
@@ -106,7 +106,7 @@ public class ByteTools {
 	 * @return byte[2]-Array
 	 */
 	public static byte[] convertToShortByte(final int theInteger) {
-		return new byte[] { (byte)(theInteger >> 8), (byte)theInteger };
+		return new byte[] { (byte) (theInteger >> 8), (byte) theInteger };
 	}
 
 	/**
@@ -125,11 +125,11 @@ public class ByteTools {
 		byte mybyte;
 
 		// for-Schleife ueber alle bytes
-		for(final byte element : byteArray) {
+		for (final byte element : byteArray) {
 			mybyte = element;
 			// for-Schleife ueber alle Bits des jeweiligen bytes
-			for(int j = 0; j < 8; j++) {
-				if((((mybyte >> (7 - j)) & 1) == 1) ^ (((crc >> 15) & 1) == 1)) {
+			for (int j = 0; j < 8; j++) {
+				if ((((mybyte >> (7 - j)) & 1) == 1) ^ (((crc >> 15) & 1) == 1)) {
 					crc = crc << 1;
 					crc = crc ^ pol;
 				} else {
@@ -139,7 +139,7 @@ public class ByteTools {
 		}
 
 		// Return mit "cast" zum 2-byte-Array
-		return new byte[] { (byte)((crc & 0xffff) >> 8), (byte)(crc & 0xffff) };
+		return new byte[] { (byte) ((crc & 0xffff) >> 8), (byte) (crc & 0xffff) };
 	}
 
 	/**

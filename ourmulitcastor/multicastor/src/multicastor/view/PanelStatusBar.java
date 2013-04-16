@@ -10,7 +10,6 @@ import javax.swing.SwingConstants;
 import multicastor.controller.ViewController;
 import multicastor.lang.LanguageManager;
 
-
 /**
  * Panel welche die Statusbar des jeweiligen Programmteils beinhaltet.
  */

@@ -12,7 +12,6 @@ import java.util.logging.LogRecord;
 import multicastor.controller.ViewController;
 import multicastor.lang.LanguageManager;
 
-
 /**
  * Selbstdefinierter Handler, der die zu loggenden Nachrichten formatiert und
  * ausgibt.
@@ -78,12 +77,12 @@ public class MulticastLogHandler extends ConsoleHandler {
 
 		// Zeigt Info-Fenster an, wenn Fehler oder Warnungen auftreten
 		// Nur wenn GUI gestartet ist
-		if(viewController != null) {
-			if(level.equals(Level.SEVERE) || level.equals(Level.WARNING)) {
+		if (viewController != null) {
+			if (level.equals(Level.SEVERE) || level.equals(Level.WARNING)) {
 				viewController.showMessage(ViewController.MessageTyp.ERROR,
 						message_window);
 			}
-			if(viewController.isInitFinished()) {
+			if (viewController.isInitFinished()) {
 				viewController.printConsole(message);
 			}
 		}
@@ -94,7 +93,7 @@ public class MulticastLogHandler extends ConsoleHandler {
 					"log.txt", true));
 			os.write(message_file + "\r\n");
 			os.close();
-		} catch(final IOException e) {
+		} catch (final IOException e) {
 			System.out.println(lang.getProperty("error.logfile.canNotWrite"));
 			e.printStackTrace();
 		}

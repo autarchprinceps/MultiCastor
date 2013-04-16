@@ -22,14 +22,14 @@ public class PcapHandler {
 	 * @return the converted string
 	 */
 	public static String byteMACToString(final byte[] mac) {
-		if(mac == null) {
+		if (mac == null) {
 			return null;
 		}
 
 		final StringBuilder sb = new StringBuilder(18);
 
-		for(final byte b : mac) {
-			if(sb.length() > 0) {
+		for (final byte b : mac) {
+			if (sb.length() > 0) {
 				sb.append(':');
 			}
 			sb.append(String.format("%02x", b));
@@ -50,8 +50,8 @@ public class PcapHandler {
 	public static boolean compareMACs(final byte[] a, final byte[] b) {
 		boolean sameMAC = true;
 
-		for(int j = 0; j < 6; j++) {
-			if(a[j] != b[j]) {
+		for (int j = 0; j < 6; j++) {
+			if (a[j] != b[j]) {
 				sameMAC = false;
 				break;
 			}
@@ -76,7 +76,7 @@ public class PcapHandler {
 		final int timeout = 10 * 1000;
 		final StringBuilder errbuf = new StringBuilder();
 
-		if(device == null) {
+		if (device == null) {
 			throw new IOException();
 		}
 
@@ -96,7 +96,7 @@ public class PcapHandler {
 	 */
 	private static PcapIf getDevice(final byte[] deviceMACAddress)
 			throws IOException {
-		if(alldevs == null) {
+		if (alldevs == null) {
 			alldevs = new ArrayList<PcapIf>(); // Will be filled with
 			alldevsAdress = new ArrayList<byte[]>();
 			// NICs
@@ -106,20 +106,20 @@ public class PcapHandler {
 			int r = 0;
 			try {
 				r = Pcap.findAllDevs(alldevs, errbuf);
-			} catch(final NoClassDefFoundError e) {
+			} catch (final NoClassDefFoundError e) {
 				// System.out.println("[Warning] NoClassDefFoundError. jnetpcap probably not installed.");
 				r = 0;
 			}
-			if((r == Pcap.NOT_OK) || alldevs.isEmpty()) {
+			if ((r == Pcap.NOT_OK) || alldevs.isEmpty()) {
 				throw new IOException();
 			}
-			for(int i = 0; i < alldevs.size(); i++) {
+			for (int i = 0; i < alldevs.size(); i++) {
 				alldevsAdress.add(alldevs.get(i).getHardwareAddress());
 			}
 		}
 
-		for(final byte[] address : alldevsAdress) {
-			if((address != null) && compareMACs(deviceMACAddress, address)) {
+		for (final byte[] address : alldevsAdress) {
+			if ((address != null) && compareMACs(deviceMACAddress, address)) {
 				return alldevs.get(alldevsAdress.indexOf(address));
 			}
 		}

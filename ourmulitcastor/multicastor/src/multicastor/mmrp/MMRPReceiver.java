@@ -54,11 +54,11 @@ public class MMRPReceiver extends MMRPEntity {
 	public void stopLoop() {
 		stop = true;
 
-		final byte[] data = { (byte)0x00, (byte)0x00 };
+		final byte[] data = { (byte) 0x00, (byte) 0x00 };
 		try {
 			PacketHandler.sendPacket(deviceMACAddress, DataPacket
 					.getDataPacket(deviceMACAddress, streamMACAddress, data));
-		} catch(final IOException e) {
+		} catch (final IOException e) {
 			e.printStackTrace();
 		}
 	}
@@ -74,7 +74,7 @@ public class MMRPReceiver extends MMRPEntity {
 		found = false;
 		foundPacket = buffer;
 
-		while(!found) {
+		while (!found) {
 			pcap.loop(1, pcapPacketHandler, "");
 		}
 

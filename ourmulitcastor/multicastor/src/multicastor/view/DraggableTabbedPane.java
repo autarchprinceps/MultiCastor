@@ -16,7 +16,6 @@ import javax.swing.JTabbedPane;
 import multicastor.controller.ViewController;
 import multicastor.lang.LanguageManager;
 
-
 /**
  * Die Klasse DraggableTabbedPane erbt von JTabbedPane und laesst zusaetzlich zu
  * JTabbed Pane ein grafish ansprechendes verschieben von Tabs per Drag&Drop zu.
@@ -56,21 +55,23 @@ public class DraggableTabbedPane extends JTabbedPane {
 			@Override
 			public void mouseDragged(final MouseEvent e) {
 
-				if(!dragging && !draggingPlus) {
+				if (!dragging && !draggingPlus) {
 					// Gets the tab index based on the mouse position
 					final int tabNumber = getUI().tabForCoordinate(
 							DraggableTabbedPane.this, e.getX(), e.getY());
 
 					// TabCount-1 is the Plus Tab therefore set an extra flag
 					// and not dragging
-					if(tabNumber == (getTabCount() - 1)) {
+					if (tabNumber == (getTabCount() - 1)) {
 						draggingPlus = true;
-					} else if(tabNumber >= 0) {
+					} else if (tabNumber >= 0) {
 						draggedTabIndex = tabNumber;
-						bounds = getUI().getTabBounds(DraggableTabbedPane.this, tabNumber);
+						bounds = getUI().getTabBounds(DraggableTabbedPane.this,
+								tabNumber);
 
 						// Paint the tabbed pane to a buffer
-						final Image totalImage = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_ARGB);
+						final Image totalImage = new BufferedImage(getWidth(),
+								getHeight(), BufferedImage.TYPE_INT_ARGB);
 						final Graphics totalGraphics = totalImage.getGraphics();
 						totalGraphics.setClip(bounds);
 
@@ -80,7 +81,8 @@ public class DraggableTabbedPane extends JTabbedPane {
 						paintComponent(totalGraphics);
 
 						// Paint just the dragged tab to the buffer
-						tabImage = new BufferedImage(bounds.width, bounds.height, BufferedImage.TYPE_INT_ARGB);
+						tabImage = new BufferedImage(bounds.width,
+								bounds.height, BufferedImage.TYPE_INT_ARGB);
 						final Graphics graphics = tabImage.getGraphics();
 						graphics.drawImage(totalImage, 0, 0, bounds.width,
 								bounds.height, bounds.x, bounds.y, bounds.x
@@ -95,14 +97,14 @@ public class DraggableTabbedPane extends JTabbedPane {
 						repaint();
 					}
 				} else {
-					final int X = (int)e.getPoint().getX() - mouseRelX;
+					final int X = (int) e.getPoint().getX() - mouseRelX;
 					final int Y = mouseRelY;
 					currentMouseLocation = new Point(X, Y);
 
-					if(getUI().tabForCoordinate(DraggableTabbedPane.this,
+					if (getUI().tabForCoordinate(DraggableTabbedPane.this,
 							e.getX(), 10) != draggedTabIndex) {
 						final int returnValue = insertIt(e);
-						if(returnValue != -1) {
+						if (returnValue != -1) {
 							draggedTabIndex = returnValue;
 						}
 					}
@@ -127,15 +129,15 @@ public class DraggableTabbedPane extends JTabbedPane {
 			@Override
 			public void mouseReleased(final MouseEvent e) {
 
-				if(dragging) {
+				if (dragging) {
 					final int tabNumber = getUI().tabForCoordinate(
 							DraggableTabbedPane.this, e.getX(), 10);
-					if(tabNumber >= 0) {
+					if (tabNumber >= 0) {
 						insertIt(e);
 					}
 				}
 
-				if(draggingPlus) {
+				if (draggingPlus) {
 					draggingPlus = false;
 				}
 
@@ -154,15 +156,15 @@ public class DraggableTabbedPane extends JTabbedPane {
 	 *            Tab geoeffnet werden soll
 	 */
 	public void closeTab(final String command) {
-		if(command.equals(" " + lang.getProperty("tab.l3r") + " ")) {
-			frame.getMi_open_l(1,0).setSelected(false);
-		} else if(command.equals(" " + lang.getProperty("tab.l3s") + " ")) {
-			frame.getMi_open_l(1,1).setSelected(false);
-		} else if(command.equals(" " + lang.getProperty("tab.l2r") + " ")) {
-			frame.getMi_open_l(0,0).setSelected(false);
-		} else if(command.equals(" " + lang.getProperty("tab.l2s") + " ")) {
-			frame.getMi_open_l(0,1).setSelected(false);
-		} else if(command.equals(" " + lang.getProperty("mi.about") + " ")) {
+		if (command.equals(" " + lang.getProperty("tab.l3r") + " ")) {
+			frame.getMi_open_l(1, 0).setSelected(false);
+		} else if (command.equals(" " + lang.getProperty("tab.l3s") + " ")) {
+			frame.getMi_open_l(1, 1).setSelected(false);
+		} else if (command.equals(" " + lang.getProperty("tab.l2r") + " ")) {
+			frame.getMi_open_l(0, 0).setSelected(false);
+		} else if (command.equals(" " + lang.getProperty("tab.l2s") + " ")) {
+			frame.getMi_open_l(0, 1).setSelected(false);
+		} else if (command.equals(" " + lang.getProperty("mi.about") + " ")) {
 			frame.getMi_open_about().setSelected(false);
 		}
 	}
@@ -178,19 +180,19 @@ public class DraggableTabbedPane extends JTabbedPane {
 		final int openTabsCount = getTabCount();
 		Integer index = -1;
 
-		for(int i = 0; i < openTabsCount; i++) {
+		for (int i = 0; i < openTabsCount; i++) {
 			openTabs.put(getTitleAt(i), i);
 		}
 
-		if(command.equals("open_layer3_r")) {
+		if (command.equals("open_layer3_r")) {
 			index = openTabs.get(" " + lang.getProperty("tab.l3r") + " ");
-		} else if(command.equals("open_layer3_s")) {
+		} else if (command.equals("open_layer3_s")) {
 			index = openTabs.get(" " + lang.getProperty("tab.l3s") + " ");
-		} else if(command.equals("open_layer2_r")) {
+		} else if (command.equals("open_layer2_r")) {
 			index = openTabs.get(" " + lang.getProperty("tab.l2r") + " ");
-		} else if(command.equals("open_layer2_s")) {
+		} else if (command.equals("open_layer2_s")) {
 			index = openTabs.get(" " + lang.getProperty("tab.l2s") + " ");
-		} else if(command.equals("open_about")) {
+		} else if (command.equals("open_about")) {
 			index = openTabs.get(" " + lang.getProperty("mi.about") + " ");
 		}
 
@@ -207,7 +209,7 @@ public class DraggableTabbedPane extends JTabbedPane {
 	public void openOrCloseTab(final String command) {
 		final int index = getIndex(command.substring(2));
 
-		if(index != -1) {
+		if (index != -1) {
 			closeTab(getTitleAt(index));
 			this.remove(index);
 		} else {
@@ -229,78 +231,69 @@ public class DraggableTabbedPane extends JTabbedPane {
 		// System.out.println("open tab: [["+command+"]]");
 		final int openTabsCount = getTabCount();
 
-		for(int i = 0; i < openTabsCount; i++) {
+		for (int i = 0; i < openTabsCount; i++) {
 			openTabs.put(getTitleAt(i), i);
 		}
 
-		if(command.equals("open_layer3_r")) {
+		if (command.equals("open_layer3_r")) {
 			// Pruefen ob Tab bereits geoeffnet ist
-			if(openTabs.containsKey(" " + lang.getProperty("tab.l3r") + " ")) {
+			if (openTabs.containsKey(" " + lang.getProperty("tab.l3r") + " ")) {
 				// Wenn ja holen wir uns die ID und focusieren(oeffnen) ihn
 				setSelectedIndex(openTabs.get(" " + lang.getProperty("tab.l3r")
 						+ " "));
 			} else {
 				insertTab(" " + lang.getProperty("tab.l3r") + " ", null,
-						frame.getPanel(0,1), null, openTabsCount - 1);
+						frame.getPanel(0, 1), null, openTabsCount - 1);
 				setTabComponentAt(openTabsCount - 1, new ButtonTabComponent(
-						this,
-						"/multicastor/images/ipv6receiver.png",
-						vCtrl));
+						this, "/multicastor/images/ipv6receiver.png", vCtrl));
 				setSelectedIndex(openTabsCount - 1);
 			}
-			frame.getMi_open_l(1,0).setSelected(true);
-		} else if(command.equals("open_layer3_s")) {
-			if(openTabs.containsKey(" " + lang.getProperty("tab.l3s") + " ")) {
+			frame.getMi_open_l(1, 0).setSelected(true);
+		} else if (command.equals("open_layer3_s")) {
+			if (openTabs.containsKey(" " + lang.getProperty("tab.l3s") + " ")) {
 				setSelectedIndex(openTabs.get(" " + lang.getProperty("tab.l3s")
 						+ " "));
 			} else {
 				insertTab(" " + lang.getProperty("tab.l3s") + " ", null,
-						frame.getPanel(1,1), null, openTabsCount - 1);
+						frame.getPanel(1, 1), null, openTabsCount - 1);
 				setTabComponentAt(openTabsCount - 1, new ButtonTabComponent(
-						this,
-						"/multicastor/images/ipv6sender.png",
-						vCtrl));
+						this, "/multicastor/images/ipv6sender.png", vCtrl));
 				setSelectedIndex(openTabsCount - 1);
 			}
-			frame.getMi_open_l(1,1).setSelected(true);
-		} else if(command.equals("open_layer2_s")) {
-			if(openTabs.containsKey(" " + lang.getProperty("tab.l2s") + " ")) {
+			frame.getMi_open_l(1, 1).setSelected(true);
+		} else if (command.equals("open_layer2_s")) {
+			if (openTabs.containsKey(" " + lang.getProperty("tab.l2s") + " ")) {
 				setSelectedIndex(openTabs.get(" " + lang.getProperty("tab.l2s")
 						+ " "));
 			} else {
 				insertTab(" " + lang.getProperty("tab.l2s") + " ", null,
-						frame.getPanel(1,0), null, openTabsCount - 1);
+						frame.getPanel(1, 0), null, openTabsCount - 1);
 				setTabComponentAt(openTabsCount - 1, new ButtonTabComponent(
-						this,
-						"/multicastor/images/ipv4sender.png",
-						vCtrl));
+						this, "/multicastor/images/ipv4sender.png", vCtrl));
 				setSelectedIndex(openTabsCount - 1);
 			}
-			frame.getMi_open_l(0,1).setSelected(true);
-		} else if(command.equals("open_layer2_r")) {
-			if(openTabs.containsKey(" " + lang.getProperty("tab.l2r") + " ")) {
+			frame.getMi_open_l(0, 1).setSelected(true);
+		} else if (command.equals("open_layer2_r")) {
+			if (openTabs.containsKey(" " + lang.getProperty("tab.l2r") + " ")) {
 				setSelectedIndex(openTabs.get(" " + lang.getProperty("tab.l2r")
 						+ " "));
 			} else {
 				insertTab(" " + lang.getProperty("tab.l2r") + " ", null,
-						frame.getPanel(0,0), null, openTabsCount - 1);
+						frame.getPanel(0, 0), null, openTabsCount - 1);
 				setTabComponentAt(openTabsCount - 1, new ButtonTabComponent(
-						this,
-						"/multicastor/images/ipv4receiver.png",
-						vCtrl));
+						this, "/multicastor/images/ipv4receiver.png", vCtrl));
 				setSelectedIndex(openTabsCount - 1);
 			}
-			frame.getMi_open_l(0,0).setSelected(true);
-		} else if(command.equals("open_about")) {
-			if(openTabs.containsKey(" " + lang.getProperty("mi.about") + " ")) {
+			frame.getMi_open_l(0, 0).setSelected(true);
+		} else if (command.equals("open_about")) {
+			if (openTabs.containsKey(" " + lang.getProperty("mi.about") + " ")) {
 				setSelectedIndex(openTabs.get(" "
 						+ lang.getProperty("mi.about") + " "));
 			} else {
 				insertTab(" " + lang.getProperty("mi.about") + " ", null,
 						frame.getPanel_about(), null, openTabsCount - 1);
 				setTabComponentAt(openTabsCount - 1, new ButtonTabComponent(
-						this, "/multicastor/images/about.png",
-						vCtrl));
+						this, "/multicastor/images/about.png", vCtrl));
 				setSelectedIndex(openTabsCount - 1);
 			}
 			frame.getMi_open_about().setSelected(true);
@@ -319,7 +312,7 @@ public class DraggableTabbedPane extends JTabbedPane {
 		super.paintComponent(g);
 
 		// Are we dragging?
-		if(dragging && (currentMouseLocation != null) && (tabImage != null)) {
+		if (dragging && (currentMouseLocation != null) && (tabImage != null)) {
 			// Draw the dragged tab
 			g.drawImage(tabImage, currentMouseLocation.x,
 					currentMouseLocation.y, this);
@@ -337,7 +330,7 @@ public class DraggableTabbedPane extends JTabbedPane {
 		final int tabNumber = getUI().tabForCoordinate(
 				DraggableTabbedPane.this, e.getX(), 10);
 
-		if((tabNumber >= 0) && (tabNumber != (getTabCount() - 1))
+		if ((tabNumber >= 0) && (tabNumber != (getTabCount() - 1))
 				&& (draggedTabIndex != (getTabCount() - 1)) && !draggingPlus) {
 			final Component comp = getComponentAt(draggedTabIndex);
 			final Component buttonTabComp = getTabComponentAt(draggedTabIndex);

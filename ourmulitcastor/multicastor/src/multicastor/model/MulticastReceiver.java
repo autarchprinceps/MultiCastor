@@ -51,16 +51,16 @@ public class MulticastReceiver extends MulticastThreadSuper {
 	 */
 	public MulticastReceiver(final MulticastData m, final Logger logger) {
 		super(m);
-		
+
 		length = 65575;
 		buf = new byte[length];
 		lang = LanguageManager.getInstance();
-		
-		if(logger == null) {
+
+		if (logger == null) {
 			System.out.println(lang.getProperty("error.mr.logger"));
 			return;
 		}
-		if(m == null) {
+		if (m == null) {
 			logger.log(Level.WARNING, lang.getProperty("error.mr.mcdata"));
 			return;
 		}
@@ -73,7 +73,7 @@ public class MulticastReceiver extends MulticastThreadSuper {
 			multicastSocket = new MulticastSocket(m.getUdpPort());
 			// Der Empfaenger nutzt alle verfuegbaren Netzwerkschnittstellen
 			multicastSocket.setInterface(mcData.getSourceIp());
-		} catch(final IOException e) {
+		} catch (final IOException e) {
 			logger.log(
 					Level.WARNING,
 					"'" + e.getMessage() + "' "
@@ -82,7 +82,7 @@ public class MulticastReceiver extends MulticastThreadSuper {
 				final int udpPort = 4711;
 				mcData.setUdpPort(udpPort);
 				multicastSocket = new MulticastSocket(udpPort);
-			} catch(final IOException e2) {
+			} catch (final IOException e2) {
 				logger.log(Level.WARNING, e.getMessage());
 				return;
 			}
@@ -120,7 +120,7 @@ public class MulticastReceiver extends MulticastThreadSuper {
 					Level.INFO,
 					mcData.identify() + ": "
 							+ lang.getProperty("message.receiverMcObj"));
-		} catch(final IOException e1) {
+		} catch (final IOException e1) {
 			// Setzt Aktivwerte wieder auf false und gibt eine Fehlermeldung aus
 			mcData.setActive(false);
 			active = false;
@@ -153,7 +153,7 @@ public class MulticastReceiver extends MulticastThreadSuper {
 		// local variables
 		final DatagramPacket datagram = new DatagramPacket(buf, length);
 
-		while(active) {
+		while (active) {
 			try {
 				multicastSocket.setSoTimeout(1000);
 				multicastSocket.receive(datagram);
@@ -162,8 +162,8 @@ public class MulticastReceiver extends MulticastThreadSuper {
 				// Analyse received packet
 				// ********************************************
 				packetAnalyzer.analyzePacket(datagram.getData());
-			} catch(final IOException e) {
-				if(e instanceof SocketTimeoutException) {
+			} catch (final IOException e) {
+				if (e instanceof SocketTimeoutException) {
 					// bei Timeout erfaehrt es der PacketAnalyzer wegen
 					// Interrupts
 					packetAnalyzer.setTimeout(true);
@@ -192,7 +192,7 @@ public class MulticastReceiver extends MulticastThreadSuper {
 	 */
 	@Override
 	public void setActive(final boolean b) {
-		if(b) {
+		if (b) {
 			setStillRunning(true);
 			// Verhindert eine "recentlyChanged"-Markierung direkt nach dem
 			// Starten
@@ -241,7 +241,7 @@ public class MulticastReceiver extends MulticastThreadSuper {
 	 * Schreibt lauter Einsen in den Buffer.
 	 */
 	private void initializeBuf() {
-		for(int i = 0; i < buf.length; i++) {
+		for (int i = 0; i < buf.length; i++) {
 			buf[i] = 1;
 		}
 	}
@@ -259,7 +259,7 @@ public class MulticastReceiver extends MulticastThreadSuper {
 					Level.INFO,
 					mcData.identify() + ": "
 							+ lang.getProperty("message.mcgroupMcobj"));
-		} catch(final IOException e) {
+		} catch (final IOException e) {
 			logger.log(
 					Level.WARNING,
 					mcData.identify() + ": "

@@ -111,7 +111,7 @@ public class PacketBuilder implements
 		int pos = 0, hIDlength = 0;
 
 		// Wenn die Host-ID zu lang ist, wird sie abgeschnitten
-		if(hostID.length() <= 25) {
+		if (hostID.length() <= 25) {
 			hIDlength = hostID.length();
 		} else {
 			hIDlength = 25;
@@ -119,12 +119,12 @@ public class PacketBuilder implements
 		// Setzen der Host-ID
 		System.arraycopy(hostID.getBytes(), 0, buf, pos, hIDlength);
 		// Rest der hostID mit Nullen auffuellen
-		for(pos = hIDlength; pos < 25; pos++) {
+		for (pos = hIDlength; pos < 25; pos++) {
 			buf[pos] = 0; // pos: 25
 		}
 
 		final int tmp = randomID.length();
-		if(tmp > 7) {
+		if (tmp > 7) {
 			System.arraycopy(
 					ByteTools.convertToByte(Integer.parseInt(
 							randomID.substring(tmp - 1), 16)
@@ -143,7 +143,7 @@ public class PacketBuilder implements
 		System.arraycopy(ByteTools.convertToShortByte(txPktRate), 0, buf, pos,
 				2);
 		pos += 2; // pos: 37
-		buf[pos] = (byte)ttl;
+		buf[pos] = (byte) ttl;
 		pos++; // pos: 38
 		System.arraycopy(ByteTools.convertToByte(reset), 0, buf, pos, 4);
 		pos += 4; // pos: 42
@@ -159,8 +159,8 @@ public class PacketBuilder implements
 		// Wenn ptkLength kleiner als die erforderte Mindestlaenge ist, wird
 		// pktLength
 		// praktisch ignoriert
-		for(; pos < pktLength; pos++) {
-			buf[pos] = (byte)0;
+		for (; pos < pktLength; pos++) {
+			buf[pos] = (byte) 0;
 		}
 	}
 }

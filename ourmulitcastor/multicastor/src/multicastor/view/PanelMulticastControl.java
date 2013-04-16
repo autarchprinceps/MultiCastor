@@ -8,7 +8,6 @@ import javax.swing.JPanel;
 import multicastor.controller.ViewController;
 import multicastor.lang.LanguageManager;
 
-
 /**
  * Das Kontrollpanel fuer Multicasts. Mit diesem Panel koennen Multicasts
  * gestartet, gestoppt und geloescht werden.
@@ -89,7 +88,7 @@ public class PanelMulticastControl extends JPanel {
 	 */
 	private void initButtons(final ViewController ctrl, final boolean firstInit) {
 
-		if(firstInit) {
+		if (firstInit) {
 			start_stop = new JButton();
 			delete = new JButton();
 			select_deselect_all = new JButton();

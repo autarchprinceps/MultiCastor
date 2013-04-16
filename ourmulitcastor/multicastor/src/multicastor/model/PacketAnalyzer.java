@@ -132,12 +132,12 @@ public class PacketAnalyzer {
 	 */
 	public PacketAnalyzer(final MulticastData multicastData,
 			final Logger logger, final int pLength) {
-		if(multicastData == null) {
+		if (multicastData == null) {
 			System.out
 					.println("Bueser Fehler!!! multicastData ist null im PacketAnalyzer.");
 		}
 		mcData = multicastData;
-		if(logger == null) {
+		if (logger == null) {
 			System.out
 					.println("Bueser Fehler!!! Message Queue ist null im PacketAnalyzer.");
 		}
@@ -170,13 +170,13 @@ public class PacketAnalyzer {
 	 */
 	public void analyzePacket(final byte[] mcPacket) {
 		// System.out.println(Arrays.toString(mcPacket));
-		if(mcPacket.length != length) {
+		if (mcPacket.length != length) {
 			logger.log(Level.SEVERE,
 					"Invalid Packet Receivied in analysePacket()");
 			return;
 		}
 
-		if(getComplete()) {
+		if (getComplete()) {
 			analyzePacketOnce(mcPacket);
 			setComplete(false);
 		}
@@ -195,7 +195,7 @@ public class PacketAnalyzer {
 		System.arraycopy(mcPacket, 0, snippet, 0, 25);
 		// Ende des Strings suchen
 		int eof = 0;
-		for(; (eof < 25) && (snippet[eof] != 0); eof++) {
+		for (; (eof < 25) && (snippet[eof] != 0); eof++) {
 			;
 		}
 
@@ -207,8 +207,8 @@ public class PacketAnalyzer {
 
 		// Hirschmann Tool Erkennung. Wenn auch nicht mit Checksumme, sondern
 		// ueber den Text
-		if(hostID.equals("Hirschmann IP Test-Multicast")) {
-			if(check) {
+		if (hostID.equals("Hirschmann IP Test-Multicast")) {
+			if (check) {
 				logger.log(Level.INFO,
 						"Muahaha - Pakete vom Hirschmann Tool entdeckt.");
 				check = false;
@@ -221,7 +221,7 @@ public class PacketAnalyzer {
 		threadID = ByteTools.shortByteToInt(shortSnippet);
 
 		// tracks how much the senderID changes
-		if(!senderID.equals(hostID + threadID)) {
+		if (!senderID.equals(hostID + threadID)) {
 			senderID = hostID + threadID;
 			senderChanges++;
 		}
@@ -230,18 +230,18 @@ public class PacketAnalyzer {
 		System.arraycopy(mcPacket, 31, intSnippet, 0, 4);
 		final int packetcount = ByteTools.byteToInt(intSnippet);
 
-		if(packetcount != internerPacketCount) {
-			if(missingPackets.contains(packetcount)) { // werden hier die
+		if (packetcount != internerPacketCount) {
+			if (missingPackets.contains(packetcount)) { // werden hier die
 														// Pointer oder die
 														// Werte verglichen???
-				missingPackets.remove((Object)packetcount);
+				missingPackets.remove((Object) packetcount);
 			} else {
 				// if (internerPacketCount > packetcount)
 				// System.out.println("packetcount entspricht nicht dem erwarteten Wert - MulticastReceiver !!!!!! packetcount: "
 				// + packetcount + "\tinternerPC: " + internerPacketCount);
-				if(((packetcount - internerPacketCount) < 1000)
+				if (((packetcount - internerPacketCount) < 1000)
 						&& (internerPacketCount > 0)) {
-					for(int n = internerPacketCount; n < packetcount; n++) {
+					for (int n = internerPacketCount; n < packetcount; n++) {
 						missingPackets.add(internerPacketCount);
 					}
 				} else {
@@ -261,7 +261,7 @@ public class PacketAnalyzer {
 		timeStampSe = ByteTools.byteToLong(longSnippet);
 		timeStampRe = System.nanoTime();
 
-		if(dTimeStamp1 != 0) {
+		if (dTimeStamp1 != 0) {
 			dTimeStamp2 = dTimeStamp1;
 			dTimeStamp1 = timeStampRe - timeStampSe;
 			jitterHelper += Math.abs(dTimeStamp2 - dTimeStamp1);
@@ -289,7 +289,7 @@ public class PacketAnalyzer {
 	public void analyzePacketOnce(final byte[] mcPacket) {
 		// Die Bufferlaenge fuer Pakete ist im MulticastReceiver
 		// festgelegt und darf davon nicht abweichen
-		if(mcPacket.length != length) {
+		if (mcPacket.length != length) {
 			logger.log(Level.SEVERE,
 					"Invalid Packet Receivied in analysePacketOnce()");
 			return;
@@ -298,8 +298,8 @@ public class PacketAnalyzer {
 		final byte[] shortSnippet = new byte[2];
 
 		// figure out packet length and save it to mcData
-		for(int i = length - 1; i > 0; i--) {
-			if(mcPacket[i] != 1) {
+		for (int i = length - 1; i > 0; i--) {
+			if (mcPacket[i] != 1) {
 				packetLength = i + 1;
 				i = 0;
 			}
@@ -317,14 +317,14 @@ public class PacketAnalyzer {
 		System.arraycopy(mcPacket, 42, checksum, 0, 2);
 		System.arraycopy(mcPacket, 0, snippetForChecksum, 0, 42);
 		final byte[] cs = ByteTools.crc16(snippetForChecksum);
-		if((checksum[0] == cs[0]) && (checksum[1] == cs[1])) {
+		if ((checksum[0] == cs[0]) && (checksum[1] == cs[1])) {
 			source = Source.MULTICASTOR;
 		} else {
 			source = Source.UNDEFINED;
 		}
 		// ist hier etwas redundant ... aber ist noch, weil es die Checksumme
 		// nicht nutzt
-		if((hostID != null) && (hostID.equals("Hirschmann-Tool SenderID:"))) {
+		if ((hostID != null) && (hostID.equals("Hirschmann-Tool SenderID:"))) {
 			source = Source.HIRSCHMANN;
 		}
 	}
@@ -373,7 +373,7 @@ public class PacketAnalyzer {
 	 *            Werte.
 	 */
 	public void setComplete(final boolean b) {
-		synchronized(complete) {
+		synchronized (complete) {
 			complete = b;
 		}
 	}
@@ -408,10 +408,10 @@ public class PacketAnalyzer {
 	 *            <code>TRUE</code> aufrufen.
 	 */
 	public void setTimeout(final boolean timeout) {
-		if((!timeout) && (this.timeout != timeout)) {
+		if ((!timeout) && (this.timeout != timeout)) {
 			interruptiontimeAvgHelper += interruptiontime;
 			interruptiontime = 0;
-		} else if((timeout) && (this.timeout != timeout)) {
+		} else if ((timeout) && (this.timeout != timeout)) {
 			interruptionCounter++;
 		}
 		this.timeout = timeout;
@@ -440,13 +440,13 @@ public class PacketAnalyzer {
 	 */
 	public void update() {
 		mcData.setNumberOfInterruptions(interruptionCounter);
-		if(interruptionCounter != 0) {
+		if (interruptionCounter != 0) {
 			mcData.setAverageInterruptionTime(interruptiontimeAvgHelper
 					/ interruptionCounter);
 		}
-		if(timeout) {
+		if (timeout) {
 			interruptiontime++;
-			if(mcData.getMaxInterruptionTime() < interruptiontime) {
+			if (mcData.getMaxInterruptionTime() < interruptiontime) {
 				mcData.setMaxInterruptionTime(interruptiontime);
 			}
 		}
@@ -474,13 +474,13 @@ public class PacketAnalyzer {
 		// ********************************************
 		// Writes calculated data
 		// ********************************************
-		if((recently_changed >= 0) && (senderChanges < 2)) {
+		if ((recently_changed >= 0) && (senderChanges < 2)) {
 			recently_changed--;
 			mcData.setSenders(senderState.RECENTLY_CHANGED);
 		} else {
-			if(senderChanges > 1) {
+			if (senderChanges > 1) {
 				mcData.setSenders(senderState.MULTIPLE);
-			} else if((senderChanges == 1) && (lastActivated <= 0)) {
+			} else if ((senderChanges == 1) && (lastActivated <= 0)) {
 				recently_changed = 4;
 				mcData.setSenders(senderState.RECENTLY_CHANGED);
 			} else {
@@ -490,7 +490,7 @@ public class PacketAnalyzer {
 		senderChanges = 0;
 
 		// Jitter
-		if(packetrate_counter > 1) {
+		if (packetrate_counter > 1) {
 			final int j = jitterHelper / (packetrate_counter - 1);
 			jitterAvgHelper += j;
 			mcData.setJitter(j);
@@ -529,7 +529,7 @@ public class PacketAnalyzer {
 	 * </ul>
 	 */
 	public void updateMin() {
-		if(updateMinHelper != 0) {
+		if (updateMinHelper != 0) {
 			mcData.setJitterAvg(jitterAvgHelper / updateMinHelper);
 			jitterAvgHelper = 0;
 
@@ -552,7 +552,7 @@ public class PacketAnalyzer {
 	 * returnt den <code>complete</code> Wert.
 	 */
 	private Boolean getComplete() {
-		synchronized(complete) {
+		synchronized (complete) {
 			return complete;
 		}
 	}

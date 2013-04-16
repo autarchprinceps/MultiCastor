@@ -51,70 +51,70 @@ public class MiscBorder extends TitledBorder {
 	 */
 	public static TitledBorder getBorder(final BorderTitle title,
 			final BorderType bordertype) {
-		if(b_neutral.size() == 0) {
+		if (b_neutral.size() == 0) {
 			lang = LanguageManager.getInstance();
 			reloadLanguage();
 		}
-		switch(bordertype) {
-			case NEUTRAL:
-				switch(title) {
-					case L3GROUP:
-						return b_neutral.get(0);
-					case L3SOURCE:
-						return b_neutral.get(1);
-					case PORT:
-						return b_neutral.get(2);
-					case RATE:
-						return b_neutral.get(3);
-					case LENGTH:
-						return b_neutral.get(4);
-					case TTL:
-						return b_neutral.get(5);
-					case L2GROUP:
-						return b_neutral.get(6);
-					case L2SOURCE:
-						return b_neutral.get(7);
-				}
-				break;
-			case TRUE:
-				switch(title) {
-					case L3GROUP:
-						return b_true.get(0);
-					case L3SOURCE:
-						return b_true.get(1);
-					case PORT:
-						return b_true.get(2);
-					case RATE:
-						return b_true.get(3);
-					case LENGTH:
-						return b_true.get(4);
-					case TTL:
-						return b_true.get(5);
-					case L2GROUP:
-						return b_true.get(6);
-					case L2SOURCE:
-						return b_true.get(7);
-				}
-				break;
-			case FALSE:
-				switch(title) {
-					case L3GROUP:
-						return b_false.get(0);
-					case L3SOURCE:
-						return b_false.get(1);
-					case PORT:
-						return b_false.get(2);
-					case RATE:
-						return b_false.get(3);
-					case LENGTH:
-						return b_false.get(4);
-					case TTL:
-						return b_false.get(5);
-					case L2GROUP:
-						return b_false.get(6);
-					case L2SOURCE:
-						return b_false.get(7);
-				}
+		switch (bordertype) {
+		case NEUTRAL:
+			switch (title) {
+			case L3GROUP:
+				return b_neutral.get(0);
+			case L3SOURCE:
+				return b_neutral.get(1);
+			case PORT:
+				return b_neutral.get(2);
+			case RATE:
+				return b_neutral.get(3);
+			case LENGTH:
+				return b_neutral.get(4);
+			case TTL:
+				return b_neutral.get(5);
+			case L2GROUP:
+				return b_neutral.get(6);
+			case L2SOURCE:
+				return b_neutral.get(7);
+			}
+			break;
+		case TRUE:
+			switch (title) {
+			case L3GROUP:
+				return b_true.get(0);
+			case L3SOURCE:
+				return b_true.get(1);
+			case PORT:
+				return b_true.get(2);
+			case RATE:
+				return b_true.get(3);
+			case LENGTH:
+				return b_true.get(4);
+			case TTL:
+				return b_true.get(5);
+			case L2GROUP:
+				return b_true.get(6);
+			case L2SOURCE:
+				return b_true.get(7);
+			}
+			break;
+		case FALSE:
+			switch (title) {
+			case L3GROUP:
+				return b_false.get(0);
+			case L3SOURCE:
+				return b_false.get(1);
+			case PORT:
+				return b_false.get(2);
+			case RATE:
+				return b_false.get(3);
+			case LENGTH:
+				return b_false.get(4);
+			case TTL:
+				return b_false.get(5);
+			case L2GROUP:
+				return b_false.get(6);
+			case L2SOURCE:
+				return b_false.get(7);
+			}
 		}
 		return null;
 	}
@@ -129,15 +129,15 @@ public class MiscBorder extends TitledBorder {
 				lang.getProperty("miscBorder.timeToLive"),
 				lang.getProperty("miscBorder.MacGroupAddress"),
 				lang.getProperty("miscBorder.NetworkInterface") };
-		if(b_neutral.size() == 0) {
-			for(final String ipv4Name : ipv4Names) {
+		if (b_neutral.size() == 0) {
+			for (final String ipv4Name : ipv4Names) {
 				b_neutral.add(createBorder(ipv4Name, neutralTextColor,
 						neutralLineColor));
 				b_true.add(createBorder(ipv4Name, enabledColor, enabledColor));
 				b_false.add(createBorder(ipv4Name, disabledColor, disabledColor));
 			}
 		} else {
-			for(int i = 0; i < ipv4Names.length; i++) {
+			for (int i = 0; i < ipv4Names.length; i++) {
 				b_neutral.get(i).setTitle(ipv4Names[i]);
 				b_true.get(i).setTitle(ipv4Names[i]);
 				b_false.get(i).setTitle(ipv4Names[i]);
@@ -159,8 +159,8 @@ public class MiscBorder extends TitledBorder {
 	 */
 	private static TitledBorder createBorder(final String title,
 			final Color titleColor, final Color lineColor) {
-		return new TitledBorder(new LineBorder(lineColor),
-				title, TitledBorder.LEFT, TitledBorder.TOP, f, titleColor);
+		return new TitledBorder(new LineBorder(lineColor), title,
+				TitledBorder.LEFT, TitledBorder.TOP, f, titleColor);
 	}
 
 	/**

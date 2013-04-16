@@ -1,4 +1,5 @@
 package multicastor.view;
+
 //FrameMain delete?
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -12,7 +13,6 @@ import javax.swing.JPanel;
 import multicastor.controller.ViewController;
 import multicastor.lang.LanguageManager;
 
-
 /**
  * Klasse, die den Inhalt des "+"-Panels definiert. Im "+" Panel erscheint eine
  * ss�bersicht, welche die Moeglichkeit bietet, alle verfuegbaren Panels zu
@@ -24,7 +24,7 @@ public class PanelPlus extends JPanel {
 
 	private JButton about;
 	private JLabel aboutText;
-	//private final FrameMain frame;
+	// private final FrameMain frame;
 	private JButton[][] lrs = new JButton[2][2];
 	private JLabel[][] lrsText = new JLabel[2][2];
 
@@ -41,9 +41,9 @@ public class PanelPlus extends JPanel {
 	 * @param pVCtrl
 	 *            Instanz des ViewControllers.
 	 */
-	public PanelPlus(/*final FrameMain pFrame,*/ final ViewController pVCtrl) {
+	public PanelPlus(/* final FrameMain pFrame, */final ViewController pVCtrl) {
 		vCtrl = pVCtrl;
-		//frame = pFrame;
+		// frame = pFrame;
 		lang = LanguageManager.getInstance();
 		initComponents(true);
 	}
@@ -64,14 +64,14 @@ public class PanelPlus extends JPanel {
 	 *            werden oder nicht.
 	 */
 	private void initComponents(final boolean firstInit) {
-		if(firstInit) {
+		if (firstInit) {
 			final GridBagLayout gridBayLayout = new GridBagLayout();
 			setLayout(gridBayLayout);
 
 			lrs[0][1] = new JButton();
 			lrs[0][1].setMinimumSize(new Dimension(100, 100));
-			gridBayLayout.setConstraints(lrs[0][1], new GridBagConstraints(0, 0, 1,
-					1, 1.0, 1.0, GridBagConstraints.CENTER,
+			gridBayLayout.setConstraints(lrs[0][1], new GridBagConstraints(0,
+					0, 1, 1, 1.0, 1.0, GridBagConstraints.CENTER,
 					GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
 			lrs[0][1].setIcon(new ImageIcon(getClass().getResource(
 					"/multicastor/images/ipv4sender.png")));
@@ -80,14 +80,14 @@ public class PanelPlus extends JPanel {
 			lrs[0][1].addActionListener(vCtrl);
 			add(lrs[0][1]);
 			lrsText[0][1] = new JLabel();
-			gridBayLayout.setConstraints(lrsText[0][1], new GridBagConstraints(1, 0,
-					1, 1, 1.0, 1.0, GridBagConstraints.CENTER,
+			gridBayLayout.setConstraints(lrsText[0][1], new GridBagConstraints(
+					1, 0, 1, 1, 1.0, 1.0, GridBagConstraints.CENTER,
 					GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
 			add(lrsText[0][1]);
 
 			lrs[0][0] = new JButton();
-			gridBayLayout.setConstraints(lrs[0][0], new GridBagConstraints(0, 1, 1,
-					1, 1.0, 1.0, GridBagConstraints.CENTER,
+			gridBayLayout.setConstraints(lrs[0][0], new GridBagConstraints(0,
+					1, 1, 1, 1.0, 1.0, GridBagConstraints.CENTER,
 					GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
 			lrs[0][0].setIcon(new ImageIcon(getClass().getResource(
 					"/multicastor/images/ipv4receiver.png")));
@@ -96,14 +96,14 @@ public class PanelPlus extends JPanel {
 			lrs[0][0].addActionListener(vCtrl);
 			add(lrs[0][0]);
 			lrsText[0][0] = new JLabel();
-			gridBayLayout.setConstraints(lrsText[0][0], new GridBagConstraints(1, 1,
-					1, 1, 1.0, 1.0, GridBagConstraints.CENTER,
+			gridBayLayout.setConstraints(lrsText[0][0], new GridBagConstraints(
+					1, 1, 1, 1, 1.0, 1.0, GridBagConstraints.CENTER,
 					GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
 			add(lrsText[0][0]);
 
 			lrs[1][1] = new JButton();
-			gridBayLayout.setConstraints(lrs[1][1], new GridBagConstraints(0, 2, 1,
-					1, 1.0, 1.0, GridBagConstraints.CENTER,
+			gridBayLayout.setConstraints(lrs[1][1], new GridBagConstraints(0,
+					2, 1, 1, 1.0, 1.0, GridBagConstraints.CENTER,
 					GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
 			lrs[1][1].setIcon(new ImageIcon(getClass().getResource(
 					"/multicastor/images/ipv6sender.png")));
@@ -112,14 +112,14 @@ public class PanelPlus extends JPanel {
 			lrs[1][1].addActionListener(vCtrl);
 			add(lrs[1][1]);
 			lrsText[1][1] = new JLabel();
-			gridBayLayout.setConstraints(lrsText[1][1], new GridBagConstraints(1, 2,
-					1, 1, 1.0, 1.0, GridBagConstraints.CENTER,
+			gridBayLayout.setConstraints(lrsText[1][1], new GridBagConstraints(
+					1, 2, 1, 1, 1.0, 1.0, GridBagConstraints.CENTER,
 					GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
 			add(lrsText[1][1]);
 
 			lrs[1][0] = new JButton();
-			gridBayLayout.setConstraints(lrs[1][0], new GridBagConstraints(0, 3, 1,
-					1, 1.0, 1.0, GridBagConstraints.CENTER,
+			gridBayLayout.setConstraints(lrs[1][0], new GridBagConstraints(0,
+					3, 1, 1, 1.0, 1.0, GridBagConstraints.CENTER,
 					GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
 			lrs[1][0].setIcon(new ImageIcon(getClass().getResource(
 					"/multicastor/images/ipv6receiver.png")));
@@ -128,8 +128,8 @@ public class PanelPlus extends JPanel {
 			lrs[1][0].addActionListener(vCtrl);
 			add(lrs[1][0]);
 			lrsText[1][0] = new JLabel();
-			gridBayLayout.setConstraints(lrsText[1][0], new GridBagConstraints(1, 3,
-					1, 1, 1.0, 1.0, GridBagConstraints.CENTER,
+			gridBayLayout.setConstraints(lrsText[1][0], new GridBagConstraints(
+					1, 3, 1, 1, 1.0, 1.0, GridBagConstraints.CENTER,
 					GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
 			add(lrsText[1][0]);
 
@@ -162,7 +162,7 @@ public class PanelPlus extends JPanel {
 		lrsText[1][0].setText(lang.getProperty("plus.l3rDescription"));
 		aboutText.setText(lang.getProperty("plus.aboutDescription"));
 
-		if(!firstInit) {
+		if (!firstInit) {
 			// do Layout is needes for for auto resize elements
 			doLayout();
 		}

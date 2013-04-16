@@ -31,7 +31,7 @@ public abstract class MulticastThreadSuper implements Runnable {
 	 * @return Wird <code>TRUE</code> zurueckgegeben laeuft der Thread.
 	 */
 	public boolean isStillRunning() {
-		synchronized(stillRunning) {
+		synchronized (stillRunning) {
 			return stillRunning;
 		}
 	}
@@ -62,7 +62,7 @@ public abstract class MulticastThreadSuper implements Runnable {
 	 *            Neuer Zustand.
 	 */
 	protected void setStillRunning(final Boolean b) {
-		synchronized(stillRunning) {
+		synchronized (stillRunning) {
 			stillRunning = b;
 		}
 	}

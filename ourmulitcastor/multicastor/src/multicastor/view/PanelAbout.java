@@ -23,7 +23,8 @@ public class PanelAbout extends javax.swing.JPanel {
 			{ "Kai Brennenstuhl", "Nick Herrmannsdörfer", "Stefan Hessler",
 					"Patrick Robinson", "Erwin Stamm" } };
 
-	private final JLabel[] labelAbout = { new JLabel(), new JLabel(), new JLabel() };
+	private final JLabel[] labelAbout = { new JLabel(), new JLabel(),
+			new JLabel() };
 	private final JLabel labelLicense = new JLabel();
 	private final JLabel[] labelMC = { new JLabel(), new JLabel() };
 	private LanguageManager lang;

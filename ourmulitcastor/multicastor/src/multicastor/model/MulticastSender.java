@@ -19,7 +19,6 @@ import multicastor.interfaces.MulticastSenderInterface;
 import multicastor.interfaces.MulticastThreadSuper;
 import multicastor.lang.LanguageManager;
 
-
 /**
  * Die MultiCastSender-Klasse kuemmert sich um das tatsuechliche Senden der
  * Multicast- Objekte ueber das Netzwerk. Sie extended
@@ -98,12 +97,12 @@ public class MulticastSender extends MulticastThreadSuper implements
 	 */
 	public MulticastSender(final MulticastData mcBean, final Logger _logger) {
 		super(mcBean);
-		
+
 		messages = _logger;
 		// Den hostName setzen
 		try {
 			mcData.setHostID(InetAddress.getLocalHost().getHostName());
-		} catch(final UnknownHostException e) {
+		} catch (final UnknownHostException e) {
 			proclaim(
 					1,
 					lang.getProperty("error.network.noHostName") + "\n"
@@ -113,7 +112,7 @@ public class MulticastSender extends MulticastThreadSuper implements
 		// uebrige Variablen initialisieren
 		myPacketBuilder = new PacketBuilder(mcData);
 		udpPort = mcData.getUdpPort();
-		ttl = (byte)mcData.getTtl();
+		ttl = (byte) mcData.getTtl();
 		packetRateDes = mcData.getPacketRateDesired();
 
 		mcGroupIp = mcData.getGroupIp();
@@ -122,7 +121,7 @@ public class MulticastSender extends MulticastThreadSuper implements
 		// einen MultiCastSocket initiieren
 		try {
 			mcSocket = new MulticastSocket(udpPort);
-		} catch(final IOException e) {
+		} catch (final IOException e) {
 			proclaim(
 					1,
 					"'"
@@ -134,7 +133,7 @@ public class MulticastSender extends MulticastThreadSuper implements
 				udpPort = 4711; // Default-Port
 				mcData.setUdpPort(udpPort);
 				mcSocket = new MulticastSocket(udpPort);
-			} catch(final IOException e2) {
+			} catch (final IOException e2) {
 				proclaim(1, lang.getProperty("error.network.settingUDP") + " "
 						+ e.getMessage());
 				proclaim(-1, lang.getProperty("error.network.noDefaultPort"));
@@ -145,17 +144,17 @@ public class MulticastSender extends MulticastThreadSuper implements
 		// Network-Adapter setzen (Source-IP)
 		try {
 			mcSocket.setInterface(sourceIp);
-		} catch(final IOException e) {
+		} catch (final IOException e) {
 			proclaim(1, lang.getProperty("error.network.sourceIP") + " "
 					+ sourceIp + ": " + e.getMessage());
 		}
 
 		// Luenge der Pause zwischen den Multicasts in Millisekunden und
 		// Nanusekunden setzen
-		pausePeriodMs = (int)(1000.0 / mcData.getPacketRateDesired()); // Pause
+		pausePeriodMs = (int) (1000.0 / mcData.getPacketRateDesired()); // Pause
 																		// in
 																		// Milisekunden
-		pausePeriodNs = (int)(((1000.0 / mcData.getPacketRateDesired()) - pausePeriodMs) * 1000000.0); // "Rest"-Pausenzeit(alles
+		pausePeriodNs = (int) (((1000.0 / mcData.getPacketRateDesired()) - pausePeriodMs) * 1000000.0); // "Rest"-Pausenzeit(alles
 																										// kleiner
 																										// als
 																										// 1ms)
@@ -198,7 +197,7 @@ public class MulticastSender extends MulticastThreadSuper implements
 							+ mcData.getGroupIp() + " "
 							+ lang.getProperty("message.joinMcPart1") + " "
 							+ usedMethod + ".");
-		} catch(final IOException e) {
+		} catch (final IOException e) {
 			proclaim(
 					1,
 					lang.getProperty("message.unableToJoin") + " "
@@ -210,7 +209,7 @@ public class MulticastSender extends MulticastThreadSuper implements
 		// TTL setzen
 		try {
 			mcSocket.setTimeToLive(ttl);
-		} catch(final IOException e) {
+		} catch (final IOException e) {
 			proclaim(1, lang.getProperty("message.settingTTLErr") + " " + ttl);
 		}
 
@@ -218,11 +217,11 @@ public class MulticastSender extends MulticastThreadSuper implements
 		// zur Sicherheit ein paar mehr als eins...
 		myPacketBuilder.setReset(true);
 		try {
-			for(int i = 0; i < 3; i++) {
+			for (int i = 0; i < 3; i++) {
 				mcSocket.send(new DatagramPacket(myPacketBuilder.getPacket(),
 						mcData.getPacketLength(), mcGroupIp, udpPort));
 			}
-		} catch(final IOException e) {
+		} catch (final IOException e) {
 			proclaim(
 					1,
 					lang.getProperty("message.resetPackets") + " "
@@ -239,153 +238,153 @@ public class MulticastSender extends MulticastThreadSuper implements
 		// Wurde bei setActive keine Methode angegeben, wird standartmueueig
 		// die
 		// PEAK-Methode verwendet.
-		switch(usedMethod) {
-			case NO_SLEEP: // ohne sleep, unter Volllast
-				while(isSending) {
-					try {
-						mcSocket.send(new DatagramPacket(myPacketBuilder
-								.getPacket(), mcData.getPacketLength(),
-								mcGroupIp, udpPort));
-						if(totalPacketCount < 65535) {
-							totalPacketCount++;
-						} else {
-							totalPacketCount = 0;
-						}
-						resetablePcktCnt++;
-
-					} catch(final IOException e1) {
-						proclaim(1, lang.getProperty("message.whileSending")
-								+ e1.getMessage());
+		switch (usedMethod) {
+		case NO_SLEEP: // ohne sleep, unter Volllast
+			while (isSending) {
+				try {
+					mcSocket.send(new DatagramPacket(myPacketBuilder
+							.getPacket(), mcData.getPacketLength(), mcGroupIp,
+							udpPort));
+					if (totalPacketCount < 65535) {
+						totalPacketCount++;
+					} else {
+						totalPacketCount = 0;
 					}
+					resetablePcktCnt++;
+
+				} catch (final IOException e1) {
+					proclaim(
+							1,
+							lang.getProperty("message.whileSending")
+									+ e1.getMessage());
 				}
-				break;
-			case PEAK:
-				// Misst wie lange er sendt um die Paketrate zu erhalten
-				// und sleept den Rest der Sekunde
-				long endTime = 0,
-				timeLeft = 0;
-				while(isSending) {
-					// Sleep wenn noch etwas von der letzten Sekunde uebrig
-					timeLeft = endTime - System.nanoTime();
-					if(timeLeft > 0) {
-						try {
-							Thread.sleep(timeLeft / 1000000,
-									(int)(timeLeft % 1000000));
-						} catch(final InterruptedException e) {
-							proclaim(1, lang.getProperty("message.sleepPeak")
-									+ e.getMessage());
-						}
-					}
-					endTime = System.nanoTime() + 1000000000; // Plus 1s (in ns)
-					if(lastIOExceptionCnt <= 10) {
-						lastIOExceptionCnt++;
-					}
-					do {
-						try {
-
-							mcSocket.send(new DatagramPacket(myPacketBuilder
-									.getPacket(), mcData.getPacketLength(),
-									mcGroupIp, udpPort));
-							if(totalPacketCount < 65535) {
-								totalPacketCount++;
-							} else {
-								totalPacketCount = 0;
-							}
-							resetablePcktCnt++;
-
-							// V1.5 [FH] added for networkfail foo
-							if(ioExceptionCnt != 0) {
-								mcData.setSenders(senderState.SINGLE);
-								proclaim(
-										2,
-										lang.getProperty("message.senderWorkingAgain"));
-								JOptionPane
-										.showMessageDialog(
-												new JFrame(),
-												lang.getProperty("message.senderWorkingAgain"));
-								ioExceptionCnt = 0;
-							}
-							lastIOExceptionCnt = 0;
-
-						} catch(final IOException e1) {
-							if(lastIOExceptionCnt >= 10) {// V1.5 [FH] Made this
-															// Code work
-								final Object[] options = { "Stop Sender",
-										"Reattemp to connect" };
-
-								mcData.setSenders(senderState.NETWORK_ERROR);
-
-								if(ioExceptionCnt == 1) {
-									proclaim(
-											1,
-											lang.getProperty("message.problemIp")
-													+ "'"
-													+ sourceIp
-													+ "'. "
-													+ lang.getProperty("message.tryReconnect"));
-								}
-
-								if(ioExceptionCnt == 10) {
-									if(JOptionPane
-											.showOptionDialog(
-													null,
-													lang.getProperty("message.senderFail")
-															+ " "
-															+ lang.getProperty("message.senderViaIp")
-															+ " ("
-															+ sourceIp
-															+ ").",
-													lang.getProperty("message.sendingWarning"),
-													JOptionPane.DEFAULT_OPTION,
-													JOptionPane.WARNING_MESSAGE,
-													null, options, options[0]) == 0) {
-										endIt();
-									} else {
-										ioExceptionCnt = 1;
-									}
-								}
-
-								ioExceptionCnt++;
-							}
-						} catch(final IllegalArgumentException e) {
-						}
-
-					} while(((totalPacketCount % packetRateDes) != 0)
-							&& isSending);
-				}
-				break;
-
-			case SLEEP_MULTIPLE: // mit Thread.sleep zwischen jedem Senden
-			default:
-				while(isSending) {
+			}
+			break;
+		case PEAK:
+			// Misst wie lange er sendt um die Paketrate zu erhalten
+			// und sleept den Rest der Sekunde
+			long endTime = 0,
+			timeLeft = 0;
+			while (isSending) {
+				// Sleep wenn noch etwas von der letzten Sekunde uebrig
+				timeLeft = endTime - System.nanoTime();
+				if (timeLeft > 0) {
 					try {
-						mcSocket.send(new DatagramPacket(myPacketBuilder
-								.getPacket(), mcData.getPacketLength(),
-								mcGroupIp, udpPort));
-						if(totalPacketCount < 65535) {
-							totalPacketCount++;
-						} else {
-							totalPacketCount = 0;
-						}
-						resetablePcktCnt++;
-						Thread.sleep(pausePeriodMs, pausePeriodNs);
-					} catch(final IOException e1) {
-						proclaim(1, lang.getProperty("message.whileSending")
-								+ " " + e1.getMessage());
-					} catch(final InterruptedException e2) {
+						Thread.sleep(timeLeft / 1000000,
+								(int) (timeLeft % 1000000));
+					} catch (final InterruptedException e) {
 						proclaim(
 								1,
-								lang.getProperty("message.whileSendingSleepFail")
-										+ " " + e2.getMessage());
+								lang.getProperty("message.sleepPeak")
+										+ e.getMessage());
 					}
 				}
+				endTime = System.nanoTime() + 1000000000; // Plus 1s (in ns)
+				if (lastIOExceptionCnt <= 10) {
+					lastIOExceptionCnt++;
+				}
+				do {
+					try {
+
+						mcSocket.send(new DatagramPacket(myPacketBuilder
+								.getPacket(), mcData.getPacketLength(),
+								mcGroupIp, udpPort));
+						if (totalPacketCount < 65535) {
+							totalPacketCount++;
+						} else {
+							totalPacketCount = 0;
+						}
+						resetablePcktCnt++;
+
+						// V1.5 [FH] added for networkfail foo
+						if (ioExceptionCnt != 0) {
+							mcData.setSenders(senderState.SINGLE);
+							proclaim(
+									2,
+									lang.getProperty("message.senderWorkingAgain"));
+							JOptionPane.showMessageDialog(new JFrame(), lang
+									.getProperty("message.senderWorkingAgain"));
+							ioExceptionCnt = 0;
+						}
+						lastIOExceptionCnt = 0;
+
+					} catch (final IOException e1) {
+						if (lastIOExceptionCnt >= 10) {// V1.5 [FH] Made this
+														// Code work
+							final Object[] options = { "Stop Sender",
+									"Reattemp to connect" };
+
+							mcData.setSenders(senderState.NETWORK_ERROR);
+
+							if (ioExceptionCnt == 1) {
+								proclaim(
+										1,
+										lang.getProperty("message.problemIp")
+												+ "'"
+												+ sourceIp
+												+ "'. "
+												+ lang.getProperty("message.tryReconnect"));
+							}
+
+							if (ioExceptionCnt == 10) {
+								if (JOptionPane
+										.showOptionDialog(
+												null,
+												lang.getProperty("message.senderFail")
+														+ " "
+														+ lang.getProperty("message.senderViaIp")
+														+ " ("
+														+ sourceIp
+														+ ").",
+												lang.getProperty("message.sendingWarning"),
+												JOptionPane.DEFAULT_OPTION,
+												JOptionPane.WARNING_MESSAGE,
+												null, options, options[0]) == 0) {
+									endIt();
+								} else {
+									ioExceptionCnt = 1;
+								}
+							}
+
+							ioExceptionCnt++;
+						}
+					} catch (final IllegalArgumentException e) {
+					}
+
+				} while (((totalPacketCount % packetRateDes) != 0) && isSending);
+			}
+			break;
+
+		case SLEEP_MULTIPLE: // mit Thread.sleep zwischen jedem Senden
+		default:
+			while (isSending) {
+				try {
+					mcSocket.send(new DatagramPacket(myPacketBuilder
+							.getPacket(), mcData.getPacketLength(), mcGroupIp,
+							udpPort));
+					if (totalPacketCount < 65535) {
+						totalPacketCount++;
+					} else {
+						totalPacketCount = 0;
+					}
+					resetablePcktCnt++;
+					Thread.sleep(pausePeriodMs, pausePeriodNs);
+				} catch (final IOException e1) {
+					proclaim(1, lang.getProperty("message.whileSending") + " "
+							+ e1.getMessage());
+				} catch (final InterruptedException e2) {
+					proclaim(1,
+							lang.getProperty("message.whileSendingSleepFail")
+									+ " " + e2.getMessage());
+				}
+			}
 		}
 
 		// MulticastGruppe verlassen, da Senden von Multicast (im Moment)
 		// beendet
 		try {
 			mcSocket.leaveGroup(mcGroupIp);
-		} catch(final IOException e) {
+		} catch (final IOException e) {
 			proclaim(1, e.getMessage());
 		}
 		proclaim(
@@ -412,7 +411,7 @@ public class MulticastSender extends MulticastThreadSuper implements
 	 */
 	@Override
 	public void setActive(final boolean active) {
-		if(active) {
+		if (active) {
 			// Setzen der ThreadID, da diese evtl.
 			// im Controller noch einmal geuendert wird
 			myPacketBuilder.alterThreadID(mcData.getThreadID());
@@ -492,15 +491,15 @@ public class MulticastSender extends MulticastThreadSuper implements
 	private void proclaim(final int level, String mssg) {
 		Level l;
 		mssg = mcData.identify() + ": " + mssg;
-		switch(level) {
-			case 1:
-				l = Level.WARNING;
-				break;
-			case 2:
-				l = Level.INFO;
-				break;
-			default:
-				l = Level.SEVERE;
+		switch (level) {
+		case 1:
+			l = Level.WARNING;
+			break;
+		case 2:
+			l = Level.INFO;
+			break;
+		default:
+			l = Level.SEVERE;
 		}
 		messages.log(l, mssg);
 	}

@@ -11,7 +11,6 @@ import multicastor.data.MulticastData;
 import multicastor.interfaces.MulticastThreadSuper;
 import multicastor.lang.LanguageManager;
 
-
 /**
  * UpdateTask ist ein Timer, der die Oberflaeche/Tabelle aktuallisiert
  */
@@ -67,7 +66,7 @@ public class UpdateTask extends TimerTask {
 		final Runtime rt = Runtime.getRuntime();
 
 		// V1.5 [FH] Pruefung des Memories. Ob noch mehr als 10% frei sind
-		if(!memoryWarned
+		if (!memoryWarned
 				&& ((rt.freeMemory() + (rt.maxMemory() - rt.totalMemory())) < (rt
 						.maxMemory() * 0.1))) {
 			logger.warning(lang.getProperty("warning.memory.title")
@@ -81,45 +80,45 @@ public class UpdateTask extends TimerTask {
 			memoryWarned = true;
 		}
 
-		for(int i = 0; i < 4; i++) {
-			switch(i) {
-				case 0:
-					v = mc_sender_l3;
-					break;
-				case 1:
-					v = mc_receiver_l3;
-					break;
-				case 2:
-					v = mc_sender_l2;
-					break;
-				case 3:
-					v = mc_receiver_l2;
-					break;
+		for (int i = 0; i < 4; i++) {
+			switch (i) {
+			case 0:
+				v = mc_sender_l3;
+				break;
+			case 1:
+				v = mc_receiver_l3;
+				break;
+			case 2:
+				v = mc_sender_l2;
+				break;
+			case 3:
+				v = mc_receiver_l2;
+				break;
 			}
-			for(final Entry<MulticastData, MulticastThreadSuper> m : v
+			for (final Entry<MulticastData, MulticastThreadSuper> m : v
 					.entrySet()) {
 				value = m.getValue();
-				if(value.getMultiCastData().isActive()) {
+				if (value.getMultiCastData().isActive()) {
 					value.update();
 				}
 			}
 		}
 
-		if(viewController != null) {
-			if(viewController.isInitFinished()) {
+		if (viewController != null) {
+			if (viewController.isInitFinished()) {
 				viewController.viewUpdate();
 			}
 		}
 
 		// V1.5 [FH] added !MemoryWarning, because if we have a memory warning
 		// it is always taking longer
-		if(!memoryWarnedForLog
+		if (!memoryWarnedForLog
 				&& (((System.nanoTime() - time1) / 1000000) > 200)) {
 			logger.log(Level.INFO, lang.getProperty("info.longUpdateTime")
 					+ ": " + ((System.nanoTime() - time1) / 1000000)
 					+ " ms !!!!!!!!!!!!");
-			if(((System.nanoTime() - time1) / 1000000) > 300) {
-				if(viewController != null) {
+			if (((System.nanoTime() - time1) / 1000000) > 300) {
+				if (viewController != null) {
 					logger.log(Level.WARNING,
 							lang.getProperty("warning.longUpdateTime"));
 				}

@@ -19,12 +19,13 @@ public abstract class MiscFont {
 	 */
 	static {
 		try {
-			mc_font = Font.createFont(Font.PLAIN, MiscFont.class.getResourceAsStream("/multicastor/fonts/MC.ttf"));
-		} catch(final FontFormatException e) {
+			mc_font = Font.createFont(Font.PLAIN, MiscFont.class
+					.getResourceAsStream("/multicastor/fonts/MC.ttf"));
+		} catch (final FontFormatException e) {
 			System.out.println("ERROR: Font format exception! Program Exit!");
 			e.printStackTrace();
 			System.exit(0);
-		} catch(final IOException e) {
+		} catch (final IOException e) {
 			System.out.println("ERROR: Font File not found! Program Exit!");
 			e.printStackTrace();
 			System.exit(0);

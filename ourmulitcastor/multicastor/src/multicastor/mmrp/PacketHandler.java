@@ -21,7 +21,7 @@ public class PacketHandler {
 			final byte[] packet) throws IOException {
 		final Pcap pcap = PcapHandler.getPcapInstance(deviceMACAddress);
 		final ByteBuffer b = ByteBuffer.wrap(packet);
-		if(pcap.sendPacket(b) != Pcap.OK) {
+		if (pcap.sendPacket(b) != Pcap.OK) {
 			System.err.println(pcap.getErr());
 		}
 		pcap.close();

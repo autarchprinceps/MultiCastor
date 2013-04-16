@@ -10,7 +10,6 @@ import org.jdesktop.swingx.JXTable;
 
 import multicastor.controller.ViewController;
 
-
 /**
  * Abstrakte Klasse welche fuer die Generierung von PopupMenus im Programm
  * zustaendig ist. Bisher wurden nur Popups fuer den Tabellenkopf implementiert,
@@ -31,11 +30,11 @@ public abstract class PopUpMenu {
 		final int count = ctrl.getTable(ctrl.getSelectedTab()).getModel()
 				.getColumnCount();
 		columns = new JCheckBox[count];
-		for(int i = 0; i < count; i++) {
+		for (int i = 0; i < count; i++) {
 			final String columnName = ctrl.getTable(ctrl.getSelectedTab())
 					.getModel().getColumnName(i);
 			columns[i] = new JCheckBox(columnName);
-			if((i == 0) || (i == 1)) {
+			if ((i == 0) || (i == 1)) {
 				columns[i].setSelected(true);
 				columns[i].setEnabled(false);
 			}
@@ -60,7 +59,7 @@ public abstract class PopUpMenu {
 	public static void createTableHeaderPopup(final JXTable table,
 			final ViewController ctrl, final MouseEvent e) {
 		createColumnCheckBoxes(ctrl);
-		if(menuPopUp != null) {
+		if (menuPopUp != null) {
 			menuPopUp.setVisible(false);
 		}
 		menuPopUp = new JPopupMenu();
@@ -69,7 +68,7 @@ public abstract class PopUpMenu {
 		final JMenuItem mi_showALL = new JMenuItem("Reset View");
 		selectedColumn = ctrl.getTable(ctrl.getSelectedTab()).getColumnModel()
 				.getColumnIndexAtX(e.getX());
-		if((ctrl.getUserInputData(ctrl.getSelectedTab()).getOriginalIndex(
+		if ((ctrl.getUserInputData(ctrl.getSelectedTab()).getOriginalIndex(
 				selectedColumn) == 0)
 				|| (ctrl.getUserInputData(ctrl.getSelectedTab())
 						.getOriginalIndex(selectedColumn) == 1)) {
@@ -81,7 +80,7 @@ public abstract class PopUpMenu {
 		mi_showALL.setActionCommand("showall");
 		menuPopUp.add(mi_hide);
 		menuPopUp.add(m_columns);
-		for(int x = 0; x < columns.length; x++) {
+		for (int x = 0; x < columns.length; x++) {
 			m_columns.add(columns[ctrl.getUserInputData(ctrl.getSelectedTab())
 					.getColumnOrder().get(x).intValue()]);
 		}
@@ -98,7 +97,7 @@ public abstract class PopUpMenu {
 	}
 
 	public static boolean isPopUpVisible() {
-		if(menuPopUp != null) {
+		if (menuPopUp != null) {
 			return menuPopUp.isVisible();
 		}
 		return false;
@@ -112,10 +111,10 @@ public abstract class PopUpMenu {
 	 *            Benoetigte Referenz zum GUI Controller
 	 */
 	public static void updateCheckBoxes(final ViewController ctrl) {
-		for(int x = 0; x < 11; x++) {
-			for(int i = 0; i < ctrl.getUserInputData(ctrl.getSelectedTab())
+		for (int x = 0; x < 11; x++) {
+			for (int i = 0; i < ctrl.getUserInputData(ctrl.getSelectedTab())
 					.getColumnVisbility().size(); i++) {
-				if(ctrl.getUserInputData(ctrl.getSelectedTab())
+				if (ctrl.getUserInputData(ctrl.getSelectedTab())
 						.getColumnOrder().get(x).intValue() == ctrl
 						.getUserInputData(ctrl.getSelectedTab())
 						.getColumnVisbility().get(i).intValue()) {

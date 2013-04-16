@@ -17,7 +17,6 @@ import multicastor.controller.ViewController;
 import multicastor.data.MulticastData.Typ;
 import multicastor.lang.LanguageManager;
 
-
 /**
  * Ein Panel welches jeweils einen kompletten Programmteil beinhaltet. Durch
  * diese Panels kann man im Programm tabben.
@@ -115,9 +114,9 @@ public class PanelTabbed extends JPanel {
 		return pan_options;
 	}
 
-//	public ReceiverGraph getPan_recGraph() {
-//		return ((ReceiverGraph)pan_graph);
-//	}
+	// public ReceiverGraph getPan_recGraph() {
+	// return ((ReceiverGraph)pan_graph);
+	// }
 
 	public JPanel getPan_space() {
 		return pan_space;
@@ -180,18 +179,18 @@ public class PanelTabbed extends JPanel {
 	 */
 	public void setPanels(final boolean config, final boolean control,
 			final boolean status, final boolean console, final boolean graph) {
-		if(!config && !control) {
+		if (!config && !control) {
 			pan_left.setVisible(false);
 		} else {
 			pan_config.setVisible(config);
 			pan_control.setVisible(control);
 		}
-		if(!console && !graph) {
+		if (!console && !graph) {
 			tab_console.setVisible(false);
-		} else if(!console) {
+		} else if (!console) {
 			ta_console.setVisible(false);
 			tab_console.remove(1);
-		} else if(!graph) {
+		} else if (!graph) {
 			pan_graph.setVisible(false);
 			tab_console.remove(0);
 		}
@@ -213,11 +212,11 @@ public class PanelTabbed extends JPanel {
 	public void setTableModel(final ViewController ctrl, final Typ typ) {
 		model = new MiscTableModel(ctrl, typ);
 		table.setModel(model);
-		//table.setRowSorter(model.getSorter());
+		// table.setRowSorter(model.getSorter());
 		final TableColumnModel colmodel = table.getColumnModel();
 		final Enumeration<TableColumn> e = colmodel.getColumns();
 		columns = new ArrayList<TableColumn>();
-		while(e.hasMoreElements()) {
+		while (e.hasMoreElements()) {
 			columns.add(e.nextElement());
 		}
 		colmodel.addColumnModelListener(ctrl);
@@ -235,7 +234,7 @@ public class PanelTabbed extends JPanel {
 		colmodel.getColumn(5).setPreferredWidth(60);
 
 		// V1.5: L2 und L3 Sender hinzugefuegt
-		if(typ == Typ.L3_SENDER) {
+		if (typ == Typ.L3_SENDER) {
 			colmodel.getColumn(6).setMinWidth(50);
 			colmodel.getColumn(7).setMinWidth(60);
 			colmodel.getColumn(8).setMinWidth(60);
@@ -246,7 +245,7 @@ public class PanelTabbed extends JPanel {
 			colmodel.getColumn(10).setMinWidth(60);
 			colmodel.getColumn(9).setPreferredWidth(30);
 			colmodel.getColumn(10).setPreferredWidth(60);
-		} else if(typ == Typ.L2_SENDER) {
+		} else if (typ == Typ.L2_SENDER) {
 			colmodel.getColumn(4).setMinWidth(70);
 			colmodel.getColumn(5).setMinWidth(70);
 			colmodel.getColumn(6).setMinWidth(80);
@@ -257,7 +256,7 @@ public class PanelTabbed extends JPanel {
 			colmodel.getColumn(6).setPreferredWidth(80);
 			colmodel.getColumn(7).setPreferredWidth(80);
 			colmodel.getColumn(8).setPreferredWidth(80);
-		} else if(typ == Typ.L3_RECEIVER) {
+		} else if (typ == Typ.L3_RECEIVER) {
 			colmodel.getColumn(6).setMinWidth(50);
 			colmodel.getColumn(7).setMinWidth(60);
 			colmodel.getColumn(8).setMinWidth(60);
@@ -268,7 +267,7 @@ public class PanelTabbed extends JPanel {
 			colmodel.getColumn(9).setPreferredWidth(45);
 			colmodel.getColumn(10).setPreferredWidth(85);
 			colmodel.getColumn(10).setMinWidth(85);
-		} else if(typ == Typ.L2_RECEIVER) {
+		} else if (typ == Typ.L2_RECEIVER) {
 			colmodel.getColumn(6).setMinWidth(65);
 			colmodel.getColumn(7).setMinWidth(65);
 			colmodel.getColumn(8).setMinWidth(65);
@@ -302,7 +301,7 @@ public class PanelTabbed extends JPanel {
 		console_scrollpane.setPreferredSize(new Dimension(300, 100));
 
 		// V1.5: L2_SENDER und L3_SENDER hinzugefuegt
-		if((typ == Typ.L3_SENDER) || (typ == Typ.L2_SENDER)) {
+		if ((typ == Typ.L3_SENDER) || (typ == Typ.L2_SENDER)) {
 			pan_graph = new PanelGraph(500, lang.getProperty("graph.sec"),
 					lang.getProperty("graph.packetsPerSec"), false);
 		} else {
@@ -341,23 +340,18 @@ public class PanelTabbed extends JPanel {
 		table = new JXTable();
 		setTableModel(ctrl, typ);
 		// TODO FIXME Markierung
-		/*table.setDefaultRenderer(Object.class,
-				new WrappingCellRenderer(
-						table.getDefaultRenderer(Object.class), ctrl));
-		table.setDefaultRenderer(
-				Boolean.class,
-				new WrappingCellRenderer(table
-						.getDefaultRenderer(Boolean.class), ctrl));
-		table.setDefaultRenderer(
-				Integer.class,
-				new WrappingCellRenderer(table
-						.getDefaultRenderer(Integer.class), ctrl));
-		table.setDefaultRenderer(Double.class,
-				new WrappingCellRenderer(
-						table.getDefaultRenderer(Double.class), ctrl));
-		table.setDefaultRenderer(Long.class,
-				new WrappingCellRenderer(table.getDefaultRenderer(Long.class),
-						ctrl));*/
+		/*
+		 * table.setDefaultRenderer(Object.class, new WrappingCellRenderer(
+		 * table.getDefaultRenderer(Object.class), ctrl));
+		 * table.setDefaultRenderer( Boolean.class, new
+		 * WrappingCellRenderer(table .getDefaultRenderer(Boolean.class),
+		 * ctrl)); table.setDefaultRenderer( Integer.class, new
+		 * WrappingCellRenderer(table .getDefaultRenderer(Integer.class),
+		 * ctrl)); table.setDefaultRenderer(Double.class, new
+		 * WrappingCellRenderer( table.getDefaultRenderer(Double.class), ctrl));
+		 * table.setDefaultRenderer(Long.class, new
+		 * WrappingCellRenderer(table.getDefaultRenderer(Long.class), ctrl));
+		 */
 		table.setFont(MiscFont.getFont(0, 10));
 		table.getTableHeader().setFont(MiscFont.getFont(0, 10));
 		table.getSelectionModel().addListSelectionListener(ctrl);

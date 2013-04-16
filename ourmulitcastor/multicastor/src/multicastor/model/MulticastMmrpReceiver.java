@@ -58,23 +58,23 @@ public class MulticastMmrpReceiver extends MulticastThreadSuper {
 	public MulticastMmrpReceiver(final MulticastData multicastData,
 			final Logger logger) throws IOException {
 		super(multicastData);
-		
+
 		length = 1500;
 		buf = new byte[length];
 		lang = LanguageManager.getInstance();
-		
-		if(logger == null) {
+
+		if (logger == null) {
 			System.out.println(lang.getProperty("error.mr.logger"));
 			return;
 		}
-		if(multicastData == null) {
+		if (multicastData == null) {
 			logger.log(Level.WARNING, lang.getProperty("error.mr.mcdata"));
 			return;
 		}
 
 		try {
 			multicastData.setHostID(InetAddress.getLocalHost().getHostName());
-		} catch(final UnknownHostException e) {
+		} catch (final UnknownHostException e) {
 			proclaim(
 					1,
 					lang.getProperty("message.getHostname") + " "
@@ -86,7 +86,7 @@ public class MulticastMmrpReceiver extends MulticastThreadSuper {
 		try {
 			receiver = new MMRPReceiver(mcData.getMmrpSourceMac(),
 					mcData.getMmrpGroupMac());
-		} catch(final IOException e) {
+		} catch (final IOException e) {
 			proclaim(3, lang.getProperty("message.receiverInterfaceFail")
 					+ " (" + mcData.getMmrpSourceMacAsString() + ")");
 			throw new IOException();
@@ -111,18 +111,18 @@ public class MulticastMmrpReceiver extends MulticastThreadSuper {
 
 		try {
 			receiver.registerPath();
-		} catch(final IOException e) {
+		} catch (final IOException e) {
 			proclaim(3, lang.getProperty("message.registerReceiverPath"));
 			setActive(false);
-		} catch(final NullPointerException e) {
+		} catch (final NullPointerException e) {
 			proclaim(1, lang.getProperty("message.jnetpcapNotInstalled"));
 			setActive(false);
 		}
 
-		while(active) {
+		while (active) {
 			isStopped = receiver.waitForDataPacketAndGetIt(buf);
 			// packetAnalyzer.setTimeout(false);
-			if(isStopped) {
+			if (isStopped) {
 				packetAnalyzer.analyzePacket(buf);
 				initializeBuf();
 			}
@@ -140,9 +140,9 @@ public class MulticastMmrpReceiver extends MulticastThreadSuper {
 		try {
 			receiver.deregisterPath();
 
-		} catch(final IOException e) {
+		} catch (final IOException e) {
 			proclaim(3, lang.getProperty("message.deregisterReceiverPath"));
-		} catch(final NullPointerException e) {
+		} catch (final NullPointerException e) {
 			proclaim(1, lang.getProperty("message.jnetpcapNotInstalled"));
 		}
 	}
@@ -157,12 +157,12 @@ public class MulticastMmrpReceiver extends MulticastThreadSuper {
 	 */
 	@Override
 	public void setActive(final boolean b) {
-		if(active) {
+		if (active) {
 			active = b;
 			receiver.stopLoop();
 		}
 
-		if(b) {
+		if (b) {
 			setStillRunning(true);
 			// Verhindert eine "recentlyChanged"-Markierung direkt nach dem
 			// Starten
@@ -203,7 +203,7 @@ public class MulticastMmrpReceiver extends MulticastThreadSuper {
 	 * Schreibt lauter Einsen in den Buffer.
 	 */
 	private void initializeBuf() {
-		for(int i = 0; i < buf.length; i++) {
+		for (int i = 0; i < buf.length; i++) {
 			buf[i] = 1;
 		}
 	}
@@ -220,15 +220,15 @@ public class MulticastMmrpReceiver extends MulticastThreadSuper {
 	private void proclaim(final int level, String mssg) {
 		Level l;
 		mssg = mcData.identify() + ": " + mssg;
-		switch(level) {
-			case 1:
-				l = Level.WARNING;
-				break;
-			case 2:
-				l = Level.INFO;
-				break;
-			default:
-				l = Level.SEVERE;
+		switch (level) {
+		case 1:
+			l = Level.WARNING;
+			break;
+		case 2:
+			l = Level.INFO;
+			break;
+		default:
+			l = Level.SEVERE;
 		}
 		logger.log(l, mssg);
 	}

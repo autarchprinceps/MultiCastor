@@ -43,7 +43,7 @@ public class WideComboBox extends JComboBox {
 	@Override
 	public Dimension getSize() {
 		final Dimension dim = super.getSize();
-		if(!layingOut) {
+		if (!layingOut) {
 			dim.width = Math.max(dim.width, getPreferredSize().width);
 		}
 		return dim;

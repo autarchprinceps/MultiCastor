@@ -180,39 +180,39 @@ public class ViewController implements ActionListener, MouseListener,
 	public void actionPerformed(final ActionEvent e) {
 
 		// Wenn Draggable Tabbed Pane entfernt wurde
-		if(f.isPaneDel()) {
+		if (f.isPaneDel()) {
 			f.openPane();
 		}
 		// Wenn "Views" ausgewaehlt werden
-		if(e.getActionCommand().startsWith("open_layer")
+		if (e.getActionCommand().startsWith("open_layer")
 				|| e.getActionCommand().equals("open_about")) {
 			f.getTabpane().openTab(e.getActionCommand());
 		}
-		if(e.getActionCommand().startsWith("m_open_layer")
+		if (e.getActionCommand().startsWith("m_open_layer")
 				|| e.getActionCommand().equals("m_open_about")) {
 			f.getTabpane().openOrCloseTab(e.getActionCommand());
 		}
 
-		else if(e.getSource() == f.getMi_help()) {
+		else if (e.getSource() == f.getMi_help()) {
 			// Create File from help file path of current language file
 			File helpfile = new File("Language/help."
 					+ LanguageManager.getCurrentLanguage() + ".pdf");
-			if(!helpfile.exists()) {
+			if (!helpfile.exists()) {
 				// If there is no help file for current language use english
 				// file
 				helpfile = new File("Language/help.english.pdf");
 			}
 			// Check if Desktop is supportet in current environment
-			if(Desktop.isDesktopSupported()) {
+			if (Desktop.isDesktopSupported()) {
 				// Get desktop instance
 				final Desktop desktop = Desktop.getDesktop();
 
 				// Check if Open with standard Program is supported
-				if(desktop.isSupported(Desktop.Action.OPEN)) {
+				if (desktop.isSupported(Desktop.Action.OPEN)) {
 					// Show Help File with standart PDF-Reader
 					try {
 						desktop.open(helpfile);
-					} catch(final IOException e1) {
+					} catch (final IOException e1) {
 						JOptionPane
 								.showMessageDialog(
 										f,
@@ -244,20 +244,20 @@ public class ViewController implements ActionListener, MouseListener,
 			}
 		}
 
-		else if(e.getActionCommand().startsWith("change_lang_to")) {
+		else if (e.getActionCommand().startsWith("change_lang_to")) {
 			LanguageManager.setCurrentLanguage(e.getActionCommand()
 					.replaceFirst("change_lang_to_", ""));
 			f.reloadLanguage();
 			f.repaint();
 		}
 
-		else if(e.getSource() == f.getMi_saveconfig()) {
+		else if (e.getSource() == f.getMi_saveconfig()) {
 			saveGUIFileEvent();
 		}
 
-		else if(e.getSource() == f.getMi_saveAllMc()) {
+		else if (e.getSource() == f.getMi_saveAllMc()) {
 			// check if there are any Multicasts to save
-			if((mc.getMCs(Typ.L2_RECEIVER).size()
+			if ((mc.getMCs(Typ.L2_RECEIVER).size()
 					+ mc.getMCs(Typ.L3_RECEIVER).size()
 					+ mc.getMCs(Typ.L2_SENDER).size() + mc
 					.getMCs(Typ.L3_SENDER).size()) < 1) {
@@ -268,9 +268,9 @@ public class ViewController implements ActionListener, MouseListener,
 			}
 		}
 
-		else if(e.getSource() == f.getMi_saveSelectedMc()) {
+		else if (e.getSource() == f.getMi_saveSelectedMc()) {
 			// check if there are any Multicasts to save
-			if((f.getPanel(0, 0).getTable().getSelectedRowCount()
+			if ((f.getPanel(0, 0).getTable().getSelectedRowCount()
 					+ f.getPanel(0, 1).getTable().getSelectedRowCount()
 					+ f.getPanel(1, 0).getTable().getSelectedRowCount() + f
 					.getPanel(1, 1).getTable().getSelectedRowCount()) < 1) {
@@ -281,122 +281,125 @@ public class ViewController implements ActionListener, MouseListener,
 			}
 		}
 
-		else if(e.getSource() == f.getMi_loadconfig()) {
+		else if (e.getSource() == f.getMi_loadconfig()) {
 			loadGUIFileEvent();
 		}
 
-		else if(e.getSource() == f.getMi_loadMc()) {
+		else if (e.getSource() == f.getMi_loadMc()) {
 			loadFileEvent(false);
 		}
 
-		else if(e.getSource() == f.getMi_loadAdditionalMc()) {
+		else if (e.getSource() == f.getMi_loadAdditionalMc()) {
 			loadFileEvent(true);
-		
-		} else if(e.getSource() == f.getMi_exit()) {
+
+		} else if (e.getSource() == f.getMi_exit()) {
 			closeProgram();
 		}
 
-		else if(e.getSource() == f.getMi_setTitle()) {
+		else if (e.getSource() == f.getMi_setTitle()) {
 			final String temp = JOptionPane.showInputDialog(
 					lang.getProperty("message.setNewTitle"), f.getBaseTitle());
-			if(temp != null) {
+			if (temp != null) {
 				f.setBaseTitle(temp);
 				f.updateTitle();
 			}
 		}
 
 		// Add Button im Config Panel
-		else if(e.getSource() == getPanConfig(Typ.L3_SENDER).getBt_enter()) {
+		else if (e.getSource() == getPanConfig(Typ.L3_SENDER).getBt_enter()) {
 			pressBTenter(Typ.L3_SENDER);
-		} else if(e.getSource() == getPanConfig(Typ.L3_RECEIVER).getBt_enter()) {
+		} else if (e.getSource() == getPanConfig(Typ.L3_RECEIVER).getBt_enter()) {
 			pressBTenter(Typ.L3_RECEIVER);
-		} else if(e.getSource() == getPanConfig(Typ.L2_SENDER).getBt_enter()) {
+		} else if (e.getSource() == getPanConfig(Typ.L2_SENDER).getBt_enter()) {
 			pressBTenter(Typ.L2_SENDER);
-		} else if(e.getSource() == getPanConfig(Typ.L2_RECEIVER).getBt_enter()) {
+		} else if (e.getSource() == getPanConfig(Typ.L2_RECEIVER).getBt_enter()) {
 			pressBTenter(Typ.L2_RECEIVER);
 		}
 
 		// Active/Inactive Button im Config Panel
-		else if(e.getSource() == getPanConfig(Typ.L3_SENDER).getTb_active()) {
+		else if (e.getSource() == getPanConfig(Typ.L3_SENDER).getTb_active()) {
 			toggleBTactive(Typ.L3_SENDER);
-		} else if(e.getSource() == getPanConfig(Typ.L3_RECEIVER).getTb_active()) {
+		} else if (e.getSource() == getPanConfig(Typ.L3_RECEIVER)
+				.getTb_active()) {
 			toggleBTactive(Typ.L3_RECEIVER);
-		} else if(e.getSource() == getPanConfig(Typ.L2_SENDER).getTb_active()) {
+		} else if (e.getSource() == getPanConfig(Typ.L2_SENDER).getTb_active()) {
 			toggleBTactive(Typ.L2_SENDER);
-		} else if(e.getSource() == getPanConfig(Typ.L2_RECEIVER).getTb_active()) {
+		} else if (e.getSource() == getPanConfig(Typ.L2_RECEIVER)
+				.getTb_active()) {
 			toggleBTactive(Typ.L2_RECEIVER);
 		}
 
 		// Delete Button im Control Panel
-		else if(e.getSource() == getPanControl(Typ.L3_SENDER).getDelete()) {
+		else if (e.getSource() == getPanControl(Typ.L3_SENDER).getDelete()) {
 			pressBTDelete(Typ.L3_SENDER);
-		} else if(e.getSource() == getPanControl(Typ.L3_RECEIVER).getDelete()) {
+		} else if (e.getSource() == getPanControl(Typ.L3_RECEIVER).getDelete()) {
 			pressBTDelete(Typ.L3_RECEIVER);
-		} else if(e.getSource() == getPanControl(Typ.L2_RECEIVER).getDelete()) {
+		} else if (e.getSource() == getPanControl(Typ.L2_RECEIVER).getDelete()) {
 			pressBTDelete(Typ.L2_RECEIVER);
-		} else if(e.getSource() == getPanControl(Typ.L2_SENDER).getDelete()) {
+		} else if (e.getSource() == getPanControl(Typ.L2_SENDER).getDelete()) {
 			pressBTDelete(Typ.L2_SENDER);
 		}
 
 		// New Button im Control Panel
-		else if(e.getSource() == getPanControl(Typ.L3_SENDER).getNewmulticast()) {
+		else if (e.getSource() == getPanControl(Typ.L3_SENDER)
+				.getNewmulticast()) {
 			pressBTNewMC(Typ.L3_SENDER);
-		} else if(e.getSource() == getPanControl(Typ.L3_RECEIVER)
+		} else if (e.getSource() == getPanControl(Typ.L3_RECEIVER)
 				.getNewmulticast()) {
 			pressBTNewMC(Typ.L3_RECEIVER);
-		} else if(e.getSource() == getPanControl(Typ.L2_SENDER)
+		} else if (e.getSource() == getPanControl(Typ.L2_SENDER)
 				.getNewmulticast()) {
 			pressBTNewMC(Typ.L2_SENDER);
-		} else if(e.getSource() == getPanControl(Typ.L2_RECEIVER)
+		} else if (e.getSource() == getPanControl(Typ.L2_RECEIVER)
 				.getNewmulticast()) {
 			pressBTNewMC(Typ.L2_RECEIVER);
 		}
 
 		// (De)SelectAll Button im Control Panel
-		else if(e.getSource() == getPanControl(Typ.L3_SENDER)
+		else if (e.getSource() == getPanControl(Typ.L3_SENDER)
 				.getSelectDeselect_all()) {
 			pressBTSelectAll(Typ.L3_SENDER, true);
-		} else if(e.getSource() == getPanControl(Typ.L3_RECEIVER)
+		} else if (e.getSource() == getPanControl(Typ.L3_RECEIVER)
 				.getSelectDeselect_all()) {
 			pressBTSelectAll(Typ.L3_RECEIVER, true);
-		} else if(e.getSource() == getPanControl(Typ.L2_SENDER)
+		} else if (e.getSource() == getPanControl(Typ.L2_SENDER)
 				.getSelectDeselect_all()) {
 			pressBTSelectAll(Typ.L2_SENDER, true);
-		} else if(e.getSource() == getPanControl(Typ.L2_RECEIVER)
+		} else if (e.getSource() == getPanControl(Typ.L2_RECEIVER)
 				.getSelectDeselect_all()) {
 			pressBTSelectAll(Typ.L2_RECEIVER, true);
 		}
 
 		// Start/Stop Button im Control Panel
-		else if(e.getSource() == getPanControl(Typ.L3_SENDER).getStartStop()) {
+		else if (e.getSource() == getPanControl(Typ.L3_SENDER).getStartStop()) {
 			pressBTStartStop(Typ.L3_SENDER);
-		} else if(e.getSource() == getPanControl(Typ.L3_RECEIVER)
+		} else if (e.getSource() == getPanControl(Typ.L3_RECEIVER)
 				.getStartStop()) {
 			pressBTStartStop(Typ.L3_RECEIVER);
-		} else if(e.getSource() == getPanControl(Typ.L2_SENDER).getStartStop()) {
+		} else if (e.getSource() == getPanControl(Typ.L2_SENDER).getStartStop()) {
 			pressBTStartStop(Typ.L2_SENDER);
 		}
 		// Start/Stop Button im Control Panel
-		else if(e.getSource() == getPanControl(Typ.L3_SENDER).getStartStop()) {
+		else if (e.getSource() == getPanControl(Typ.L3_SENDER).getStartStop()) {
 			pressBTStartStop(Typ.L3_SENDER);
-		} else if(e.getSource() == getPanControl(Typ.L3_RECEIVER)
+		} else if (e.getSource() == getPanControl(Typ.L3_RECEIVER)
 				.getStartStop()) {
 			pressBTStartStop(Typ.L3_RECEIVER);
-		} else if(e.getSource() == getPanControl(Typ.L2_SENDER).getStartStop()) {
+		} else if (e.getSource() == getPanControl(Typ.L2_SENDER).getStartStop()) {
 			pressBTStartStop(Typ.L2_SENDER);
-		} else if(e.getSource() == getPanControl(Typ.L2_RECEIVER)
+		} else if (e.getSource() == getPanControl(Typ.L2_RECEIVER)
 				.getStartStop()) {
 			pressBTStartStop(Typ.L2_RECEIVER);
 		}
 
-		else if(e.getActionCommand().equals("hide")) {
+		else if (e.getActionCommand().equals("hide")) {
 			hideColumnClicked();
 			getTable(getSelectedTab()).getColumnModel().removeColumn(
 					getTable(getSelectedTab()).getColumnModel().getColumn(
 							PopUpMenu.getSelectedColumn()));
-		} else if(e.getActionCommand().equals("showall")) {
+		} else if (e.getActionCommand().equals("showall")) {
 			popUpResetColumnsPressed();
-		} else if(e.getActionCommand().equals("PopupCheckBox")) {
+		} else if (e.getActionCommand().equals("PopupCheckBox")) {
 			popUpCheckBoxPressed();
 		}
 
@@ -422,7 +425,7 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	public void autoSave() {
 
-		if(initFinished && f.isAutoSaveEnabled()) {
+		if (initFinished && f.isAutoSaveEnabled()) {
 			submitInputData();
 		}
 
@@ -473,7 +476,7 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	@Override
 	public void columnMoved(final TableColumnModelEvent arg0) {
-		if(arg0.getFromIndex() != arg0.getToIndex()) {
+		if (arg0.getFromIndex() != arg0.getToIndex()) {
 			// System.out.println("column moved from "+arg0.getFromIndex()+" "+arg0.getToIndex());
 			getUserInputData(getSelectedTab()).changeColumns(
 					arg0.getFromIndex(), arg0.getToIndex());
@@ -541,7 +544,7 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	@Override
 	public void componentResized(final ComponentEvent e) {
-		if(e.getSource() == getFrame()) {
+		if (e.getSource() == getFrame()) {
 			frameResizeEvent();
 		}
 	}
@@ -624,17 +627,17 @@ public class ViewController implements ActionListener, MouseListener,
 	 * @return JPanel mit dem angeforderten Programmteil.
 	 */
 	public PanelTabbed getPanTabbed(final Typ typ) {
-		switch(typ) {
-			case L2_SENDER:
-				return f.getPanel(1, 0);
-			case L2_RECEIVER:
-				return f.getPanel(0, 0);
-			case L3_SENDER:
-				return f.getPanel(1, 1);
-			case L3_RECEIVER:
-				return f.getPanel(0, 1);
-			default:
-				return null;
+		switch (typ) {
+		case L2_SENDER:
+			return f.getPanel(1, 0);
+		case L2_RECEIVER:
+			return f.getPanel(0, 0);
+		case L3_SENDER:
+			return f.getPanel(1, 1);
+		case L3_RECEIVER:
+			return f.getPanel(0, 1);
+		default:
+			return null;
 		}
 	}
 
@@ -650,7 +653,7 @@ public class ViewController implements ActionListener, MouseListener,
 	public int[] getSelectedRows(final Typ typ) {
 		JXTable t = getTable(typ);
 		int[] result = t.getSelectedRows();
-		for(int i = 0; i < result.length; i++) {
+		for (int i = 0; i < result.length; i++) {
 			result[i] = t.convertRowIndexToModel(result[i]);
 		}
 		return result;
@@ -666,13 +669,13 @@ public class ViewController implements ActionListener, MouseListener,
 		final String title = f.getTabpane().getTitleAt(
 				f.getTabpane().getSelectedIndex());
 		Typ typ;
-		if(title.equals(" " + lang.getProperty("tab.l3s") + " ")) {
+		if (title.equals(" " + lang.getProperty("tab.l3s") + " ")) {
 			typ = Typ.L3_SENDER;
-		} else if(title.equals(" " + lang.getProperty("tab.l3r") + " ")) {
+		} else if (title.equals(" " + lang.getProperty("tab.l3r") + " ")) {
 			typ = Typ.L3_RECEIVER;
-		} else if(title.equals(" " + lang.getProperty("tab.l2s") + " ")) {
+		} else if (title.equals(" " + lang.getProperty("tab.l2s") + " ")) {
 			typ = Typ.L2_SENDER;
-		} else if(title.equals(" " + lang.getProperty("tab.l2r") + " ")) {
+		} else if (title.equals(" " + lang.getProperty("tab.l2r") + " ")) {
 			typ = Typ.L2_RECEIVER;
 		} else {
 			typ = Typ.UNDEFINED;
@@ -698,17 +701,17 @@ public class ViewController implements ActionListener, MouseListener,
 	 * @return Die JTable welche angefordert wurde.
 	 */
 	public JXTable getTable(final Typ typ) {
-		switch(typ) {
-			case L2_RECEIVER:
-				return f.getPanel(0, 0).getTable();
-			case L2_SENDER:
-				return f.getPanel(1, 0).getTable();
-			case L3_RECEIVER:
-				return f.getPanel(0, 1).getTable();
-			case L3_SENDER:
-				return f.getPanel(1, 1).getTable();
-			default:
-				return null;
+		switch (typ) {
+		case L2_RECEIVER:
+			return f.getPanel(0, 0).getTable();
+		case L2_SENDER:
+			return f.getPanel(1, 0).getTable();
+		case L3_RECEIVER:
+			return f.getPanel(0, 1).getTable();
+		case L3_SENDER:
+			return f.getPanel(1, 1).getTable();
+		default:
+			return null;
 		}
 	}
 
@@ -720,7 +723,7 @@ public class ViewController implements ActionListener, MouseListener,
 	 * @return das Tabellenmodel des spezifizierten Programmteils.
 	 */
 	public MiscTableModel getTableModel(final Typ typ) {
-		return ((MiscTableModel)getTable(typ).getModel());
+		return ((MiscTableModel) getTable(typ).getModel());
 	}
 
 	/**
@@ -733,9 +736,9 @@ public class ViewController implements ActionListener, MouseListener,
 	public String getTotalTrafficDown() {
 		double sum = 0.0;
 
-		for(int i = 0; i < getTable(Typ.L3_RECEIVER).getModel().getRowCount(); i++) {
+		for (int i = 0; i < getTable(Typ.L3_RECEIVER).getModel().getRowCount(); i++) {
 			sum = sum
-					+ Double.parseDouble(((String)getTable(Typ.L3_RECEIVER)
+					+ Double.parseDouble(((String) getTable(Typ.L3_RECEIVER)
 							.getModel().getValueAt(i, 6)).replace(",", "."));
 		}
 		return (new DecimalFormat("##0.000")).format(sum);
@@ -748,9 +751,9 @@ public class ViewController implements ActionListener, MouseListener,
 	public String getTotalTrafficUP() {
 		double sum = 0.0;
 
-		for(int i = 0; i < getTable(Typ.L3_SENDER).getModel().getRowCount(); i++) {
+		for (int i = 0; i < getTable(Typ.L3_SENDER).getModel().getRowCount(); i++) {
 			sum = sum
-					+ Double.parseDouble(((String)getTable(Typ.L3_SENDER)
+					+ Double.parseDouble(((String) getTable(Typ.L3_SENDER)
 							.getModel().getValueAt(i, 6)).replace(",", "."));
 		}
 		return (new DecimalFormat("##0.000")).format(sum);
@@ -765,17 +768,17 @@ public class ViewController implements ActionListener, MouseListener,
 	 * @return Gibt das UserInputData Objekt des entsprechenden Typs zurueck
 	 */
 	public UserInputData getUserInputData(final Typ typ) {
-		switch(typ) {
-			case L3_SENDER:
-				return inputData_S3;
-			case L3_RECEIVER:
-				return inputData_R3;
-			case L2_SENDER:
-				return inputData_S2;
-			case L2_RECEIVER:
-				return inputData_R2;
-			default:
-				return null;
+		switch (typ) {
+		case L3_SENDER:
+			return inputData_S3;
+		case L3_RECEIVER:
+			return inputData_R3;
+		case L2_SENDER:
+			return inputData_S2;
+		case L2_RECEIVER:
+			return inputData_R2;
+		default:
+			return null;
 		}
 	}
 
@@ -797,11 +800,10 @@ public class ViewController implements ActionListener, MouseListener,
 		f = new FrameMain(this);
 		addKeyAndContainerListenerToAll(f);
 		// Sinn?
-		/*try {
-			Thread.sleep(500);
-		} catch(final InterruptedException e) {
-			e.printStackTrace();
-		}*/
+		/*
+		 * try { Thread.sleep(500); } catch(final InterruptedException e) {
+		 * e.printStackTrace(); }
+		 */
 	}
 
 	/**
@@ -820,8 +822,8 @@ public class ViewController implements ActionListener, MouseListener,
 
 		final Vector<byte[]> temp = NetworkAdapter.getMacAdapters();
 
-		if(temp != null) {
-			for(int i = 0; i < temp.size(); i++) {
+		if (temp != null) {
+			for (int i = 0; i < temp.size(); i++) {
 				cbSrc.addItem(NetworkAdapter.getNameToMacAdress(temp.get(i)));
 			}
 		}
@@ -834,37 +836,37 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	@Override
 	public void insertUpdate(final DocumentEvent source) {
-		if(source.getDocument() == getPanConfig(Typ.L3_SENDER)
+		if (source.getDocument() == getPanConfig(Typ.L3_SENDER)
 				.getTf_groupIPaddress().getDocument()) {
 			docEventTFgrp(Typ.L3_SENDER);
-		} else if(source.getDocument() == getPanConfig(Typ.L3_RECEIVER)
+		} else if (source.getDocument() == getPanConfig(Typ.L3_RECEIVER)
 				.getTf_groupIPaddress().getDocument()) {
 			docEventTFgrp(Typ.L3_RECEIVER);
-		} else if(source.getDocument() == getPanConfig(Typ.L3_SENDER)
+		} else if (source.getDocument() == getPanConfig(Typ.L3_SENDER)
 				.getTf_udp_port().getDocument()) {
 			docEventTFport(Typ.L3_SENDER);
-		} else if(source.getDocument() == getPanConfig(Typ.L3_RECEIVER)
+		} else if (source.getDocument() == getPanConfig(Typ.L3_RECEIVER)
 				.getTf_udp_port().getDocument()) {
 			docEventTFport(Typ.L3_RECEIVER);
-		} else if(source.getDocument() == getPanConfig(Typ.L3_SENDER)
+		} else if (source.getDocument() == getPanConfig(Typ.L3_SENDER)
 				.getTf_ttl().getDocument()) {
 			docEventTFttl(Typ.L3_SENDER);
-		} else if(source.getDocument() == getPanConfig(Typ.L3_SENDER)
+		} else if (source.getDocument() == getPanConfig(Typ.L3_SENDER)
 				.getTf_packetrate().getDocument()) {
 			docEventTFrate(Typ.L3_SENDER);
-		} else if(source.getDocument() == getPanConfig(Typ.L3_SENDER)
+		} else if (source.getDocument() == getPanConfig(Typ.L3_SENDER)
 				.getTf_udp_packetlength().getDocument()) {
 			docEventTFlength(Typ.L3_SENDER);
-		} else if(source.getDocument() == getPanConfig(Typ.L2_RECEIVER)
+		} else if (source.getDocument() == getPanConfig(Typ.L2_RECEIVER)
 				.getTf_groupIPaddress().getDocument()) {
 			docEventTFgrp(Typ.L2_RECEIVER);
-		} else if(source.getDocument() == getPanConfig(Typ.L2_SENDER)
+		} else if (source.getDocument() == getPanConfig(Typ.L2_SENDER)
 				.getTf_groupIPaddress().getDocument()) {
 			docEventTFgrp(Typ.L2_SENDER);
-		} else if(source.getDocument() == getPanConfig(Typ.L2_SENDER)
+		} else if (source.getDocument() == getPanConfig(Typ.L2_SENDER)
 				.getTf_udp_packetlength().getDocument()) {
 			docEventTFlength(Typ.L2_SENDER);
-		} else if(source.getDocument() == getPanConfig(Typ.L2_SENDER)
+		} else if (source.getDocument() == getPanConfig(Typ.L2_SENDER)
 				.getTf_packetrate().getDocument()) {
 			docEventTFrate(Typ.L2_SENDER);
 		}
@@ -888,67 +890,67 @@ public class ViewController implements ActionListener, MouseListener,
 	@SuppressWarnings({ "static-access" })
 	@Override
 	public void itemStateChanged(final ItemEvent arg0) {
-		if(arg0.getStateChange() == arg0.SELECTED) {
+		if (arg0.getStateChange() == arg0.SELECTED) {
 			/* Auswahl eines Netzwerkinterfaces */
-			if(arg0.getSource() == getPanConfig(Typ.L3_SENDER)
+			if (arg0.getSource() == getPanConfig(Typ.L3_SENDER)
 					.getTf_sourceIPaddress()) {
 				changeNetworkInterface(Typ.L3_SENDER);
-			} else if(arg0.getSource() == getPanConfig(Typ.L3_RECEIVER)
+			} else if (arg0.getSource() == getPanConfig(Typ.L3_RECEIVER)
 					.getTf_sourceIPaddress()) {
 				changeNetworkInterface(Typ.L3_RECEIVER);
-			} else if(arg0.getSource() == getPanConfig(Typ.L2_SENDER)
+			} else if (arg0.getSource() == getPanConfig(Typ.L2_SENDER)
 					.getTf_sourceIPaddress()) {
 				changeNetworkInterface(Typ.L2_SENDER);
-			} else if(arg0.getSource() == getPanConfig(Typ.L2_RECEIVER)
+			} else if (arg0.getSource() == getPanConfig(Typ.L2_RECEIVER)
 					.getTf_sourceIPaddress()) {
 				changeNetworkInterface(Typ.L2_RECEIVER);
 			}
 
 			/* Auswahl des Lost Packages Graphen im Receiver L3 */
-			else if(arg0.getSource() == ((ReceiverGraph)getPanTabbed(
+			else if (arg0.getSource() == ((ReceiverGraph) getPanTabbed(
 					Typ.L3_RECEIVER).getPan_graph()).getLostPktsRB()) {
-				((ReceiverGraph)getPanTabbed(Typ.L3_RECEIVER).getPan_graph())
+				((ReceiverGraph) getPanTabbed(Typ.L3_RECEIVER).getPan_graph())
 						.selectionChanged(valueType.LOSTPKT);
 			}
 			/* Auswahl des Jitter Graphen im Receiver L3 */
-			else if(arg0.getSource() == ((ReceiverGraph)getPanTabbed(
+			else if (arg0.getSource() == ((ReceiverGraph) getPanTabbed(
 					Typ.L3_RECEIVER).getPan_graph()).getJitterRB()) {
-				((ReceiverGraph)getPanTabbed(Typ.L3_RECEIVER).getPan_graph())
+				((ReceiverGraph) getPanTabbed(Typ.L3_RECEIVER).getPan_graph())
 						.selectionChanged(valueType.JITTER);
 			}
 			/* Auswahl des Measured Packages Graphen im Receiver L3 */
-			else if(arg0.getSource() == ((ReceiverGraph)getPanTabbed(
+			else if (arg0.getSource() == ((ReceiverGraph) getPanTabbed(
 					Typ.L3_RECEIVER).getPan_graph()).getMeasPktRtRB()) {
-				((ReceiverGraph)getPanTabbed(Typ.L3_RECEIVER).getPan_graph())
+				((ReceiverGraph) getPanTabbed(Typ.L3_RECEIVER).getPan_graph())
 						.selectionChanged(valueType.MEASPKT);
 			}
 
 			/* Auswahl des Lost Packages Graphen im Receiver L2 */
-			else if(arg0.getSource() == ((ReceiverGraph)getPanTabbed(
+			else if (arg0.getSource() == ((ReceiverGraph) getPanTabbed(
 					Typ.L2_RECEIVER).getPan_graph()).getLostPktsRB()) {
-				((ReceiverGraph)getPanTabbed(Typ.L2_RECEIVER).getPan_graph())
+				((ReceiverGraph) getPanTabbed(Typ.L2_RECEIVER).getPan_graph())
 						.selectionChanged(valueType.LOSTPKT);
 			}
 			/* Auswahl des Jitter Graphen im Receiver L2 */
-			else if(arg0.getSource() == ((ReceiverGraph)getPanTabbed(
+			else if (arg0.getSource() == ((ReceiverGraph) getPanTabbed(
 					Typ.L2_RECEIVER).getPan_graph()).getJitterRB()) {
-				((ReceiverGraph)getPanTabbed(Typ.L2_RECEIVER).getPan_graph())
+				((ReceiverGraph) getPanTabbed(Typ.L2_RECEIVER).getPan_graph())
 						.selectionChanged(valueType.JITTER);
 			}
 			/* Auswahl des Measured Packages Graphen im Receiver L2 */
-			else if(arg0.getSource() == ((ReceiverGraph)getPanTabbed(
+			else if (arg0.getSource() == ((ReceiverGraph) getPanTabbed(
 					Typ.L2_RECEIVER).getPan_graph()).getMeasPktRtRB()) {
-				((ReceiverGraph)getPanTabbed(Typ.L2_RECEIVER).getPan_graph())
+				((ReceiverGraph) getPanTabbed(Typ.L2_RECEIVER).getPan_graph())
 						.selectionChanged(valueType.MEASPKT);
 			}
 		} else {
-			if(arg0.getSource() == f.getMi_autoSave()) {
-				if(arg0.getStateChange() == ItemEvent.DESELECTED) {
+			if (arg0.getSource() == f.getMi_autoSave()) {
+				if (arg0.getStateChange() == ItemEvent.DESELECTED) {
 					submitInputData();
 				}
 			}
 		}
-		if(arg0.getSource() == f.getMi_autoSave()) {
+		if (arg0.getSource() == f.getMi_autoSave()) {
 			f.setAutoSave(f.isAutoSaveEnabled());
 		}
 		autoSave();
@@ -960,19 +962,19 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	@Override
 	public void keyPressed(final KeyEvent arg0) {
-		switch(arg0.getKeyCode()) {
-			case 38:
-				snakeDir = SnakeGimmick.SNAKE_DIRECTION.N;
-				break;
-			case 40:
-				snakeDir = SnakeGimmick.SNAKE_DIRECTION.S;
-				break;
-			case 37:
-				snakeDir = SnakeGimmick.SNAKE_DIRECTION.W;
-				break;
-			case 39:
-				snakeDir = SnakeGimmick.SNAKE_DIRECTION.E;
-			default:
+		switch (arg0.getKeyCode()) {
+		case 38:
+			snakeDir = SnakeGimmick.SNAKE_DIRECTION.N;
+			break;
+		case 40:
+			snakeDir = SnakeGimmick.SNAKE_DIRECTION.S;
+			break;
+		case 37:
+			snakeDir = SnakeGimmick.SNAKE_DIRECTION.W;
+			break;
+		case 39:
+			snakeDir = SnakeGimmick.SNAKE_DIRECTION.E;
+		default:
 		}
 	}
 
@@ -997,7 +999,7 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	public void loadAutoSave() {
 		final Vector<UserInputData> loaded = mc.loadAutoSave();
-		if((loaded != null) && (loaded.size() == 4)) {
+		if ((loaded != null) && (loaded.size() == 4)) {
 			inputData_S3 = loaded.get(0);
 			inputData_R3 = loaded.get(1);
 			inputData_S2 = loaded.get(2);
@@ -1022,29 +1024,29 @@ public class ViewController implements ActionListener, MouseListener,
 	 *            der zu den UserInputData zugehuerige Programmtetil
 	 */
 	public void loadAutoSavePart(final UserInputData data, final Typ typ) {
-		switch(data.getTyp()) {
-			case L3_SENDER:
-				f.getTabpane().setSelectedIndex(0);
-				break;
-			case L3_RECEIVER:
-				f.getTabpane().setSelectedIndex(1);
-				break;
-			case L2_SENDER:
-				f.getTabpane().setSelectedIndex(2);
-				break;
-			case L2_RECEIVER:
-				f.getTabpane().setSelectedIndex(3);
-				break;
-			default:
-				f.getTabpane().setSelectedIndex(0);
+		switch (data.getTyp()) {
+		case L3_SENDER:
+			f.getTabpane().setSelectedIndex(0);
+			break;
+		case L3_RECEIVER:
+			f.getTabpane().setSelectedIndex(1);
+			break;
+		case L2_SENDER:
+			f.getTabpane().setSelectedIndex(2);
+			break;
+		case L2_RECEIVER:
+			f.getTabpane().setSelectedIndex(3);
+			break;
+		default:
+			f.getTabpane().setSelectedIndex(0);
 		}
 		f.setAutoSave((data.isAutoSaveEnabled()));
 		getPanConfig(typ).getTf_groupIPaddress().setText(data.getGroupadress());
 		getPanConfig(typ).getTf_udp_port().setText(data.getPort());
-		if(data.isActive()) {
+		if (data.isActive()) {
 			setTBactive(true, typ);
 		}
-		if(typ == Typ.L3_SENDER) {
+		if (typ == Typ.L3_SENDER) {
 			getPanConfig(typ).getCb_sourceIPaddress().setSelectedIndex(
 					data.getSourceAdressIndex());
 			getPanConfig(typ).getTf_packetrate().setText(data.getPacketrate());
@@ -1061,12 +1063,13 @@ public class ViewController implements ActionListener, MouseListener,
 	@Override
 	public void mouseClicked(final MouseEvent e) {
 		// is rightclick?
-		if(e.getButton() == MouseEvent.BUTTON3) {
+		if (e.getButton() == MouseEvent.BUTTON3) {
 			// Source of click is table header of selected tab?
-			if((getSelectedTab() != Typ.CONFIG)
+			if ((getSelectedTab() != Typ.CONFIG)
 					&& (getSelectedTab() != Typ.UNDEFINED)) {
-				if(e.getSource() == getTable(getSelectedTab()).getTableHeader()) {
-					if(getPanTabbed(getSelectedTab()).isPopupsAllowed()) {
+				if (e.getSource() == getTable(getSelectedTab())
+						.getTableHeader()) {
+					if (getPanTabbed(getSelectedTab()).isPopupsAllowed()) {
 						PopUpMenu.createTableHeaderPopup(
 								getTable(getSelectedTab()), this, e);
 					}
@@ -1176,12 +1179,12 @@ public class ViewController implements ActionListener, MouseListener,
 		final ArrayList<Integer> saved_visibility = input.getColumnVisbility();
 		final ArrayList<Integer> saved_order = input.getColumnOrder();
 		final int columnCount = getTable(typ).getColumnCount();
-		for(int i = 0; i < columnCount; i++) {
+		for (int i = 0; i < columnCount; i++) {
 			getTable(getSelectedTab()).getColumnModel().removeColumn(
 					getTable(getSelectedTab()).getColumnModel().getColumn(0));
 		}
 		// System.out.println("saved visibility size"+saved_visibility.size());
-		for(int i = 0; i < saved_visibility.size(); i++) {
+		for (int i = 0; i < saved_visibility.size(); i++) {
 			getTable(getSelectedTab()).getColumnModel().addColumn(
 					columns.get(saved_visibility.get(i).intValue()));
 		}
@@ -1202,8 +1205,8 @@ public class ViewController implements ActionListener, MouseListener,
 		f.reloadLanguage();
 		f.repaint();
 
-		for(int i = 0; i < LanguageManager.languages.length; i++) {
-			if(f.getMi_languages()[i].getText().equals(data.getLanguage())) {
+		for (int i = 0; i < LanguageManager.languages.length; i++) {
+			if (f.getMi_languages()[i].getText().equals(data.getLanguage())) {
 				f.getMi_languages()[i].setSelected(true);
 			} else {
 				f.getMi_languages()[i].setSelected(false);
@@ -1217,123 +1220,123 @@ public class ViewController implements ActionListener, MouseListener,
 
 		f.getTabpane().closeTab(title);
 
-		if(data.getL2_RECEIVER() == GUIData.TabState.invisible) {
+		if (data.getL2_RECEIVER() == GUIData.TabState.invisible) {
 			title = " " + lang.getProperty("tab.l2r") + " ";
-			for(int i = 0; i < f.getTabpane().getTabCount(); ++i) {
-				if(f.getTabpane().getTitleAt(i).equals(title)) {
+			for (int i = 0; i < f.getTabpane().getTabCount(); ++i) {
+				if (f.getTabpane().getTitleAt(i).equals(title)) {
 					f.getTabpane().closeTab(f.getTabpane().getTitleAt(i));
 					f.getTabpane().remove(i);
 				}
 			}
 		}
-		if(data.getL3_RECEIVER() == GUIData.TabState.invisible) {
+		if (data.getL3_RECEIVER() == GUIData.TabState.invisible) {
 			title = " " + lang.getProperty("tab.l3r") + " ";
-			for(int i = 0; i < f.getTabpane().getTabCount(); ++i) {
-				if(f.getTabpane().getTitleAt(i).equals(title)) {
+			for (int i = 0; i < f.getTabpane().getTabCount(); ++i) {
+				if (f.getTabpane().getTitleAt(i).equals(title)) {
 					f.getTabpane().closeTab(f.getTabpane().getTitleAt(i));
 					f.getTabpane().remove(i);
 				}
 			}
 		}
-		if(data.getL2_SENDER() == GUIData.TabState.invisible) {
+		if (data.getL2_SENDER() == GUIData.TabState.invisible) {
 			title = " " + lang.getProperty("tab.l2s") + " ";
-			for(int i = 0; i < f.getTabpane().getTabCount(); ++i) {
-				if(f.getTabpane().getTitleAt(i).equals(title)) {
+			for (int i = 0; i < f.getTabpane().getTabCount(); ++i) {
+				if (f.getTabpane().getTitleAt(i).equals(title)) {
 					f.getTabpane().closeTab(f.getTabpane().getTitleAt(i));
 					f.getTabpane().remove(i);
 				}
 			}
 		}
-		if(data.getL3_SENDER() == GUIData.TabState.invisible) {
+		if (data.getL3_SENDER() == GUIData.TabState.invisible) {
 			title = " " + lang.getProperty("tab.l3s") + " ";
-			for(int i = 0; i < f.getTabpane().getTabCount(); ++i) {
-				if(f.getTabpane().getTitleAt(i).equals(title)) {
+			for (int i = 0; i < f.getTabpane().getTabCount(); ++i) {
+				if (f.getTabpane().getTitleAt(i).equals(title)) {
 					f.getTabpane().closeTab(f.getTabpane().getTitleAt(i));
 					f.getTabpane().remove(i);
 				}
 			}
 		}
-		if(data.getABOUT() == GUIData.TabState.invisible) {
+		if (data.getABOUT() == GUIData.TabState.invisible) {
 			title = " " + lang.getProperty("mi.about") + " ";
-			for(int i = 0; i < f.getTabpane().getTabCount(); ++i) {
-				if(f.getTabpane().getTitleAt(i).equals(title)) {
+			for (int i = 0; i < f.getTabpane().getTabCount(); ++i) {
+				if (f.getTabpane().getTitleAt(i).equals(title)) {
 					f.getTabpane().closeTab(f.getTabpane().getTitleAt(i));
 					f.getTabpane().remove(i);
 				}
 			}
 		}
 
-		if((data.getL2_RECEIVER() == GUIData.TabState.visible)
+		if ((data.getL2_RECEIVER() == GUIData.TabState.visible)
 				|| (data.getL2_RECEIVER() == GUIData.TabState.selected)) {
 			f.getTabpane().openTab("open_layer2_r");
 		}
 
-		if((data.getL3_RECEIVER() == GUIData.TabState.visible)
+		if ((data.getL3_RECEIVER() == GUIData.TabState.visible)
 				|| (data.getL3_RECEIVER() == GUIData.TabState.selected)) {
 			f.getTabpane().openTab("open_layer3_r");
 		}
 
-		if((data.getL2_SENDER() == GUIData.TabState.visible)
+		if ((data.getL2_SENDER() == GUIData.TabState.visible)
 				|| (data.getL2_SENDER() == GUIData.TabState.selected)) {
 			f.getTabpane().openTab("open_layer2_s");
 		}
 
-		if((data.getL3_SENDER() == GUIData.TabState.visible)
+		if ((data.getL3_SENDER() == GUIData.TabState.visible)
 				|| (data.getL3_RECEIVER() == GUIData.TabState.selected)) {
 			f.getTabpane().openTab("open_layer3_s");
 		}
 
-		if((data.getABOUT() == GUIData.TabState.visible)
+		if ((data.getABOUT() == GUIData.TabState.visible)
 				|| (data.getABOUT() == GUIData.TabState.selected)) {
 			f.getTabpane().openTab("open_about");
 		}
 
 		// select the selected tab
 
-		if(data.getL2_RECEIVER() == GUIData.TabState.selected) {
+		if (data.getL2_RECEIVER() == GUIData.TabState.selected) {
 			title = " " + lang.getProperty("tab.l2r") + " ";
-			for(int i = 0; i < f.getTabpane().getTabCount(); ++i) {
-				if(f.getTabpane().getTitleAt(i).equals(title)) {
+			for (int i = 0; i < f.getTabpane().getTabCount(); ++i) {
+				if (f.getTabpane().getTitleAt(i).equals(title)) {
 					f.getTabpane().setSelectedIndex(i);
 				}
 			}
 		}
-		if(data.getL3_RECEIVER() == GUIData.TabState.selected) {
+		if (data.getL3_RECEIVER() == GUIData.TabState.selected) {
 			title = " " + lang.getProperty("tab.l3r") + " ";
-			for(int i = 0; i < f.getTabpane().getTabCount(); ++i) {
-				if(f.getTabpane().getTitleAt(i).equals(title)) {
+			for (int i = 0; i < f.getTabpane().getTabCount(); ++i) {
+				if (f.getTabpane().getTitleAt(i).equals(title)) {
 					f.getTabpane().setSelectedIndex(i);
 				}
 			}
 		}
-		if(data.getL2_SENDER() == GUIData.TabState.selected) {
+		if (data.getL2_SENDER() == GUIData.TabState.selected) {
 			title = " " + lang.getProperty("tab.l2s") + " ";
-			for(int i = 0; i < f.getTabpane().getTabCount(); ++i) {
-				if(f.getTabpane().getTitleAt(i).equals(title)) {
+			for (int i = 0; i < f.getTabpane().getTabCount(); ++i) {
+				if (f.getTabpane().getTitleAt(i).equals(title)) {
 					f.getTabpane().setSelectedIndex(i);
 				}
 			}
 		}
-		if(data.getL3_SENDER() == GUIData.TabState.selected) {
+		if (data.getL3_SENDER() == GUIData.TabState.selected) {
 			title = " " + lang.getProperty("tab.l3s") + " ";
-			for(int i = 0; i < f.getTabpane().getTabCount(); ++i) {
-				if(f.getTabpane().getTitleAt(i).equals(title)) {
+			for (int i = 0; i < f.getTabpane().getTabCount(); ++i) {
+				if (f.getTabpane().getTitleAt(i).equals(title)) {
 					f.getTabpane().setSelectedIndex(i);
 				}
 			}
 		}
-		if(data.getABOUT() == GUIData.TabState.selected) {
+		if (data.getABOUT() == GUIData.TabState.selected) {
 			title = " " + lang.getProperty("mi.about") + " ";
-			for(int i = 0; i < f.getTabpane().getTabCount(); ++i) {
-				if(f.getTabpane().getTitleAt(i).equals(title)) {
+			for (int i = 0; i < f.getTabpane().getTabCount(); ++i) {
+				if (f.getTabpane().getTitleAt(i).equals(title)) {
 					f.getTabpane().setSelectedIndex(i);
 				}
 			}
 		}
-		if(data.getPLUS() == GUIData.TabState.selected) {
+		if (data.getPLUS() == GUIData.TabState.selected) {
 			title = " + ";
-			for(int i = 0; i < f.getTabpane().getTabCount(); ++i) {
-				if(f.getTabpane().getTitleAt(i).equals(title)) {
+			for (int i = 0; i < f.getTabpane().getTabCount(); ++i) {
+				if (f.getTabpane().getTitleAt(i).equals(title)) {
 					f.getTabpane().setSelectedIndex(i);
 				}
 			}
@@ -1357,8 +1360,8 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	public void setTBactive(final int[] selectedLine, final Typ typ) {
 		getPanConfig(typ).getTb_active().setEnabled(true);
-		if(selectedLine.length == 1) {
-			if(mc.getMC(selectedLine[0], typ).isActive()) {
+		if (selectedLine.length == 1) {
+			if (mc.getMC(selectedLine[0], typ).isActive()) {
 				getPanConfig(typ).getTb_active().setSelected(true);
 				getPanConfig(typ).getTb_active().setText(
 						lang.getProperty("button.active"));
@@ -1391,19 +1394,19 @@ public class ViewController implements ActionListener, MouseListener,
 		// type 1 ==
 		// warning, type
 		// 2 == error
-		switch(typ) {
-			case INFO:
-				JOptionPane.showMessageDialog(null, message, "Information",
-						JOptionPane.INFORMATION_MESSAGE);
-				break;
-			case WARNING:
-				JOptionPane.showMessageDialog(null, message, "Warning",
-						JOptionPane.WARNING_MESSAGE);
-				break;
-			case ERROR:
-				JOptionPane.showMessageDialog(null, message, "Error",
-						JOptionPane.ERROR_MESSAGE);
-				break;
+		switch (typ) {
+		case INFO:
+			JOptionPane.showMessageDialog(null, message, "Information",
+					JOptionPane.INFORMATION_MESSAGE);
+			break;
+		case WARNING:
+			JOptionPane.showMessageDialog(null, message, "Warning",
+					JOptionPane.WARNING_MESSAGE);
+			break;
+		case ERROR:
+			JOptionPane.showMessageDialog(null, message, "Error",
+					JOptionPane.ERROR_MESSAGE);
+			break;
 		}
 	}
 
@@ -1429,7 +1432,7 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	@Override
 	public void stateChanged(final ChangeEvent arg0) {
-		if(arg0.getSource() == getFrame().getTabpane()) {
+		if (arg0.getSource() == getFrame().getTabpane()) {
 			frameResizeEvent();
 		}
 	}
@@ -1535,33 +1538,33 @@ public class ViewController implements ActionListener, MouseListener,
 																	// i=1 ->
 		// delete, i=2 -> change
 		final PanelTabbed tabpart = getPanTabbed(typ);
-		switch(utyp) {
-			case INSERT:
-				tabpart.getTableModel().insertUpdate();
-				tabpart.getPan_status()
-						.getLb_multicast_count()
-						.setText(
-								getMCCount(typ) + " "
-										+ lang.getProperty("status.mcTotal"));
-				if(initFinished) {
-					clearInput(typ);
-				}
-				break;
-			case DELETE:
-				tabpart.getTableModel().deleteUpdate();
-				tabpart.getPan_status()
-						.getLb_multicast_count()
-						.setText(
-								getMCCount(typ) + " "
-										+ lang.getProperty("status.mcTotal"));
-				if(initFinished) {
-					clearInput(typ);
-				}
-				break;
+		switch (utyp) {
+		case INSERT:
+			tabpart.getTableModel().insertUpdate();
+			tabpart.getPan_status()
+					.getLb_multicast_count()
+					.setText(
+							getMCCount(typ) + " "
+									+ lang.getProperty("status.mcTotal"));
+			if (initFinished) {
+				clearInput(typ);
+			}
+			break;
+		case DELETE:
+			tabpart.getTableModel().deleteUpdate();
+			tabpart.getPan_status()
+					.getLb_multicast_count()
+					.setText(
+							getMCCount(typ) + " "
+									+ lang.getProperty("status.mcTotal"));
+			if (initFinished) {
+				clearInput(typ);
+			}
+			break;
 
-			case UPDATE:
-				tabpart.getTableModel().changeUpdate();
-				break;
+		case UPDATE:
+			tabpart.getTableModel().changeUpdate();
+			break;
 		}
 	}
 
@@ -1572,7 +1575,7 @@ public class ViewController implements ActionListener, MouseListener,
 	 *            Programmteil der geupdatet werden soll
 	 */
 	public void updateTablePart(final Typ typ) {
-		if(typ != Typ.UNDEFINED) {
+		if (typ != Typ.UNDEFINED) {
 			updateTable(typ, UpdateTyp.UPDATE);
 		}
 	}
@@ -1584,16 +1587,16 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	@Override
 	public void valueChanged(final ListSelectionEvent e) {
-		if(e.getSource() == getTable(Typ.L3_SENDER).getSelectionModel()) {
+		if (e.getSource() == getTable(Typ.L3_SENDER).getSelectionModel()) {
 			listSelectionEventFired(Typ.L3_SENDER);
 		}
-		if(e.getSource() == getTable(Typ.L3_RECEIVER).getSelectionModel()) {
+		if (e.getSource() == getTable(Typ.L3_RECEIVER).getSelectionModel()) {
 			listSelectionEventFired(Typ.L3_RECEIVER);
 		}
-		if(e.getSource() == getTable(Typ.L2_SENDER).getSelectionModel()) {
+		if (e.getSource() == getTable(Typ.L2_SENDER).getSelectionModel()) {
 			listSelectionEventFired(Typ.L2_SENDER);
 		}
-		if(e.getSource() == getTable(Typ.L2_RECEIVER).getSelectionModel()) {
+		if (e.getSource() == getTable(Typ.L2_RECEIVER).getSelectionModel()) {
 			listSelectionEventFired(Typ.L2_RECEIVER);
 		}
 		autoSave();
@@ -1606,30 +1609,31 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	public void viewUpdate() {
 		final Typ typ = getSelectedTab();
-		if(typ != Typ.UNDEFINED) {
+		if (typ != Typ.UNDEFINED) {
 			updateTablePart(typ);
 			updateGraph(typ);
 			getPanStatus(typ).updateTraffic(this);
 			getPanStatus(typ).getLb_multicast_count().setText(
 					getMCCount(typ) + " " + lang.getProperty("status.mcTotal"));
 			PanelTabbed tabpart = null;
-			switch(typ) {
-				case L2_SENDER:
-					tabpart = f.getPanel(1, 0);
-					break;
-				case L3_SENDER:
-					tabpart = f.getPanel(1, 1);
-					break;
-				case L2_RECEIVER:
-					tabpart = f.getPanel(0, 0);
-					break;
-				case L3_RECEIVER:
-					tabpart = f.getPanel(0, 1);
-					break;
+			switch (typ) {
+			case L2_SENDER:
+				tabpart = f.getPanel(1, 0);
+				break;
+			case L3_SENDER:
+				tabpart = f.getPanel(1, 1);
+				break;
+			case L2_RECEIVER:
+				tabpart = f.getPanel(0, 0);
+				break;
+			case L3_RECEIVER:
+				tabpart = f.getPanel(0, 1);
+				break;
 			}
 			final int[] selectedRows = tabpart.getTable().getSelectedRows();
-			for(int i = 0; i < selectedRows.length; i++) {
-				selectedRows[i] = tabpart.getTable().convertRowIndexToModel(selectedRows[i]);
+			for (int i = 0; i < selectedRows.length; i++) {
+				selectedRows[i] = tabpart.getTable().convertRowIndexToModel(
+						selectedRows[i]);
 			}
 			getPanStatus(typ).getLb_multicasts_selected().setText(
 					selectedRows.length + " "
@@ -1698,11 +1702,11 @@ public class ViewController implements ActionListener, MouseListener,
 		c.addKeyListener(this);
 		// Wenn Container, noch containerListener benuetigt
 		// Auueerdem benuetigen die Childs den gleichen listener
-		if(c instanceof Container) {
-			final Container cont = (Container)c;
+		if (c instanceof Container) {
+			final Container cont = (Container) c;
 			cont.addContainerListener(this);
 			final Component[] children = cont.getComponents();
-			for(final Component element : children) {
+			for (final Component element : children) {
 				addKeyAndContainerListenerToAll(element);
 			}
 		}
@@ -1722,163 +1726,155 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	private MulticastData changeMCData(final MulticastData mcd,
 			final MulticastData.Typ typ, final IPType iptype) {
-		switch(typ) {
-			case L3_SENDER:
-				if(!getPanConfig(typ).getTf_groupIPaddress().getText()
-						.equals("...")) {
-					if(iptype == IPType.IPv4) {
-						mcd.setGroupIp(InputValidator
-								.checkMC_IPv4(getPanConfig(typ)
-										.getTf_groupIPaddress().getText()));
-					} else if(iptype == IPType.IPv6) {
-						mcd.setGroupIp(InputValidator
-								.checkMC_IPv6(getPanConfig(typ)
-										.getTf_groupIPaddress().getText()));
-					}
+		switch (typ) {
+		case L3_SENDER:
+			if (!getPanConfig(typ).getTf_groupIPaddress().getText()
+					.equals("...")) {
+				if (iptype == IPType.IPv4) {
+					mcd.setGroupIp(InputValidator
+							.checkMC_IPv4(getPanConfig(typ)
+									.getTf_groupIPaddress().getText()));
+				} else if (iptype == IPType.IPv6) {
+					mcd.setGroupIp(InputValidator
+							.checkMC_IPv6(getPanConfig(typ)
+									.getTf_groupIPaddress().getText()));
 				}
-				if(!(getPanConfig(typ).getCb_sourceIPaddress()
-						.getSelectedIndex() == 0)) {
-					mcd.setSourceIp(getPanConfig(typ).getSelectedAddress(typ,
-							iptype));
-				}
-				if(!getPanConfig(typ).getTf_udp_packetlength().getText()
-						.equals("...")) {
-					if(iptype == IPType.IPv4) {
-						mcd.setPacketLength(InputValidator
-								.checkIPv4PacketLength(getPanConfig(typ)
-										.getTf_udp_packetlength().getText()));
-					} else if(iptype == IPType.IPv6) {
-						mcd.setPacketLength(InputValidator
-								.checkIPv6PacketLength(getPanConfig(typ)
-										.getTf_udp_packetlength().getText()));
-					}
-				}
-				if(!getPanConfig(typ).getTf_ttl().getText().equals("...")) {
-					mcd.setTtl(InputValidator.checkTimeToLive(getPanConfig(typ)
-							.getTf_ttl().getText()));
-				}
-				if(!getPanConfig(typ).getTf_packetrate().getText()
-						.equals("...")) {
-					mcd.setPacketRateDesired(InputValidator
-							.checkPacketRate(getPanConfig(typ)
-									.getTf_packetrate().getText()));
-				}
-				break;
-			case L3_RECEIVER:
-				if(!getPanConfig(typ).getTf_groupIPaddress().getText()
-						.equals("...")) {
-					if(iptype == IPType.IPv4) {
-						mcd.setGroupIp(InputValidator
-								.checkMC_IPv4(getPanConfig(typ)
-										.getTf_groupIPaddress().getText()));
-					} else if(iptype == IPType.IPv6) {
-						mcd.setGroupIp(InputValidator
-								.checkMC_IPv6(getPanConfig(typ)
-										.getTf_groupIPaddress().getText()));
-					}
-				}
-				// V1.5 [FH] Added source IP for receiver (network interface)
-				if(!(getPanConfig(typ).getCb_sourceIPaddress()
-						.getSelectedIndex() == 0)) {
-					mcd.setSourceIp(getPanConfig(typ).getSelectedAddress(typ,
-							iptype));
-				}
-				break;
-			case L2_SENDER:
-				if(!getPanConfig(typ).getTf_groupIPaddress().getText()
-						.equals("...")) {
-					if(InputValidator.checkMulticastGroup(getPanConfig(typ)
-							.getTf_groupIPaddress().getText())) {
-						final String inputGroupText = getPanConfig(typ)
-								.getTf_groupIPaddress().getText();
-						final byte[] b = new byte[6];
-						for(int fromIndex = -1, arrayIndex = 0, begin = 0; arrayIndex < 6; arrayIndex++) {
-							begin = fromIndex;
-
-							if(arrayIndex < 5) {
-								fromIndex = inputGroupText.indexOf(':',
-										fromIndex + 1);
-							} else {
-								fromIndex = inputGroupText.length();
-							}
-
-							final String tmp = (String)inputGroupText
-									.subSequence(begin + 1, fromIndex);
-							if(!tmp.equals("")) {
-								b[arrayIndex] = new Byte(
-										(byte)Integer.parseInt(tmp, 16));
-							} else {
-								b[arrayIndex] = new Byte("0");
-							}
-						}
-						mcd.setMmrpGroupMac(b);
-					}
-					;
-				}
-				if(!(getPanConfig(typ).getCb_sourceIPaddress()
-						.getSelectedIndex() == 0)) {
-					mcd.setMmrpSourceMac(getPanConfig(typ).getSelectedAddress(
-							typ));
-				}
-				if(!getPanConfig(typ).getTf_udp_packetlength().getText()
-						.equals("...")) {
+			}
+			if (!(getPanConfig(typ).getCb_sourceIPaddress().getSelectedIndex() == 0)) {
+				mcd.setSourceIp(getPanConfig(typ).getSelectedAddress(typ,
+						iptype));
+			}
+			if (!getPanConfig(typ).getTf_udp_packetlength().getText()
+					.equals("...")) {
+				if (iptype == IPType.IPv4) {
 					mcd.setPacketLength(InputValidator
-							.checkMMRPPacketLength(getPanConfig(typ)
+							.checkIPv4PacketLength(getPanConfig(typ)
+									.getTf_udp_packetlength().getText()));
+				} else if (iptype == IPType.IPv6) {
+					mcd.setPacketLength(InputValidator
+							.checkIPv6PacketLength(getPanConfig(typ)
 									.getTf_udp_packetlength().getText()));
 				}
-				if(!getPanConfig(typ).getTf_packetrate().getText()
-						.equals("...")) {
-					mcd.setPacketRateDesired(InputValidator
-							.checkPacketRate(getPanConfig(typ)
-									.getTf_packetrate().getText()));
+			}
+			if (!getPanConfig(typ).getTf_ttl().getText().equals("...")) {
+				mcd.setTtl(InputValidator.checkTimeToLive(getPanConfig(typ)
+						.getTf_ttl().getText()));
+			}
+			if (!getPanConfig(typ).getTf_packetrate().getText().equals("...")) {
+				mcd.setPacketRateDesired(InputValidator
+						.checkPacketRate(getPanConfig(typ).getTf_packetrate()
+								.getText()));
+			}
+			break;
+		case L3_RECEIVER:
+			if (!getPanConfig(typ).getTf_groupIPaddress().getText()
+					.equals("...")) {
+				if (iptype == IPType.IPv4) {
+					mcd.setGroupIp(InputValidator
+							.checkMC_IPv4(getPanConfig(typ)
+									.getTf_groupIPaddress().getText()));
+				} else if (iptype == IPType.IPv6) {
+					mcd.setGroupIp(InputValidator
+							.checkMC_IPv6(getPanConfig(typ)
+									.getTf_groupIPaddress().getText()));
 				}
-				break;
-			case L2_RECEIVER:
-				if(!getPanConfig(typ).getTf_groupIPaddress().getText()
-						.equals("...")) {
-					if(InputValidator.checkMulticastGroup(getPanConfig(typ)
-							.getTf_groupIPaddress().getText())) {
-						final String inputGroupText = getPanConfig(typ)
-								.getTf_groupIPaddress().getText();
-						final byte[] b = new byte[6];
-						for(int fromIndex = -1, arrayIndex = 0, begin = 0; arrayIndex < 6; arrayIndex++) {
-							begin = fromIndex;
+			}
+			// V1.5 [FH] Added source IP for receiver (network interface)
+			if (!(getPanConfig(typ).getCb_sourceIPaddress().getSelectedIndex() == 0)) {
+				mcd.setSourceIp(getPanConfig(typ).getSelectedAddress(typ,
+						iptype));
+			}
+			break;
+		case L2_SENDER:
+			if (!getPanConfig(typ).getTf_groupIPaddress().getText()
+					.equals("...")) {
+				if (InputValidator.checkMulticastGroup(getPanConfig(typ)
+						.getTf_groupIPaddress().getText())) {
+					final String inputGroupText = getPanConfig(typ)
+							.getTf_groupIPaddress().getText();
+					final byte[] b = new byte[6];
+					for (int fromIndex = -1, arrayIndex = 0, begin = 0; arrayIndex < 6; arrayIndex++) {
+						begin = fromIndex;
 
-							if(arrayIndex < 5) {
-								fromIndex = inputGroupText.indexOf(':',
-										fromIndex + 1);
-							} else {
-								fromIndex = inputGroupText.length();
-							}
-
-							final String tmp = (String)inputGroupText
-									.subSequence(begin + 1, fromIndex);
-							if(!tmp.equals("")) {
-								b[arrayIndex] = new Byte(
-										(byte)Integer.parseInt(tmp, 16));
-							} else {
-								b[arrayIndex] = new Byte("0");
-							}
+						if (arrayIndex < 5) {
+							fromIndex = inputGroupText.indexOf(':',
+									fromIndex + 1);
+						} else {
+							fromIndex = inputGroupText.length();
 						}
-						mcd.setMmrpGroupMac(b);
+
+						final String tmp = (String) inputGroupText.subSequence(
+								begin + 1, fromIndex);
+						if (!tmp.equals("")) {
+							b[arrayIndex] = new Byte((byte) Integer.parseInt(
+									tmp, 16));
+						} else {
+							b[arrayIndex] = new Byte("0");
+						}
 					}
-					;
+					mcd.setMmrpGroupMac(b);
 				}
-				if(!(getPanConfig(typ).getCb_sourceIPaddress()
-						.getSelectedIndex() == 0)) {
-					mcd.setMmrpSourceMac(getPanConfig(typ).getSelectedAddress(
-							typ));
+				;
+			}
+			if (!(getPanConfig(typ).getCb_sourceIPaddress().getSelectedIndex() == 0)) {
+				mcd.setMmrpSourceMac(getPanConfig(typ).getSelectedAddress(typ));
+			}
+			if (!getPanConfig(typ).getTf_udp_packetlength().getText()
+					.equals("...")) {
+				mcd.setPacketLength(InputValidator
+						.checkMMRPPacketLength(getPanConfig(typ)
+								.getTf_udp_packetlength().getText()));
+			}
+			if (!getPanConfig(typ).getTf_packetrate().getText().equals("...")) {
+				mcd.setPacketRateDesired(InputValidator
+						.checkPacketRate(getPanConfig(typ).getTf_packetrate()
+								.getText()));
+			}
+			break;
+		case L2_RECEIVER:
+			if (!getPanConfig(typ).getTf_groupIPaddress().getText()
+					.equals("...")) {
+				if (InputValidator.checkMulticastGroup(getPanConfig(typ)
+						.getTf_groupIPaddress().getText())) {
+					final String inputGroupText = getPanConfig(typ)
+							.getTf_groupIPaddress().getText();
+					final byte[] b = new byte[6];
+					for (int fromIndex = -1, arrayIndex = 0, begin = 0; arrayIndex < 6; arrayIndex++) {
+						begin = fromIndex;
+
+						if (arrayIndex < 5) {
+							fromIndex = inputGroupText.indexOf(':',
+									fromIndex + 1);
+						} else {
+							fromIndex = inputGroupText.length();
+						}
+
+						final String tmp = (String) inputGroupText.subSequence(
+								begin + 1, fromIndex);
+						if (!tmp.equals("")) {
+							b[arrayIndex] = new Byte((byte) Integer.parseInt(
+									tmp, 16));
+						} else {
+							b[arrayIndex] = new Byte("0");
+						}
+					}
+					mcd.setMmrpGroupMac(b);
 				}
-				break;
-			default:
-				System.out.println("changeMCData(Multicastdata mcd) - ERROR");
+				;
+			}
+			if (!(getPanConfig(typ).getCb_sourceIPaddress().getSelectedIndex() == 0)) {
+				mcd.setMmrpSourceMac(getPanConfig(typ).getSelectedAddress(typ));
+			}
+			break;
+		default:
+			System.out.println("changeMCData(Multicastdata mcd) - ERROR");
 		}
 
-		if(!getPanConfig(typ).getTf_udp_port().getText().equals("...")) {
+		if (!getPanConfig(typ).getTf_udp_port().getText().equals("...")) {
 			mcd.setUdpPort(InputValidator.checkPort(getPanConfig(typ)
 					.getTf_udp_port().getText()));
 		}
-		if(!getPanConfig(typ).getTb_active().getText().equals("multiple")) {
+		if (!getPanConfig(typ).getTb_active().getText().equals("multiple")) {
 			mcd.setActive(getPanConfig(typ).getTb_active().isSelected());
 		}
 
@@ -1898,68 +1894,68 @@ public class ViewController implements ActionListener, MouseListener,
 		final int selectedIndex = configpart.getTf_sourceIPaddress()
 				.getSelectedIndex();
 
-		if(selectedIndex != 0) {
-			if((typ == Typ.L3_SENDER) || (typ == Typ.L3_RECEIVER)) {
+		if (selectedIndex != 0) {
+			if ((typ == Typ.L3_SENDER) || (typ == Typ.L3_RECEIVER)) {
 				configpart.getPan_sourceIPaddress().setBorder(
 						MiscBorder.getBorder(BorderTitle.L3SOURCE,
 								BorderType.TRUE));
-				if(typ == Typ.L3_SENDER) {
+				if (typ == Typ.L3_SENDER) {
 					input[0][1] = true;
 				} else {
 					input[1][1] = true;
 				}
-			} else if((typ == Typ.L2_RECEIVER) || (typ == Typ.L2_SENDER)) {
+			} else if ((typ == Typ.L2_RECEIVER) || (typ == Typ.L2_SENDER)) {
 				configpart.getPan_sourceIPaddress().setBorder(
 						MiscBorder.getBorder(BorderTitle.L2SOURCE,
 								BorderType.TRUE));
-				if(typ == Typ.L2_SENDER) {
+				if (typ == Typ.L2_SENDER) {
 					input[2][1] = true;
 				} else {
 					input[3][1] = true;
 				}
 			}
-		} else if((getSelectedRows(typ).length > 1)
+		} else if ((getSelectedRows(typ).length > 1)
 				&& configpart.getCb_sourceIPaddress().getItemAt(0)
 						.equals("...")) {
-			if((typ == Typ.L3_SENDER) || (typ == Typ.L3_RECEIVER)) {
+			if ((typ == Typ.L3_SENDER) || (typ == Typ.L3_RECEIVER)) {
 				configpart.getPan_sourceIPaddress().setBorder(
 						MiscBorder.getBorder(BorderTitle.L3SOURCE,
 								BorderType.TRUE));
-				if(typ == Typ.L3_SENDER) {
+				if (typ == Typ.L3_SENDER) {
 					input[0][1] = true;
 				} else {
 					input[1][1] = true;
 				}
-			} else if((typ == Typ.L2_RECEIVER) || (typ == Typ.L2_SENDER)) {
+			} else if ((typ == Typ.L2_RECEIVER) || (typ == Typ.L2_SENDER)) {
 				configpart.getPan_sourceIPaddress().setBorder(
 						MiscBorder.getBorder(BorderTitle.L2SOURCE,
 								BorderType.TRUE));
-				if(typ == Typ.L2_SENDER) {
+				if (typ == Typ.L2_SENDER) {
 					input[2][1] = true;
 				} else {
 					input[3][1] = true;
 				}
 			}
 		} else {
-			switch(typ) {
-				case L3_SENDER:
-					input[0][1] = false;
-					break;
-				case L3_RECEIVER:
-					input[1][1] = false;
-					break;
-				case L2_SENDER:
-					input[2][1] = false;
-					break;
-				case L2_RECEIVER:
-					input[3][1] = false;
-					break;
+			switch (typ) {
+			case L3_SENDER:
+				input[0][1] = false;
+				break;
+			case L3_RECEIVER:
+				input[1][1] = false;
+				break;
+			case L2_SENDER:
+				input[2][1] = false;
+				break;
+			case L2_RECEIVER:
+				input[3][1] = false;
+				break;
 			}
-			if((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
+			if ((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
 				configpart.getPan_sourceIPaddress().setBorder(
 						MiscBorder.getBorder(BorderTitle.L3SOURCE,
 								BorderType.NEUTRAL));
-			} else if((typ == Typ.L2_RECEIVER) || (typ == Typ.L2_SENDER)) {
+			} else if ((typ == Typ.L2_RECEIVER) || (typ == Typ.L2_SENDER)) {
 				configpart.getPan_sourceIPaddress().setBorder(
 						MiscBorder.getBorder(BorderTitle.L2SOURCE,
 								BorderType.NEUTRAL));
@@ -1977,44 +1973,44 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	private void checkInput(final Typ typ) {
 
-		switch(typ) {
-			case L3_SENDER:
-				if(input[0][0] && input[0][1] && input[0][2] && input[0][3]
-						&& input[0][4] && input[0][5]) {
-					getPanConfig(typ).getBt_enter().setEnabled(true);
-				} else if(getSelectedRows(getSelectedTab()).length <= 1) {
-					getPanConfig(typ).getBt_enter().setEnabled(false);
-				} else {
-					getPanConfig(typ).getBt_enter().setEnabled(false);
-				}
-				break;
-			case L3_RECEIVER:
-				if(input[1][0] && input[1][1] && input[1][2]) {
-					getPanConfig(typ).getBt_enter().setEnabled(true);
-				} else if(getSelectedRows(getSelectedTab()).length <= 1) {
-					getPanConfig(typ).getBt_enter().setEnabled(false);
-				} else {
-					getPanConfig(typ).getBt_enter().setEnabled(false);
-				}
-				break;
-			case L2_SENDER:
-				if(input[2][0] && input[2][1] && input[2][4] && input[2][5]) {
-					getPanConfig(typ).getBt_enter().setEnabled(true);
-				} else if(getSelectedRows(getSelectedTab()).length <= 1) {
-					getPanConfig(typ).getBt_enter().setEnabled(false);
-				} else {
-					getPanConfig(typ).getBt_enter().setEnabled(false);
-				}
-				break;
-			case L2_RECEIVER:
-				if(input[3][0] && input[3][1]) {
-					getPanConfig(typ).getBt_enter().setEnabled(true);
-				} else if(getSelectedRows(getSelectedTab()).length <= 1) {
-					getPanConfig(typ).getBt_enter().setEnabled(false);
-				} else {
-					getPanConfig(typ).getBt_enter().setEnabled(false);
-				}
-				break;
+		switch (typ) {
+		case L3_SENDER:
+			if (input[0][0] && input[0][1] && input[0][2] && input[0][3]
+					&& input[0][4] && input[0][5]) {
+				getPanConfig(typ).getBt_enter().setEnabled(true);
+			} else if (getSelectedRows(getSelectedTab()).length <= 1) {
+				getPanConfig(typ).getBt_enter().setEnabled(false);
+			} else {
+				getPanConfig(typ).getBt_enter().setEnabled(false);
+			}
+			break;
+		case L3_RECEIVER:
+			if (input[1][0] && input[1][1] && input[1][2]) {
+				getPanConfig(typ).getBt_enter().setEnabled(true);
+			} else if (getSelectedRows(getSelectedTab()).length <= 1) {
+				getPanConfig(typ).getBt_enter().setEnabled(false);
+			} else {
+				getPanConfig(typ).getBt_enter().setEnabled(false);
+			}
+			break;
+		case L2_SENDER:
+			if (input[2][0] && input[2][1] && input[2][4] && input[2][5]) {
+				getPanConfig(typ).getBt_enter().setEnabled(true);
+			} else if (getSelectedRows(getSelectedTab()).length <= 1) {
+				getPanConfig(typ).getBt_enter().setEnabled(false);
+			} else {
+				getPanConfig(typ).getBt_enter().setEnabled(false);
+			}
+			break;
+		case L2_RECEIVER:
+			if (input[3][0] && input[3][1]) {
+				getPanConfig(typ).getBt_enter().setEnabled(true);
+			} else if (getSelectedRows(getSelectedTab()).length <= 1) {
+				getPanConfig(typ).getBt_enter().setEnabled(false);
+			} else {
+				getPanConfig(typ).getBt_enter().setEnabled(false);
+			}
+			break;
 		}
 	}
 
@@ -2027,16 +2023,16 @@ public class ViewController implements ActionListener, MouseListener,
 	 *            sollen.
 	 */
 	private void clearInput(final Typ typ) {
-		if(initFinished) {
+		if (initFinished) {
 			// Only for L3
-			if((typ == Typ.L3_SENDER) || (typ == Typ.L3_RECEIVER)) {
+			if ((typ == Typ.L3_SENDER) || (typ == Typ.L3_RECEIVER)) {
 				getPanConfig(typ).getTf_groupIPaddress().setText(
 						guidata.Default_L3_GroupIp);
 				getPanConfig(typ).getTf_udp_port().setText(
 						guidata.Default_L3_UdpPort);
 
 				// Only L3 Sender
-				if(typ == Typ.L3_SENDER) {
+				if (typ == Typ.L3_SENDER) {
 					getPanConfig(typ).getTf_ttl().setText(
 							guidata.Default_L3_Ttl);
 					getPanConfig(typ).getTf_packetrate().setText(
@@ -2049,7 +2045,7 @@ public class ViewController implements ActionListener, MouseListener,
 						guidata.Default_L2_GroupMac);
 
 				// Only L2 Sender
-				if(typ == Typ.L2_SENDER) {
+				if (typ == Typ.L2_SENDER) {
 					getPanConfig(typ).getTf_packetrate().setText(
 							guidata.Default_L2_PacketRateDesired);
 					getPanConfig(typ).getTf_udp_packetlength().setText(
@@ -2104,16 +2100,16 @@ public class ViewController implements ActionListener, MouseListener,
 				.checkMulticastGroup(getPanConfig(typ).getTf_groupIPaddress()
 						.getText());
 
-		if((typ == Typ.L2_SENDER) || (typ == Typ.L2_RECEIVER)) {
-			if(getPanConfig(typ).getCb_sourceIPaddress().getItemCount() <= 1) {
+		if ((typ == Typ.L2_SENDER) || (typ == Typ.L2_RECEIVER)) {
+			if (getPanConfig(typ).getCb_sourceIPaddress().getItemCount() <= 1) {
 				insertNetworkAdapters(typ);
 			}
 
-			if(mac) {
+			if (mac) {
 				getPanConfig(typ).getPan_groupIPaddress().setBorder(
 						MiscBorder.getBorder(BorderTitle.L2GROUP,
 								BorderType.TRUE));
-				if(typ == Typ.L2_SENDER) {
+				if (typ == Typ.L2_SENDER) {
 					input[2][0] = true;
 				} else {
 					input[3][0] = true;
@@ -2122,14 +2118,14 @@ public class ViewController implements ActionListener, MouseListener,
 				getPanConfig(typ).getPan_groupIPaddress().setBorder(
 						MiscBorder.getBorder(BorderTitle.L2GROUP,
 								BorderType.FALSE));
-				if(typ == Typ.L2_SENDER) {
+				if (typ == Typ.L2_SENDER) {
 					input[2][0] = false;
 				} else {
 					input[3][0] = false;
 				}
 			}
-		} else if((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
-			if(isIPv4
+		} else if ((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
+			if (isIPv4
 					|| isIPv6
 					|| ((getSelectedRows(typ).length > 1) && getPanConfig(typ)
 							.getTf_groupIPaddress().getText().equals("..."))) {
@@ -2137,13 +2133,13 @@ public class ViewController implements ActionListener, MouseListener,
 						MiscBorder.getBorder(BorderTitle.L3GROUP,
 								BorderType.TRUE));
 				/* Lade die richtigen Netzwerkinterfaces */
-				if(isIPv4) {
+				if (isIPv4) {
 					insertNetworkAdapters(typ, true);
-				} else if(isIPv6) {
+				} else if (isIPv6) {
 					insertNetworkAdapters(typ, false);
 				}
 
-				if(typ == Typ.L3_SENDER) {
+				if (typ == Typ.L3_SENDER) {
 					input[0][0] = true;
 					getPanConfig(typ).getTf_udp_packetlength().setText("");
 					getPanConfig(typ).getTf_udp_packetlength().setEnabled(true);
@@ -2155,7 +2151,7 @@ public class ViewController implements ActionListener, MouseListener,
 						MiscBorder.getBorder(BorderTitle.L3GROUP,
 								BorderType.FALSE));
 				// insertNetworkAdapters(typ);
-				if(typ == Typ.L3_SENDER) {
+				if (typ == Typ.L3_SENDER) {
 					input[0][0] = false;
 					getPanConfig(typ).getTf_udp_packetlength()
 							.setEnabled(false);
@@ -2174,7 +2170,7 @@ public class ViewController implements ActionListener, MouseListener,
 
 			}
 		}
-		if(getPanConfig(typ).getTf_groupIPaddress().getText()
+		if (getPanConfig(typ).getTf_groupIPaddress().getText()
 				.equalsIgnoreCase("")
 				&& (typ != Typ.L2_SENDER) && (typ != Typ.L2_RECEIVER)) {
 			getPanConfig(typ).getPan_groupIPaddress().setBorder(
@@ -2185,7 +2181,7 @@ public class ViewController implements ActionListener, MouseListener,
 			getPanConfig(typ).getCb_sourceIPaddress().addItem(
 					lang.getProperty("config.message.ipFirst"));
 
-			if(typ == Typ.L3_SENDER) {
+			if (typ == Typ.L3_SENDER) {
 				getPanConfig(typ).getTf_udp_packetlength().setEnabled(false);
 				getPanConfig(typ).getTf_udp_packetlength().setText("IP first");
 			}
@@ -2204,8 +2200,8 @@ public class ViewController implements ActionListener, MouseListener,
 	private void docEventTFlength(final Typ typ) {
 		final IPType ipTyp = NetworkAdapter.getAddressType(getPanConfig(typ)
 				.getTf_groupIPaddress().getText());
-		if((typ == Typ.L3_SENDER) && (ipTyp != null)) {
-			if(((ipTyp == IPType.IPv4) && (InputValidator
+		if ((typ == Typ.L3_SENDER) && (ipTyp != null)) {
+			if (((ipTyp == IPType.IPv4) && (InputValidator
 					.checkIPv4PacketLength(getPanConfig(typ)
 							.getTf_udp_packetlength().getText()) > 0))
 					|| ((ipTyp == IPType.IPv6) && (InputValidator
@@ -2221,8 +2217,8 @@ public class ViewController implements ActionListener, MouseListener,
 								BorderType.FALSE));
 				input[0][5] = false;
 			}
-		} else if(typ == Typ.L2_SENDER) {
-			if(InputValidator.checkMMRPPacketLength(getPanConfig(typ)
+		} else if (typ == Typ.L2_SENDER) {
+			if (InputValidator.checkMMRPPacketLength(getPanConfig(typ)
 					.getTf_udp_packetlength().getText()) > 0) {
 				getPanConfig(typ).getPan_packetlength().setBorder(
 						MiscBorder.getBorder(BorderTitle.LENGTH,
@@ -2237,7 +2233,7 @@ public class ViewController implements ActionListener, MouseListener,
 
 		}
 
-		if(getPanConfig(typ).getTf_udp_packetlength().getText()
+		if (getPanConfig(typ).getTf_udp_packetlength().getText()
 				.equalsIgnoreCase("")) {
 			getPanConfig(typ).getPan_packetlength().setBorder(
 					MiscBorder
@@ -2254,28 +2250,28 @@ public class ViewController implements ActionListener, MouseListener,
 	 *            Programmteil in welchem das Port Feld geuendert wurde.
 	 */
 	private void docEventTFport(final Typ typ) {
-		if((InputValidator.checkPort(getPanConfig(typ).getTf_udp_port()
+		if ((InputValidator.checkPort(getPanConfig(typ).getTf_udp_port()
 				.getText()) > 0)
 				|| ((getSelectedRows(typ).length > 1) && getPanConfig(typ)
 						.getTf_udp_port().getText().equals("..."))) {
 			getPanConfig(typ).getPan_udp_port().setBorder(
 					MiscBorder.getBorder(BorderTitle.PORT, BorderType.TRUE));
-			if(typ == Typ.L3_SENDER) {
+			if (typ == Typ.L3_SENDER) {
 				input[0][2] = true;
-			} else if(typ == Typ.L3_RECEIVER) {
+			} else if (typ == Typ.L3_RECEIVER) {
 				input[1][2] = true;
 			}
 		} else {
 			getPanConfig(typ).getPan_udp_port().setBorder(
 					MiscBorder.getBorder(BorderTitle.PORT, BorderType.FALSE));
-			if(typ == Typ.L3_SENDER) {
+			if (typ == Typ.L3_SENDER) {
 				input[0][2] = false;
-			} else if(typ == Typ.L3_RECEIVER) {
+			} else if (typ == Typ.L3_RECEIVER) {
 				input[1][2] = false;
 			}
 		}
 
-		if(getPanConfig(typ).getTf_udp_port().getText().equalsIgnoreCase("")) {
+		if (getPanConfig(typ).getTf_udp_port().getText().equalsIgnoreCase("")) {
 			getPanConfig(typ).getPan_udp_port().setBorder(
 					MiscBorder.getBorder(BorderTitle.PORT, BorderType.NEUTRAL));
 		}
@@ -2290,16 +2286,16 @@ public class ViewController implements ActionListener, MouseListener,
 	 *            Programmteil in welchem das Packet Rate Feld geuendert wurde.
 	 */
 	private void docEventTFrate(final Typ typ) {
-		if((InputValidator.checkPacketRate(getPanConfig(typ).getTf_packetrate()
-				.getText()) > 0)
+		if ((InputValidator.checkPacketRate(getPanConfig(typ)
+				.getTf_packetrate().getText()) > 0)
 				|| ((getSelectedRows(typ).length > 1) && getPanConfig(typ)
 						.getTf_packetrate().getText().equals("..."))) {
 			getPanConfig(typ).getPan_packetrate().setBorder(
 					MiscBorder.getBorder(BorderTitle.RATE, BorderType.TRUE));
-			if(typ == Typ.L3_SENDER) {
+			if (typ == Typ.L3_SENDER) {
 				input[0][4] = true;
-			} else if(typ == Typ.L2_SENDER) {
-				if(InputValidator.checkPacketRate(getPanConfig(typ)
+			} else if (typ == Typ.L2_SENDER) {
+				if (InputValidator.checkPacketRate(getPanConfig(typ)
 						.getTf_packetrate().getText()) > 0) {
 					input[2][4] = true;
 				}
@@ -2307,13 +2303,13 @@ public class ViewController implements ActionListener, MouseListener,
 		} else {
 			getPanConfig(typ).getPan_packetrate().setBorder(
 					MiscBorder.getBorder(BorderTitle.RATE, BorderType.FALSE));
-			if(typ == Typ.L3_SENDER) {
+			if (typ == Typ.L3_SENDER) {
 				input[0][4] = false;
-			} else if(typ == Typ.L2_SENDER) {
+			} else if (typ == Typ.L2_SENDER) {
 				input[2][4] = false;
 			}
 		}
-		if(getPanConfig(typ).getTf_packetrate().getText().equalsIgnoreCase("")) {
+		if (getPanConfig(typ).getTf_packetrate().getText().equalsIgnoreCase("")) {
 			getPanConfig(typ).getPan_packetrate().setBorder(
 					MiscBorder.getBorder(BorderTitle.RATE, BorderType.NEUTRAL));
 		}
@@ -2328,23 +2324,23 @@ public class ViewController implements ActionListener, MouseListener,
 	 *            Programmteil in welchem das TTL Feld geuendert wurde.
 	 */
 	private void docEventTFttl(final Typ typ) {
-		if((InputValidator.checkTimeToLive(getPanConfig(typ).getTf_ttl()
+		if ((InputValidator.checkTimeToLive(getPanConfig(typ).getTf_ttl()
 				.getText()) > 0)
 				|| ((getSelectedRows(typ).length > 1) && getPanConfig(typ)
 						.getTf_ttl().getText().equals("..."))) {
 			getPanConfig(typ).getPan_ttl().setBorder(
 					MiscBorder.getBorder(BorderTitle.TTL, BorderType.TRUE));
-			if(typ == Typ.L3_SENDER) {
+			if (typ == Typ.L3_SENDER) {
 				input[0][3] = true;
 			}
 		} else {
 			getPanConfig(typ).getPan_ttl().setBorder(
 					MiscBorder.getBorder(BorderTitle.TTL, BorderType.FALSE));
-			if(typ == Typ.L3_SENDER) {
+			if (typ == Typ.L3_SENDER) {
 				input[0][3] = false;
 			}
 		}
-		if(getPanConfig(typ).getTf_ttl().getText().equalsIgnoreCase("")) {
+		if (getPanConfig(typ).getTf_ttl().getText().equalsIgnoreCase("")) {
 			getPanConfig(typ).getPan_ttl().setBorder(
 					MiscBorder.getBorder(BorderTitle.TTL, BorderType.NEUTRAL));
 		}
@@ -2356,8 +2352,8 @@ public class ViewController implements ActionListener, MouseListener,
 	 * Passt die Komponenten der GUI auf die neue Groesse an.
 	 */
 	private void frameResizeEvent() {
-		if(getSelectedTab() != Typ.UNDEFINED) {
-			if(getFrame().getSize().width > 1000) {
+		if (getSelectedTab() != Typ.UNDEFINED) {
+			if (getFrame().getSize().width > 1000) {
 				getTable(getSelectedTab()).setAutoResizeMode(
 						JXTable.AUTO_RESIZE_SUBSEQUENT_COLUMNS);
 			} else {
@@ -2365,19 +2361,19 @@ public class ViewController implements ActionListener, MouseListener,
 						JXTable.AUTO_RESIZE_OFF);
 			}
 		}
-		if((getSelectedTab() == Typ.L2_RECEIVER)
+		if ((getSelectedTab() == Typ.L2_RECEIVER)
 				|| (getSelectedTab() == Typ.L3_RECEIVER)) {
-			if(((ReceiverGraph)getPanTabbed(getSelectedTab()).getPan_graph())
+			if (((ReceiverGraph) getPanTabbed(getSelectedTab()).getPan_graph())
 					.isVisible()
 					&& getPanTabbed(getSelectedTab()).getTab_console()
 							.isVisible()) {
-				((ReceiverGraph)getPanTabbed(getSelectedTab()).getPan_graph())
+				((ReceiverGraph) getPanTabbed(getSelectedTab()).getPan_graph())
 						.resize(new Dimension(getFrame().getSize().width - 262,
 								100));
 			}
-		} else if((getSelectedTab() == Typ.L2_SENDER)
+		} else if ((getSelectedTab() == Typ.L2_SENDER)
 				|| (getSelectedTab() == Typ.L3_SENDER)) {
-			if(getPanTabbed(getSelectedTab()).getPan_graph().isVisible()
+			if (getPanTabbed(getSelectedTab()).getPan_graph().isVisible()
 					&& getPanTabbed(getSelectedTab()).getTab_console()
 							.isVisible()) {
 				getPanTabbed(getSelectedTab()).getPan_graph().resize(
@@ -2396,19 +2392,19 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	private PanelMulticastConfig getPanConfig(final Typ typ) {
 		PanelMulticastConfig configpart = null;
-		switch(typ) {
-			case L2_SENDER:
-				configpart = f.getPanel(1, 0).getPan_config();
-				break;
-			case L2_RECEIVER:
-				configpart = f.getPanel(0, 0).getPan_config();
-				break;
-			case L3_SENDER:
-				configpart = f.getPanel(1, 1).getPan_config();
-				break;
-			case L3_RECEIVER:
-				configpart = f.getPanel(0, 1).getPan_config();
-				break;
+		switch (typ) {
+		case L2_SENDER:
+			configpart = f.getPanel(1, 0).getPan_config();
+			break;
+		case L2_RECEIVER:
+			configpart = f.getPanel(0, 0).getPan_config();
+			break;
+		case L3_SENDER:
+			configpart = f.getPanel(1, 1).getPan_config();
+			break;
+		case L3_RECEIVER:
+			configpart = f.getPanel(0, 1).getPan_config();
+			break;
 		}
 		return configpart;
 	}
@@ -2423,19 +2419,19 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	private PanelMulticastControl getPanControl(final Typ typ) {
 		PanelMulticastControl controlpart = null;
-		switch(typ) {
-			case L2_SENDER:
-				controlpart = f.getPanel(1, 0).getPan_control();
-				break;
-			case L2_RECEIVER:
-				controlpart = f.getPanel(0, 0).getPan_control();
-				break;
-			case L3_SENDER:
-				controlpart = f.getPanel(1, 1).getPan_control();
-				break;
-			case L3_RECEIVER:
-				controlpart = f.getPanel(0, 1).getPan_control();
-				break;
+		switch (typ) {
+		case L2_SENDER:
+			controlpart = f.getPanel(1, 0).getPan_control();
+			break;
+		case L2_RECEIVER:
+			controlpart = f.getPanel(0, 0).getPan_control();
+			break;
+		case L3_SENDER:
+			controlpart = f.getPanel(1, 1).getPan_control();
+			break;
+		case L3_RECEIVER:
+			controlpart = f.getPanel(0, 1).getPan_control();
+			break;
 		}
 		return controlpart;
 	}
@@ -2450,19 +2446,19 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	private PanelStatusBar getPanStatus(final Typ typ) {
 		PanelStatusBar statusbarpart = null;
-		switch(typ) {
-			case L2_SENDER:
-				statusbarpart = f.getPanel(1, 0).getPan_status();
-				break;
-			case L2_RECEIVER:
-				statusbarpart = f.getPanel(0, 0).getPan_status();
-				break;
-			case L3_SENDER:
-				statusbarpart = f.getPanel(1, 1).getPan_status();
-				break;
-			case L3_RECEIVER:
-				statusbarpart = f.getPanel(0, 1).getPan_status();
-				break;
+		switch (typ) {
+		case L2_SENDER:
+			statusbarpart = f.getPanel(1, 0).getPan_status();
+			break;
+		case L2_RECEIVER:
+			statusbarpart = f.getPanel(0, 0).getPan_status();
+			break;
+		case L3_SENDER:
+			statusbarpart = f.getPanel(1, 1).getPan_status();
+			break;
+		case L3_RECEIVER:
+			statusbarpart = f.getPanel(0, 1).getPan_status();
+			break;
 		}
 		return statusbarpart;
 	}
@@ -2492,18 +2488,18 @@ public class ViewController implements ActionListener, MouseListener,
 		cbSrc.addItem("");
 
 		Vector<InetAddress> temp = null;
-		if(isIPv4) {
+		if (isIPv4) {
 			temp = NetworkAdapter.getipv4Adapters();
 
 		} else {
 			temp = NetworkAdapter.getipv6Adapters();
 		}
-		if(temp != null) {
-			for(int i = 0; i < temp.size(); i++) {
+		if (temp != null) {
+			for (int i = 0; i < temp.size(); i++) {
 				try {
 					cbSrc.addItem(NetworkInterface
 							.getByInetAddress(temp.get(i)).getDisplayName());
-				} catch(final SocketException e) {
+				} catch (final SocketException e) {
 					// In this case the interface disappeared while running
 					// MCastor,
 					// So we commented this out and do nothing
@@ -2523,38 +2519,39 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	private void listSelectionEventFired(final Typ typ) {
 		PanelTabbed tabpart = null;
-		switch(typ) {
-			case L3_SENDER:
-				tabpart = f.getPanel(1, 1);
-				break;
-			case L3_RECEIVER:
-				tabpart = f.getPanel(0, 1);
-				break;
-			case L2_SENDER:
-				tabpart = f.getPanel(1, 0);
-				break;
-			case L2_RECEIVER:
-				tabpart = f.getPanel(0, 0);
-				break;
+		switch (typ) {
+		case L3_SENDER:
+			tabpart = f.getPanel(1, 1);
+			break;
+		case L3_RECEIVER:
+			tabpart = f.getPanel(0, 1);
+			break;
+		case L2_SENDER:
+			tabpart = f.getPanel(1, 0);
+			break;
+		case L2_RECEIVER:
+			tabpart = f.getPanel(0, 0);
+			break;
 		}
 
 		final int[] selectedRows = tabpart.getTable().getSelectedRows();
-		for(int i = 0; i < selectedRows.length; i++) {
-			selectedRows[i] = tabpart.getTable().convertRowIndexToModel(selectedRows[i]);
+		for (int i = 0; i < selectedRows.length; i++) {
+			selectedRows[i] = tabpart.getTable().convertRowIndexToModel(
+					selectedRows[i]);
 		}
 		tabpart.getPan_status()
 				.getLb_multicasts_selected()
 				.setText(
 						selectedRows.length + " "
 								+ lang.getProperty("status.mcSelected") + " ");
-		if(selectedRows.length > 1) {
+		if (selectedRows.length > 1) {
 			multipleSelect(typ);
 		}
-		if(selectedRows.length == 1) {
+		if (selectedRows.length == 1) {
 			tabpart.getPan_config().getBt_enter()
 					.setText(lang.getProperty("button.change"));
 			tabpart.getPan_config().getTf_groupIPaddress().setEnabled(true);
-			if((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
+			if ((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
 				tabpart.getPan_config()
 						.getTf_groupIPaddress()
 						.setText(
@@ -2570,9 +2567,9 @@ public class ViewController implements ActionListener, MouseListener,
 
 				final IPType iptype = NetworkAdapter.getAddressType(tabpart
 						.getPan_config().getTf_groupIPaddress().getText());
-				if(iptype == IPType.IPv4) {
+				if (iptype == IPType.IPv4) {
 					insertNetworkAdapters(typ, true);
-				} else if(iptype == IPType.IPv6) {
+				} else if (iptype == IPType.IPv6) {
 					insertNetworkAdapters(typ, false);
 				}
 				tabpart.getPan_config()
@@ -2596,7 +2593,7 @@ public class ViewController implements ActionListener, MouseListener,
 												typ).getMmrpSourceMac())));
 			}
 
-			if(typ == Typ.L2_SENDER) {
+			if (typ == Typ.L2_SENDER) {
 				tabpart.getPan_config()
 						.getTf_packetrate()
 						.setText(
@@ -2610,7 +2607,7 @@ public class ViewController implements ActionListener, MouseListener,
 										+ getMCData(selectedRows[0], typ)
 												.getPacketLength());
 			}
-			if(typ == Typ.L3_SENDER) {
+			if (typ == Typ.L3_SENDER) {
 				tabpart.getPan_config()
 						.getTf_packetrate()
 						.setText(
@@ -2630,12 +2627,12 @@ public class ViewController implements ActionListener, MouseListener,
 			}
 			setTBactive(selectedRows, typ);
 			setBTStartStopDelete(typ);
-		} else if(selectedRows.length == 0) {
+		} else if (selectedRows.length == 0) {
 			clearInput(typ);
 			tabpart.getPan_config().getBt_enter()
 					.setText(lang.getProperty("button.add"));
 			tabpart.getPan_config().getTf_groupIPaddress().setEnabled(true);
-			if(typ == Typ.L3_SENDER) {
+			if (typ == Typ.L3_SENDER) {
 				tabpart.getPan_config().getTf_sourceIPaddress()
 						.setEnabled(true);
 			}
@@ -2657,7 +2654,7 @@ public class ViewController implements ActionListener, MouseListener,
 
 		final int ret = chooser.showOpenDialog(f);
 
-		if(ret == JFileChooser.APPROVE_OPTION) {
+		if (ret == JFileChooser.APPROVE_OPTION) {
 			loadMulticastConfig(chooser.getSelectedFile().toString(),
 					incremental);
 		}
@@ -2674,14 +2671,14 @@ public class ViewController implements ActionListener, MouseListener,
 		chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
 		chooser.setFont(MiscFont.getFont());
 		final int ret = chooser.showOpenDialog(f);
-		if(ret == JFileChooser.APPROVE_OPTION) {
+		if (ret == JFileChooser.APPROVE_OPTION) {
 			mc.loadGUIConfig(chooser.getSelectedFile().toString(), false);
 		}
 	}
 
 	private void loadMulticastConfig(final String path,
 			final boolean incremental) {
-		if(!incremental) {
+		if (!incremental) {
 			deleteAllMulticasts(Typ.L3_SENDER);
 			deleteAllMulticasts(Typ.L2_SENDER);
 			deleteAllMulticasts(Typ.L3_RECEIVER);
@@ -2705,13 +2702,13 @@ public class ViewController implements ActionListener, MouseListener,
 		boolean ipv4 = false;
 		boolean ipv6 = false;
 
-		if((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
+		if ((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
 			final int[] rows = getSelectedRows(typ);
-			for(final int row : rows) {
-				if(InputValidator.checkIPv4((String)getTable(typ).getModel()
+			for (final int row : rows) {
+				if (InputValidator.checkIPv4((String) getTable(typ).getModel()
 						.getValueAt(row, 3)) != null) {
 					ipv4 = true;
-				} else if(InputValidator.checkIPv6((String)getTable(typ)
+				} else if (InputValidator.checkIPv6((String) getTable(typ)
 						.getModel().getValueAt(row, 3)) != null) {
 					ipv6 = true;
 				}
@@ -2720,7 +2717,7 @@ public class ViewController implements ActionListener, MouseListener,
 
 		getPanConfig(typ).getBt_enter().setText(
 				lang.getProperty("button.changeAll"));
-		if(typ == Typ.L3_SENDER) {
+		if (typ == Typ.L3_SENDER) {
 			getPanConfig(typ).getTf_sourceIPaddress().removeItemListener(this);
 			getPanConfig(typ).getTf_packetrate().getDocument()
 					.removeDocumentListener(this);
@@ -2750,12 +2747,12 @@ public class ViewController implements ActionListener, MouseListener,
 			getPanConfig(typ).getTf_ttl().getDocument()
 					.addDocumentListener(this);
 
-			if(ipv4 && ipv6) {
+			if (ipv4 && ipv6) {
 				getPanConfig(typ).getCb_sourceIPaddress().removeAllItems();
-			} else if(ipv4 && !ipv6) {
+			} else if (ipv4 && !ipv6) {
 				insertNetworkAdapters(typ, true);
 				getPanConfig(typ).getCb_sourceIPaddress().removeItemAt(0);
-			} else if(!ipv4 && ipv6) {
+			} else if (!ipv4 && ipv6) {
 				insertNetworkAdapters(typ, false);
 				getPanConfig(typ).getCb_sourceIPaddress().removeItemAt(0);
 			}
@@ -2794,30 +2791,30 @@ public class ViewController implements ActionListener, MouseListener,
 		store.setColumnOrder(getUserInputData(getSelectedTab())
 				.getColumnOrder());
 		final JCheckBox[] columns = PopUpMenu.getColumns();
-		for(final JCheckBox column : columns) {
-			if(column.isSelected()) {
+		for (final JCheckBox column : columns) {
+			if (column.isSelected()) {
 				final String s = column.getText();
-				if(s.equals("STATE")) {
+				if (s.equals("STATE")) {
 					visibility.add(new Integer(0));
-				} else if(s.equals("ID")) {
+				} else if (s.equals("ID")) {
 					visibility.add(new Integer(1));
-				} else if(s.equals("GRP IP")) {
+				} else if (s.equals("GRP IP")) {
 					visibility.add(new Integer(2));
-				} else if(s.equals("D RATE")) {
+				} else if (s.equals("D RATE")) {
 					visibility.add(new Integer(3));
-				} else if(s.equals("M RATE")) {
+				} else if (s.equals("M RATE")) {
 					visibility.add(new Integer(4));
-				} else if(s.equals("Mbit/s")) {
+				} else if (s.equals("Mbit/s")) {
 					visibility.add(new Integer(5));
-				} else if(s.equals("PORT")) {
+				} else if (s.equals("PORT")) {
 					visibility.add(new Integer(6));
-				} else if(s.equals("SRC IP") || s.equals("LOSS/S")) {
+				} else if (s.equals("SRC IP") || s.equals("LOSS/S")) {
 					visibility.add(new Integer(7));
-				} else if(s.equals("#SENT") || s.equals("AVG INT")) {
+				} else if (s.equals("#SENT") || s.equals("AVG INT")) {
 					visibility.add(new Integer(8));
-				} else if(s.equals("#INT") || s.equals("TTL")) {
+				} else if (s.equals("#INT") || s.equals("TTL")) {
 					visibility.add(new Integer(9));
-				} else if(s.equals("SRC") || s.equals("LENGTH")) {
+				} else if (s.equals("SRC") || s.equals("LENGTH")) {
 					visibility.add(new Integer(10));
 				}
 			}
@@ -2859,7 +2856,7 @@ public class ViewController implements ActionListener, MouseListener,
 	private void pressBTChange(final Typ typ) {
 		IPType iptype = null;
 		final int[] selectedList = getSelectedRows(typ);
-		if(selectedList.length == 1) {
+		if (selectedList.length == 1) {
 			iptype = NetworkAdapter.getAddressType(getPanConfig(typ)
 					.getTf_groupIPaddress().getText());
 			final MulticastData mcd = getMCData(selectedList[0], typ);
@@ -2867,7 +2864,7 @@ public class ViewController implements ActionListener, MouseListener,
 			getTable(typ).getSelectionModel().setSelectionInterval(0, 0);
 		} else {
 			final PanelMulticastConfig config = getPanConfig(typ);
-			if((typ == Typ.L3_SENDER)
+			if ((typ == Typ.L3_SENDER)
 					&& (config.getTf_groupIPaddress().getText().equals("..."))
 					&& (config.getCb_sourceIPaddress().getSelectedIndex() == 0)
 					&& (config.getTf_udp_port().getText().equals("..."))
@@ -2878,33 +2875,32 @@ public class ViewController implements ActionListener, MouseListener,
 					&& (config.getTb_active().getText().equals("multiple"))) {
 				showMessage(MessageTyp.INFO,
 						"No changes were made.\n\"...\" keeps old values!");
-			} else if((typ == Typ.L3_RECEIVER)
+			} else if ((typ == Typ.L3_RECEIVER)
 					&& (config.getTf_groupIPaddress().getText().equals("..."))
 					&& (config.getTf_udp_port().getText().equals("..."))
 					&& (config.getTb_active().getText().equals("multiple"))) {
 				showMessage(MessageTyp.INFO,
 						"No changes were made.\n\"...\" keeps old values!");
 			} else {
-				for(int i = selectedList.length - 1; i >= 0; i--) {
+				for (int i = selectedList.length - 1; i >= 0; i--) {
 					final MulticastData mcd = getMCData(selectedList[i]
 							+ ((selectedList.length - 1) - i), typ);
-					if(config.getTf_groupIPaddress().getText().equals("...")) {
-						if(InputValidator.checkIPv6((String)getTable(typ)
+					if (config.getTf_groupIPaddress().getText().equals("...")) {
+						if (InputValidator.checkIPv6((String) getTable(typ)
 								.getModel().getValueAt(selectedList[i], 3)) != null) {
 							changeMC(changeMCData(mcd, typ, IPType.IPv6));
-						} else if(InputValidator
-								.checkIPv4((String)getTable(typ).getModel()
-										.getValueAt(selectedList[i], 3)) != null) {
+						} else if (InputValidator.checkIPv4((String) getTable(
+								typ).getModel().getValueAt(selectedList[i], 3)) != null) {
 							changeMC(changeMCData(mcd, typ, IPType.IPv4));
 						} else {
 							/* MMRP */
 							changeMC(changeMCData(mcd, typ, null));
 						}
 					} else {
-						if(InputValidator.checkMC_IPv6(config
+						if (InputValidator.checkMC_IPv6(config
 								.getTf_groupIPaddress().getText()) != null) {
 							changeMC(changeMCData(mcd, typ, IPType.IPv6));
-						} else if(InputValidator.checkMC_IPv4(config
+						} else if (InputValidator.checkMC_IPv4(config
 								.getTf_groupIPaddress().getText()) != null) {
 							changeMC(changeMCData(mcd, typ, IPType.IPv4));
 						} else {
@@ -2929,10 +2925,11 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	private void pressBTDelete(final Typ typ) {
 		final int[] selectedRows = getTable(typ).getSelectedRows();
-		for(int i = 0; i < selectedRows.length; i++) {
-			selectedRows[i] = getTable(typ).convertRowIndexToModel(selectedRows[i]);
+		for (int i = 0; i < selectedRows.length; i++) {
+			selectedRows[i] = getTable(typ).convertRowIndexToModel(
+					selectedRows[i]);
 		}
-		for(int i = 0; i < selectedRows.length; i++) {
+		for (int i = 0; i < selectedRows.length; i++) {
 			// System.out.println("luesche zeile: "+selectedRows[i]);
 			deleteMC(getMCData(selectedRows[i] - i, typ));
 		}
@@ -2948,7 +2945,7 @@ public class ViewController implements ActionListener, MouseListener,
 	 *            Programmteil in welchem der Add Button gedrueckt wurde
 	 */
 	private void pressBTenter(final Typ typ) {
-		if(getPanConfig(typ).getBt_enter().getText()
+		if (getPanConfig(typ).getBt_enter().getText()
 				.equals(lang.getProperty("button.add"))) {
 			pressBTAdd(typ);
 		} else {
@@ -2985,12 +2982,12 @@ public class ViewController implements ActionListener, MouseListener,
 		 * If all rows are already selected, deselect all which is the same
 		 * functionality like pressing new
 		 */
-		if((getSelectedRows(typ).length == getTable(typ).getRowCount())
+		if ((getSelectedRows(typ).length == getTable(typ).getRowCount())
 				&& deselectPossible) {
 			pressBTNewMC(typ);
 		} else {
 			getTable(typ).selectAll();
-			if(getSelectedRows(typ).length > 1) {
+			if (getSelectedRows(typ).length > 1) {
 				multipleSelect(typ);
 			}
 		}
@@ -3003,36 +3000,36 @@ public class ViewController implements ActionListener, MouseListener,
 	 *            Programmteil in welchem der Start Button gedrueckt wurde
 	 */
 	private void pressBTStartStop(final Typ typ) {
-		final int[] selectedLine = getSelectedRows(typ);	
+		final int[] selectedLine = getSelectedRows(typ);
 		boolean oneActive = false;
 
-		if(selectedLine.length == 1) {
-			if(!getMCData(selectedLine[0], typ).isActive()) {
+		if (selectedLine.length == 1) {
+			if (!getMCData(selectedLine[0], typ).isActive()) {
 				startMC(selectedLine[0], typ);
 				updateTable(typ, UpdateTyp.UPDATE);
 			} else {
-				if(getMCData(selectedLine[0], typ).isActive()) {
+				if (getMCData(selectedLine[0], typ).isActive()) {
 					stopMC(selectedLine[0], typ);
 					updateTable(typ, UpdateTyp.UPDATE);
 				}
 			}
-		} else if(selectedLine.length > 1) {
-			for(final int element : selectedLine) {
-				if(getMCData(element, typ).isActive()) {
+		} else if (selectedLine.length > 1) {
+			for (final int element : selectedLine) {
+				if (getMCData(element, typ).isActive()) {
 					oneActive = true;
 				}
 			}
 			/* if at least one is active, deactivate all otherwise activate all */
-			if(oneActive) {
-				for(final int element : selectedLine) {
-					if(getMCData(element, typ).isActive()) {
+			if (oneActive) {
+				for (final int element : selectedLine) {
+					if (getMCData(element, typ).isActive()) {
 						stopMC(element, typ);
 						updateTable(typ, UpdateTyp.UPDATE);
 					}
 				}
 			} else {
-				for(int i = 0; i < selectedLine.length; i++) {
-					if(!getMCData(selectedLine[i], typ).isActive()) {
+				for (int i = 0; i < selectedLine.length; i++) {
+					if (!getMCData(selectedLine[i], typ).isActive()) {
 						startMC(selectedLine[i], typ);
 						updateTable(typ, UpdateTyp.UPDATE);
 					}
@@ -3052,11 +3049,11 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	private void removeKeyAndContainerListenerToAll(final Component c) {
 		c.removeKeyListener(this);
-		if(c instanceof Container) {
-			final Container cont = (Container)c;
+		if (c instanceof Container) {
+			final Container cont = (Container) c;
 			cont.removeContainerListener(this);
 			final Component[] children = cont.getComponents();
-			for(final Component element : children) {
+			for (final Component element : children) {
 				removeKeyAndContainerListenerToAll(element);
 			}
 		}
@@ -3079,8 +3076,8 @@ public class ViewController implements ActionListener, MouseListener,
 		// show the save dialog
 		final int ret = chooser.showSaveDialog(f);
 		// save the file
-		if(ret == JFileChooser.APPROVE_OPTION) {
-			if(!partiell) {
+		if (ret == JFileChooser.APPROVE_OPTION) {
+			if (!partiell) {
 				final Vector<MulticastData> v = new Vector<MulticastData>();
 				v.addAll(mc.getMCs(Typ.L2_RECEIVER));
 				v.addAll(mc.getMCs(Typ.L3_RECEIVER));
@@ -3089,21 +3086,25 @@ public class ViewController implements ActionListener, MouseListener,
 				mc.saveMulticastConfig(chooser.getSelectedFile().getPath(), v);
 			} else {
 				final Vector<MulticastData> v = new Vector<MulticastData>();
-				for(final int row : f.getPanel(0, 0).getTable()
+				for (final int row : f.getPanel(0, 0).getTable()
 						.getSelectedRows()) {
-					v.add(mc.getMC(f.getPanel(0, 0).getTable().convertRowIndexToModel(row), Typ.L2_RECEIVER));
+					v.add(mc.getMC(f.getPanel(0, 0).getTable()
+							.convertRowIndexToModel(row), Typ.L2_RECEIVER));
 				}
-				for(final int row : f.getPanel(0, 1).getTable()
+				for (final int row : f.getPanel(0, 1).getTable()
 						.getSelectedRows()) {
-					v.add(mc.getMC(f.getPanel(0, 1).getTable().convertRowIndexToModel(row), Typ.L3_RECEIVER));
+					v.add(mc.getMC(f.getPanel(0, 1).getTable()
+							.convertRowIndexToModel(row), Typ.L3_RECEIVER));
 				}
-				for(final int row : f.getPanel(1, 0).getTable()
+				for (final int row : f.getPanel(1, 0).getTable()
 						.getSelectedRows()) {
-					v.add(mc.getMC(f.getPanel(1, 0).getTable().convertRowIndexToModel(row), Typ.L2_SENDER));
+					v.add(mc.getMC(f.getPanel(1, 0).getTable()
+							.convertRowIndexToModel(row), Typ.L2_SENDER));
 				}
-				for(final int row : f.getPanel(1, 1).getTable()
+				for (final int row : f.getPanel(1, 1).getTable()
 						.getSelectedRows()) {
-					v.add(mc.getMC(f.getPanel(1, 1).getTable().convertRowIndexToModel(row), Typ.L3_SENDER));
+					v.add(mc.getMC(f.getPanel(1, 1).getTable()
+							.convertRowIndexToModel(row), Typ.L3_SENDER));
 				}
 				mc.saveMulticastConfig(chooser.getSelectedFile().getPath(), v);
 			}
@@ -3123,7 +3124,7 @@ public class ViewController implements ActionListener, MouseListener,
 		// show the save dialog
 		final int ret = chooser.showSaveDialog(f);
 		// save the file
-		if(ret == JFileChooser.APPROVE_OPTION) {
+		if (ret == JFileChooser.APPROVE_OPTION) {
 			mc.updateGUIData(guidata);
 			mc.saveGUIConfig(chooser.getSelectedFile().getPath(), guidata);
 		}
@@ -3138,10 +3139,10 @@ public class ViewController implements ActionListener, MouseListener,
 	 */
 	private void setBTStartStopDelete(final Typ typ) {
 		final int[] selectedLine = getSelectedRows(typ);
-		if(selectedLine.length != 0) {
+		if (selectedLine.length != 0) {
 			getPanControl(typ).getDelete().setEnabled(true);
 			getPanControl(typ).getStartStop().setEnabled(true);
-		} else  {
+		} else {
 			getPanControl(typ).getStartStop().setEnabled(false);
 			getPanControl(typ).getDelete().setEnabled(false);
 		}
@@ -3157,7 +3158,7 @@ public class ViewController implements ActionListener, MouseListener,
 	 *            Programmteil in welchem sich der Active Button befindet
 	 */
 	private void setTBactive(final boolean b, final Typ typ) {
-		if(b) {
+		if (b) {
 			getPanConfig(typ).getTb_active().setSelected(true);
 			getPanConfig(typ).getTb_active().setText(
 					lang.getProperty("button.active"));
@@ -3181,7 +3182,7 @@ public class ViewController implements ActionListener, MouseListener,
 	 *            gedrueckt wurde
 	 */
 	private void toggleBTactive(final Typ typ) {
-		if(getPanConfig(typ).getTb_active().isSelected()) {
+		if (getPanConfig(typ).getTb_active().isSelected()) {
 			setTBactive(true, typ);
 		} else {
 			setTBactive(false, typ);
@@ -3200,10 +3201,10 @@ public class ViewController implements ActionListener, MouseListener,
 		// graph in front of SRC address dropdown
 		boolean showupdate = false;
 		// check if graph is selected
-		if(getPanTabbed(typ).getTab_console().getSelectedIndex() == 0) {
-			if(getPanTabbed(typ).getPan_graph().isVisible()
+		if (getPanTabbed(typ).getTab_console().getSelectedIndex() == 0) {
+			if (getPanTabbed(typ).getPan_graph().isVisible()
 					&& getPanTabbed(typ).getTab_console().isVisible()) {
-				if((typ == Typ.L2_SENDER) || (typ == Typ.L3_SENDER)) {
+				if ((typ == Typ.L2_SENDER) || (typ == Typ.L3_SENDER)) {
 					showupdate = !getPanConfig(typ).getCb_sourceIPaddress()
 							.isPopupVisible() && !PopUpMenu.isPopUpVisible();
 				} else {
@@ -3215,15 +3216,15 @@ public class ViewController implements ActionListener, MouseListener,
 		}
 		// check which tab is selected and update graph for specific program
 		// part
-		if((typ == Typ.L2_SENDER) || (typ == Typ.L3_SENDER)) {
+		if ((typ == Typ.L2_SENDER) || (typ == Typ.L3_SENDER)) {
 			getPanTabbed(typ).getPan_graph().updateGraph(mc.getPPSSender(typ),
 					showupdate);
 		} else {
 			graphData = new MulticastData[getSelectedRows(typ).length];
-			for(int i = 0; i < getSelectedRows(typ).length; i++) {
+			for (int i = 0; i < getSelectedRows(typ).length; i++) {
 				graphData[i] = mc.getMC(getSelectedRows(typ)[i], typ);
 			}
-			((ReceiverGraph)getPanTabbed(typ).getPan_graph()).updateGraph(
+			((ReceiverGraph) getPanTabbed(typ).getPan_graph()).updateGraph(
 					graphData, showupdate);
 
 		}

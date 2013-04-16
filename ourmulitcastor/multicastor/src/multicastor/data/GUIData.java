@@ -199,7 +199,7 @@ public class GUIData {
 	 *            the tab state to be set
 	 */
 	public void setPLUS(final TabState pLUS) {
-		if(pLUS != TabState.invisible) {
+		if (pLUS != TabState.invisible) {
 			PLUS = pLUS;
 		}
 	}

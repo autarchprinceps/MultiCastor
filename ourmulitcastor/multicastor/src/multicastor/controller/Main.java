@@ -58,12 +58,11 @@ public class Main {
 		MulticastLogHandler consoleHandler;
 
 		// Erstellen und Einrichten vom Logger
-		final Logger logger = Logger
-				.getLogger("multicastor.controller.main");
+		final Logger logger = Logger.getLogger("multicastor.controller.main");
 		logger.setUseParentHandlers(false);
 		logger.setLevel(Level.FINEST);
 
-		if(Main.REAL_MAX_HEAP < Main.MIN_MAX_HEAP) {
+		if (Main.REAL_MAX_HEAP < Main.MIN_MAX_HEAP) {
 
 			consoleHandler = new MulticastLogHandler();
 			consoleHandler.setLevel(Level.FINEST);
@@ -75,7 +74,7 @@ public class Main {
 					+ (Main.MIN_MAX_HEAP / (1024 * 1024)) + " MB "
 					+ lang.getProperty("error.memory.part3"));
 
-			if((args.length == 0) || !args[0].equals("-g")) {
+			if ((args.length == 0) || !args[0].equals("-g")) {
 				JOptionPane.showMessageDialog(
 						new JFrame(),
 						lang.getProperty("error.memory.part1") + " "
@@ -89,7 +88,7 @@ public class Main {
 			}
 			logSystemInformation(logger);
 			System.exit(1);
-		} else if(args.length == 0) {
+		} else if (args.length == 0) {
 			gui = new ViewController();
 			controller = new MulticastController(gui, logger);
 			gui.initialize(controller);
@@ -102,19 +101,19 @@ public class Main {
 			logger.info(lang.getProperty("logger.info.startWithGui"));
 
 			// Fehler für fehlende JNetPcap
-			if(NetworkAdapter.hasJpcapMissing) {
+			if (NetworkAdapter.hasJpcapMissing) {
 				logger.warning(lang.getProperty("message.pcapDeviceFail"));
 			}
 
 			controller.loadDefaultMulticastConfig();
 			controller.loadGUIConfig("", true);
 
-			for(final Handler h : logger.getHandlers()) {
+			for (final Handler h : logger.getHandlers()) {
 				h.close();
 			}
-		} else if(args[0].equals("-g")) {
+		} else if (args[0].equals("-g")) {
 			// System.out.println("Parameter -g mitgegeben");
-			if(args.length == 1) {
+			if (args.length == 1) {
 				System.out.println(lang
 						.getProperty("error.config.notSpecified"));
 			} else {
@@ -134,42 +133,42 @@ public class Main {
 					logger.info(lang.getProperty("logger.info.startNoGui"));
 
 					// Fehler für fehlende JNetPcap
-					if(NetworkAdapter.hasJpcapMissing) {
+					if (NetworkAdapter.hasJpcapMissing) {
 						logger.info(lang.getProperty("message.pcapDeviceFail"));
 					}
 
 					controller.loadConfigWithoutGUI(pfad);
 
-				} catch(final FileNotFoundException e) {
+				} catch (final FileNotFoundException e) {
 					System.out.println(lang
 							.getProperty("error.config.notSpecified"));
 					// e.printStackTrace();
 					System.exit(0);
-				} catch(final SAXException e) {
+				} catch (final SAXException e) {
 					System.out.println(lang
 							.getProperty("error.config.wrongFormat"));
 					// e.printStackTrace();
 					System.exit(0);
-				} catch(final IOException e) {
+				} catch (final IOException e) {
 					System.out.println("IOE");
 					// e.printStackTrace();
 					System.exit(0);
-				} catch(final WrongConfigurationException e) {
+				} catch (final WrongConfigurationException e) {
 					System.out.println(lang
 							.getProperty("error.config.wrongFormat"));
 					e.printStackTrace();
 					System.exit(0);
 				}
-				for(final Handler h : logger.getHandlers()) {
+				for (final Handler h : logger.getHandlers()) {
 					h.close();
 				}
 			}
-		} else if(args[0].equals("-h")) {
+		} else if (args[0].equals("-h")) {
 			// System.out.println("Parameter -h mitgegeben");
 			System.out.println(lang.getProperty("console.helptext"));
-		} else if(args.length != 0) {
+		} else if (args.length != 0) {
 			final File checkfile = new File(args[0]);
-			if(checkfile.exists()) {
+			if (checkfile.exists()) {
 				gui = new ViewController();
 				controller = new MulticastController(gui, logger);
 				gui.initialize(controller);
@@ -185,7 +184,7 @@ public class Main {
 				controller.loadMulticastConfig(args[0], true);
 				controller.loadGUIConfig("", true);
 
-				for(final Handler h : logger.getHandlers()) {
+				for (final Handler h : logger.getHandlers()) {
 					h.close();
 				}
 			} else {
@@ -208,7 +207,7 @@ public class Main {
 					+ java.net.InetAddress.getLocalHost().getHostName());
 			logger.info("Hostadress: "
 					+ java.net.InetAddress.getLocalHost().getHostAddress());
-		} catch(final UnknownHostException e1) {
+		} catch (final UnknownHostException e1) {
 			logger.info("Unable to get hostname and hostadress");
 		}
 		logger.info("Username: " + System.getProperty("user.name")

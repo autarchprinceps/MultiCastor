@@ -23,7 +23,6 @@ import javax.swing.plaf.basic.BasicButtonUI;
 import multicastor.controller.ViewController;
 import multicastor.lang.LanguageManager;
 
-
 /**
  * Die Klasse ButtonTabComponent ist ein Panel das in den Tabs (Titeln) benutzt
  * wird. Links steht dabei jeweils ein Icon in der Mitte der Titel und rechts
@@ -70,7 +69,7 @@ public class ButtonTabComponent extends JPanel {
 		@Override
 		public void actionPerformed(final ActionEvent e) {
 			final int i = pane.indexOfTabComponent(ButtonTabComponent.this);
-			if(i != -1) {
+			if (i != -1) {
 				pane.closeTab(pane.getTitleAt(i));
 				pane.remove(i);
 				vCtrl.autoSave();
@@ -93,19 +92,21 @@ public class ButtonTabComponent extends JPanel {
 		@Override
 		protected void paintComponent(final Graphics g) {
 			super.paintComponent(g);
-			final Graphics2D g2 = (Graphics2D)g.create();
+			final Graphics2D g2 = (Graphics2D) g.create();
 			// shift the image for pressed buttons
-			if(getModel().isPressed()) {
+			if (getModel().isPressed()) {
 				g2.translate(1, 1);
 			}
 			g2.setStroke(new BasicStroke(2));
 			g2.setColor(Color.BLACK);
-			if(getModel().isRollover()) {
+			if (getModel().isRollover()) {
 				g2.setColor(Color.MAGENTA);
 			}
 			final int delta = 6;
-			g2.drawLine(delta, delta, getWidth() - delta - 1, getHeight() - delta - 1);
-			g2.drawLine(getWidth() - delta - 1, delta, delta, getHeight() - delta - 1);
+			g2.drawLine(delta, delta, getWidth() - delta - 1, getHeight()
+					- delta - 1);
+			g2.drawLine(getWidth() - delta - 1, delta, delta, getHeight()
+					- delta - 1);
 			g2.dispose();
 		}
 	}
@@ -122,8 +123,8 @@ public class ButtonTabComponent extends JPanel {
 		@Override
 		public void mouseEntered(final MouseEvent e) {
 			final Component component = e.getComponent();
-			if(component instanceof AbstractButton) {
-				final AbstractButton button = (AbstractButton)component;
+			if (component instanceof AbstractButton) {
+				final AbstractButton button = (AbstractButton) component;
 				button.setBorderPainted(true);
 			}
 		}
@@ -139,8 +140,8 @@ public class ButtonTabComponent extends JPanel {
 		@Override
 		public void mouseExited(final MouseEvent e) {
 			final Component component = e.getComponent();
-			if(component instanceof AbstractButton) {
-				final AbstractButton button = (AbstractButton)component;
+			if (component instanceof AbstractButton) {
+				final AbstractButton button = (AbstractButton) component;
 				button.setBorderPainted(false);
 			}
 		}
@@ -174,7 +175,7 @@ public class ButtonTabComponent extends JPanel {
 		vCtrl = pVCtrl;
 
 		// Handle Errors
-		if(pane == null) {
+		if (pane == null) {
 			throw new NullPointerException("The parent TabbedPane is null");
 		}
 
@@ -187,7 +188,7 @@ public class ButtonTabComponent extends JPanel {
 				// This gets the index of this Component (or -1 if its not
 				// contained in a TabbedPane)
 				final int i = pane.indexOfTabComponent(ButtonTabComponent.this);
-				if(i != -1) {
+				if (i != -1) {
 					return pane.getTitleAt(i);
 				}
 				return null;

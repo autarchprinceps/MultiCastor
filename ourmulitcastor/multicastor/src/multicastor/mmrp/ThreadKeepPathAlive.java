@@ -19,46 +19,45 @@ public class ThreadKeepPathAlive implements Runnable {
 			final byte[] source = new byte[6];
 			final byte[] stream = new byte[6];
 
-			for(int i = 0; i < 6; i++) {
+			for (int i = 0; i < 6; i++) {
 				source[i] = packet.getByte(6 + i);
 				stream[i] = packet.getByte(19 + i);
 			}
 
-			if(PcapHandler.compareMACs(stream, streamMACAddress)) {
+			if (PcapHandler.compareMACs(stream, streamMACAddress)) {
 				int cast = packet.getByte(25) & 0xff;
 				cast = cast / 36;
 
 				try {
 					// if message is a leaveAll event
-					if(packet.getByte(17) == (byte)0x20) {
+					if (packet.getByte(17) == (byte) 0x20) {
 						PacketHandler.sendPacket(deviceMACAddress, MMRPPacket
 								.getJoinEmpty(deviceMACAddress,
 										streamMACAddress));
 					} else {
-						switch(cast) {
+						switch (cast) {
 						// joinEmpty
-							case 3:
-								PacketHandler.sendPacket(deviceMACAddress,
-										MMRPPacket.getJoinIn(deviceMACAddress,
-												streamMACAddress));
-								break;
-							// empty
-							case 4:
-								PacketHandler.sendPacket(deviceMACAddress,
-										MMRPPacket.getJoinIn(deviceMACAddress,
-												streamMACAddress));
-								break;
-							// leave
-							case 5:
-								PacketHandler.sendPacket(deviceMACAddress,
-										MMRPPacket.getJoinEmpty(
-												deviceMACAddress,
-												streamMACAddress));
-								break;
+						case 3:
+							PacketHandler.sendPacket(deviceMACAddress,
+									MMRPPacket.getJoinIn(deviceMACAddress,
+											streamMACAddress));
+							break;
+						// empty
+						case 4:
+							PacketHandler.sendPacket(deviceMACAddress,
+									MMRPPacket.getJoinIn(deviceMACAddress,
+											streamMACAddress));
+							break;
+						// leave
+						case 5:
+							PacketHandler.sendPacket(deviceMACAddress,
+									MMRPPacket.getJoinEmpty(deviceMACAddress,
+											streamMACAddress));
+							break;
 						}
 					}
 
-				} catch(final IOException e) {
+				} catch (final IOException e) {
 					e.printStackTrace();
 				}
 
@@ -88,7 +87,7 @@ public class ThreadKeepPathAlive implements Runnable {
 	}
 
 	public void waitForEmpty() {
-		while(!Thread.interrupted()) {
+		while (!Thread.interrupted()) {
 			pcap.loop(1, pcapPacketHandler, "");
 		}
 	}

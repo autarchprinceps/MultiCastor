@@ -55,34 +55,34 @@ public abstract class NetworkAdapter {
 		NetworkInterface current = null;
 		try {
 			adapters = NetworkInterface.getNetworkInterfaces();
-		} catch(final SocketException e) {
+		} catch (final SocketException e) {
 			e.printStackTrace();
 		}
-		while(adapters.hasMoreElements()) {
+		while (adapters.hasMoreElements()) {
 
 			current = adapters.nextElement();
 			final Enumeration<InetAddress> addresses = current
 					.getInetAddresses();
 
-			while(addresses.hasMoreElements()) {
+			while (addresses.hasMoreElements()) {
 
 				final InetAddress currentaddress = addresses.nextElement();
-				if(InputValidator.checkIPv4(currentaddress.getHostAddress()) != null) {
+				if (InputValidator.checkIPv4(currentaddress.getHostAddress()) != null) {
 					ipv4Interfaces.add(currentaddress);
 				}
 
-				if(InputValidator.checkIPv6(currentaddress.getHostAddress()
+				if (InputValidator.checkIPv6(currentaddress.getHostAddress()
 						.split("%")[0]) != null) {
 					ipv6Interfaces.add(currentaddress);
 				}
 			}
 			try {
-				if((current.getHardwareAddress() != null)
+				if ((current.getHardwareAddress() != null)
 						&& (current.getHardwareAddress().length == 6)) {
 					macInterfaces.add(current.getHardwareAddress());
 					macInterfacesName.add(current.getDisplayName());
 				}
-			} catch(final SocketException e) {
+			} catch (final SocketException e) {
 
 			}
 		}
@@ -97,19 +97,19 @@ public abstract class NetworkAdapter {
 		int r;
 		try {
 			r = Pcap.findAllDevs(alldevs, errbuf);
-		} catch(final UnsatisfiedLinkError e) {
+		} catch (final UnsatisfiedLinkError e) {
 			// System.out.println(lang.getProperty("message.unsatisfiedLinkError"));
 			r = 0;
 			hasJpcapMissing = true;
 		}
-		if(!(r == Pcap.NOT_OK) && !(alldevs.isEmpty())) {
-			for(final PcapIf p : alldevs) {
+		if (!(r == Pcap.NOT_OK) && !(alldevs.isEmpty())) {
+			for (final PcapIf p : alldevs) {
 				try {
-					if(p.getHardwareAddress() != null) {
+					if (p.getHardwareAddress() != null) {
 						String name = NetworkAdapter.getNameToMacAdress(p
 								.getHardwareAddress());
 						tmpMacAdress.add(p.getHardwareAddress());
-						if(name == null) {
+						if (name == null) {
 							// p.getName() looks cryptic under windows
 							// Therefore also Use the Dev 0,1,2,...
 							name = lang.getProperty("message.device") + " "
@@ -118,7 +118,7 @@ public abstract class NetworkAdapter {
 						}
 						tmpNameList.add(name);
 					}
-				} catch(final IOException e) {
+				} catch (final IOException e) {
 
 				}
 			}
@@ -140,16 +140,16 @@ public abstract class NetworkAdapter {
 	 */
 	public static int findAddressIndex(final String address) {
 		int ret = -1;
-		if(getAddressType(address) == IPType.IPv4) {
-			for(int i = 0; i < ipv4Interfaces.size(); i++) {
-				if(ipv4Interfaces.get(i).toString().substring(1)
+		if (getAddressType(address) == IPType.IPv4) {
+			for (int i = 0; i < ipv4Interfaces.size(); i++) {
+				if (ipv4Interfaces.get(i).toString().substring(1)
 						.equals(address)) {
 					ret = i;
 				}
 			}
-		} else if(getAddressType(address) == IPType.IPv6) {
-			for(int i = 0; i < ipv6Interfaces.size(); i++) {
-				if(ipv6Interfaces.get(i).toString().substring(1)
+		} else if (getAddressType(address) == IPType.IPv6) {
+			for (int i = 0; i < ipv6Interfaces.size(); i++) {
+				if (ipv6Interfaces.get(i).toString().substring(1)
 						.startsWith(address)) {
 					ret = i;
 				}
@@ -160,8 +160,8 @@ public abstract class NetworkAdapter {
 
 	public static int findAddressIndexMMRP(final String address) {
 		int ret = -1;
-		for(int i = 0; i < macInterfaces.size(); i++) {
-			if(Arrays.toString(macInterfaces.get(i)).equals(address)) {
+		for (int i = 0; i < macInterfaces.size(); i++) {
+			if (Arrays.toString(macInterfaces.get(i)).equals(address)) {
 				ret = i;
 			}
 		}
@@ -169,10 +169,10 @@ public abstract class NetworkAdapter {
 	}
 
 	public static IPType getAddressType(final String address) {
-		if((InputValidator.checkMC_IPv4(address) != null)
+		if ((InputValidator.checkMC_IPv4(address) != null)
 				|| (InputValidator.checkIPv4(address) != null)) {
 			return IPType.IPv4;
-		} else if((InputValidator.checkMC_IPv6(address) != null)
+		} else if ((InputValidator.checkMC_IPv6(address) != null)
 				|| (InputValidator.checkIPv6(address) != null)) {
 			return IPType.IPv6;
 		}
@@ -222,8 +222,8 @@ public abstract class NetworkAdapter {
 	}
 
 	public static String getNameToMacAdress(final byte[] mac) {
-		for(int i = 0; i < macInterfaces.size(); i++) {
-			if(Arrays.equals(macInterfaces.get(i), mac)) {
+		for (int i = 0; i < macInterfaces.size(); i++) {
+			if (Arrays.equals(macInterfaces.get(i), mac)) {
 				return macInterfacesName.get(i);
 			}
 		}

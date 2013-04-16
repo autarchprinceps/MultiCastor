@@ -76,7 +76,7 @@ public class SnakeGimmick {
 		g.setColor(Color.BLACK);
 		bodyCoord[0] = headX;
 		bodyCoord[1] = headY;
-		for(int i = snakeLength; i > -1; i--) {
+		for (int i = snakeLength; i > -1; i--) {
 			bodyCoord = findSnakeBodyPart(i, bodyCoord[0], bodyCoord[1]);
 			g.fillRect((bodyCoord[0] * 3) + 5, (bodyCoord[1] * 3) + 5, 3, 3);
 		}
@@ -93,10 +93,10 @@ public class SnakeGimmick {
 	 */
 	public void dropNewApple() {
 		int newAppleX, newAppleY;
-		while(true) {
-			newAppleX = (int)((Math.random() * 100) % 30);
-			newAppleY = (int)((Math.random() * 100) % 30);
-			if(snakeField[newAppleX][newAppleY] == -1) {
+		while (true) {
+			newAppleX = (int) ((Math.random() * 100) % 30);
+			newAppleY = (int) ((Math.random() * 100) % 30);
+			if (snakeField[newAppleX][newAppleY] == -1) {
 				snakeField[newAppleX][newAppleY] = APPLE;
 				appleX = newAppleX;
 				appleY = newAppleY;
@@ -110,8 +110,8 @@ public class SnakeGimmick {
 	 */
 	public void initSnake() {
 		// setze alle Felder -1 (unbesetzt)
-		for(int i = 0; i < 30; i++) {
-			for(int j = 0; j < 30; j++) {
+		for (int i = 0; i < 30; i++) {
+			for (int j = 0; j < 30; j++) {
 				snakeField[i][j] = -1;
 			}
 		}
@@ -142,54 +142,54 @@ public class SnakeGimmick {
 		// Die Richtung aus die die Snake kommt, ist nicht erlaubt!
 		// Sollte diese Richtung uebergeben werden,
 		// laeuft die Snake weiter in die vorige Richtung
-		if((lastD == SNAKE_DIRECTION.N) && (d == SNAKE_DIRECTION.S)) {
+		if ((lastD == SNAKE_DIRECTION.N) && (d == SNAKE_DIRECTION.S)) {
 			d = SNAKE_DIRECTION.N;
 		}
-		if((lastD == SNAKE_DIRECTION.S) && (d == SNAKE_DIRECTION.N)) {
+		if ((lastD == SNAKE_DIRECTION.S) && (d == SNAKE_DIRECTION.N)) {
 			d = SNAKE_DIRECTION.S;
 		}
-		if((lastD == SNAKE_DIRECTION.W) && (d == SNAKE_DIRECTION.E)) {
+		if ((lastD == SNAKE_DIRECTION.W) && (d == SNAKE_DIRECTION.E)) {
 			d = SNAKE_DIRECTION.W;
 		}
-		if((lastD == SNAKE_DIRECTION.E) && (d == SNAKE_DIRECTION.W)) {
+		if ((lastD == SNAKE_DIRECTION.E) && (d == SNAKE_DIRECTION.W)) {
 			d = SNAKE_DIRECTION.E;
 		}
 
 		lastD = d;
 
-		switch(d) {
-			case N:
-				headY--;
-				break;
-			case S:
-				headY++;
-				break;
-			case W:
-				headX--;
-				break;
-			case E:
-				headX++;
-				break;
+		switch (d) {
+		case N:
+			headY--;
+			break;
+		case S:
+			headY++;
+			break;
+		case W:
+			headX--;
+			break;
+		case E:
+			headX++;
+			break;
 		}
 
 		// "Umbrueche" an den Raendern beruecksichtigen
-		if(headY < 0) {
+		if (headY < 0) {
 			headY = 29;
 		}
-		if(headY > 29) {
+		if (headY > 29) {
 			headY = 0;
 		}
-		if(headX < 0) {
+		if (headX < 0) {
 			headX = 29;
 		}
-		if(headX > 29) {
+		if (headX > 29) {
 			headX = 0;
 		}
 
 		// Ist das Feld an der neuen Head-Position leer?
-		if(snakeField[headX][headY] != -1) {
+		if (snakeField[headX][headY] != -1) {
 			// APFEL
-			if(snakeField[headX][headY] == APPLE) {
+			if (snakeField[headX][headY] == APPLE) {
 				foundApple = true;
 				snakeLength++;
 				score += 10;
@@ -205,11 +205,11 @@ public class SnakeGimmick {
 
 		// Wenn kein Apfel gefunden wurde,
 		// muessen die anderen Indizes umgeaendert werden
-		if(!foundApple) {
+		if (!foundApple) {
 			int[] temp = new int[2];
 			temp[0] = headX;
 			temp[1] = headY;
-			for(int i = snakeLength; i >= 0; i--) {
+			for (int i = snakeLength; i >= 0; i--) {
 				temp = findSnakeBodyPart(i, temp[0], temp[1]);
 				snakeField[temp[0]][temp[1]]--;
 			}
@@ -217,7 +217,7 @@ public class SnakeGimmick {
 
 		// Index des neuen Kopfs setzen
 		snakeField[headX][headY] = snakeLength;
-		if(foundApple) {
+		if (foundApple) {
 			foundApple = false;
 			return 1;
 		} else {
@@ -239,46 +239,46 @@ public class SnakeGimmick {
 	private int[] findSnakeBodyPart(final int index, final int lastX,
 			final int lastY) {
 		// �stliches Feld ueberpruefen
-		if(lastX < 29) {
-			if(snakeField[lastX + 1][lastY] == index) {
+		if (lastX < 29) {
+			if (snakeField[lastX + 1][lastY] == index) {
 				return new int[] { (lastX + 1), lastY };
 			}
 		}
-		if(lastX == 29) {
-			if(snakeField[0][lastY] == index) {
+		if (lastX == 29) {
+			if (snakeField[0][lastY] == index) {
 				return new int[] { 0, lastY };
 			}
 		}
 		// Westliches Feld
-		if(lastX > 0) {
-			if(snakeField[lastX - 1][lastY] == index) {
+		if (lastX > 0) {
+			if (snakeField[lastX - 1][lastY] == index) {
 				return new int[] { (lastX - 1), lastY };
 			}
 		}
-		if(lastX == 0) {
-			if(snakeField[29][lastY] == index) {
+		if (lastX == 0) {
+			if (snakeField[29][lastY] == index) {
 				return new int[] { 29, lastY };
 			}
 		}
 		// Noerdliches Feld
-		if(lastY < 29) {
-			if(snakeField[lastX][lastY + 1] == index) {
+		if (lastY < 29) {
+			if (snakeField[lastX][lastY + 1] == index) {
 				return new int[] { lastX, (lastY + 1) };
 			}
 		}
-		if(lastY == 29) {
-			if(snakeField[lastX][0] == index) {
+		if (lastY == 29) {
+			if (snakeField[lastX][0] == index) {
 				return new int[] { lastX, 0 };
 			}
 		}
 		// Suedliches Feld
-		if(lastY > 0) {
-			if(snakeField[lastX][lastY - 1] == index) {
+		if (lastY > 0) {
+			if (snakeField[lastX][lastY - 1] == index) {
 				return new int[] { lastX, (lastY - 1) };
 			}
 		}
-		if(lastY == 0) {
-			if(snakeField[lastX][29] == index) {
+		if (lastY == 0) {
+			if (snakeField[lastX][29] == index) {
 				return new int[] { lastX, 29 };
 			}
 		}

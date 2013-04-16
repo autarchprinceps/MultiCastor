@@ -22,7 +22,6 @@ import multicastor.model.NetworkAdapter.IPType;
 import multicastor.view.MiscBorder.BorderTitle;
 import multicastor.view.MiscBorder.BorderType;
 
-
 /**
  * Das KonfigurationPanel fuer Multicasts (links unten im Programm). Dient zum
  * Einstellen und Erstellen von Multicast Sendern und Receivern.
@@ -111,8 +110,8 @@ public class PanelMulticastConfig extends JPanel {
 	public InetAddress getSelectedAddress(final Typ typ, final IPType iptype) {
 		// V1.5 [FH] Added L3 with IPv4 Stuff
 		/* [MH] Changed to iptype */
-		if((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
-			if(iptype == IPType.IPv4) {
+		if ((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
+			if (iptype == IPType.IPv4) {
 				return InputValidator.checkIPv4(getSourceIP(
 						cb_sourceIPaddress.getSelectedIndex() - 1, iptype));
 			} else {
@@ -133,10 +132,10 @@ public class PanelMulticastConfig extends JPanel {
 	}
 
 	public String getSourceIP(final int i, final IPType iptype) {
-		if(iptype == IPType.IPv4) {
+		if (iptype == IPType.IPv4) {
 			return NetworkAdapter.getipv4Adapters().get(i).toString()
 					.substring(1);
-		} else if(iptype == IPType.IPv6) {
+		} else if (iptype == IPType.IPv6) {
 			return NetworkAdapter.getipv6Adapters().get(i).toString()
 					.substring(1).split("%")[0];
 		}
@@ -178,24 +177,25 @@ public class PanelMulticastConfig extends JPanel {
 	public void reloadLanguage() {
 		PanelTabbed tabpart = null;
 
-		switch(ctrl.getSelectedTab()) {
-			case L3_SENDER:
-				tabpart = ctrl.getFrame().getPanel(1,1);
-				break;
-			case L3_RECEIVER:
-				tabpart = ctrl.getFrame().getPanel(0,1);
-				break;
-			case L2_SENDER:
-				tabpart = ctrl.getFrame().getPanel(1,0);
-				break;
-			case L2_RECEIVER:
-				tabpart = ctrl.getFrame().getPanel(0,0);
-				break;
+		switch (ctrl.getSelectedTab()) {
+		case L3_SENDER:
+			tabpart = ctrl.getFrame().getPanel(1, 1);
+			break;
+		case L3_RECEIVER:
+			tabpart = ctrl.getFrame().getPanel(0, 1);
+			break;
+		case L2_SENDER:
+			tabpart = ctrl.getFrame().getPanel(1, 0);
+			break;
+		case L2_RECEIVER:
+			tabpart = ctrl.getFrame().getPanel(0, 0);
+			break;
 		}
 
-		if((tabpart != null) && (tabpart.getTable().getSelectedRowCount() == 1)) {
+		if ((tabpart != null)
+				&& (tabpart.getTable().getSelectedRowCount() == 1)) {
 			bt_enter.setText(lang.getProperty("button.change"));
-		} else if((tabpart != null)
+		} else if ((tabpart != null)
 				&& (tabpart.getTable().getSelectedRowCount() > 1)) {
 			bt_enter.setText(lang.getProperty("button.changeAll"));
 		} else {
@@ -261,12 +261,13 @@ public class PanelMulticastConfig extends JPanel {
 
 		// V1.5 [FH] Use cb_sourceIPadress for all kinds
 		cb_sourceIPaddress = new WideComboBox();
-		if((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
-			cb_sourceIPaddress.addItem(lang.getProperty("config.message.ipFirst"));
+		if ((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
+			cb_sourceIPaddress.addItem(lang
+					.getProperty("config.message.ipFirst"));
 		} else {
 			cb_sourceIPaddress.addItem("");
 			final Vector<String> names = NetworkAdapter.getMacAdapterNames();
-			for(final String s : names) {
+			for (final String s : names) {
 				cb_sourceIPaddress.addItem(s);
 			}
 
@@ -282,7 +283,7 @@ public class PanelMulticastConfig extends JPanel {
 
 		// V1.5: Layer 2 und Layer 3 Tabs hinzugefuegt: typ==Typ.L2_SENDER ||
 		// typ==Typ.L3_SENDER
-		if((typ == Typ.L2_SENDER) || (typ == Typ.L3_SENDER)) {
+		if ((typ == Typ.L2_SENDER) || (typ == Typ.L3_SENDER)) {
 
 			pan_packetrate = new JPanel();
 			pan_packetlength = new JPanel();
@@ -300,7 +301,7 @@ public class PanelMulticastConfig extends JPanel {
 			pan_ttl.setBorder(MiscBorder.getBorder(BorderTitle.TTL,
 					BorderType.NEUTRAL));
 			tf_udp_packetlength = new JTextField();
-			if((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
+			if ((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
 				tf_udp_packetlength.setText(lang
 						.getProperty("config.message.ipFirstShort"));
 			}
@@ -341,12 +342,12 @@ public class PanelMulticastConfig extends JPanel {
 		bt_active.addActionListener(ctrl);
 
 		// V1.5: Added new Tabs
-		if((typ == Typ.L3_SENDER) || (typ == Typ.L3_RECEIVER)) {
+		if ((typ == Typ.L3_SENDER) || (typ == Typ.L3_RECEIVER)) {
 			pan_groupIPaddress.setBorder(MiscBorder.getBorder(
 					BorderTitle.L3GROUP, BorderType.NEUTRAL));
 			pan_sourceIPaddress.setBorder(MiscBorder.getBorder(
 					BorderTitle.L3SOURCE, BorderType.NEUTRAL));
-		} else if((typ == Typ.L2_SENDER) || (typ == Typ.L2_RECEIVER)) {
+		} else if ((typ == Typ.L2_SENDER) || (typ == Typ.L2_RECEIVER)) {
 			pan_groupIPaddress.setBorder(MiscBorder.getBorder(
 					BorderTitle.L2GROUP, BorderType.NEUTRAL));
 			pan_sourceIPaddress.setBorder(MiscBorder.getBorder(
@@ -379,15 +380,15 @@ public class PanelMulticastConfig extends JPanel {
 	private void createGUIstandard(final Typ typ) {
 		add(bt_enter);
 		add(pan_groupIPaddress);
-		if((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
+		if ((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
 			add(pan_udp_port);
 		}
 		add(bt_active);
 		// V1.5: typ==Typ.L3_SENDER || typ==Typ.L2_SENDER hinzugefuegt
-		if((typ == Typ.L3_SENDER) || (typ == Typ.L2_SENDER)) {
+		if ((typ == Typ.L3_SENDER) || (typ == Typ.L2_SENDER)) {
 			add(pan_packetrate);
 			add(pan_packetlength);
-			if(typ == Typ.L3_SENDER) {
+			if (typ == Typ.L3_SENDER) {
 				add(pan_ttl);
 			}
 		}
@@ -400,7 +401,7 @@ public class PanelMulticastConfig extends JPanel {
 	 *            Gibt an zu welchem Programmteil das Panel gehoert.
 	 */
 	private void setToolTips(final Typ typ) {
-		if((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
+		if ((typ == Typ.L3_RECEIVER) || (typ == Typ.L3_SENDER)) {
 			tf_groupIPaddress
 					.setToolTipText("<html>"
 							+ lang.getProperty("toolTip.mcAddressRange")
@@ -412,7 +413,7 @@ public class PanelMulticastConfig extends JPanel {
 			tf_udp_port.setToolTipText(lang
 					.getProperty("toolTip.specifyUDPPort") + " (1 - 65535).");
 
-			if(typ == Typ.L3_SENDER) {
+			if (typ == Typ.L3_SENDER) {
 				tf_ttl.setToolTipText(lang.getProperty("toolTip.specifyTTL")
 						+ " (1 - 32)");
 				tf_packetrate.setToolTipText(lang
@@ -423,7 +424,7 @@ public class PanelMulticastConfig extends JPanel {
 						+ "<br />" + "IPv4: 52 - 65507<br />"
 						+ "IPv6: 52 - 65527" + "</html>");
 			}
-		} else if((typ == Typ.L2_RECEIVER) || (typ == Typ.L2_SENDER)) {
+		} else if ((typ == Typ.L2_RECEIVER) || (typ == Typ.L2_SENDER)) {
 			tf_groupIPaddress.setToolTipText("<html>"
 					+ lang.getProperty("toolTip.selectMacAddress") + "<br />"
 					+ "(any adress with a 1 at last bit in first Byte.<br />"
@@ -431,7 +432,7 @@ public class PanelMulticastConfig extends JPanel {
 			cb_sourceIPaddress.setToolTipText(lang
 					.getProperty("toolTip.selectNetInterface"));
 
-			if(typ == Typ.L2_SENDER) {
+			if (typ == Typ.L2_SENDER) {
 				tf_packetrate.setToolTipText(lang
 						.getProperty("toolTip.specifyPacketRate")
 						+ " (1 - 65535)");

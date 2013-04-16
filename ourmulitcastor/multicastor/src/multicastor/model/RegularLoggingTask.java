@@ -39,19 +39,19 @@ public class RegularLoggingTask extends TimerTask {
 	public void run() {
 		MulticastThreadSuper value = null;
 		Map<MulticastData, MulticastThreadSuper> v = null;
-		for(int i = 0; i < 2; i++) {
-			switch(i) {
-				case 0:
-					v = mc_sender_l3;
-					break;
-				case 1:
-					v = mc_receiver_l3;
-					break;
+		for (int i = 0; i < 2; i++) {
+			switch (i) {
+			case 0:
+				v = mc_sender_l3;
+				break;
+			case 1:
+				v = mc_receiver_l3;
+				break;
 			}
-			for(final Entry<MulticastData, MulticastThreadSuper> m : v
+			for (final Entry<MulticastData, MulticastThreadSuper> m : v
 					.entrySet()) {
 				value = m.getValue();
-				if(value.getMultiCastData().isActive()) {
+				if (value.getMultiCastData().isActive()) {
 					value.updateMin();
 					logger.log(Level.FINEST, value.getMultiCastData()
 							.toStringConsole());

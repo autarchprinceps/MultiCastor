@@ -14,7 +14,6 @@ import multicastor.interfaces.MulticastThreadSuper;
 import multicastor.lang.LanguageManager;
 import multicastor.mmrp.MMRPSender;
 
-
 /**
  * Die MultiCastMmrpSender-Klasse kuemmert sich um das tatsaechliche Senden der
  * Multicast-Objekte ueber das Netzwerk per MMRP Protokoll. Sie extended
@@ -72,18 +71,18 @@ public class MulticastMmrpSender extends MulticastThreadSuper implements
 			throws IOException {
 		super(multicastData);
 
-		if(logger == null) {
+		if (logger == null) {
 			System.out.println(lang.getProperty("error.mr.logger"));
 			return;
 		}
-		if(multicastData == null) {
+		if (multicastData == null) {
 			logger.log(Level.WARNING, lang.getProperty("error.mr.mcdata"));
 			return;
 		}
 
 		try {
 			multicastData.setHostID(InetAddress.getLocalHost().getHostName());
-		} catch(final UnknownHostException e) {
+		} catch (final UnknownHostException e) {
 			proclaim(
 					1,
 					lang.getProperty("message.getHostname") + " "
@@ -97,7 +96,7 @@ public class MulticastMmrpSender extends MulticastThreadSuper implements
 		try {
 			sender = new MMRPSender(mcData.getMmrpSourceMac(),
 					mcData.getMmrpGroupMac());
-		} catch(final IOException e) {
+		} catch (final IOException e) {
 			proclaim(3, lang.getProperty("message.mmrpSender"));
 			throw new IOException();
 		}
@@ -124,14 +123,14 @@ public class MulticastMmrpSender extends MulticastThreadSuper implements
 			// und sleept den Rest der Sekunde
 			long endTime = 0, timeLeft = 0;
 
-			while(isSending) {
+			while (isSending) {
 				// Sleep wenn noch etwas von der letzten Sekunde uebrig
 				timeLeft = endTime - System.nanoTime();
-				if(timeLeft > 0) {
+				if (timeLeft > 0) {
 					try {
 						Thread.sleep(timeLeft / 1000000,
-								(int)(timeLeft % 1000000));
-					} catch(final InterruptedException e) {
+								(int) (timeLeft % 1000000));
+					} catch (final InterruptedException e) {
 						proclaim(1, lang.getProperty("message.sleapPeak") + " "
 								+ e.getMessage());
 					}
@@ -140,21 +139,21 @@ public class MulticastMmrpSender extends MulticastThreadSuper implements
 				do {
 					try {
 						sender.sendDataPacket(myPacketBuilder.getPacket());
-						if(totalPacketCount < 65535) {
+						if (totalPacketCount < 65535) {
 							totalPacketCount++;
 						} else {
 							totalPacketCount = 0;
 						}
 						resetablePcktCnt++;
 
-					} catch(final Exception e1) {
+					} catch (final Exception e1) {
 						proclaim(2, lang.getProperty("message.problemSending"));
 					}
-				} while(((totalPacketCount % packetRateDes) != 0) && isSending);
+				} while (((totalPacketCount % packetRateDes) != 0) && isSending);
 			}
 			try {
 				sender.deregisterPath();
-			} catch(final IOException e) {
+			} catch (final IOException e) {
 				proclaim(3, "Could not deregister Path");
 			}
 			proclaim(
@@ -170,7 +169,7 @@ public class MulticastMmrpSender extends MulticastThreadSuper implements
 			updateMin();
 			setStillRunning(false);
 
-		} catch(final IOException e2) {
+		} catch (final IOException e2) {
 			proclaim(3, lang.getProperty("message.registerMmrpSender"));
 			isSending = false;
 			setActive(false);
@@ -190,7 +189,7 @@ public class MulticastMmrpSender extends MulticastThreadSuper implements
 	public void setActive(final boolean active) {
 		isSending = active;
 		mcData.setActive(active);
-		if(active) {
+		if (active) {
 			// Setzen der ThreadID, da diese evtl.
 			// im Controller noch einmal geuendert wird
 			myPacketBuilder.alterThreadID(mcData.getThreadID());
@@ -239,15 +238,15 @@ public class MulticastMmrpSender extends MulticastThreadSuper implements
 	private void proclaim(final int level, String mssg) {
 		Level l;
 		mssg = mcData.identify() + ": " + mssg;
-		switch(level) {
-			case 1:
-				l = Level.WARNING;
-				break;
-			case 2:
-				l = Level.INFO;
-				break;
-			default:
-				l = Level.SEVERE;
+		switch (level) {
+		case 1:
+			l = Level.WARNING;
+			break;
+		case 2:
+			l = Level.INFO;
+			break;
+		default:
+			l = Level.SEVERE;
 		}
 		logger.log(l, mssg);
 	}

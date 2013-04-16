@@ -19,7 +19,6 @@ import multicastor.controller.ViewController;
 import multicastor.data.MulticastData.Typ;
 import multicastor.lang.LanguageManager;
 
-
 /**
  * Hauptfenster des MultiCastor Tools In Version 2 wurde CheckBox und
  * RadioButton Farbgebungsfehler gefixt Ausserdem Drag&Drop Tabs durch
@@ -88,8 +87,8 @@ public class FrameMain extends JFrame {
 	 */
 	private PanelPlus panel_plus;
 
-	private PanelTabbed[][] panel = new PanelTabbed[2][2];//(rec,sen)(l2,l3)
-	
+	private PanelTabbed[][] panel = new PanelTabbed[2][2];// (rec,sen)(l2,l3)
+
 	private String subTitle;
 
 	// GUI element variables
@@ -252,18 +251,18 @@ public class FrameMain extends JFrame {
 	 *         beinhaltet.
 	 */
 	public PanelTabbed getPanelPart(final Typ typ) {
-		switch(typ) {
-			case L2_SENDER:
-				return panel[1][0];
-			case L3_SENDER:
-				return panel[1][1];
-			case L2_RECEIVER:
-				return panel[0][0];
-			case L3_RECEIVER:
-				return panel[0][1];
-			default:
-				System.out.println("Error in FrameMain - getPanelPart");
-				return null;
+		switch (typ) {
+		case L2_SENDER:
+			return panel[1][0];
+		case L3_SENDER:
+			return panel[1][1];
+		case L2_RECEIVER:
+			return panel[0][0];
+		case L3_RECEIVER:
+			return panel[0][1];
+		default:
+			System.out.println("Error in FrameMain - getPanelPart");
+			return null;
 		}
 	}
 
@@ -288,35 +287,33 @@ public class FrameMain extends JFrame {
 	 * Aeffnet einen gewuenschten Tab.
 	 */
 	public void openPane() {
-		if(subTitle.equals(" " + lang.getProperty("tab.l2s") + " ")) {
+		if (subTitle.equals(" " + lang.getProperty("tab.l2s") + " ")) {
 			remove(panel[1][0]);
 			tabpane.insertTab(" L2 Sender ", null, panel[1][0], null, 0);
 			tabpane.setTabComponentAt(0, new ButtonTabComponent(tabpane,
 					"/multicastor/images/ipv4sender.png", ctrl));
 
-		} else if(subTitle.equals(" " + lang.getProperty("tab.l3s") + " ")) {
+		} else if (subTitle.equals(" " + lang.getProperty("tab.l3s") + " ")) {
 			remove(panel[1][1]);
 			tabpane.insertTab(" " + lang.getProperty("tab.l3s") + " ", null,
 					panel[1][1], null, 0);
 			tabpane.setTabComponentAt(0, new ButtonTabComponent(tabpane,
 					"/multicastor/images/ipv6sender.png", ctrl));
 
-		} else if(subTitle.equals(" " + lang.getProperty("tab.l2r") + " ")) {
+		} else if (subTitle.equals(" " + lang.getProperty("tab.l2r") + " ")) {
 			remove(panel[0][0]);
 			tabpane.insertTab(" " + lang.getProperty("tab.l2r") + " ", null,
 					panel[0][0], null, 0);
 			tabpane.setTabComponentAt(0, new ButtonTabComponent(tabpane,
-					"/multicastor/images/ipv4receiver.png",
-					ctrl));
+					"/multicastor/images/ipv4receiver.png", ctrl));
 
-		} else if(subTitle.equals(" " + lang.getProperty("tab.l3r") + " ")) {
+		} else if (subTitle.equals(" " + lang.getProperty("tab.l3r") + " ")) {
 			remove(panel[0][1]);
 			tabpane.insertTab(" " + lang.getProperty("tab.l3r") + " ", null,
 					panel[0][1], null, 0);
 			tabpane.setTabComponentAt(0, new ButtonTabComponent(tabpane,
-					"/multicastor/images/ipv6receiver.png",
-					ctrl));
-		} else if(subTitle.equals(" " + lang.getProperty("mi.about") + " ")) {
+					"/multicastor/images/ipv6receiver.png", ctrl));
+		} else if (subTitle.equals(" " + lang.getProperty("mi.about") + " ")) {
 			remove(panel_about);
 			tabpane.insertTab(" " + lang.getProperty("mi.about") + " ", null,
 					panel_about, null, 0);
@@ -344,15 +341,15 @@ public class FrameMain extends JFrame {
 		subTitle = title;
 		paneDel = true;
 
-		if(title.equals(" " + lang.getProperty("tab.l2s") + " ")) {
+		if (title.equals(" " + lang.getProperty("tab.l2s") + " ")) {
 			add(panel[1][0]);
-		} else if(title.equals(" " + lang.getProperty("tab.l3s") + " ")) {
+		} else if (title.equals(" " + lang.getProperty("tab.l3s") + " ")) {
 			add(panel[1][1]);
-		} else if(title.equals(" " + lang.getProperty("tab.l2r") + " ")) {
+		} else if (title.equals(" " + lang.getProperty("tab.l2r") + " ")) {
 			add(panel[0][0]);
-		} else if(title.equals(" " + lang.getProperty("tab.l3r") + " ")) {
+		} else if (title.equals(" " + lang.getProperty("tab.l3r") + " ")) {
 			add(panel[0][1]);
-		} else if(title.equals(" " + lang.getProperty("mi.about") + " ")) {
+		} else if (title.equals(" " + lang.getProperty("mi.about") + " ")) {
 			add(panel_about);
 		}
 	}
@@ -368,7 +365,7 @@ public class FrameMain extends JFrame {
 	 *            Angabe true / false fuer sichtbar / unsichtbar.
 	 */
 	public void setAboutPanelVisible(final boolean visible) {
-		if(visible) {
+		if (visible) {
 			aboutPanelState = 1;
 			tabpane.addTab(" About ", img_close, panel_about);
 		} else {
@@ -409,19 +406,19 @@ public class FrameMain extends JFrame {
 	public void setLastConfigs(final Vector<String> l, final boolean live) {
 
 		lastConfigs = l;
-		if((lastConfigs != null) && (lastConfigs.size() > 0)) {
-			if(lastConfigs.size() > 0) {
+		if ((lastConfigs != null) && (lastConfigs.size() > 0)) {
+			if (lastConfigs.size() > 0) {
 				m_menu.remove(mi_exit);
-				if(live) {
+				if (live) {
 					m_menu.remove(mi_separator);
 				}
 				mi_profiles[0].setText(lastConfigs.get(0));
 				m_menu.add(mi_profiles[0]);
-				if(lastConfigs.size() > 1) {
+				if (lastConfigs.size() > 1) {
 					mi_profiles[1].setText(lastConfigs.get(1));
 					m_menu.add(mi_profiles[1]);
 				}
-				if(lastConfigs.size() > 2) {
+				if (lastConfigs.size() > 2) {
 					mi_profiles[2].setText(lastConfigs.get(2));
 					m_menu.add(mi_profiles[2]);
 				}
@@ -443,22 +440,22 @@ public class FrameMain extends JFrame {
 		mi_setTitle = miSetTitle;
 	}
 
-//	public void setPanel_rec_lay2(final PanelTabbed panelRecLay2) {
-//		panel_rec_lay2 = panelRecLay2;
-//	}
-//
-//	public void setPanel_rec_lay3(final PanelTabbed panelRecLay3) {
-//		panel_rec_lay3 = panelRecLay3;
-//	}
-//
-//	public void setPanel_sen_lay2(final PanelTabbed panelSenLay2) {
-//		panel_sen_lay2 = panelSenLay2;
-//	}
-//
-//	public void setPanel_sen_lay3(final PanelTabbed panelSenLay3) {
-//		panel_sen_lay3 = panelSenLay3;
-//	}
-	
+	// public void setPanel_rec_lay2(final PanelTabbed panelRecLay2) {
+	// panel_rec_lay2 = panelRecLay2;
+	// }
+	//
+	// public void setPanel_rec_lay3(final PanelTabbed panelRecLay3) {
+	// panel_rec_lay3 = panelRecLay3;
+	// }
+	//
+	// public void setPanel_sen_lay2(final PanelTabbed panelSenLay2) {
+	// panel_sen_lay2 = panelSenLay2;
+	// }
+	//
+	// public void setPanel_sen_lay3(final PanelTabbed panelSenLay3) {
+	// panel_sen_lay3 = panelSenLay3;
+	// }
+
 	public void setPanel(final PanelTabbed newPanel, int i1, int i2) {
 		panel[i1][i2] = newPanel;
 	}
@@ -470,7 +467,7 @@ public class FrameMain extends JFrame {
 	 *            Config-Daten.
 	 */
 	public void updateLastConfigs(final String s) {
-		if(lastConfigs.size() > 2) {
+		if (lastConfigs.size() > 2) {
 			lastConfigs.remove(0);
 		}
 		lastConfigs.add(s);
@@ -482,7 +479,7 @@ public class FrameMain extends JFrame {
 	 */
 	public void updateTitle() {
 
-		if(!paneDel) {
+		if (!paneDel) {
 			setTitle(baseTitle + (baseTitle.isEmpty() ? "" : ": ")
 					+ tabpane.getTitleAt(tabpane.getSelectedIndex()).trim());
 		} else {
@@ -503,7 +500,7 @@ public class FrameMain extends JFrame {
 	 */
 	private void initMenuBar(final ViewController ctrl, final boolean firstInit) {
 
-		if(firstInit) {
+		if (firstInit) {
 			mi_autoSave = new JCheckBoxMenuItem();
 			mi_autoSave.addItemListener(ctrl);
 			mi_autoSave.setFont(MiscFont.getFont(0, 14));
@@ -525,9 +522,8 @@ public class FrameMain extends JFrame {
 			mi_saveconfig.setFont(MiscFont.getFont(0, 14));
 			mi_saveconfig.addActionListener(ctrl);
 
-			mi_saveSelectedMc = new JMenuItem(new ImageIcon(
-					getClass().getResource(
-							"/multicastor/images/save.png")));
+			mi_saveSelectedMc = new JMenuItem(new ImageIcon(getClass()
+					.getResource("/multicastor/images/save.png")));
 			mi_saveSelectedMc.setFont(MiscFont.getFont(0, 14));
 			mi_saveSelectedMc.addActionListener(ctrl);
 
@@ -541,9 +537,8 @@ public class FrameMain extends JFrame {
 			mi_loadconfig.setFont(MiscFont.getFont(0, 14));
 			mi_loadconfig.addActionListener(ctrl);
 
-			mi_loadAdditionalMc = new JMenuItem(new ImageIcon(
-					getClass().getResource(
-							"/multicastor/images/load.png")));
+			mi_loadAdditionalMc = new JMenuItem(new ImageIcon(getClass()
+					.getResource("/multicastor/images/load.png")));
 			mi_loadAdditionalMc.setFont(MiscFont.getFont(0, 14));
 			mi_loadAdditionalMc.addActionListener(ctrl);
 
@@ -552,20 +547,20 @@ public class FrameMain extends JFrame {
 			mi_loadMc.setFont(MiscFont.getFont(0, 14));
 			mi_loadMc.addActionListener(ctrl);
 
-			mi_profiles[0] = new JMenuItem(new ImageIcon(getClass().getResource(
-					"/multicastor/images/load.png")));
+			mi_profiles[0] = new JMenuItem(new ImageIcon(getClass()
+					.getResource("/multicastor/images/load.png")));
 			mi_profiles[0].setFont(MiscFont.getFont(0, 14));
 			mi_profiles[0].addActionListener(ctrl);
 			mi_profiles[0].setActionCommand("lastConfig1");
 
-			mi_profiles[1] = new JMenuItem(new ImageIcon(getClass().getResource(
-					"/multicastor/images/load.png")));
+			mi_profiles[1] = new JMenuItem(new ImageIcon(getClass()
+					.getResource("/multicastor/images/load.png")));
 			mi_profiles[1].setFont(MiscFont.getFont(0, 14));
 			mi_profiles[1].addActionListener(ctrl);
 			mi_profiles[1].setActionCommand("lastConfig2");
 
-			mi_profiles[2] = new JMenuItem(new ImageIcon(getClass().getResource(
-					"/multicastor/images/load.png")));
+			mi_profiles[2] = new JMenuItem(new ImageIcon(getClass()
+					.getResource("/multicastor/images/load.png")));
 			mi_profiles[2].setFont(MiscFont.getFont(0, 14));
 			mi_profiles[2].addActionListener(ctrl);
 			mi_profiles[2].setActionCommand("lastConfig3");
@@ -636,10 +631,10 @@ public class FrameMain extends JFrame {
 
 			// Create Language Buttons
 			mi_languages = new JRadioButtonMenuItem[LanguageManager.languages.length];
-			for(int i = 0; i < LanguageManager.languages.length; i++) {
+			for (int i = 0; i < LanguageManager.languages.length; i++) {
 				mi_languages[i] = new JRadioButtonMenuItem(
 						LanguageManager.languages[i].replaceAll(".lang", ""));
-				if(mi_languages[i].getText().equals(
+				if (mi_languages[i].getText().equals(
 						LanguageManager.getCurrentLanguage())) {
 					mi_languages[i].setSelected(true);
 				}
@@ -715,7 +710,7 @@ public class FrameMain extends JFrame {
 	 */
 	private void initPanels(final ViewController ctrl, final boolean firstInit) {
 
-		if(firstInit) {
+		if (firstInit) {
 			// v1.5: Added new Tabs: L2 Receiver, L2 Sender, L3 Receiver, L3
 			// Sender
 			panel[0][0] = new PanelTabbed(ctrl, Typ.L2_RECEIVER);
@@ -733,25 +728,19 @@ public class FrameMain extends JFrame {
 			tabpane = new DraggableTabbedPane(this, ctrl);
 			tabpane.addMouseListener(ctrl);
 
-			tabpane.addTab(" " + lang.getProperty("tab.l2r") + " ",
-					panel[0][0]);
+			tabpane.addTab(" " + lang.getProperty("tab.l2r") + " ", panel[0][0]);
 			tabpane.setTabComponentAt(i++, new ButtonTabComponent(tabpane,
-					"/multicastor/images/ipv4receiver.png",
-					ctrl));
+					"/multicastor/images/ipv4receiver.png", ctrl));
 
-			tabpane.addTab(" " + lang.getProperty("tab.l2s") + " ",
-					panel[1][0]);
+			tabpane.addTab(" " + lang.getProperty("tab.l2s") + " ", panel[1][0]);
 			tabpane.setTabComponentAt(i++, new ButtonTabComponent(tabpane,
 					"/multicastor/images/ipv4sender.png", ctrl));
 
-			tabpane.addTab(" " + lang.getProperty("tab.l3r") + " ",
-					panel[0][1]);
+			tabpane.addTab(" " + lang.getProperty("tab.l3r") + " ", panel[0][1]);
 			tabpane.setTabComponentAt(i++, new ButtonTabComponent(tabpane,
-					"/multicastor/images/ipv6receiver.png",
-					ctrl));
+					"/multicastor/images/ipv6receiver.png", ctrl));
 
-			tabpane.addTab(" " + lang.getProperty("tab.l3s") + " ",
-					panel[1][1]);
+			tabpane.addTab(" " + lang.getProperty("tab.l3s") + " ", panel[1][1]);
 			tabpane.setTabComponentAt(i++, new ButtonTabComponent(tabpane,
 					"/multicastor/images/ipv6sender.png", ctrl));
 
@@ -759,28 +748,28 @@ public class FrameMain extends JFrame {
 			tabpane.addTab(" + ", panel_plus);
 
 		} else {
-			for(int i = 0; i < tabpane.getTabCount(); i++) {
-				if(tabpane.getComponentAt(i) == panel[0][0]) {
+			for (int i = 0; i < tabpane.getTabCount(); i++) {
+				if (tabpane.getComponentAt(i) == panel[0][0]) {
 					tabpane.setTitleAt(i, " " + lang.getProperty("tab.l2r")
 							+ " ");
-				} else if(tabpane.getComponentAt(i) == panel[1][0]) {
+				} else if (tabpane.getComponentAt(i) == panel[1][0]) {
 					tabpane.setTitleAt(i, " " + lang.getProperty("tab.l2s")
 							+ " ");
-				} else if(tabpane.getComponentAt(i) == panel[0][1]) {
+				} else if (tabpane.getComponentAt(i) == panel[0][1]) {
 					tabpane.setTitleAt(i, " " + lang.getProperty("tab.l3r")
 							+ " ");
-				} else if(tabpane.getComponentAt(i) == panel[1][1]) {
+				} else if (tabpane.getComponentAt(i) == panel[1][1]) {
 					tabpane.setTitleAt(i, " " + lang.getProperty("tab.l3s")
 							+ " ");
 				}
 				// New Layout is required for auto resize of the tabs
-				if(tabpane.getTabComponentAt(i) != null) {
+				if (tabpane.getTabComponentAt(i) != null) {
 					tabpane.getTabComponentAt(i).doLayout();
 				}
 			}
 		}
 
-		if(firstInit) {
+		if (firstInit) {
 			mi_open_l[0][0].setSelected(true);
 			mi_open_l[0][1].setSelected(true);
 			mi_open_l[1][0].setSelected(true);
@@ -814,7 +803,7 @@ public class FrameMain extends JFrame {
 			// UIManager.setLookAndFeel(
 			// "com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 
-		} catch(final Exception e) {
+		} catch (final Exception e) {
 		}
 
 		setSize(1000, 489);

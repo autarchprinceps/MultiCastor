@@ -83,7 +83,7 @@ public class MulticastController {
 	/** Referenz auf einen Timer fuer updateTask */
 	private final Timer timer1;
 	/** Referenz auf einen Timer fuer messageCheck */
-	//private Timer timer2;
+	// private Timer timer2;
 	/** Referenz auf einen Timer fuer regularLoggingTask */
 	private final Timer timer3;
 	/**
@@ -160,7 +160,7 @@ public class MulticastController {
 
 		// Der Logger darf eigentlich nicht null sein. Dies wird zu Fehlern im
 		// Programm fuehren.
-		if(logger != null) {
+		if (logger != null) {
 			this.logger = logger;
 		} else {
 			System.out.println(lang.getProperty("error.mc.logger"));
@@ -200,28 +200,28 @@ public class MulticastController {
 			// Erzeugt den passenden MulticastThreadSuper
 			MulticastThreadSuper t = null;
 
-			switch(m.getTyp()) {
-				case L3_SENDER:
-					t = new MulticastSender(m, logger);
-					// V1.5 [FH] Added MulticastController to stop it in case of
-					// network error
-					((MulticastSender)t).setMCtrl(this);
-					break;
+			switch (m.getTyp()) {
+			case L3_SENDER:
+				t = new MulticastSender(m, logger);
+				// V1.5 [FH] Added MulticastController to stop it in case of
+				// network error
+				((MulticastSender) t).setMCtrl(this);
+				break;
 
-				case L3_RECEIVER:
-					t = new MulticastReceiver(m, logger);
-					break;
+			case L3_RECEIVER:
+				t = new MulticastReceiver(m, logger);
+				break;
 
-				case L2_SENDER:
-					t = new MulticastMmrpSender(m, logger, this);
-					break;
+			case L2_SENDER:
+				t = new MulticastMmrpSender(m, logger, this);
+				break;
 
-				case L2_RECEIVER:
-					t = new MulticastMmrpReceiver(m, logger);
-					break;
+			case L2_RECEIVER:
+				t = new MulticastMmrpReceiver(m, logger);
+				break;
 
-				default:
-					break;
+			default:
+				break;
 			}
 
 			// Fuegt Multicasts zu der entsprechenden Map und Vector hinzu
@@ -232,10 +232,10 @@ public class MulticastController {
 			logger.log(Level.INFO, lang.getProperty("message.mcAdded") + " :"
 					+ m.identify());
 			// Startet den Multicast, falls notwendig
-			if(m.isActive()) {
+			if (m.isActive()) {
 				startMC(m);
 			}
-		} catch(final IOException e) {
+		} catch (final IOException e) {
 		}
 	}
 
@@ -285,7 +285,7 @@ public class MulticastController {
 	 *            Vector mit zu entfernenden Multicasts.
 	 */
 	public void deleteMC(final Vector<MulticastData> m) {
-		for(final MulticastData mc : m) {
+		for (final MulticastData mc : m) {
 			deleteMC(mc);
 		}
 	}
@@ -296,22 +296,22 @@ public class MulticastController {
 	public void destroy() {
 		saveCompleteConfig();
 		Map<MulticastData, MulticastThreadSuper> v = null;
-		for(int i = 0; i < 4; i++) {
-			switch(i) {
-				case 0:
-					v = mcMap_sender_l3;
-					break;
-				case 1:
-					v = mcMap_receiver_l3;
-					break;
-				case 2:
-					v = mcMap_sender_l2;
-					break;
-				case 3:
-					v = mcMap_receiver_l2;
-					break;
+		for (int i = 0; i < 4; i++) {
+			switch (i) {
+			case 0:
+				v = mcMap_sender_l3;
+				break;
+			case 1:
+				v = mcMap_receiver_l3;
+				break;
+			case 2:
+				v = mcMap_sender_l2;
+				break;
+			case 3:
+				v = mcMap_receiver_l2;
+				break;
 			}
-			for(final Entry<MulticastData, MulticastThreadSuper> m : v
+			for (final Entry<MulticastData, MulticastThreadSuper> m : v
 					.entrySet()) {
 				m.getValue().setActive(false);
 			}
@@ -353,7 +353,7 @@ public class MulticastController {
 			final MulticastData.Typ multicastDataTyp) {
 		try {
 			return getMCVector(multicastDataTyp).get(index);
-		} catch(final IndexOutOfBoundsException e) {
+		} catch (final IndexOutOfBoundsException e) {
 			return null;
 		}
 	}
@@ -386,16 +386,16 @@ public class MulticastController {
 	public int getPPSSender(final MulticastData.Typ typ) {
 		int count = 0, tmpCount = 0;
 
-		if(typ == Typ.L3_SENDER) {
-			for(final MulticastData ms : mc_sender_l3) {
-				count += ((MulticastSenderInterface)mcMap_sender_l3.get(ms))
+		if (typ == Typ.L3_SENDER) {
+			for (final MulticastData ms : mc_sender_l3) {
+				count += ((MulticastSenderInterface) mcMap_sender_l3.get(ms))
 						.getMultiCastData().getPacketRateMeasured();
 			}
-		} else if(typ == Typ.L2_SENDER) {
-			for(final MulticastData ms : mc_sender_l2) {
-				tmpCount = ((MulticastSenderInterface)mcMap_sender_l2.get(ms))
+		} else if (typ == Typ.L2_SENDER) {
+			for (final MulticastData ms : mc_sender_l2) {
+				tmpCount = ((MulticastSenderInterface) mcMap_sender_l2.get(ms))
 						.getMultiCastData().getPacketRateMeasured();
-				if(tmpCount == -1) {
+				if (tmpCount == -1) {
 					tmpCount = 0;
 				}
 				count += tmpCount;
@@ -434,8 +434,8 @@ public class MulticastController {
 			WrongConfigurationException {
 		final Vector<MulticastData> v = new Vector<MulticastData>();
 		xml_parser.loadMultiCastConfig(path, v);
-		if(v != null) {
-			for(final MulticastData m : v) {
+		if (v != null) {
+			for (final MulticastData m : v) {
 				addMC(m); // hier vllt. nur adden wenn man auch starten will, da
 							// das leider nicht mehr geht
 			}
@@ -464,29 +464,29 @@ public class MulticastController {
 		try {
 			xml_parser.loadGUIConfig(useDefaultXML ? defaultXML : path, data);
 			logger.log(Level.INFO, lang.getProperty("message.gui.Loaded"));
-		} catch(final Exception e) {
-			if(e instanceof FileNotFoundException) {
-				if(useDefaultXML) {
+		} catch (final Exception e) {
+			if (e instanceof FileNotFoundException) {
+				if (useDefaultXML) {
 					message = lang.getProperty("message.gui.NotFoundWithout");
 				} else {
 					message = lang.getProperty("message.gui.NotFound");
 				}
-			} else if(e instanceof SAXException) {
-				if(useDefaultXML) {
+			} else if (e instanceof SAXException) {
+				if (useDefaultXML) {
 					message = lang.getProperty("message.gui.NotParsedWithout");
 				} else {
 					message = lang.getProperty("message.gui.NotParsed");
 				}
-			} else if(e instanceof IOException) {
-				if(useDefaultXML) {
+			} else if (e instanceof IOException) {
+				if (useDefaultXML) {
 					message = lang.getProperty("message.gui.NotLoadedWithout");
 				} else {
 					message = lang.getProperty("message.gui.NotLoaded");
 				}
-			} else if(e instanceof WrongConfigurationException) {
-				message = ((WrongConfigurationException)e).getErrorMessage();
-			} else if(e instanceof IllegalArgumentException) {
-				if(useDefaultXML) {
+			} else if (e instanceof WrongConfigurationException) {
+				message = ((WrongConfigurationException) e).getErrorMessage();
+			} else if (e instanceof IllegalArgumentException) {
+				if (useDefaultXML) {
 					message = lang.getProperty("message.gui.ErrorDefault");
 				} else {
 					message = lang.getProperty("message.gui.Error");
@@ -496,7 +496,7 @@ public class MulticastController {
 						+ e.getClass();
 			}
 
-			if(!useDefaultXML) {
+			if (!useDefaultXML) {
 				message += lang.getProperty("message.gui.usedPath") + path;
 			}
 			logger.log(Level.WARNING, message);
@@ -525,29 +525,29 @@ public class MulticastController {
 			xml_parser.loadMultiCastConfig(useDefaultXML ? defaultXML : path,
 					multicasts);
 			logger.log(Level.INFO, lang.getProperty("message.mcc.Loaded"));
-		} catch(final Exception e) {
-			if(e instanceof FileNotFoundException) {
-				if(useDefaultXML) {
+		} catch (final Exception e) {
+			if (e instanceof FileNotFoundException) {
+				if (useDefaultXML) {
 					message = lang.getProperty("message.mcc.NotFoundWithout");
 				} else {
 					message = lang.getProperty("message.mcc.NotFound");
 				}
-			} else if(e instanceof SAXException) {
-				if(useDefaultXML) {
+			} else if (e instanceof SAXException) {
+				if (useDefaultXML) {
 					message = lang.getProperty("message.mcc.NotParsedWithout");
 				} else {
 					message = lang.getProperty("message.mcc.NotParsed");
 				}
-			} else if(e instanceof IOException) {
-				if(useDefaultXML) {
+			} else if (e instanceof IOException) {
+				if (useDefaultXML) {
 					message = lang.getProperty("message.mcc.NotLoadedWithout");
 				} else {
 					message = lang.getProperty("message.mcc.NotLoaded");
 				}
-			} else if(e instanceof WrongConfigurationException) {
-				message = ((WrongConfigurationException)e).getErrorMessage();
-			} else if(e instanceof IllegalArgumentException) {
-				if(useDefaultXML) {
+			} else if (e instanceof WrongConfigurationException) {
+				message = ((WrongConfigurationException) e).getErrorMessage();
+			} else if (e instanceof IllegalArgumentException) {
+				if (useDefaultXML) {
 					message = lang.getProperty("message.mcc.ErrorDefault");
 				} else {
 					message = lang.getProperty("message.mcc.Error");
@@ -557,16 +557,16 @@ public class MulticastController {
 						+ e.getClass();
 			}
 			skip = true;
-			if(!useDefaultXML) {
+			if (!useDefaultXML) {
 				message += lang.getProperty("message.mcc.usedPath") + path;
 			}
 			logger.log(Level.WARNING, message);
 		}
 
-		if(!skip) {
+		if (!skip) {
 			// Fuege Multicast hinzu
-			for(final MulticastData m : multicasts) {
-				if(m.getTyp().equals(Typ.L3_RECEIVER)
+			for (final MulticastData m : multicasts) {
+				if (m.getTyp().equals(Typ.L3_RECEIVER)
 						|| m.getTyp().equals(Typ.L2_RECEIVER)
 						|| m.getTyp().equals(Typ.L3_SENDER)
 						|| m.getTyp().equals(Typ.L2_SENDER)) {
@@ -589,7 +589,7 @@ public class MulticastController {
 		final String p = "GUIConfig.xml";
 		try { // Uebergibt den Vektor mit allen Multicasts an den XMLParser
 				// FH Changed && to ||, think this is right ;)
-			if((path == null) || (path.length() == 0)) {
+			if ((path == null) || (path.length() == 0)) {
 				xml_parser.saveGUIConfig(p, data);
 				// logger.log(Level.INFO,
 				// "Saved Multicastconfiguration at default location.");
@@ -598,7 +598,7 @@ public class MulticastController {
 				addLastConfigs(path);
 				logger.log(Level.INFO, lang.getProperty("message.savedGUI"));
 			}
-		} catch(final Exception e) {
+		} catch (final Exception e) {
 			logger.log(Level.WARNING, lang.getProperty("message.savedGUINot"));
 		}
 	}
@@ -617,7 +617,7 @@ public class MulticastController {
 
 		try { // Uebergibt den Vektor mit allen Multicasts an den XMLParser
 				// FH Changed && to ||, think this is right ;)
-			if((path == null) || (path.length() == 0)) {
+			if ((path == null) || (path.length() == 0)) {
 				xml_parser.saveMulticastConfig(p, v);
 				// logger.log(Level.INFO,
 				// "Saved Multicastconfiguration at default location.");
@@ -627,7 +627,7 @@ public class MulticastController {
 				logger.log(Level.INFO,
 						lang.getProperty("message.savedMCConfig"));
 			}
-		} catch(final Exception e) {
+		} catch (final Exception e) {
 			logger.log(Level.WARNING,
 					lang.getProperty("message.savedMCConfigNot"));
 			e.printStackTrace();
@@ -653,21 +653,21 @@ public class MulticastController {
 	 */
 	public void startMC(final MulticastData m) {
 
-		synchronized(m) { // ohne sychronized ist das Programm in einen
+		synchronized (m) { // ohne sychronized ist das Programm in einen
 							// Deadlock gelaufen
-			if(!threads.containsKey(m)) { // prueft ob der Multicast schon
+			if (!threads.containsKey(m)) { // prueft ob der Multicast schon
 											// laeuft.
 				// versucht, 2 Sekunden lang auf den noch laufenden Thread zu
 				// warten.
 				final long time = System.currentTimeMillis() + 2000;
-				while((getMCMap(m).get(m)).isStillRunning()) {
-					if(time < System.currentTimeMillis()) { // verhindert
-															// haengen
-															// bleiben; dies
-															// kommt in
-															// wenigen
-															// Faellen noch
-															// vor.
+				while ((getMCMap(m).get(m)).isStillRunning()) {
+					if (time < System.currentTimeMillis()) { // verhindert
+																// haengen
+																// bleiben; dies
+																// kommt in
+																// wenigen
+																// Faellen noch
+																// vor.
 						logger.log(
 								Level.SEVERE,
 								lang.getProperty("message.mcAdvisePart1")
@@ -677,38 +677,36 @@ public class MulticastController {
 					}
 				}
 
-				switch(m.getTyp()) {
-					case L3_SENDER:
-						// Thread ID nur bei Sendern setzen. Beim Receiver wird
-						// der
-						// Wert aus dem Datenpaket ausgelesen.
-						m.setThreadID(threadCounter);
-						// Random Number zur Unterscheidung von verschiedenen
-						// Instanzen generieren
-						m.setRandomID(Integer.toHexString(new Random()
-								.nextInt()));
-						threadCounter++;
-						break;
-					case L3_RECEIVER:
-						// Fehlermeldung und Log werden im Receiver selber
-						// ausgegeben.
-						if(((MulticastReceiver)getMCMap(m).get(m)).joinGroup()) {
-							return;
-						}
-						break;
-					case L2_SENDER:
-						m.setThreadID(threadCounter);
-						// Random Number zur Unterscheidung von verschiedenen
-						// Instanzen generieren
-						m.setRandomID(Integer.toHexString(new Random()
-								.nextInt()));
-						threadCounter++;
-						break;
-					/*
-					 * case L2_RECEIVER: break;
-					 */
-					default:
-						break;
+				switch (m.getTyp()) {
+				case L3_SENDER:
+					// Thread ID nur bei Sendern setzen. Beim Receiver wird
+					// der
+					// Wert aus dem Datenpaket ausgelesen.
+					m.setThreadID(threadCounter);
+					// Random Number zur Unterscheidung von verschiedenen
+					// Instanzen generieren
+					m.setRandomID(Integer.toHexString(new Random().nextInt()));
+					threadCounter++;
+					break;
+				case L3_RECEIVER:
+					// Fehlermeldung und Log werden im Receiver selber
+					// ausgegeben.
+					if (((MulticastReceiver) getMCMap(m).get(m)).joinGroup()) {
+						return;
+					}
+					break;
+				case L2_SENDER:
+					m.setThreadID(threadCounter);
+					// Random Number zur Unterscheidung von verschiedenen
+					// Instanzen generieren
+					m.setRandomID(Integer.toHexString(new Random().nextInt()));
+					threadCounter++;
+					break;
+				/*
+				 * case L2_RECEIVER: break;
+				 */
+				default:
+					break;
 				}
 
 				// Multicast auf aktiv setzen, einen neuen Thread erzeugen und
@@ -731,7 +729,7 @@ public class MulticastController {
 	 *            Vektor mit MulticastData-Objekten.
 	 */
 	public void startMC(final Vector<MulticastData> m) {
-		for(final MulticastData ms : m) {
+		for (final MulticastData ms : m) {
 			startMC(ms);
 		}
 	}
@@ -747,7 +745,7 @@ public class MulticastController {
 	 *            MulticastData-Objekt
 	 */
 	public void stopMC(final MulticastData m) {
-		if(threads.containsKey(m)) {
+		if (threads.containsKey(m)) {
 			// Der Receiver loggt selber; Fehler werden an in die MessageQueue
 			// eingefuegt.
 			getMCMap(m).get(m).setActive(false);
@@ -776,7 +774,7 @@ public class MulticastController {
 	 */
 	public void stopMC(final Vector<MulticastData> m) {
 		// log("stopMC mit Vector *****");
-		for(final MulticastData ms : m) {
+		for (final MulticastData ms : m) {
 			stopMC(ms);
 		}
 	}
@@ -802,26 +800,26 @@ public class MulticastController {
 		data.Default_L3_UdpPort = view_controller.guidata.Default_L3_UdpPort;
 
 		// set the new state if they are visible
-		for(int i = 0; i < view_controller.getFrame().getTabpane()
+		for (int i = 0; i < view_controller.getFrame().getTabpane()
 				.getTabCount(); ++i) {
 			final String title = view_controller.getFrame().getTabpane()
 					.getTitleAt(i);
-			if(title.equals(" " + lang.getProperty("tab.l2s") + " ")) {
+			if (title.equals(" " + lang.getProperty("tab.l2s") + " ")) {
 				data.setL2_SENDER(GUIData.TabState.visible);
 			}
-			if(title.equals(" " + lang.getProperty("tab.l3s") + " ")) {
+			if (title.equals(" " + lang.getProperty("tab.l3s") + " ")) {
 				data.setL3_SENDER(GUIData.TabState.visible);
 			}
-			if(title.equals(" " + lang.getProperty("tab.l2r") + " ")) {
+			if (title.equals(" " + lang.getProperty("tab.l2r") + " ")) {
 				data.setL2_RECEIVER(GUIData.TabState.visible);
 			}
-			if(title.equals(" " + lang.getProperty("tab.l3r") + " ")) {
+			if (title.equals(" " + lang.getProperty("tab.l3r") + " ")) {
 				data.setL3_RECEIVER(GUIData.TabState.visible);
 			}
-			if(title.equals(" " + lang.getProperty("mi.about") + " ")) {
+			if (title.equals(" " + lang.getProperty("mi.about") + " ")) {
 				data.setABOUT(GUIData.TabState.visible);
 			}
-			if(title.equals(" + ")) {
+			if (title.equals(" + ")) {
 				data.setPLUS(GUIData.TabState.visible);
 			}
 		}
@@ -834,22 +832,22 @@ public class MulticastController {
 						view_controller.getFrame().getTabpane()
 								.getSelectedIndex());
 
-		if(title.equals(" " + lang.getProperty("tab.l2s") + " ")) {
+		if (title.equals(" " + lang.getProperty("tab.l2s") + " ")) {
 			data.setL2_SENDER(GUIData.TabState.selected);
 		}
-		if(title.equals(" " + lang.getProperty("tab.l3s") + " ")) {
+		if (title.equals(" " + lang.getProperty("tab.l3s") + " ")) {
 			data.setL3_SENDER(GUIData.TabState.selected);
 		}
-		if(title.equals(" " + lang.getProperty("tab.l2r") + " ")) {
+		if (title.equals(" " + lang.getProperty("tab.l2r") + " ")) {
 			data.setL2_RECEIVER(GUIData.TabState.selected);
 		}
-		if(title.equals(" " + lang.getProperty("tab.l3r") + " ")) {
+		if (title.equals(" " + lang.getProperty("tab.l3r") + " ")) {
 			data.setL3_RECEIVER(GUIData.TabState.selected);
 		}
-		if(title.equals(" " + lang.getProperty("mi.about") + " ")) {
+		if (title.equals(" " + lang.getProperty("mi.about") + " ")) {
 			data.setABOUT(GUIData.TabState.selected);
 		}
-		if(title.equals(" + ")) {
+		if (title.equals(" + ")) {
 			data.setPLUS(GUIData.TabState.selected);
 		}
 
@@ -891,7 +889,7 @@ public class MulticastController {
 	 *            Pfad zur Konfigurationsdatei
 	 */
 	private void addLastConfigs(final String path) {
-		if(lastConfigs.size() < 3) {
+		if (lastConfigs.size() < 3) {
 			lastConfigs.add(0, path);
 		} else {
 			lastConfigs.remove(2);
@@ -925,25 +923,24 @@ public class MulticastController {
 	private Map<MulticastData, MulticastThreadSuper> getMCMap(
 			final MulticastData.Typ multicastDataTyp) {
 		Map<MulticastData, MulticastThreadSuper> map = null;
-		switch(multicastDataTyp) {
+		switch (multicastDataTyp) {
 		/* v1.5 */
-			case L3_RECEIVER:
-				map = mcMap_receiver_l3;
-				break;
-			case L3_SENDER:
-				map = mcMap_sender_l3;
-				break;
-			case L2_RECEIVER:
-				map = mcMap_receiver_l2;
-				break;
-			case L2_SENDER:
-				map = mcMap_sender_l2;
-				break;
+		case L3_RECEIVER:
+			map = mcMap_receiver_l3;
+			break;
+		case L3_SENDER:
+			map = mcMap_sender_l3;
+			break;
+		case L2_RECEIVER:
+			map = mcMap_receiver_l2;
+			break;
+		case L2_SENDER:
+			map = mcMap_sender_l2;
+			break;
 
-			default:
-				logger.log(Level.SEVERE,
-						lang.getProperty("message.mc.undefined"));
-				return null;
+		default:
+			logger.log(Level.SEVERE, lang.getProperty("message.mc.undefined"));
+			return null;
 		}
 		return map;
 	}
@@ -973,25 +970,24 @@ public class MulticastController {
 	private Vector<MulticastData> getMCVector(
 			final MulticastData.Typ multicastDataTyp) {
 		Vector<MulticastData> vector = null;
-		switch(multicastDataTyp) {
+		switch (multicastDataTyp) {
 		/* v1.5 */
-			case L3_RECEIVER:
-				vector = mc_receiver_l3;
-				break;
-			case L3_SENDER:
-				vector = mc_sender_l3;
-				break;
-			case L2_RECEIVER:
-				vector = mc_receiver_l2;
-				break;
-			case L2_SENDER:
-				vector = mc_sender_l2;
-				break;
+		case L3_RECEIVER:
+			vector = mc_receiver_l3;
+			break;
+		case L3_SENDER:
+			vector = mc_sender_l3;
+			break;
+		case L2_RECEIVER:
+			vector = mc_receiver_l2;
+			break;
+		case L2_SENDER:
+			vector = mc_sender_l2;
+			break;
 
-			default:
-				logger.log(Level.SEVERE,
-						lang.getProperty("message.mc.undefined"));
-				return null;
+		default:
+			logger.log(Level.SEVERE, lang.getProperty("message.mc.undefined"));
+			return null;
 		}
 		return vector;
 	}

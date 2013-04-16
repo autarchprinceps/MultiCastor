@@ -46,11 +46,11 @@ public class UserInputData {
 		final Integer bufferFrom = columnVisibility.get(from);
 		Integer orderTo = null;
 		Integer orderFrom = null;
-		for(int i = 0; i < 11; i++) {
-			if(bufferTo.intValue() == columnOrder.get(i).intValue()) {
+		for (int i = 0; i < 11; i++) {
+			if (bufferTo.intValue() == columnOrder.get(i).intValue()) {
 				orderTo = i;
 			}
-			if(bufferFrom.intValue() == columnOrder.get(i).intValue()) {
+			if (bufferFrom.intValue() == columnOrder.get(i).intValue()) {
 				orderFrom = i;
 			}
 		}
@@ -116,8 +116,8 @@ public class UserInputData {
 	 */
 	public int getOriginalIndex(final int i) {
 		int ret = -1;
-		for(int x = 0; x < 11; x++) {
-			if(columnVisibility.get(i).intValue() == columnOrder.get(x)
+		for (int x = 0; x < 11; x++) {
+			if (columnVisibility.get(i).intValue() == columnOrder.get(x)
 					.intValue()) {
 				ret = columnOrder.get(x).intValue();
 			}
@@ -185,13 +185,13 @@ public class UserInputData {
 	 * @return type (L2/L3 Sender/Receiver)
 	 */
 	public Typ getTyp() {
-		if(selectedTab.equals(Typ.L3_SENDER.toString())) {
+		if (selectedTab.equals(Typ.L3_SENDER.toString())) {
 			return Typ.L3_SENDER;
-		} else if(selectedTab.equals(Typ.L2_SENDER.toString())) {
+		} else if (selectedTab.equals(Typ.L2_SENDER.toString())) {
 			return Typ.L2_SENDER;
-		} else if(selectedTab.equals(Typ.L3_RECEIVER.toString())) {
+		} else if (selectedTab.equals(Typ.L3_RECEIVER.toString())) {
 			return Typ.L3_RECEIVER;
-		} else if(selectedTab.equals(Typ.L2_RECEIVER.toString())) {
+		} else if (selectedTab.equals(Typ.L2_RECEIVER.toString())) {
 			return Typ.L2_RECEIVER;
 		}
 		return Typ.UNDEFINED;
@@ -233,7 +233,7 @@ public class UserInputData {
 		columnVisibility = new ArrayList<Integer>();
 		columnOrder.clear();
 		columnVisibility.clear();
-		for(int i = 0; i < 11; i++) {
+		for (int i = 0; i < 11; i++) {
 			columnOrder.add(new Integer(i));
 			columnVisibility.add(new Integer(i));
 		}
@@ -371,7 +371,7 @@ public class UserInputData {
 	 */
 	public void setSelectedRowsArray(final int[] selectedRows) {
 		final ArrayList<Integer> r = new ArrayList<Integer>();
-		for(final int selectedRow : selectedRows) {
+		for (final int selectedRow : selectedRows) {
 			r.add(new Integer(selectedRow));
 		}
 		this.selectedRows = r.toString();
@@ -385,25 +385,25 @@ public class UserInputData {
 	 *            CONFIG)
 	 */
 	public void setSelectedTab(final Typ typ) {
-		switch(typ) {
-			case L3_SENDER:
-				selectedTab = Typ.L3_SENDER.toString();
-				break;
-			case L2_SENDER:
-				selectedTab = Typ.L2_SENDER.toString();
-				break;
-			case L3_RECEIVER:
-				selectedTab = Typ.L3_RECEIVER.toString();
-				break;
-			case L2_RECEIVER:
-				selectedTab = Typ.L2_RECEIVER.toString();
-				break;
-			case CONFIG:
-				selectedTab = Typ.CONFIG.toString();
-				break;
-			default:
-				selectedTab = Typ.UNDEFINED.toString();
-				break;
+		switch (typ) {
+		case L3_SENDER:
+			selectedTab = Typ.L3_SENDER.toString();
+			break;
+		case L2_SENDER:
+			selectedTab = Typ.L2_SENDER.toString();
+			break;
+		case L3_RECEIVER:
+			selectedTab = Typ.L3_RECEIVER.toString();
+			break;
+		case L2_RECEIVER:
+			selectedTab = Typ.L2_RECEIVER.toString();
+			break;
+		case CONFIG:
+			selectedTab = Typ.CONFIG.toString();
+			break;
+		default:
+			selectedTab = Typ.UNDEFINED.toString();
+			break;
 		}
 	}
 

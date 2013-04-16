@@ -160,7 +160,7 @@ public class LanguageManager extends Properties {
 	 * @return the one and only LanguageManager object
 	 */
 	public static LanguageManager getInstance() {
-		if(instance == null) {
+		if (instance == null) {
 			return instance = new LanguageManager();
 		} else {
 			return instance;
@@ -176,7 +176,7 @@ public class LanguageManager extends Properties {
 	 *            name of the language that you want to load
 	 */
 	public static void setCurrentLanguage(final String currentLanguage) {
-		if(instance == null) {
+		if (instance == null) {
 			new LanguageManager("Language/" + currentLanguage + ".lang");
 			// Following Line not needed: current Language is already set by the
 			// constructor
@@ -185,17 +185,17 @@ public class LanguageManager extends Properties {
 			try {
 				getInstance().loadLanguage(
 						"Language/" + currentLanguage + ".lang");
-			} catch(final FileNotFoundException e) {
+			} catch (final FileNotFoundException e) {
 				JOptionPane.showMessageDialog(null,
 						"Can not find the language file at\nLanguage/"
 								+ currentLanguage
 								+ ".lang\nCan not change language!");
-			} catch(final IOException e) {
+			} catch (final IOException e) {
 				JOptionPane.showMessageDialog(null,
 						"Can not read the language file at\nLanguage/"
 								+ currentLanguage
 								+ ".lang\nCan not change language!");
-			} catch(final InvalidLanguageFileException e) {
+			} catch (final InvalidLanguageFileException e) {
 				JOptionPane
 						.showMessageDialog(
 								null,
@@ -234,21 +234,21 @@ public class LanguageManager extends Properties {
 		currentLanguage = languageFile.getName().replaceAll(".lang", "");
 		try {
 			loadLanguage(currentLang);
-		} catch(final FileNotFoundException e) {
+		} catch (final FileNotFoundException e) {
 			JOptionPane.showMessageDialog(
 					null,
 					"Can not find the language file at\n"
 							+ languageFile.getAbsolutePath()
 							+ "\nCan not start Multicastor.");
 			System.exit(1);
-		} catch(final IOException e) {
+		} catch (final IOException e) {
 			JOptionPane.showMessageDialog(
 					null,
 					"Can not read the language file at\n"
 							+ languageFile.getAbsolutePath()
 							+ "\nCan not start Multicastor.");
 			System.exit(1);
-		} catch(final InvalidLanguageFileException e) {
+		} catch (final InvalidLanguageFileException e) {
 			JOptionPane
 					.showMessageDialog(
 							null,
@@ -289,8 +289,8 @@ public class LanguageManager extends Properties {
 		// all keys!
 		// Unavailable Keys wont be resetet to the new Language if they are not
 		// available
-		for(int i = 0; i < keys.length; i++) {
-			if(!containsKey(keys[i])) {
+		for (int i = 0; i < keys.length; i++) {
+			if (!containsKey(keys[i])) {
 				throw new InvalidLanguageFileException(i, keys[i], keys);
 			}
 		}
