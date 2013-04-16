@@ -2,7 +2,6 @@ package multicastor.view;
 
 import java.text.DecimalFormat;
 import javax.swing.table.AbstractTableModel;
-import javax.swing.table.TableRowSorter;
 
 import multicastor.controller.ViewController;
 import multicastor.data.MulticastData;

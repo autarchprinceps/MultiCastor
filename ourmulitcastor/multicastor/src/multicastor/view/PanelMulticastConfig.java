@@ -28,7 +28,7 @@ import multicastor.view.MiscBorder.BorderType;
  */
 @SuppressWarnings("serial")
 public class PanelMulticastConfig extends JPanel {
-
+	// TODO Control für GMRP JComboBox
 	private JToggleButton bt_active;
 	private JButton bt_enter;
 	private WideComboBox cb_sourceIPaddress;
