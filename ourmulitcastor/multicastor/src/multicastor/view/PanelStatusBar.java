@@ -29,8 +29,8 @@ public class PanelStatusBar extends JPanel {
 	public PanelStatusBar() {
 		lang = LanguageManager.getInstance();
 
-		pan_east = new JPanel();
-		pan_west = new JPanel();
+		pan_east = new JPanel(true);
+		pan_west = new JPanel(true);
 
 		pan_east.setLayout(new FlowLayout(FlowLayout.RIGHT, 10, 0));
 		pan_west.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 0));

@@ -62,16 +62,16 @@ public class PanelTabbed extends JPanel {
 		initStatusPanel(ctrl, typ);
 
 		// Multicast Options Panel containing Control and Configuration
-		pan_options = new JPanel();
+		pan_options = new JPanel(true);
 		pan_options.setLayout(new BorderLayout());
 		pan_options.add(pan_control, BorderLayout.NORTH);
 		pan_options.add(pan_config, BorderLayout.EAST);
 
 		// Space Panel, a Buffer for Resizing below the Left Panel
-		pan_space = new JPanel();
+		pan_space = new JPanel(true);
 
 		// The Left Panel containing the Options Panel and the Space Panel
-		pan_left = new JPanel();
+		pan_left = new JPanel(true);
 		pan_left.setLayout(new BorderLayout());
 		pan_left.setPreferredSize(new Dimension(225, 500));
 		pan_left.add(pan_options, BorderLayout.NORTH);
@@ -332,7 +332,7 @@ public class PanelTabbed extends JPanel {
 	 *            Gibt den Programmteil an zu welchem die Tabelle gehoert.
 	 */
 	private void initTablePanel(final ViewController ctrl, final Typ typ) {
-		pan_table = new JPanel();
+		pan_table = new JPanel(true);
 		table = new JXTable();
 		setTableModel(ctrl, typ);
 
