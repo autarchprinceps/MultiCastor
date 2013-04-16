@@ -1,4 +1,4 @@
-﻿package multicastor.data;
+package multicastor.data;
 
 import java.util.ArrayList;
 
