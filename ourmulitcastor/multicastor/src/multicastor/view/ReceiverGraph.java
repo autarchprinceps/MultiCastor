@@ -161,29 +161,29 @@ public class ReceiverGraph extends PanelGraph {
 	public void updateGraph(final MulticastData[] mcDataArray,
 			final boolean repaint) {
 		int newValue = 0;
-		if (mcDataArray.length != 0) {
-			switch (curValueType) {
-			case JITTER:
-				for (final MulticastData element : mcDataArray) {
-					newValue += element.getJitter();
-				}
-				break;
-			case LOSTPKT:
-				for (final MulticastData element : mcDataArray) {
-					newValue += element.getPacketLossPerSecond();
-				}
-				break;
-			case MEASPKT:
-				for (final MulticastData element : mcDataArray) {
-					newValue += element.getPacketRateMeasured();
-				}
-				break;
+		if(mcDataArray.length != 0) {
+			switch(curValueType) {
+				case JITTER:
+					for(final MulticastData element : mcDataArray) {
+						newValue += element.getJitter();
+					}
+					break;
+				case LOSTPKT:
+					for(final MulticastData element : mcDataArray) {
+						newValue += element.getPacketLossPerSecond();
+					}
+					break;
+				case MEASPKT:
+					for(final MulticastData element : mcDataArray) {
+						newValue += element.getPacketRateMeasured();
+					}
+					break;
 			}
 		} else {
 			newValue = 0;
 		}
 		this.updateGraph(newValue, repaint);
-		if (repaint && !runSnake) {
+		if(repaint) {
 			jitterRB.repaint();
 			lostPktsRB.repaint();
 			measPktRtRB.repaint();

@@ -157,17 +157,17 @@ public class MulticastData {
 		String substring;
 		final HexBinaryAdapter h = new HexBinaryAdapter();
 
-		for (int begin = 0, end, counter = 0; counter < 6; counter++) {
+		for(int begin = 0, end, counter = 0; counter < 6; counter++) {
 			end = s.indexOf(":", begin);
 
-			if (end != -1) {
-				substring = (String) s.subSequence(begin, end);
+			if(end != -1) {
+				substring = (String)s.subSequence(begin, end);
 			} else {
-				substring = (String) s.subSequence(begin, s.length());
+				substring = (String)s.subSequence(begin, s.length());
 			}
 
 			// Shouldn't happen ;)
-			if (substring.length() == 1) {
+			if(substring.length() == 1) {
 				substring = "0" + substring;
 			}
 
@@ -193,23 +193,21 @@ public class MulticastData {
 	 */
 	public String getMmrpGroupMacAsString() {
 		String s = "";
-		if (mmrpGroupMac != null) {
-			for (int i = 0; i < mmrpGroupMac.length; i++) {
+		if(mmrpGroupMac != null) {
+			for(int i = 0; i < mmrpGroupMac.length; i++) {
 
 				String tmp = Integer.toHexString(mmrpGroupMac[i]);
 
 				// Falls negativer Wert wird fffffXX zurueckgegeben deswegen nur
 				// XX nehmen
-				if (tmp.length() > 2) {
+				if(tmp.length() > 2) {
 					tmp = tmp.substring(tmp.length() - 2, tmp.length());
 				}
-
-				if (tmp.length() == 1) {
+				if(tmp.length() == 1) {
 					tmp = "0" + tmp;
 				}
-
 				s += tmp;
-				if (i != (mmrpGroupMac.length - 1)) {
+				if(i != (mmrpGroupMac.length - 1)) {
 					s += ":";
 				}
 			}
@@ -233,21 +231,21 @@ public class MulticastData {
 	 */
 	public String getMmrpSourceMacAsString() {
 		String s = "";
-		for (int i = 0; i < mmrpSourceMac.length; i++) {
+		for(int i = 0; i < mmrpSourceMac.length; i++) {
 			String tmp = Integer.toHexString(mmrpSourceMac[i]);
 
 			// Falls negativer Wert wird fffffXX zurueckgegeben deswegen nur XX
 			// nehmen
-			if (tmp.length() > 2) {
+			if(tmp.length() > 2) {
 				tmp = tmp.substring(tmp.length() - 2, tmp.length());
 			}
 
-			if (tmp.length() == 1) {
+			if(tmp.length() == 1) {
 				tmp = "0" + tmp;
 			}
 
 			s += tmp;
-			if (i != (mmrpSourceMac.length - 1)) {
+			if(i != (mmrpSourceMac.length - 1)) {
 				s += ":";
 			}
 		}
@@ -350,7 +348,7 @@ public class MulticastData {
 	 * @return the received packets
 	 */
 	public int getReceivedPackets() {
-		return (int) packetCount;
+		return (int)packetCount;
 	}
 
 	/**
@@ -442,7 +440,7 @@ public class MulticastData {
 	 * @return the identify string
 	 */
 	public String identify() {
-		if ((typ == Typ.L2_SENDER) || (typ == Typ.L2_RECEIVER)) {
+		if((typ == Typ.L2_SENDER) || (typ == Typ.L2_RECEIVER)) {
 			return typ + "_" + getSenderID() + "_" + getMmrpGroupMacAsString();
 		} else {
 			return typ + "_" + getSenderID() + "_" + getGroupIp();
@@ -464,7 +462,7 @@ public class MulticastData {
 	public void resetValues() {
 		final int d = 0;
 
-		if (typ == Typ.L3_RECEIVER) {
+		if(typ == Typ.L3_RECEIVER) {
 			ttl = d;
 			packetRateDesired = d;
 			packetLength = d;
@@ -776,7 +774,7 @@ public class MulticastData {
 	 * @return console friendly toString of this object
 	 */
 	public String toStringConsole() {
-		if (typ == Typ.L3_SENDER) {
+		if(typ == Typ.L3_SENDER) {
 			return groupIp + "\t" + udpPort + "\t" + sourceIp + "\t"
 					+ packetRateDesired + "\t" + threadID + "\t" + ttl + "\t"
 					+ packetCount + "\t" + typ + "\t" + getSenderID() + "\t";

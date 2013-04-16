@@ -10,7 +10,6 @@ import java.awt.image.BufferedImage;
 import javax.swing.JPanel;
 
 import multicastor.lang.LanguageManager;
-import multicastor.view.SnakeGimmick.SNAKE_DIRECTION;
 
 /**
  * Zeichnet einen Grafen auf einer Flache mit einer Huehe von 100 Pixeln und
@@ -25,7 +24,6 @@ import multicastor.view.SnakeGimmick.SNAKE_DIRECTION;
 
 @SuppressWarnings("serial")
 public class PanelGraph extends JPanel {
-	public Boolean runSnake = false;
 	Font graphFont = new Font("SansSerif", Font.PLAIN, 9);
 	protected LanguageManager lang;
 	private int actualValue = 0;

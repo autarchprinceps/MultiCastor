@@ -15,7 +15,7 @@ public class MMRPReceiver extends MMRPEntity {
 		@Override
 		public void nextPacket(final PcapPacket packet, final String arg1) {
 			final int length = (packet.getByte(13) & 0xFF)
-					+ ((packet.getByte(12) & 0xFF) * 255);
+					+ ((packet.getByte(12) & 0xFF) * 256);
 			System.arraycopy(packet.getByteArray(14, length), 0, foundPacket,
 					0, length);
 			found = true;
