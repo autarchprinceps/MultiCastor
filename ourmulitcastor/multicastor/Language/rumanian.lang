@@ -48,6 +48,7 @@ miscBorder.ipGroupAddress		=IP adresă de grup
 miscBorder.ipNetworkInterface	=IP interfață rețea
 miscBorder.MacGroupAddress		=Mac adresă de grup
 miscBorder.NetworkInterface		=interfață rețea
+miscBorder.Protocol				=protocol
 config.message.ipFirst			=mai întâi alege IP
 config.message.ipFirstShort		=mai întâi IP
 button.start		=start

@@ -17,7 +17,7 @@ public class MiscBorder extends TitledBorder {
 	 * Enum welches bestimmt um welchen Rahmen es sich handelt
 	 */
 	public enum BorderTitle {
-		L2GROUP, L2SOURCE, L3GROUP, L3SOURCE, LENGTH, PORT, RATE, TTL
+		L2GROUP, L2SOURCE, L3GROUP, L3SOURCE, LENGTH, PORT, RATE, TTL, L2PROTOCOL
 	}
 
 	/**
@@ -56,65 +56,72 @@ public class MiscBorder extends TitledBorder {
 			reloadLanguage();
 		}
 		switch (bordertype) {
-		case NEUTRAL:
-			switch (title) {
-			case L3GROUP:
-				return b_neutral.get(0);
-			case L3SOURCE:
-				return b_neutral.get(1);
-			case PORT:
-				return b_neutral.get(2);
-			case RATE:
-				return b_neutral.get(3);
-			case LENGTH:
-				return b_neutral.get(4);
-			case TTL:
-				return b_neutral.get(5);
-			case L2GROUP:
-				return b_neutral.get(6);
-			case L2SOURCE:
-				return b_neutral.get(7);
-			}
-			break;
-		case TRUE:
-			switch (title) {
-			case L3GROUP:
-				return b_true.get(0);
-			case L3SOURCE:
-				return b_true.get(1);
-			case PORT:
-				return b_true.get(2);
-			case RATE:
-				return b_true.get(3);
-			case LENGTH:
-				return b_true.get(4);
-			case TTL:
-				return b_true.get(5);
-			case L2GROUP:
-				return b_true.get(6);
-			case L2SOURCE:
-				return b_true.get(7);
-			}
-			break;
-		case FALSE:
-			switch (title) {
-			case L3GROUP:
-				return b_false.get(0);
-			case L3SOURCE:
-				return b_false.get(1);
-			case PORT:
-				return b_false.get(2);
-			case RATE:
-				return b_false.get(3);
-			case LENGTH:
-				return b_false.get(4);
-			case TTL:
-				return b_false.get(5);
-			case L2GROUP:
-				return b_false.get(6);
-			case L2SOURCE:
-				return b_false.get(7);
-			}
+                    case NEUTRAL:
+                        switch (title) {
+                            case L3GROUP:
+                                    return b_neutral.get(0);
+                            case L3SOURCE:
+                                    return b_neutral.get(1);
+                            case PORT:
+                                    return b_neutral.get(2);
+                            case RATE:
+                                    return b_neutral.get(3);
+                            case LENGTH:
+                                    return b_neutral.get(4);
+                            case TTL:
+                                    return b_neutral.get(5);
+                            case L2GROUP:
+                                    return b_neutral.get(6);
+                            case L2SOURCE:
+                                    return b_neutral.get(7);
+                            case L2PROTOCOL:
+                                    return b_neutral.get(8);
+                        }
+                        break;
+                    case TRUE:
+                        switch (title) {
+                            case L3GROUP:
+                                    return b_true.get(0);
+                            case L3SOURCE:
+                                    return b_true.get(1);
+                            case PORT:
+                                    return b_true.get(2);
+                            case RATE:
+                                    return b_true.get(3);
+                            case LENGTH:
+                                    return b_true.get(4);
+                            case TTL:
+                                    return b_true.get(5);
+                            case L2GROUP:
+                                    return b_true.get(6);
+                            case L2SOURCE:
+                                    return b_true.get(7);
+                            case L2PROTOCOL:
+                                    return b_true.get(8);
+                        }
+                        break;
+                    case FALSE:
+                        switch (title) {
+                            case L3GROUP:
+                                    return b_false.get(0);
+                            case L3SOURCE:
+                                    return b_false.get(1);
+                            case PORT:
+                                    return b_false.get(2);
+                            case RATE:
+                                    return b_false.get(3);
+                            case LENGTH:
+                                    return b_false.get(4);
+                            case TTL:
+                                    return b_false.get(5);
+                            case L2GROUP:
+                                    return b_false.get(6);
+                            case L2SOURCE:
+                                    return b_false.get(7);
+                            case L2PROTOCOL:
+                                    return b_false.get(8);
+                        }
+                        break;
 		}
 		return null;
 	}
@@ -128,7 +135,8 @@ public class MiscBorder extends TitledBorder {
 				lang.getProperty("miscBorder.packetLength"),
 				lang.getProperty("miscBorder.timeToLive"),
 				lang.getProperty("miscBorder.MacGroupAddress"),
-				lang.getProperty("miscBorder.NetworkInterface") };
+				lang.getProperty("miscBorder.NetworkInterface"),
+                                lang.getProperty("miscBorder.Protocol")};
 		if (b_neutral.size() == 0) {
 			for (final String ipv4Name : ipv4Names) {
 				b_neutral.add(createBorder(ipv4Name, neutralTextColor,

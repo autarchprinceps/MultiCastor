@@ -34,7 +34,6 @@ public class PanelMulticastConfig extends JPanel {
          * LanguageManager Integration
          */
         private JComboBox gmrp_chooser;
-        private JTextField tf_gmrp;
         private JPanel pan_gmrp;
     
 	private JToggleButton bt_active;
@@ -351,16 +350,28 @@ public class PanelMulticastConfig extends JPanel {
 
 		// V1.5: Added new Tabs
 		if ((typ == Typ.L3_SENDER) || (typ == Typ.L3_RECEIVER)) {
-			pan_groupIPaddress.setBorder(MiscBorder.getBorder(
-					BorderTitle.L3GROUP, BorderType.NEUTRAL));
-			pan_sourceIPaddress.setBorder(MiscBorder.getBorder(
-					BorderTitle.L3SOURCE, BorderType.NEUTRAL));
+                    pan_groupIPaddress.setBorder(MiscBorder.getBorder(
+                                    BorderTitle.L3GROUP, BorderType.NEUTRAL));
+                    pan_sourceIPaddress.setBorder(MiscBorder.getBorder(
+                                    BorderTitle.L3SOURCE, BorderType.NEUTRAL));
 		} else if ((typ == Typ.L2_SENDER) || (typ == Typ.L2_RECEIVER)) {
-			pan_groupIPaddress.setBorder(MiscBorder.getBorder(
-					BorderTitle.L2GROUP, BorderType.NEUTRAL));
-			pan_sourceIPaddress.setBorder(MiscBorder.getBorder(
-					BorderTitle.L2SOURCE, BorderType.NEUTRAL));
-                        pan_gmrp = new JPanel(true);
+                    pan_groupIPaddress.setBorder(MiscBorder.getBorder(
+                                    BorderTitle.L2GROUP, BorderType.NEUTRAL));
+                    pan_sourceIPaddress.setBorder(MiscBorder.getBorder(
+                                    BorderTitle.L2SOURCE, BorderType.NEUTRAL));
+                    gmrp_chooser = new JComboBox();
+                    gmrp_chooser.addItem("MMRP");
+                    gmrp_chooser.addItem("GMRP");
+                    gmrp_chooser.setBounds(5, 15, 205, 20);
+                    gmrp_chooser.setFont(MiscFont.getFont(0, 12));
+                    gmrp_chooser.setBorder(null);
+                    pan_gmrp = new JPanel(true);
+                    pan_gmrp.setLayout(null);
+                    pan_gmrp.setBounds(5, 100, 215, 40);
+                    pan_gmrp.setBorder(MiscBorder.getBorder(
+                                    BorderTitle.L2PROTOCOL, BorderType.NEUTRAL));
+                    pan_gmrp.add(gmrp_chooser, BorderLayout.CENTER);
+                    add(pan_gmrp);
 		}
 
 		tf_udp_port = new JTextField();

@@ -48,6 +48,7 @@ miscBorder.ipGroupAddress  	=	Adresse IP du groupe
 miscBorder.ipNetworkInterface 	=	Interface du réseau
 miscBorder.MacGroupAddress  	=	Adresse de groupe MAC
 miscBorder.NetworkInterface  	=	Interface du réseau
+miscBorder.Protocol				=Protocol
 config.message.ipFirst   	=	Choisir d'abord une adresse IP
 config.message.ipFirstShort  	=	D'abord une IP
 button.start  	=	Démarrer

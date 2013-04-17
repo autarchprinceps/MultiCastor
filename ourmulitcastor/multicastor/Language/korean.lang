@@ -48,6 +48,7 @@ miscBorder.ipGroupAddress  	=	IP 그룹주소
 miscBorder.ipNetworkInterface 	=	IP 네트워크 인터페이스
 miscBorder.MacGroupAddress  	=	맥 그룹주소
 miscBorder.NetworkInterface  	=	네트워크 인터페이스
+miscBorder.Protocol				=프로토콜
 config.message.ipFirst   	=	IP를 선택해주십시오
 config.message.ipFirstShort  	=	IP 우선
 button.start  	=	시작
