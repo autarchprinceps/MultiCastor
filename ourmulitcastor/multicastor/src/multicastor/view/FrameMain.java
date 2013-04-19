@@ -72,7 +72,6 @@ public class FrameMain extends JFrame {
 	private Separator mi_separator;
 	// V1.5: Set individual title
 	private JMenuItem mi_setTitle;
-	private JMenuItem mi_snake;
 	/**
 	 * V1.5: Zum entfernen der TabPane
 	 */
@@ -225,14 +224,6 @@ public class FrameMain extends JFrame {
 		return mi_setTitle;
 	}
 
-	/**
-	 * Hilfsfunktion zum Abfrage des Snake Menu Items
-	 * 
-	 * @return Das Snake Menu Item
-	 */
-	public JMenuItem getMi_snake() {
-		return mi_snake;
-	}
 
 	public PanelAbout getPanel_about() {
 		return panel_about;
@@ -567,10 +558,6 @@ public class FrameMain extends JFrame {
 
 			mi_separator = new Separator();
 
-			mi_snake = new JMenuItem(new ImageIcon(getClass().getResource(
-					"/multicastor/images/ksnake.png")));
-			mi_snake.setFont(MiscFont.getFont(0, 14));
-			mi_snake.addActionListener(ctrl);
 
 			mi_help = new JMenuItem(new ImageIcon(getClass().getResource(
 					"/multicastor/images/help.png")));
@@ -651,7 +638,6 @@ public class FrameMain extends JFrame {
 			m_view.add(mi_open_l[1][1]);
 			m_view.add(mi_open_l[1][0]);
 			m_view.add(mi_open_about);
-			m_info.add(mi_snake);
 			m_info.add(mi_about);
 			m_info.add(mi_help);
 			m_options.add(m_view);
@@ -684,7 +670,6 @@ public class FrameMain extends JFrame {
 		mi_profiles[2].setText("mi.errorFileNotFound");
 		mi_profiles[2].setText("mi.errorFileNotFound");
 		mi_profiles[2].setText("mi.errorFileNotFound");
-		mi_snake.setText(lang.getProperty("mi.snake"));
 		mi_help.setText(lang.getProperty("mi.help"));
 		mi_exit.setText(lang.getProperty("mi.exit"));
 		mi_about.setText(lang.getProperty("mi.about"));
