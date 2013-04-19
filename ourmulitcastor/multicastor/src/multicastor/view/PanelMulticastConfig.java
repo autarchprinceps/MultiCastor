@@ -21,6 +21,7 @@ import multicastor.model.NetworkAdapter;
 import multicastor.model.NetworkAdapter.IPType;
 import multicastor.view.MiscBorder.BorderTitle;
 import multicastor.view.MiscBorder.BorderType;
+import org.jdesktop.swingx.JXTable;
 
 /**
  * Das KonfigurationPanel fuer Multicasts (links unten im Programm). Dient zum
@@ -28,7 +29,13 @@ import multicastor.view.MiscBorder.BorderType;
  */
 @SuppressWarnings("serial")
 public class PanelMulticastConfig extends JPanel {
-	// TODO Control für GMRP JComboBox
+	/*
+         * TODO Control für GMRP JComboBox
+         * LanguageManager Integration
+         */
+        private JComboBox gmrp_chooser;
+        private JPanel pan_gmrp;
+    
 	private JToggleButton bt_active;
 	private JButton bt_enter;
 	private WideComboBox cb_sourceIPaddress;
@@ -250,9 +257,9 @@ public class PanelMulticastConfig extends JPanel {
 		bt_active = new JToggleButton(lang.getProperty("button.inactive"));
 		bt_active.setForeground(Color.red);
 		bt_active.setFont(MiscFont.getFont(0, 11));
-		pan_groupIPaddress = new JPanel();
-		pan_sourceIPaddress = new JPanel();
-		pan_udp_port = new JPanel();
+		pan_groupIPaddress = new JPanel(true);
+		pan_sourceIPaddress = new JPanel(true);
+		pan_udp_port = new JPanel(true);
 		bt_enter = new JButton(lang.getProperty("button.add"));
 		bt_enter.addActionListener(ctrl);
 		bt_enter.setBounds(115, 204, 100, 25);
@@ -267,7 +274,7 @@ public class PanelMulticastConfig extends JPanel {
 		} else {
 			cb_sourceIPaddress.addItem("");
 			final Vector<String> names = NetworkAdapter.getMacAdapterNames();
-			for (final String s : names) {
+			for(final String s : names) {
 				cb_sourceIPaddress.addItem(s);
 			}
 
@@ -285,9 +292,9 @@ public class PanelMulticastConfig extends JPanel {
 		// typ==Typ.L3_SENDER
 		if ((typ == Typ.L2_SENDER) || (typ == Typ.L3_SENDER)) {
 
-			pan_packetrate = new JPanel();
-			pan_packetlength = new JPanel();
-			pan_ttl = new JPanel();
+			pan_packetrate = new JPanel(true);
+			pan_packetlength = new JPanel(true);
+			pan_ttl = new JPanel(true);
 			pan_packetrate.setLayout(null);
 			pan_packetlength.setLayout(null);
 			pan_ttl.setLayout(null);
@@ -343,15 +350,28 @@ public class PanelMulticastConfig extends JPanel {
 
 		// V1.5: Added new Tabs
 		if ((typ == Typ.L3_SENDER) || (typ == Typ.L3_RECEIVER)) {
-			pan_groupIPaddress.setBorder(MiscBorder.getBorder(
-					BorderTitle.L3GROUP, BorderType.NEUTRAL));
-			pan_sourceIPaddress.setBorder(MiscBorder.getBorder(
-					BorderTitle.L3SOURCE, BorderType.NEUTRAL));
+                    pan_groupIPaddress.setBorder(MiscBorder.getBorder(
+                                    BorderTitle.L3GROUP, BorderType.NEUTRAL));
+                    pan_sourceIPaddress.setBorder(MiscBorder.getBorder(
+                                    BorderTitle.L3SOURCE, BorderType.NEUTRAL));
 		} else if ((typ == Typ.L2_SENDER) || (typ == Typ.L2_RECEIVER)) {
-			pan_groupIPaddress.setBorder(MiscBorder.getBorder(
-					BorderTitle.L2GROUP, BorderType.NEUTRAL));
-			pan_sourceIPaddress.setBorder(MiscBorder.getBorder(
-					BorderTitle.L2SOURCE, BorderType.NEUTRAL));
+                    pan_groupIPaddress.setBorder(MiscBorder.getBorder(
+                                    BorderTitle.L2GROUP, BorderType.NEUTRAL));
+                    pan_sourceIPaddress.setBorder(MiscBorder.getBorder(
+                                    BorderTitle.L2SOURCE, BorderType.NEUTRAL));
+                    gmrp_chooser = new JComboBox();
+                    gmrp_chooser.addItem("MMRP");
+                    gmrp_chooser.addItem("GMRP");
+                    gmrp_chooser.setBounds(5, 15, 205, 20);
+                    gmrp_chooser.setFont(MiscFont.getFont(0, 12));
+                    gmrp_chooser.setBorder(null);
+                    pan_gmrp = new JPanel(true);
+                    pan_gmrp.setLayout(null);
+                    pan_gmrp.setBounds(5, 100, 215, 40);
+                    pan_gmrp.setBorder(MiscBorder.getBorder(
+                                    BorderTitle.L2PROTOCOL, BorderType.NEUTRAL));
+                    pan_gmrp.add(gmrp_chooser, BorderLayout.CENTER);
+                    add(pan_gmrp);
 		}
 
 		tf_udp_port = new JTextField();

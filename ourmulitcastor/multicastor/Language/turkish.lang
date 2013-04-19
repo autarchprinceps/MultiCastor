@@ -48,6 +48,7 @@ miscBorder.ipGroupAddress  	=	IP Grup Adresi
 miscBorder.ipNetworkInterface 	=	IP Ağ Arayüzü
 miscBorder.MacGroupAddress  	=	Mac Grup Adresi
 miscBorder.NetworkInterface  	=	Ağ Arayüzü
+miscBorder.Protocol				=Protokol
 config.message.ipFirst   	=	Lütfen Önce IP Seçin
 config.message.ipFirstShort  	=	Önce IP
 button.start  	=	Başlat

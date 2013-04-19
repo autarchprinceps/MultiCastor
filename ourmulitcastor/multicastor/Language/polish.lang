@@ -48,6 +48,7 @@ miscBorder.ipGroupAddress			=IP grupy
 miscBorder.ipNetworkInterface		=ip interfejs sieciowy
 miscBorder.MacGroupAddress			=Adres użytkownika grupy
 miscBorder.NetworkInterface			=Interfejs sieciowy
+miscBorder.Protocol					=Protokół
 config.message.ipFirst				=Proszę wybrać wpierw IP
 config.message.ipFirstShort			=Najpierw IP
 button.start			=Start
