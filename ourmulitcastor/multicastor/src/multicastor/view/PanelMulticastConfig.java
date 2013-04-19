@@ -29,12 +29,8 @@ import org.jdesktop.swingx.JXTable;
  */
 @SuppressWarnings("serial")
 public class PanelMulticastConfig extends JPanel {
-	/*
-         * TODO Control für GMRP JComboBox
-         * LanguageManager Integration
-         */
-        private JComboBox gmrp_chooser;
-        private JPanel pan_gmrp;
+	private JComboBox gmrp_chooser;
+    private JPanel pan_gmrp;
     
 	private JToggleButton bt_active;
 	private JButton bt_enter;
@@ -131,7 +127,6 @@ public class PanelMulticastConfig extends JPanel {
 		else {
 			return null;
 		}
-
 	}
 
 	public int getSelectedSourceIndex() {
