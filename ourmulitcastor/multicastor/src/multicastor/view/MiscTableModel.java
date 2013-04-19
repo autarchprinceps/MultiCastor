@@ -187,6 +187,9 @@ public class MiscTableModel extends AbstractTableModel {
 	 */
 	public Object getValueAt(final int rowIndex, final int columnIndex) {
 		final MulticastData data = ctrl.getMCData(rowIndex, typ);
+                if(data == null) {
+                    return null;
+                }
 		if ((typ == Typ.L2_SENDER) || (typ == Typ.L3_SENDER)) {
 			switch (columnIndex) {
 			case 0:

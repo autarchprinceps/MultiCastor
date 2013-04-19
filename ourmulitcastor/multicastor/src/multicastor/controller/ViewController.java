@@ -720,7 +720,7 @@ public class ViewController implements ActionListener, MouseListener,
 		for(int i = 0; i < getTable(Typ.L3_RECEIVER).getModel().getRowCount(); i++) {
 			sum = sum
 					+ Double.parseDouble(((String)getTable(Typ.L3_RECEIVER)
-							.getModel().getValueAt(i, 6)).replace(",", "."));
+							.getModel().getValueAt(i, 6)).replace(',', '.'));
 		}
 		return (new DecimalFormat("##0.000")).format(sum);
 	}
@@ -735,7 +735,7 @@ public class ViewController implements ActionListener, MouseListener,
 		for(int i = 0; i < getTable(Typ.L3_SENDER).getModel().getRowCount(); i++) {
 			sum = sum
 					+ Double.parseDouble(((String)getTable(Typ.L3_SENDER)
-							.getModel().getValueAt(i, 6)).replace(",", "."));
+							.getModel().getValueAt(i, 6)).replace(',', '.'));
 		}
 		return (new DecimalFormat("##0.000")).format(sum);
 	}
