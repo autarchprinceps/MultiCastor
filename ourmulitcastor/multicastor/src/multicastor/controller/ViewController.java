@@ -2900,7 +2900,7 @@ public class ViewController implements ActionListener, MouseListener,
 			selectedRows[i] = getTable(typ).convertRowIndexToModel(selectedRows[i]);
 		}
 		for(int i = 0; i < selectedRows.length; i++) {
-			// System.out.println("luesche zeile: "+selectedRows[i]);
+			// System.out.println("lösche zeile: " + selectedRows[i]);
 			deleteMC(getMCData(selectedRows[i] - i, typ));
 		}
 		setBTStartStopDelete(typ);
