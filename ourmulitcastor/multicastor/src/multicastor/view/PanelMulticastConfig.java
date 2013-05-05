@@ -15,6 +15,7 @@ import javax.swing.SwingConstants;
 
 import multicastor.controller.ViewController;
 import multicastor.data.MulticastData.Typ;
+import multicastor.data.MulticastData.Protocol;
 import multicastor.lang.LanguageManager;
 import multicastor.model.InputValidator;
 import multicastor.model.NetworkAdapter;
@@ -29,7 +30,7 @@ import org.jdesktop.swingx.JXTable;
  */
 @SuppressWarnings("serial")
 public class PanelMulticastConfig extends JPanel {
-	private JComboBox gmrp_chooser;
+	private JComboBox<String> gmrp_chooser;
     private JPanel pan_gmrp;
     
 	private JToggleButton bt_active;
@@ -50,6 +51,7 @@ public class PanelMulticastConfig extends JPanel {
 	private JTextField tf_udp_packetlength;
 	private JTextField tf_udp_port;
 	private final Typ typ;
+	private Protocol protocol;
 
 	/**
 	 * Konstruktor welcher das komplette Configuration Panel initialisiert.
@@ -105,6 +107,26 @@ public class PanelMulticastConfig extends JPanel {
 		return pan_udp_port;
 	}
 
+	public Protocol getSelectedLayer2Protocol()
+	{
+		if(gmrp_chooser.getSelectedItem().equals("GMRP"))
+			return Protocol.GMRP;
+		if(gmrp_chooser.getSelectedItem().equals("MMRP"))
+			return Protocol.MMRP;
+		
+		return Protocol.UNDEFINED;
+	}
+	
+	public Protocol getSelectedLayer3Protocol(final IPType iptype)
+	{
+		if(iptype == IPType.IPv4)
+			return Protocol.IGMP;
+		if(iptype == IPType.IPv6)
+			return Protocol.MLD;
+			
+		return Protocol.UNDEFINED;
+	}
+	
 	public byte[] getSelectedAddress(final Typ typ) {
 		return NetworkAdapter.getMacToMMRP(cb_sourceIPaddress
 				.getSelectedIndex() - 1);
@@ -210,6 +232,11 @@ public class PanelMulticastConfig extends JPanel {
 		setToolTips(typ);
 	}
 
+	public void setProtocol(final Protocol protocol)
+	{
+		this.protocol = protocol;
+	}
+	
 	public void setBt_enter(final JButton btEnter) {
 		bt_enter = btEnter;
 	}

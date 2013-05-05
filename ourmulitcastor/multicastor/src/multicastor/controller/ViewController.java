@@ -46,6 +46,7 @@ import org.jdesktop.swingx.JXTable;
 
 import multicastor.data.GUIData;
 import multicastor.data.MulticastData;
+import multicastor.data.MulticastData.Protocol;
 import multicastor.data.UserInputData;
 import multicastor.data.MulticastData.Typ;
 import multicastor.lang.LanguageManager;
@@ -1699,10 +1700,12 @@ public class ViewController implements ActionListener, MouseListener,
 						mcd.setGroupIp(InputValidator
 								.checkMC_IPv4(getPanConfig(typ)
 										.getTf_groupIPaddress().getText()));
+						mcd.setProtocol(Protocol.IGMP);
 					} else if(iptype == IPType.IPv6) {
 						mcd.setGroupIp(InputValidator
 								.checkMC_IPv6(getPanConfig(typ)
 										.getTf_groupIPaddress().getText()));
+						mcd.setProtocol(Protocol.MLD);
 					}
 				}
 				if(!(getPanConfig(typ).getCb_sourceIPaddress()
@@ -1740,10 +1743,12 @@ public class ViewController implements ActionListener, MouseListener,
 						mcd.setGroupIp(InputValidator
 								.checkMC_IPv4(getPanConfig(typ)
 										.getTf_groupIPaddress().getText()));
+						mcd.setProtocol(Protocol.IGMP);
 					} else if(iptype == IPType.IPv6) {
 						mcd.setGroupIp(InputValidator
 								.checkMC_IPv6(getPanConfig(typ)
 										.getTf_groupIPaddress().getText()));
+						mcd.setProtocol(Protocol.MLD);
 					}
 				}
 				// V1.5 [FH] Added source IP for receiver (network interface)
@@ -1782,6 +1787,9 @@ public class ViewController implements ActionListener, MouseListener,
 						}
 						mcd.setMmrpGroupMac(b);
 					}
+				}
+				if(getPanConfig(typ).getSelectedLayer2Protocol() != mcd.getProtocol()){
+					mcd.setProtocol(getPanConfig(typ).getSelectedLayer2Protocol());
 				}
 				if(!(getPanConfig(typ).getCb_sourceIPaddress()
 						.getSelectedIndex() == 0)) {
@@ -1830,6 +1838,9 @@ public class ViewController implements ActionListener, MouseListener,
 						}
 						mcd.setMmrpGroupMac(b);
 					}
+				}
+				if(getPanConfig(typ).getSelectedLayer2Protocol() != mcd.getProtocol()){
+					mcd.setProtocol(getPanConfig(typ).getSelectedLayer2Protocol());
 				}
 				if(!(getPanConfig(typ).getCb_sourceIPaddress()
 						.getSelectedIndex() == 0)) {
