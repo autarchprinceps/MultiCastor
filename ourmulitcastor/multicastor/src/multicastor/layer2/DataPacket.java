@@ -1,4 +1,4 @@
-package multicastor.mmrp;
+package multicastor.layer2;
 
 /**
  * Build a packet with source, destination, data length and the data which

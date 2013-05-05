@@ -1,22 +1,18 @@
-package multicastor.gmrp;
+package multicastor.layer2;
 
 /**
  * Build and return the MMRPPacket
  */
-public class MMRPPacket {
+public class GMRPPacket {
 
 	// MultiCastor will send a MAC address as a attribute this is the reason why
-	// we will need an attribute length of 6
-	private static final byte attributeLength = (byte) 6;
-	// MultiCastor will always send a MAC address(AttributeType = 2) to the
-	// switch.
-	private static final byte attributeType = (byte) 2;
+	// we will need an attribute length of 8
+	private static final byte attributeLength = (byte) 8;
 	// the destination is a constant MAC address which is used for the
 	// recognition by the switch
 	private static final byte[] destination = { (byte) 0x01, (byte) 0x80,
 			(byte) 0xc2, (byte) 0x00, (byte) 0x00, (byte) 0x20 };
 	
-	//TODO remove unused 
 	private static final byte endmark =  		(byte) 0x00;
 	private static final byte joinEmpty = 		(byte) 0x01;
 	private static final byte joinIn = 			(byte) 0x02;
@@ -40,7 +36,7 @@ public class MMRPPacket {
 	 *            is the MAC address of the multicast group
 	 */
 	public static byte[] getEmpty(final byte[] source, final byte[] mCastGrp) {
-		return buildMMRPPacket(source, mCastGrp, MMRPPacket.empty, false);
+		return buildMMRPPacket(source, mCastGrp, GMRPPacket.empty, false);
 	}
 
 	/**
@@ -49,8 +45,28 @@ public class MMRPPacket {
 	 * @param mCastGrp
 	 *            is the MAC address of the multicast group
 	 */
+	public static byte[] getLeaveEmpty(final byte[] source, final byte[] mCastGrp) {
+		return buildMMRPPacket(source, mCastGrp, GMRPPacket.leaveEmpty, false);
+	}
+	
+	/**
+	 * @param source
+	 *            is the MAC address of the device which will send the packet
+	 * @param mCastGrp
+	 *            is the MAC address of the multicast group
+	 */
+	public static byte[] getLeaveIN(final byte[] source, final byte[] mCastGrp) {
+		return buildMMRPPacket(source, mCastGrp, GMRPPacket.leaveIn, false);
+	}
+	
+	/**
+	 * @param source
+	 *            is the MAC address of the device which will send the packet
+	 * @param mCastGrp
+	 *            is the MAC address of the multicast group
+	 */
 	public static byte[] getIn(final byte[] source, final byte[] mCastGrp) {
-		return buildMMRPPacket(source, mCastGrp, MMRPPacket.joinIn, false);
+		return buildMMRPPacket(source, mCastGrp, GMRPPacket.joinIn, false);
 	}
 
 	/*
@@ -61,7 +77,7 @@ public class MMRPPacket {
 	 */
 	public static byte[] getJoinEmpty(final byte[] source,
 			final byte[] mCastGrp) {
-		return buildMMRPPacket(source, mCastGrp, MMRPPacket.joinEmpty, false);
+		return buildMMRPPacket(source, mCastGrp, GMRPPacket.joinEmpty, false);
 	}
 
 	/**
@@ -73,7 +89,7 @@ public class MMRPPacket {
 	 *            is the MAC address of the multicast group
 	 */
 	public static byte[] getJoinIn(final byte[] source, final byte[] mCastGrp) {
-		return buildMMRPPacket(source, mCastGrp, MMRPPacket.joinIn, false);
+		return buildMMRPPacket(source, mCastGrp, GMRPPacket.joinIn, false);
 	}
 
 	/**
@@ -83,7 +99,7 @@ public class MMRPPacket {
 	 *            is the MAC address of the multicast group
 	 */
 	public static byte[] getLeave(final byte[] source, final byte[] mCastGrp) {
-		return buildMMRPPacket(source, mCastGrp, MMRPPacket.leaveAll, false);
+		return buildMMRPPacket(source, mCastGrp, GMRPPacket.leaveAll, false);
 	}
 
 	/**
@@ -94,7 +110,7 @@ public class MMRPPacket {
 	 */
 	public static byte[] getLeaveAll(final byte[] source,
 			final byte[] mCastGrp) {
-		return buildMMRPPacket(source, mCastGrp, MMRPPacket.leaveAll, true);
+		return buildMMRPPacket(source, mCastGrp, GMRPPacket.leaveAll, true);
 	}
 
 	/**
@@ -118,7 +134,7 @@ public class MMRPPacket {
 		System.arraycopy(llc, 		  0, mmrpPacket, 14, 3);
 		System.arraycopy(type,		  0, mmrpPacket, 17, 2);
 		mmrpPacket[19] = 0x01;
-		mmrpPacket[20] = 0x08;
+		mmrpPacket[20] = attributeLength;
 		mmrpPacket[21] = event;
 		System.arraycopy(mCastGrp,	  0, mmrpPacket, 22, 6);
 		mmrpPacket[28] = endmark;//element endmark

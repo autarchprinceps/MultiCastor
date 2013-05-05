@@ -1,4 +1,4 @@
-package multicastor.mmrp;
+package multicastor.layer2;
 
 import java.io.IOException;
 import org.jnetpcap.Pcap;
@@ -9,7 +9,7 @@ import org.jnetpcap.packet.PcapPacketHandler;
 /**
  * Receives packets which are send from the stream.
  */
-public class MMRPReceiver extends MMRPEntity {
+public class Receiver extends Entity {
 
 	PcapPacketHandler<String> pcapPacketHandler = new PcapPacketHandler<String>() {
 		@Override
@@ -37,7 +37,7 @@ public class MMRPReceiver extends MMRPEntity {
 	 * @throws IOException
 	 *             if the network device was not found
 	 */
-	public MMRPReceiver(final byte[] deviceMACAddress,
+	public Receiver(final byte[] deviceMACAddress,
 			final byte[] streamMACAddress) throws IOException {
 		super(deviceMACAddress, streamMACAddress);
 		pcap = PcapHandler.getPcapInstance(deviceMACAddress);

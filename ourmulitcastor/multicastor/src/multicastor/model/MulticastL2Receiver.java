@@ -8,9 +8,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import multicastor.data.MulticastData;
+import multicastor.data.MulticastData.Protocol;
 import multicastor.interfaces.MulticastThreadSuper;
 import multicastor.lang.LanguageManager;
-import multicastor.gmrp.MMRPReceiver;
+import multicastor.layer2.Receiver;
 
 /**
  * Die MulticastMmrpReceiver-Klasse kuemmert sich um das tatsaechliche Empfangen
@@ -22,7 +23,7 @@ import multicastor.gmrp.MMRPReceiver;
  * gebildet werden. Das Erleichtert die nachtraegliche Analyse, Da das Objekt
  * eindeutig einem "Test" zuordnungsbar ist.
  */
-public class MulticastMmrpReceiver extends MulticastThreadSuper {
+public class MulticastL2Receiver extends MulticastThreadSuper {
 
 	/** Analysiert ankommende Pakete */
 	PacketAnalyzer packetAnalyzer;
@@ -40,12 +41,14 @@ public class MulticastMmrpReceiver extends MulticastThreadSuper {
 	/** Wird fuer die Fehlerausgabe verwendet. */
 	private Logger logger;
 
-	private MMRPReceiver receiver;
+	private Receiver receiver;
+	
+	private Protocol protocol;
 
 	/**
 	 * Einziger Konstruktor der Klasse (Sieht man vom Konstruktor der
 	 * Superklasse ab). Im Konstruktor wird die hostID gesetzt (entspricht dem
-	 * hostnamen des Geraets), der {@link MMRPReceiver} initialisiert und das
+	 * hostnamen des Geraets), der {@link Receiver} initialisiert und das
 	 * Datenpaket mit dem {@link PacketBuilder} erstellt.
 	 * 
 	 * @param multicastData
@@ -55,13 +58,14 @@ public class MulticastMmrpReceiver extends MulticastThreadSuper {
 	 *            Eine {@link Queue}, ueber den der Receiver seine Ausgaben an
 	 *            den Controller weitergibt.
 	 */
-	public MulticastMmrpReceiver(final MulticastData multicastData,
+	public MulticastL2Receiver(final MulticastData multicastData,
 			final Logger logger) throws IOException {
 		super(multicastData);
 
 		length = 1500;
 		buf = new byte[length];
 		lang = LanguageManager.getInstance();
+		protocol = multicastData.getProtocol();
 
 		if (logger == null) {
 			System.out.println(lang.getProperty("error.mr.logger"));
@@ -84,7 +88,7 @@ public class MulticastMmrpReceiver extends MulticastThreadSuper {
 		this.logger = logger;
 		packetAnalyzer = new PacketAnalyzer(mcData, logger, length);
 		try {
-			receiver = new MMRPReceiver(mcData.getMmrpSourceMac(),
+			receiver = new Receiver(mcData.getMmrpSourceMac(),
 					mcData.getMmrpGroupMac());
 		} catch (final IOException e) {
 			proclaim(3, lang.getProperty("message.receiverInterfaceFail")
@@ -110,7 +114,7 @@ public class MulticastMmrpReceiver extends MulticastThreadSuper {
 		initializeBuf();
 
 		try {
-			receiver.registerPath();
+			receiver.registerPath(protocol);
 		} catch (final IOException e) {
 			proclaim(3, lang.getProperty("message.registerReceiverPath"));
 			setActive(false);
@@ -138,7 +142,7 @@ public class MulticastMmrpReceiver extends MulticastThreadSuper {
 		setStillRunning(false);
 
 		try {
-			receiver.deregisterPath();
+			receiver.deregisterPath(protocol);
 
 		} catch (final IOException e) {
 			proclaim(3, lang.getProperty("message.deregisterReceiverPath"));

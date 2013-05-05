@@ -1,4 +1,4 @@
-package multicastor.mmrp;
+package multicastor.layer2;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;

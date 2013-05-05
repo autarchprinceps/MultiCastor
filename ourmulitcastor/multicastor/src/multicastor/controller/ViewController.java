@@ -1757,6 +1757,7 @@ public class ViewController implements ActionListener, MouseListener,
 					mcd.setSourceIp(getPanConfig(typ).getSelectedAddress(typ,
 							iptype));
 				}
+				
 				break;
 			case L2_SENDER:
 				if(!getPanConfig(typ).getTf_groupIPaddress().getText()
@@ -2876,7 +2877,7 @@ public class ViewController implements ActionListener, MouseListener,
 							changeMC(changeMCData(mcd, typ, IPType.IPv4));
 						} else {
 							/* MMRP */
-							changeMC(changeMCData(mcd, typ, null));
+							changeMC(changeMCData(mcd, typ, IPType.MAC));
 						}
 					} else {
 						if(InputValidator.checkMC_IPv6(config
@@ -2887,7 +2888,7 @@ public class ViewController implements ActionListener, MouseListener,
 							changeMC(changeMCData(mcd, typ, IPType.IPv4));
 						} else {
 							/* MMRP */
-							changeMC(changeMCData(mcd, typ, null));
+							changeMC(changeMCData(mcd, typ, IPType.MAC));
 						}
 					}
 

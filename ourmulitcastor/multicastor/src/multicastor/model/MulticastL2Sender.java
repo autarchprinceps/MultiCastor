@@ -9,10 +9,11 @@ import java.util.logging.Logger;
 
 import multicastor.controller.MulticastController;
 import multicastor.data.MulticastData;
+import multicastor.data.MulticastData.Protocol;
 import multicastor.interfaces.MulticastSenderInterface;
 import multicastor.interfaces.MulticastThreadSuper;
 import multicastor.lang.LanguageManager;
-import multicastor.gmrp.MMRPSender;
+import multicastor.layer2.Sender;
 
 /**
  * Die MultiCastMmrpSender-Klasse kuemmert sich um das tatsaechliche Senden der
@@ -24,7 +25,7 @@ import multicastor.gmrp.MMRPSender;
  * nachtraegliche Analyse, Da das Objekt eindeutig einem "Test" zuordnungsbar
  * ist.
  */
-public class MulticastMmrpSender extends MulticastThreadSuper implements
+public class MulticastL2Sender extends MulticastThreadSuper implements
 		MulticastSenderInterface {
 
 	private int cumulatedResetablePcktCnt = 0;
@@ -45,14 +46,15 @@ public class MulticastMmrpSender extends MulticastThreadSuper implements
 	private int packetRateDes;
 	private int resetablePcktCnt = 0;
 
-	private MMRPSender sender;
+	private Sender sender;
 	/** Anzahl aller Pakete */
 	private int totalPacketCount = 0;
+	private Protocol protocol;
 
 	/**
 	 * Einziger Konstruktor der Klasse (Sieht man vom Konstruktor der
 	 * Superklasse ab). Im Konstruktor wird die hostID gesetzt (entspricht dem
-	 * hostnamen des Geraets), der {@link MMRPSender} initialisiert und das
+	 * hostnamen des Geraets), der {@link Sender} initialisiert und das
 	 * Datenpaket mit dem {@link PacketBuilder} erstellt.
 	 * 
 	 * @param multicastData
@@ -66,11 +68,12 @@ public class MulticastMmrpSender extends MulticastThreadSuper implements
 	 *            {@link MulticastController} damit MulticastStroeme ggf.
 	 *            richtig gestoppt werden kann
 	 */
-	public MulticastMmrpSender(final MulticastData multicastData,
+	public MulticastL2Sender(final MulticastData multicastData,
 			final Logger logger, final MulticastController multiCtrl)
 			throws IOException {
 		super(multicastData);
-
+		protocol = multicastData.getProtocol();
+		
 		if (logger == null) {
 			System.out.println(lang.getProperty("error.mr.logger"));
 			return;
@@ -94,7 +97,7 @@ public class MulticastMmrpSender extends MulticastThreadSuper implements
 		myPacketBuilder = new PacketBuilder(mcData);
 		packetRateDes = mcData.getPacketRateDesired();
 		try {
-			sender = new MMRPSender(mcData.getMmrpSourceMac(),
+			sender = new Sender(mcData.getMmrpSourceMac(),
 					mcData.getMmrpGroupMac());
 		} catch (final IOException e) {
 			proclaim(3, lang.getProperty("message.mmrpSender"));
@@ -113,7 +116,7 @@ public class MulticastMmrpSender extends MulticastThreadSuper implements
 	public void run() {
 
 		try {
-			sender.registerPath();
+			sender.registerPath(protocol);
 			// Paketzaehler auf 0 setzen
 			totalPacketCount = 0;
 			resetablePcktCnt = 0;
@@ -152,7 +155,7 @@ public class MulticastMmrpSender extends MulticastThreadSuper implements
 				} while (((totalPacketCount % packetRateDes) != 0) && isSending);
 			}
 			try {
-				sender.deregisterPath();
+				sender.deregisterPath(protocol);
 			} catch (final IOException e) {
 				proclaim(3, "Could not deregister Path");
 			}

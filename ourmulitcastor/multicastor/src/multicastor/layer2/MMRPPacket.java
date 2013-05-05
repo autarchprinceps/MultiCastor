@@ -1,4 +1,4 @@
-package multicastor.mmrp;
+package multicastor.layer2;
 
 /**
  * Build and return the MMRPPacket

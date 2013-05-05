@@ -19,8 +19,8 @@ import multicastor.interfaces.MulticastSenderInterface;
 import multicastor.interfaces.MulticastThreadSuper;
 import multicastor.interfaces.XMLParserInterface;
 import multicastor.lang.LanguageManager;
-import multicastor.model.MulticastMmrpReceiver;
-import multicastor.model.MulticastMmrpSender;
+import multicastor.model.MulticastL2Receiver;
+import multicastor.model.MulticastL2Sender;
 import multicastor.model.MulticastReceiver;
 import multicastor.model.MulticastSender;
 import multicastor.model.RegularLoggingTask;
@@ -213,11 +213,11 @@ public class MulticastController {
 				break;
 
 			case L2_SENDER:
-				t = new MulticastMmrpSender(m, logger, this);
+				t = new MulticastL2Sender(m, logger, this);
 				break;
 
 			case L2_RECEIVER:
-				t = new MulticastMmrpReceiver(m, logger);
+				t = new MulticastL2Receiver(m, logger);
 				break;
 
 			default:

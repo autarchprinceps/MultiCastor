@@ -1,11 +1,11 @@
-package multicastor.gmrp;
+package multicastor.layer2;
 
 import java.io.IOException;
 
 /**
  * Send data packets into the MMRPPath
  */
-public class MMRPSender extends MMRPEntity {
+public class Sender extends Entity {
 	/**
 	 * @param deviceMACAddress
 	 *            is a byte array which contains the MAC address of the network
@@ -13,11 +13,11 @@ public class MMRPSender extends MMRPEntity {
 	 * @param streamMACAddress
 	 *            is a byte array which contains the Address of the multicast
 	 *            group
-	 * @throws IOException
+	 * @throws IOExceptionleaveAll
 	 *             if the network device was not found
 	 */
 
-	public MMRPSender(final byte[] deviceMACAddress,
+	public Sender(final byte[] deviceMACAddress,
 			final byte[] streamMACAddress) throws IOException {
 		super(deviceMACAddress, streamMACAddress);
 	}

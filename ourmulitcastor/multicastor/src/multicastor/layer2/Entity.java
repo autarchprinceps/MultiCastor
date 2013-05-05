@@ -1,13 +1,15 @@
-package multicastor.mmrp;
+package multicastor.layer2;
 
 import java.io.IOException;
+
+import multicastor.data.MulticastData.Protocol;
 
 /**
  * A sender and a receiver have to be available to register and deregister MMRP
  * Paths. So this class contains the logic how to do these operations and the
  * sender and receiver will inherit of this class.
  */
-public class MMRPEntity {
+public class Entity {
 
 	protected byte[] deviceMACAddress = null;
 	protected byte[] streamMACAddress = null;
@@ -26,7 +28,7 @@ public class MMRPEntity {
 	 *             if the network device was not found
 	 */
 
-	public MMRPEntity(final byte[] deviceMACAddress,
+	public Entity(final byte[] deviceMACAddress,
 			final byte[] streamMACAddress) throws IOException {
 		this.deviceMACAddress = deviceMACAddress;
 		this.streamMACAddress = streamMACAddress;
@@ -39,9 +41,18 @@ public class MMRPEntity {
 	 *             if the network device was not found
 	 */
 
-	public void deregisterAllPaths() throws IOException {
-		PacketHandler.sendPacket(deviceMACAddress,
+	public void deregisterAllPaths(Protocol protocol) throws IOException {
+		if(protocol == Protocol.MMRP)
+		{
+			PacketHandler.sendPacket(deviceMACAddress,
 				MMRPPacket.getLeaveAll(deviceMACAddress, streamMACAddress));
+		} else {
+			PacketHandler.sendPacket(deviceMACAddress,
+				GMRPPacket.getLeaveAll(deviceMACAddress, streamMACAddress));
+			//TODO remove
+			if(protocol != Protocol.GMRP)
+				System.out.println("PROTOCOL ERROR!!!!!!!!!!!!!!!!!!!!!!");
+		}
 		keepPathAlive.interrupt();
 	}
 
@@ -52,10 +63,18 @@ public class MMRPEntity {
 	 *             if the network device was not found
 	 */
 
-	public void deregisterPath() throws IOException {
-		// Send a leave message
-		PacketHandler.sendPacket(deviceMACAddress,
+	public void deregisterPath(Protocol protocol) throws IOException {
+		if(protocol == Protocol.MMRP)
+		{
+			PacketHandler.sendPacket(deviceMACAddress,
 				MMRPPacket.getLeave(deviceMACAddress, streamMACAddress));
+		} else {
+			PacketHandler.sendPacket(deviceMACAddress,
+				GMRPPacket.getLeave(deviceMACAddress, streamMACAddress));
+			//TODO remove
+			if(protocol != Protocol.GMRP)
+				System.out.println("PROTOCOL ERROR!!!!!!!!!!!!!!!!!!!!!!");
+		}
 		keepPathAlive.interrupt();
 	}
 
@@ -65,9 +84,18 @@ public class MMRPEntity {
 	 * @throws IOException
 	 *             if the network device was not found
 	 */
-	public void registerPath() throws IOException {
-		PacketHandler.sendPacket(deviceMACAddress,
+	public void registerPath(Protocol protocol) throws IOException {
+		if(protocol == Protocol.MMRP)
+		{
+			PacketHandler.sendPacket(deviceMACAddress,
 				MMRPPacket.getJoinEmpty(deviceMACAddress, streamMACAddress));
+		} else {
+			PacketHandler.sendPacket(deviceMACAddress,
+				GMRPPacket.getJoinEmpty(deviceMACAddress, streamMACAddress));
+			//TODO remove
+			if(protocol != Protocol.GMRP)
+				System.out.println("PROTOCOL ERROR!!!!!!!!!!!!!!!!!!!!!!");
+		}
 		keepPathAlive = new Thread(new ThreadKeepPathAlive(deviceMACAddress,
 				streamMACAddress));
 		keepPathAlive.start();
