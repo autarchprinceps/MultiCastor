@@ -27,6 +27,7 @@ import javax.xml.transform.stream.StreamResult;
 
 import multicastor.data.GUIData;
 import multicastor.data.MulticastData;
+import multicastor.data.MulticastData.Protocol;
 import multicastor.data.MulticastData.Typ;
 import multicastor.interfaces.XMLParserInterface;
 import multicastor.lang.LanguageManager;
@@ -46,7 +47,7 @@ import org.xml.sax.SAXException;
 public class xmlParser implements multicastor.interfaces.XMLParserInterface {
 	/** XML Tag Namen fuer die Multicast Daten */
 	private enum mcdTag {
-		active, groupIp, groupMac, packetLength, packetRateDesired, sourceIp, sourceMac, ttl, typ, udpPort
+		active, groupIp, groupMac, packetLength, packetRateDesired, sourceIp, sourceMac, ttl, typ, udpPort, protocol
 	}
 
 	/**
@@ -679,6 +680,17 @@ public class xmlParser implements multicastor.interfaces.XMLParserInterface {
 										// you want to
 									}
 								}
+								break;
+							case protocol:
+								if(!val.isEmpty()) {
+									final MulticastData.Protocol prot = MulticastData.Protocol
+											.valueOf(val);
+									if(prot != null) {
+										mcd.setProtocol(prot);
+									} else {
+										mcd.setProtocol(Protocol.UNDEFINED);
+									}
+								}
 						} // end of switch
 					} // end of if
 				}// end of for
@@ -800,6 +812,10 @@ public class xmlParser implements multicastor.interfaces.XMLParserInterface {
 							text = doc.createTextNode(v1.get(count)
 									.getMmrpSourceMacAsString());
 						}
+						break;
+					case protocol:
+						text = doc.createTextNode(v1.get(count).getProtocol().toString());
+						
 				}
 				mcdElement.appendChild(text);
 				mcdTyp.appendChild(mcdElement);

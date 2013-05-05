@@ -41,7 +41,7 @@ public class ReceiverGraph extends PanelGraph {
 	JRadioButton jitterRB, lostPktsRB, measPktRtRB;
 	ButtonGroup myButtonGroup;
 	Font rbFont = new Font("SansSerif", Font.PLAIN, 10);
-	private valueType curValueType = valueType.JITTER;
+	private valueType curValueType = valueType.MEASPKT;
 
 	/**
 	 * Konstruktor. Erwartet einen {@link multicastor.controller.viewController}
@@ -56,7 +56,7 @@ public class ReceiverGraph extends PanelGraph {
 		setLayout(null);
 
 		// Radiobuttons zum Umschalten zwischen den Graphen
-		jitterRB = new JRadioButton("", true);
+		jitterRB = new JRadioButton();
 		jitterRB.addItemListener(ctrl);
 		jitterRB.setActionCommand("jitter");
 		jitterRB.setLocation(30, 0);
@@ -74,7 +74,7 @@ public class ReceiverGraph extends PanelGraph {
 		lostPktsRB.setForeground(Color.LIGHT_GRAY);
 		lostPktsRB.setFont(rbFont);
 
-		measPktRtRB = new JRadioButton();
+		measPktRtRB = new JRadioButton("",true);
 		measPktRtRB.addItemListener(ctrl);
 		measPktRtRB.setActionCommand("measuredPacketRate");
 		measPktRtRB.setLocation(160, 0);
@@ -183,6 +183,7 @@ public class ReceiverGraph extends PanelGraph {
 			newValue = 0;
 		}
 		this.updateGraph(newValue, repaint);
+		
 		if(repaint) {
 			jitterRB.repaint();
 			lostPktsRB.repaint();

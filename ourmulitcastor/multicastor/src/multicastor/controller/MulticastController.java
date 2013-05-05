@@ -549,6 +549,7 @@ public class MulticastController {
 			} else if (e instanceof IllegalArgumentException) {
 				if (useDefaultXML) {
 					message = lang.getProperty("message.mcc.ErrorDefault");
+					e.printStackTrace();
 				} else {
 					message = lang.getProperty("message.mcc.Error");
 				}
