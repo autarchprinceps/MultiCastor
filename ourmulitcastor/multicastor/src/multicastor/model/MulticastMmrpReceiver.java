@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 import multicastor.data.MulticastData;
 import multicastor.interfaces.MulticastThreadSuper;
 import multicastor.lang.LanguageManager;
-import multicastor.mmrp.MMRPReceiver;
+import multicastor.gmrp.MMRPReceiver;
 
 /**
  * Die MulticastMmrpReceiver-Klasse kuemmert sich um das tatsaechliche Empfangen

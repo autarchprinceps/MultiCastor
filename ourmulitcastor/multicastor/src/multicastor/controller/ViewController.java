@@ -720,7 +720,7 @@ public class ViewController implements ActionListener, MouseListener,
 		for(int i = 0; i < getTable(Typ.L3_RECEIVER).getModel().getRowCount(); i++) {
 			sum = sum
 					+ Double.parseDouble(((String)getTable(Typ.L3_RECEIVER)
-							.getModel().getValueAt(i, 6)).replace(',', '.'));
+							.getModel().getValueAt(i, 7)).replace(',', '.'));
 		}
 		return (new DecimalFormat("##0.000")).format(sum);
 	}
@@ -735,7 +735,7 @@ public class ViewController implements ActionListener, MouseListener,
 		for(int i = 0; i < getTable(Typ.L3_SENDER).getModel().getRowCount(); i++) {
 			sum = sum
 					+ Double.parseDouble(((String)getTable(Typ.L3_SENDER)
-							.getModel().getValueAt(i, 6)).replace(',', '.'));
+							.getModel().getValueAt(i, 7)).replace(',', '.'));
 		}
 		return (new DecimalFormat("##0.000")).format(sum);
 	}
@@ -2676,10 +2676,10 @@ public class ViewController implements ActionListener, MouseListener,
 			final int[] rows = getSelectedRows(typ);
 			for(final int row : rows) {
 				if(InputValidator.checkIPv4((String)getTable(typ).getModel()
-						.getValueAt(row, 3)) != null) {
+						.getValueAt(row, 4)) != null) {
 					ipv4 = true;
 				} else if(InputValidator.checkIPv6((String)getTable(typ)
-						.getModel().getValueAt(row, 3)) != null) {
+						.getModel().getValueAt(row, 4)) != null) {
 					ipv6 = true;
 				}
 			}
@@ -2857,11 +2857,11 @@ public class ViewController implements ActionListener, MouseListener,
 							+ ((selectedList.length - 1) - i), typ);
 					if(config.getTf_groupIPaddress().getText().equals("...")) {
 						if(InputValidator.checkIPv6((String)getTable(typ)
-								.getModel().getValueAt(selectedList[i], 3)) != null) {
+								.getModel().getValueAt(selectedList[i], 4)) != null) {
 							changeMC(changeMCData(mcd, typ, IPType.IPv6));
 						} else if(InputValidator
 								.checkIPv4((String)getTable(typ).getModel()
-										.getValueAt(selectedList[i], 3)) != null) {
+										.getValueAt(selectedList[i], 4)) != null) {
 							changeMC(changeMCData(mcd, typ, IPType.IPv4));
 						} else {
 							/* MMRP */

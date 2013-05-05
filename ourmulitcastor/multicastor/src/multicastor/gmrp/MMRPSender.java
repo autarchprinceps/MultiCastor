@@ -1,4 +1,4 @@
-package multicastor.mmrp;
+package multicastor.gmrp;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ public class MMRPSender extends MMRPEntity {
 	 * @param streamMACAddress
 	 *            is a byte array which contains the Address of the multicast
 	 *            group
-	 * @throws IOExceptionleaveAll
+	 * @throws IOException
 	 *             if the network device was not found
 	 */
 

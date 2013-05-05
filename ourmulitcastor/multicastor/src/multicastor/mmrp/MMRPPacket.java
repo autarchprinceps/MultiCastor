@@ -19,11 +19,11 @@ public class MMRPPacket {
 	// defines the end of the packet
 	private static final byte[] endmark = { (byte) 0x00, (byte) 0x00,
 			(byte) 0x00, (byte) 0x00 };
-	private static final int in = 2;
-	private static final int joinEmpty = 3;
+	private static final byte in = 2;
+	private static final byte joinEmpty = 3;
 	// Set up the events for MMRP
-	private static final int joinIn = 1;
-	private static final int leave = 5;
+	private static final byte joinIn = 1;
+	private static final byte leave = 5;
 
 	// defines if a leaveAll event will be send
 	private static final byte leaveAll = (byte) 0x20;

@@ -12,7 +12,7 @@ import multicastor.data.MulticastData;
 import multicastor.interfaces.MulticastSenderInterface;
 import multicastor.interfaces.MulticastThreadSuper;
 import multicastor.lang.LanguageManager;
-import multicastor.mmrp.MMRPSender;
+import multicastor.gmrp.MMRPSender;
 
 /**
  * Die MultiCastMmrpSender-Klasse kuemmert sich um das tatsaechliche Senden der

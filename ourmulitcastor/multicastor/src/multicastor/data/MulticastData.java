@@ -25,6 +25,10 @@ public class MulticastData {
 	public enum Typ {
 		CONFIG, L2_RECEIVER, L2_SENDER, L3_RECEIVER, L3_SENDER, UNDEFINED
 	}
+	
+	public enum Protocol{
+		MMRP, GMRP, IGMP, MLD, UNDEFINED
+	}
 
 	private boolean active = false;
 	private int averageInterruptionTime = -1;
@@ -51,6 +55,7 @@ public class MulticastData {
 	/** Packet source program */
 	private Source packetSource = Source.UNDEFINED;
 	private String randomID = "0";
+	private Protocol protocol = Protocol.UNDEFINED;
 	/** Shows if data from multiple Senders is received */
 	private senderState senders = senderState.NONE;
 	private InetAddress sourceIp = null;
@@ -79,6 +84,32 @@ public class MulticastData {
 	// Getters und Setters
 	// ********************************************
 
+	public Protocol getProtocol()
+	{
+		return protocol;
+	}
+	
+	public String getProtocolString()
+	{
+		switch(protocol)
+		{
+			case MMRP:
+				return "MMRP";
+			case GMRP:
+				return "GMRP";
+			case MLD:
+				return "MLD";
+			case IGMP:
+				return "IGMP";
+			default:
+				return "UNDEFINED";
+		}
+	}
+	
+	public void setProtocol(Protocol protocol)
+	{
+		this.protocol = protocol;
+	}
 	/**
 	 * returns the average interruption time
 	 * 
@@ -481,6 +512,7 @@ public class MulticastData {
 		traffic = d;
 		trafficAvg = d;
 		packetSource = Source.UNDEFINED;
+		protocol = Protocol.UNDEFINED;
 	}
 
 	/**

@@ -366,6 +366,7 @@ public class PanelMulticastConfig extends JPanel {
                     pan_gmrp.setBorder(MiscBorder.getBorder(
                                     BorderTitle.L2PROTOCOL, BorderType.NEUTRAL));
                     pan_gmrp.add(gmrp_chooser, BorderLayout.CENTER);
+                    // TODO Listener
                     add(pan_gmrp);
 		}
 
