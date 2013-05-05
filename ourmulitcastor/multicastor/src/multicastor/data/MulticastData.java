@@ -89,22 +89,6 @@ public class MulticastData {
 		return protocol;
 	}
 	
-	public String getProtocolString()
-	{
-		switch(protocol)
-		{
-			case MMRP:
-				return "MMRP";
-			case GMRP:
-				return "GMRP";
-			case MLD:
-				return "MLD";
-			case IGMP:
-				return "IGMP";
-			default:
-				return "UNDEFINED";
-		}
-	}
 	
 	public void setProtocol(Protocol protocol)
 	{
@@ -512,7 +496,6 @@ public class MulticastData {
 		traffic = d;
 		trafficAvg = d;
 		packetSource = Source.UNDEFINED;
-		protocol = Protocol.UNDEFINED;
 	}
 
 	/**

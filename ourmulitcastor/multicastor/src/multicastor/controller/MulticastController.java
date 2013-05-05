@@ -709,7 +709,6 @@ public class MulticastController {
 				default:
 					break;
 				}
-
 				// Multicast auf aktiv setzen, einen neuen Thread erzeugen und
 				// starten.
 				getMCMap(m).get(m).setActive(true);

@@ -203,7 +203,7 @@ public class MiscTableModel extends AbstractTableModel {
 			case 1:
 				return data.getSenderID();
 			case 2:
-				return new String(data.getProtocolString());
+				return new String(data.getProtocol().toString());
 			case 3:
 				return (typ == Typ.L2_SENDER) ? data.getMmrpGroupMacAsString()
 						: data.getGroupIp().toString().substring(1);
@@ -235,7 +235,7 @@ public class MiscTableModel extends AbstractTableModel {
 			case 1:
 				return data.getSenderID();
 			case 2:
-				return data.getProtocolString();
+				return data.getProtocol().toString();
 			case 3:
 				return (typ == Typ.L2_RECEIVER) ? data
 						.getMmrpGroupMacAsString() : data.getGroupIp()

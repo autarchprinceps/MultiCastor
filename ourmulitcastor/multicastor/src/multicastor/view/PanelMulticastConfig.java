@@ -30,8 +30,8 @@ import org.jdesktop.swingx.JXTable;
  */
 @SuppressWarnings("serial")
 public class PanelMulticastConfig extends JPanel {
-	private JComboBox<String> gmrp_chooser;
-    private JPanel pan_gmrp;
+	private JComboBox<String> protocol_chooser;
+    private JPanel pan_protocol;
     
 	private JToggleButton bt_active;
 	private JButton bt_enter;
@@ -109,9 +109,9 @@ public class PanelMulticastConfig extends JPanel {
 
 	public Protocol getSelectedLayer2Protocol()
 	{
-		if(gmrp_chooser.getSelectedItem().equals("GMRP"))
+		if(protocol_chooser.getSelectedItem().equals("GMRP"))
 			return Protocol.GMRP;
-		if(gmrp_chooser.getSelectedItem().equals("MMRP"))
+		if(protocol_chooser.getSelectedItem().equals("MMRP"))
 			return Protocol.MMRP;
 		
 		return Protocol.UNDEFINED;
@@ -381,20 +381,19 @@ public class PanelMulticastConfig extends JPanel {
                                     BorderTitle.L2GROUP, BorderType.NEUTRAL));
                     pan_sourceIPaddress.setBorder(MiscBorder.getBorder(
                                     BorderTitle.L2SOURCE, BorderType.NEUTRAL));
-                    gmrp_chooser = new JComboBox();
-                    gmrp_chooser.addItem("MMRP");
-                    gmrp_chooser.addItem("GMRP");
-                    gmrp_chooser.setBounds(5, 15, 205, 20);
-                    gmrp_chooser.setFont(MiscFont.getFont(0, 12));
-                    gmrp_chooser.setBorder(null);
-                    pan_gmrp = new JPanel(true);
-                    pan_gmrp.setLayout(null);
-                    pan_gmrp.setBounds(5, 100, 215, 40);
-                    pan_gmrp.setBorder(MiscBorder.getBorder(
+                    protocol_chooser = new JComboBox<String>();
+                    protocol_chooser.addItem("MMRP");
+                    protocol_chooser.addItem("GMRP");
+                    protocol_chooser.setBounds(5, 15, 205, 20);
+                    protocol_chooser.setFont(MiscFont.getFont(0, 12));
+                    protocol_chooser.setBorder(null);
+                    pan_protocol = new JPanel(true);
+                    pan_protocol.setLayout(null);
+                    pan_protocol.setBounds(5, 100, 215, 40);
+                    pan_protocol.setBorder(MiscBorder.getBorder(
                                     BorderTitle.L2PROTOCOL, BorderType.NEUTRAL));
-                    pan_gmrp.add(gmrp_chooser, BorderLayout.CENTER);
-                    // TODO Listener
-                    add(pan_gmrp);
+                    pan_protocol.add(protocol_chooser, BorderLayout.CENTER);
+                    add(pan_protocol);
 		}
 
 		tf_udp_port = new JTextField();
