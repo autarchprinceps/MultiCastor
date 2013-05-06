@@ -130,11 +130,11 @@ console.helptext		=Nutze:\tjava -jar multiCastor.jar [-h] [-g] configuration-fil
  \t\t\teine grafische Benutzeroberfläche
 
 info.longUpdateTime		 =Die Aktualisierungszeit ist sehr lange
-warning.longUpdateTime	 =Die Aktualisierung des GUI daürt sehr lange. Konsultieren sie das Benutzerhandbuch für mehr Informationen.
+warning.longUpdateTime	 =Die Aktualisierung des GUI dauert sehr lange. Konsultieren sie das Benutzerhandbuch für mehr Informationen.
 
 warning.invalidNetAdapter=Ungültiger Netzwerkadapter. Netzwerkadapter wurde auf localhost gesetzt.
 
-toolTip.closeThisTab	 	=schlieﬂe diese Registerkarte
+toolTip.closeThisTab	 	=schließe diese Registerkarte
 toolTip.mcAddressRange		=Wählen sie eine Multicast IP Adresse (IPV4 oder IPV6)
 toolTip.ipFirst			=Geben sie erst eine IP Adresse an und wählen sie dann das Netzwerkinterace
 toolTip.specifyUDPPort		=Geben sie den UDP Port an
@@ -144,7 +144,7 @@ toolTip.specifyPacketLength	=Spezifizieren sie die Paketlänge
 toolTip.selectNetInterface	=Wählen sie ein Netzwerkinterface für Multicast
 toolTip.selectMacAddress	=Wählen sie eine Multicast Mac Adresse
 
-message.setNewTitle		=Bitte geben sie einen neün Titel ein
+message.setNewTitle		=Bitte geben sie einen neuen Titel ein
 message.noMcCreated		=Sie haben noch keine Multicastdaten angelegt, die gespeichert werden könnten.
 message.noMcSelected		=Zur Zeit sind keine Multicast Daten ausgewählt. Sie können beliebige Tabellenzeilen wählen. Mehrfachauswahl ist mit gedrückter Strg-Taste möglich.
 message.canNotOpenHelpPart1	=Die Hilfedatei konnte nicht geöffnet werden. Sie finden die Datei unter dem Pfad
@@ -169,7 +169,7 @@ message.sleepPeak 			=Schlafen nach Ende des Sendens mit PEAK-Methode fehlgeschl
 message.senderWorkingAgain  =Sender arbeitet wieder
 message.problemIp			=Problem beim Senden via IP
 message.tryReconnect		=Versuche neu zu verbinden ... 
-message.senderFail			=Sender funktioniert noch nicht ordnungsgemässü.
+message.senderFail			=Sender funktioniert noch nicht ordnungsgemäß.
 message.senderViaIp			=Da das Senden über die IP nicht erreichbar ist
 message.sendingWarning		=Sende Warnung
 message.whileSending		=Während Senden von:
