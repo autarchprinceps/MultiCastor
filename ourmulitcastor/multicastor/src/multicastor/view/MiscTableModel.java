@@ -37,7 +37,7 @@ public class MiscTableModel extends AbstractTableModel {
 	 */
 	public void deleteUpdate() {
 		int lastIndex = ctrl.getMCCount(typ) - 1;
-		if (lastIndex >= 0) {
+		if (lastIndex >= -1) {
 			fireTableRowsDeleted(0, lastIndex);
 		}
 	}

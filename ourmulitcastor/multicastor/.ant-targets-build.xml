@@ -1,0 +1,17 @@
+-profile-pre72
+-profile-single-pre72
+clean
+compile
+debug
+default
+jar
+javadoc
+profile
+profile-single
+profile-test
+profile-test-single
+profile-test-with-main
+run
+test
+test-single
+test-single-method
