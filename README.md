@@ -8,7 +8,7 @@ MultiCastor allows to simultaneously send and receive multiple Ethernet, IPv4 or
 
 MultiCastor v2 is worldwide the first available testtool supporting MMRP according to IEEE 802.1ak.
 
-MultiCastor v3 is currently under development and will support GMRP according to IEEE 802.1p.
+MultiCastor v3 supports GMRP according to IEEE 802.1p.
 
 Development of MultiCastor is performed as an ongoing student project at the Cooperative State University Stuttgart (DHBW) in Germany.
 
