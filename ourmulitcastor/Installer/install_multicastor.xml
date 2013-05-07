@@ -1,0 +1,76 @@
+<izpack:installation version="5.0"
+                     xmlns:izpack="http://izpack.org/schema/installation"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="http://izpack.org/schema/installation http://izpack.org/schema/5.0/izpack-installation-5.0.xsd">
+ 
+  <info>
+    <appname>Multicastor</appname>
+    <appversion>3.0</appversion>
+    <appsubpath>multicastor 3.0</appsubpath>
+	<url>http://sourceforge.net/projects/multicastor</url>
+    <javaversion>1.6</javaversion>
+	<authors>
+		<author name="Patrick Robinson" email="patrick.robinson@de.ibm.com"/>
+		<author name="Erwin Stamm" email="erwin.stamm@de.ibm.com"/>
+		<author name="Nick Herrmannsdörfer" email="nick.herrmannsdoerfer@de.ibm.com"/>
+		<author name="Stefan Heßler" email="stefan.hessler@de.ibm.com"/>
+		<author name="Kai Brennenstuhl" email="kai.brennenstuhl@de.ibm.com"/>
+	</authors>
+	<run-privileged/>
+	<tempdir prefix="multicastor"/>
+	
+  </info>
+ 
+  <locale>
+    <langpack iso3="eng"/>
+  </locale>
+ 
+  <guiprefs width="800" height="600" resizable="no">
+  
+    <laf name="substance">
+      <os family="windows" />
+      <os family="unix" />
+      <param name="variant" value="mist-silver" />
+    </laf>
+
+    <modifier key="useHeadingPanel" value="yes" />
+  </guiprefs>
+ 
+  <panels>
+	<panel classname="HelloPanel">
+		<validator classname="com.izforge.izpack.installer.validator.ConditionValidator"/>
+	</panel>
+	<panel classname="PacksPanel"/>
+
+  </panels>
+ 
+<packs>
+	<pack name="Pcap for Windows" required="no">
+       	<description>Required if you dont have WinPcap installed on your system</description>
+        <file src="res/pcap/pcap.exe" targetdir="$INSTALL_PATH"/>
+		<executable targetfile="${INSTALL_PATH}/pcap.exe" stage="postinstall">
+			<args>
+				<arg value="/S" />
+			</args>
+		</executable>
+    </pack>
+    <pack name="MultiCastor 3.0" required="yes">
+        <description>Multicastor 3.0</description>
+        <file src="MultiCastor.jar" targetdir="${INSTALL_PATH}"/>
+	    <file src="log.txt" targetdir="${INSTALL_PATH}"/>
+	    <file src="GUIConfig.xml" targetdir="${INSTALL_PATH}"/>
+	    <file src="windowsMulticastor.exe" targetdir="${INSTALL_PATH}"/>
+	   
+	    <fileset dir="lib" targetdir="${INSTALL_PATH}\lib">
+            <include name="**"/>
+        </fileset>
+	    <fileset dir="Language" targetdir="${INSTALL_PATH}\Language">
+            <include name="**"/>
+        </fileset>
+		<fileset dir="res" targetdir="${INSTALL_PAT_H}\res">
+			<include name="**"/>
+		</fileset>
+    </pack>
+ </packs>
+ 
+</izpack:installation>
