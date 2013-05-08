@@ -38,7 +38,7 @@ public class GUIData {
 	private String Language = "english";
 	private TabState PLUS = TabState.visible;
 
-	private String windowName = "MCastor 2.0";
+	private String windowName = "MultiCastor 3.0";
 
 	/**
 	 * returns the tab state of ABOUT can be visible, invisible or selected

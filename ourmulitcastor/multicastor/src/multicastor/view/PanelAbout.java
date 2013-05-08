@@ -23,10 +23,9 @@ public class PanelAbout extends javax.swing.JPanel {
 			{ "Kai Brennenstuhl", "Nick Herrmannsdörfer", "Stefan Hessler",
 					"Patrick Robinson", "Erwin Stamm" } };
 
-	private final JLabel[] labelAbout = { new JLabel(), new JLabel(),
-			new JLabel() };
+	private final JLabel[] labelAbout = { new JLabel(), new JLabel(), new JLabel() };
 	private final JLabel labelLicense = new JLabel();
-	private final JLabel[] labelMC = { new JLabel(), new JLabel() };
+	private final JLabel[] labelMC = { new JLabel(), new JLabel(), new JLabel() };
 	private LanguageManager lang;
 	private javax.swing.JLabel lb_image;
 	private javax.swing.JPanel panel_about_inner;
@@ -45,6 +44,7 @@ public class PanelAbout extends javax.swing.JPanel {
 		labelAbout[2].setText(lang.getProperty("about.text3"));
 		labelMC[0].setText(lang.getProperty("about.mc1"));
 		labelMC[1].setText(lang.getProperty("about.mc2"));
+		labelMC[2].setText(lang.getProperty("about.mc3"));
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class PanelAbout extends javax.swing.JPanel {
 		/* MC 2.0 Logo. */
 		lb_image = new javax.swing.JLabel();
 		lb_image.setIcon(new javax.swing.ImageIcon(getClass().getResource(
-				"/multicastor/images/mcastor20_logo.png")));
+				"/multicastor/images/MCastor3.png")));
 		panel_about_inner.add(lb_image);
 
 		/* Lizenzhinweis. */
@@ -105,6 +105,24 @@ public class PanelAbout extends javax.swing.JPanel {
 		panel_about_inner.add(labelAbout[1]);
 		panel_about_inner.add(labelAbout[2]);
 
+		/* Platzhalter (20 Pixel hoch) */
+		panel_about_inner.add(Box.createRigidArea(new Dimension(0, 20)));
+		
+		/* Entwickler-Überschrift */
+		labelMC[2].setText(lang.getProperty("about.mc3"));
+		labelMC[2].setFont(new Font("Helvetica", Font.BOLD, 12));
+		panel_about_inner.add(labelMC[2]);
+
+		/* Platzhalter (5 Pixel hoch) */
+		panel_about_inner.add(Box.createRigidArea(new Dimension(0, 5)));
+
+		/* Auflistung der Entwickler Version 2.0 */
+		panel_about_inner.add(new JLabel(mc_developers[2][0]));
+		panel_about_inner.add(new JLabel(mc_developers[2][1]));
+		panel_about_inner.add(new JLabel(mc_developers[2][2]));
+		panel_about_inner.add(new JLabel(mc_developers[2][3]));
+		panel_about_inner.add(new JLabel(mc_developers[2][4]));
+		
 		/* Platzhalter (20 Pixel hoch) */
 		panel_about_inner.add(Box.createRigidArea(new Dimension(0, 20)));
 
