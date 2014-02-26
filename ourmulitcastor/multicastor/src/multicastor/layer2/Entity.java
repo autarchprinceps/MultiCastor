@@ -42,16 +42,15 @@ public class Entity {
 	 */
 
 	public void deregisterAllPaths(Protocol protocol) throws IOException {
-		if(protocol == Protocol.MMRP)
+		if(protocol == Protocol.GMRP)
 		{
 			PacketHandler.sendPacket(deviceMACAddress,
-				MMRPPacket.getLeaveAll(deviceMACAddress, streamMACAddress));
+				GMRPPacket.getLeaveAll(deviceMACAddress, streamMACAddress));
 		} else {
 			PacketHandler.sendPacket(deviceMACAddress,
-				GMRPPacket.getLeaveAll(deviceMACAddress, streamMACAddress));
-			//TODO remove
-			if(protocol != Protocol.GMRP)
-				System.out.println("PROTOCOL ERROR!!!!!!!!!!!!!!!!!!!!!!");
+				MMRPPacket.getLeaveAll(deviceMACAddress, streamMACAddress));
+			if(protocol != Protocol.MMRP)
+				System.out.println("PROTOCOL ERROR fallback to MMRP");
 		}
 		keepPathAlive.interrupt();
 	}
@@ -64,16 +63,15 @@ public class Entity {
 	 */
 
 	public void deregisterPath(Protocol protocol) throws IOException {
-		if(protocol == Protocol.MMRP)
+		if(protocol == Protocol.GMRP)
 		{
 			PacketHandler.sendPacket(deviceMACAddress,
-				MMRPPacket.getLeave(deviceMACAddress, streamMACAddress));
+				GMRPPacket.getLeave(deviceMACAddress, streamMACAddress));
 		} else {
 			PacketHandler.sendPacket(deviceMACAddress,
-				GMRPPacket.getLeave(deviceMACAddress, streamMACAddress));
-			//TODO remove
-			if(protocol != Protocol.GMRP)
-				System.out.println("PROTOCOL ERROR!!!!!!!!!!!!!!!!!!!!!!");
+				MMRPPacket.getLeave(deviceMACAddress, streamMACAddress));
+			if(protocol != Protocol.MMRP)
+				System.out.println("PROTOCOL ERROR fallback to GMRP");
 		}
 		keepPathAlive.interrupt();
 	}
@@ -85,16 +83,15 @@ public class Entity {
 	 *             if the network device was not found
 	 */
 	public void registerPath(Protocol protocol) throws IOException {
-		if(protocol == Protocol.MMRP)
+		if(protocol == Protocol.GMRP)
 		{
 			PacketHandler.sendPacket(deviceMACAddress,
-				MMRPPacket.getJoinEmpty(deviceMACAddress, streamMACAddress));
+				GMRPPacket.getJoinEmpty(deviceMACAddress, streamMACAddress));
 		} else {
 			PacketHandler.sendPacket(deviceMACAddress,
-				GMRPPacket.getJoinEmpty(deviceMACAddress, streamMACAddress));
-			//TODO remove
-			if(protocol != Protocol.GMRP)
-				System.out.println("PROTOCOL ERROR!!!!!!!!!!!!!!!!!!!!!!");
+				MMRPPacket.getJoinEmpty(deviceMACAddress, streamMACAddress));
+			if(protocol != Protocol.MMRP)
+				System.out.println("PROTOCOL ERROR fallback to GMRP");
 		}
 		keepPathAlive = new Thread(new ThreadKeepPathAlive(deviceMACAddress,
 				streamMACAddress));
