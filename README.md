@@ -16,11 +16,11 @@ Developers
 ----------
 
 ### Version 3:
-* Patrick Robinson (autarchprinceps)
-* Erwin Stamm (groxar)
-* Nick Herrmannsdörfer (Tweety321)
-* Stefan Heßler (cranqcore)
-* Kai Brennenstuhl (Brenne)
+* Patrick Robinson
+* Erwin Stamm
+* Nick Herrmannsdörfer
+* Stefan Heßler
+* Kai Brennenstuhl
 
 ### Version 2:
 * Jonas Traub
