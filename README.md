@@ -1,3 +1,5 @@
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fautarchprinceps%2FMultiCastor.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fautarchprinceps%2FMultiCastor?ref=badge_shield)
+
 MultiCastor
 ===========
 
@@ -43,3 +45,7 @@ License
 
 GPLv3
 http://gplv3.fsf.org/
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fautarchprinceps%2FMultiCastor.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fautarchprinceps%2FMultiCastor?ref=badge_large)
